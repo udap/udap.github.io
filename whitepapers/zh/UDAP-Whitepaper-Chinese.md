@@ -1,4 +1,4 @@
-# Universal Decentralized Asset Protocol(UDAP)
+#A Universal Decentralized Asset Protocol(UDAP)
 
 A White Paper
 
@@ -6,9 +6,9 @@ A White Paper
 
 白皮书
 
-Version 0.6
+Working Draft (Ver 0.7)
 
-**UDAP Foundation， 1/19/2007**
+**UDAP Foundation， 2/9/2018**
 
 ## 1.  背景
 
