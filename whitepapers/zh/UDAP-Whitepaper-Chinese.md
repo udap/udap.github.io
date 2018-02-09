@@ -1,4 +1,4 @@
-#A Universal Decentralized Asset Protocol(UDAP)
+## UDAP - A Universal Decentralized Asset Protocol
 
 A White Paper
 
@@ -50,7 +50,7 @@ UDAP基金会的目标是建设一个"资产互联网"（The Internet of Asset�
 
 用Ethereum区块链来作为参照的设计是我们的起点。 我们的设计思维和Ethereum 最大的差别是关于"Feature"。 Vitalik Buterin 认为Ethereum 的设计思想之一是Ethereum 是一个 "Feature-less" 的计算平台。
 
-**We Have No Features**: as a corollary to generalization, we often
+> **We Have No Features**: as a corollary to generalization, we often
 refuse to build in even very common high-level use cases as intrinsic
 parts of the protocol, with the understanding that if people really want
 to do it they can always create a sub-protocol (e.g., ether-backed
@@ -656,3 +656,29 @@ UDAP支持公司通过把公司的权益或者产品使用的权利代币化，�
 最终UDAP将运行一个专注于全球资产的专门化分布式计算和存储的网络，这个网络和比特币网络， 以太坊网络等等区块链网络并存，并且有可能通过跨链技术实现网络之间的资产的流动。
 
 我们相信这个一个具有高度针对性的网络对于大量的能沉淀各类资产的应用领域提供前所未有的新技术平台。
+
+## 参考文献
+
+1. The Internet of Money*, A.M. Antonopoulos
+2. https://github.com/ethereum/wiki/wiki/Design-Rationale
+3. https://blog.ethereum.org/2018/01/02/ethereum-scalability-research-development-subsidy-programs
+4. JSON for Linking Data, https://json-ld.org
+5. IPLD - The data model of the content-addressable web, https://ipld.io
+6.  http://www.linkedcontentcoalition.org/phocadownload/framework/The%20LCC%20Rights%20Reference%20Model%20v1.0.pdf
+4. Linked Data Signatures 1.0, https://w3c-dvcg.github.io/ld-signatures/
+5. JSON-LD: Building Meaningful Data APIs, https://blog.codeship.com/json-ld-building-meaningful-data-apis/
+6. The Building Blocks Of Digital Asset Management Interoperability, Ralph Windsor, CMS Wire,  https://www.cmswire.com/cms/digital-asset-management/the-building-blocks-of-digital-asset-management-interoperability-021996.php
+7. Adopting Blockchain for enterprise asset management (EAM), https://www.ibm.com/developerworks/cloud/library/cl-adopting-blockchain-for-enterprise-asset-management-eam/index.html
+8. Re-Defining The Meaning And Scope Of Digital Assets, http://digitalassetmanagementnews.org/features/re-defining-the-meaning-and-scope-of-digital-assets-part-1/
+9. BANKEX Proof-of-Asset Protocol, https://bankex.com/en/whitepaper
+10. BYTOM, http://bytom.io
+11. Digix, https://digix.global
+12. Powering decentralized exchange, https://0xproject.com
+13. Achain: Smart Contract Platform, https://www.achain.com
+14. hSelfSell----Nasdaq Based on 'People' as Assets, https://www.selfsell.com
+15. BitShares, https://bitshares.org
+16. Linkeye: Blockchain-based Credit Alliance, https://www.linkeye.com
+17. Fusion, https://fusion.org
+18. Oraclize, http://www.oraclize.it
+19. CoinSpark, http://coinspark.org
+20. Mediachain - an open, universal media library, http://docs.mediachain.io
