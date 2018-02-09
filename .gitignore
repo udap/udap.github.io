@@ -2,5 +2,5 @@
 *~
 .DS_Store
 .settings/
-.site/
+_site/
 .pydevproject
