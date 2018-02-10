@@ -61,7 +61,7 @@ contract.  \[ <https://github.com/ethereum/wiki/wiki/Design-Rationale>\]
 以太坊的主要目标是建设成一个通用的、支持智能合约的区块链平台。 任何有针对性的高层次的功能性抽象都被推给了用户自定义的智能合约中。这种理性的有节制的目标是令人赞同的， 它给予社区足够的空间去设计应用层面的协议，但是却不是我们构思的"资产互联网"协议以及参考实现追求的方向。 智能合同因为其"图灵完整"的计算能力为DAPP开发者提供了相对而言的极大的灵活性, 但是也带来明显的技术障碍和安全风险。智能合同的开发语言虽然支持“图灵完整"，但是提供的编程能力还是有较大的局限性，对于普通应用开发者而言有很多"坑"需要绕过，用户自定义的智能合约可能会暴露出很大的受攻击表面， 就像以太坊近两年所发生的几起造成严重的经济损失的安全事故所展现的一样。比特币网络拥有非常有限的智能合同能力，但是说到底，这并不一定是比特网络的一个明显的局限性，实际上很多比特币网络的忠实粉丝认为这种有限的设计是一种非常好的措施来防止比特币网络受到各种各样的攻击。比特币网络引以为傲的一个非常重要的指标就是，一段时间来比特币网络经受了无数的冲击，但是，比特币网络从本质上来说，还没有出现一次真正的巨大的漏洞。
 
 
-"资产互联网"从目标而言并不是一个通用计算平台，而是一个专门从财务角度和更一般的角度处理现实资产和加密资产的平台，是一个"功能丰富的区块链". 从协议的角度来看，它是一个更丰富和更专门化的协议。这个协议内置支持资产的代币化和通用的资产行为，例如存储、转移、交易和销毁等等，面向的是一般软件开发者。并且我们希望在这个垂直领域中，我们能为我们第三方的客户提供一个健壮的、高性能的、持续有效、并且不会出错的一个全资产（而不仅仅是虚拟货币）管理和交易平台。为了达到这个目的，更为了从安全和性能的角度实现这个目的，我们甚至考虑不支持智能合约（或者至少不把智能合约的能力暴露给最终用户）。也就是说我们不惜牺牲掉通用智能合约或者通用计算能力，直接把资产管理的能力的安全性和性能作为平台最主要的发展方向。这个实现级别的考虑也许会在项目进展中仔细推敲。
+"资产互联网"从目标而言并不是一个通用计算平台，而是一个专门从财务角度和更一般的角度处理现实资产和加密资产的平台，是一个"功能丰富的区块链"。从协议的角度来看，它是一个更丰富和更专门化的协议。这个协议内置支持资产的代币化和通用的资产行为，例如存储、转移、交易和销毁等等，面向的是一般软件开发者。并且我们希望在这个垂直领域中，我们能为我们第三方的客户提供一个健壮的、高性能的、持续有效、并且不会出错的一个全资产（而不仅仅是虚拟货币）管理和交易平台。为了达到这个目的，更为了从安全和性能的角度实现这个目的，我们甚至考虑不支持智能合约（或者至少不把智能合约的能力暴露给最终用户）。也就是说我们不惜牺牲掉通用智能合约或者通用计算能力，直接把资产管理的能力的安全性和性能作为平台最主要的发展方向。这个实现级别的考虑也许会在项目进展中仔细推敲。
 
 我们认为这种"Thick Protocol + Thin Application"的模式将是区块链应用的核心架构模式，它将极大地为互联网的新型应用带来极大的繁荣。这种模式从技术说有革新性的意义。从价值上分析，它会让互联网的价值从应用层下沉到协议层，让协议层变成一个跨应用的大数据沉积层。客观的结果是协议层变得更有战略价值和投资价值。
 
@@ -735,6 +735,8 @@ UDAP支持公司通过把公司的权益或者产品使用的权利代币化，�
 6. The Building Blocks Of Digital Asset Management Interoperability, Ralph Windsor, CMS Wire,  https://www.cmswire.com/cms/digital-asset-management/the-building-blocks-of-digital-asset-management-interoperability-021996.php
 7. Adopting Blockchain for enterprise asset management (EAM), https://www.ibm.com/developerworks/cloud/library/cl-adopting-blockchain-for-enterprise-asset-management-eam/index.html
 8. Re-Defining The Meaning And Scope Of Digital Assets, http://digitalassetmanagementnews.org/features/re-defining-the-meaning-and-scope-of-digital-assets-part-1/
+9. https://docs.oracle.com/middleware/1221/wcs/develop/GUID-D76319B9-602D-44F0-8C05-1D4660EC4B7C.htm#WBCSD1365
+10. https://snipe-it.readme.io/v3.6.2/docs/asset-models
 9. BANKEX Proof-of-Asset Protocol, https://bankex.com/en/whitepaper
 10. BYTOM, http://bytom.io
 11. Digix, https://digix.global
