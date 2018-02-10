@@ -95,7 +95,7 @@ contract.  \[ <https://github.com/ethereum/wiki/wiki/Design-Rationale>\]
 
 #### 5.1.  链上资产模型（On-Chain Asset Model)
 
-传统的ERP系统建立了一套基于中心化存储和计算的资产模型<sup>\[1\]\[2\]</sup>，这个资产模型是资产发布者对其发布的各种资产的抽象，它规范了系统如何管理资产的属性、服务及安全。与传统ERP不同的是，UDAP资产模型需要规范资产在**区块链**上的表达、交互、安全、隐私及资产真实性。
+传统的ERP系统建立了一套基于中心化存储和计算的资产模型<sup>\[9\]\[10\]</sup>，这个资产模型是资产发布者对其发布的各种资产的抽象，它规范了系统如何管理资产的属性、服务及安全。与传统ERP不同的是，UDAP资产模型需要规范资产在**区块链**上的表达、交互、安全、隐私及资产真实性。
 
 > 为什么资产需要上链？加密资产相比数字资产（这里指传统的ERP管理的资产）有如下优势：
 >
@@ -290,7 +290,7 @@ contract Asset is ERC721 {
 
 ###### 5.1.5 资产证明（Proof of Asset）
 
-资产证明是UDAP资产模型的一个重要概念，是确定资产的真实性的关键要素之一。同时，资产证明也是UDAP资产模型里资产元数据的一种数据类型，在JSON-LD或者IPLD里表示为一个数组数据项(proofs)，每一个资产证明包括一个关键字和一个MultiHash值，这个关键字代表发布者给予资产证明的命名，而Hash值代表这个证明的地址，它可能是一个数字签名的PDF文件，也可能是一张扫描的购物收据。
+资产证明是UDAP资产模型的一个重要概念，是确定资产的真实性的关键要素之一。同时，资产证明也是UDAP资产模型里资产元数据的一种数据类型，在JSON-LD或者IPLD里表示为一个数组数据项(proofs)，每一个资产证明包括一个关键字和一个MultiHash值，这个关键字代表发布者给予资产证明的命名，而Hash值代表这个证明的地址，它可能是一个数字签名的PDF文件，也可能是一张扫描的购物收据。资产证明也可以通过元数据的merkle-path来获得。
 ```
 "proofs":[
   {"storage_contract":"QmWwr4ZfeLJfbWNAuCQfefwo1aHtxC5yjyU8C5WG4DYrYe"}，
@@ -738,6 +738,8 @@ UDAP支持公司通过把公司的权益或者产品使用的权利代币化，�
 6. The Building Blocks Of Digital Asset Management Interoperability, Ralph Windsor, CMS Wire,  https://www.cmswire.com/cms/digital-asset-management/the-building-blocks-of-digital-asset-management-interoperability-021996.php
 7. Adopting Blockchain for enterprise asset management (EAM), https://www.ibm.com/developerworks/cloud/library/cl-adopting-blockchain-for-enterprise-asset-management-eam/index.html
 8. Re-Defining The Meaning And Scope Of Digital Assets, http://digitalassetmanagementnews.org/features/re-defining-the-meaning-and-scope-of-digital-assets-part-1/
+9. https://docs.oracle.com/middleware/1221/wcs/develop/GUID-D76319B9-602D-44F0-8C05-1D4660EC4B7C.htm#WBCSD1365
+10. https://snipe-it.readme.io/v3.6.2/docs/asset-models
 9. BANKEX Proof-of-Asset Protocol, https://bankex.com/en/whitepaper
 10. BYTOM, http://bytom.io
 11. Digix, https://digix.global
@@ -750,5 +752,3 @@ UDAP支持公司通过把公司的权益或者产品使用的权利代币化，�
 18. Oraclize, http://www.oraclize.it
 19. CoinSpark, http://coinspark.org
 20. Mediachain - an open, universal media library, http://docs.mediachain.io
-
-[1]: https://docs.oracle.com/middleware/1221/wcs/develop/GUID-D76319B9-602D-44F0-8C05-1D4660EC4B7C.htm#WBCSD1365 "Title"
