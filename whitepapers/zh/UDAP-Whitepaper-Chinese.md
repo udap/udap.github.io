@@ -113,7 +113,7 @@ contract.  \[ <https://github.com/ethereum/wiki/wiki/Design-Rationale>\]
 
 针对那些不可置换的数字化的资产目前开始出现一些标准化的努力和规范，例如ERC721协议，体现这个规范的是2017年12月在以太坊网络上流行的加密小猫，以及后来的各种各样的拷贝复制者。
 
-UDAP的资产模型是通过对现实世界各种资产的分析和抽象，并结合MediaChain、Digix、BankEx等实践而提出的概念性资产模型：
+UDAP的资产模型是通过对现实世界各种资产的分析和抽象，并结合MediaChain、Digix、BankEx等区块链项目而提出的概念性资产模型：
 
 <p align="middle">
 <img src="media/asset-model-diagram.png" alt="Asset Model" style="width: 500px;"/>
@@ -143,7 +143,7 @@ contract Asset is ERC721 {
   function namespace() public view returns (bytes32);
   function transferrable() public view returns (bool);
   function fungible() public view returns (bool);
-  function metadataHash() public view returns (bytes32);
+  function metadataHash() public view returns (bytes);
 
   function transfer(address _to) public;
   function destroy() public;
@@ -204,51 +204,56 @@ contract Asset is ERC721 {
 
 ###### 5.1.2 资产元数据（MetaData）
 
-元数据一般被称为“关于数据的数据”。UDAP的资产元数据概念是指关于资产的描述性信息，包括资产的基本属性等由资产发布者定义的属性。这些元数据的结构以及数据的含义是由资产发布者及相关的应用来解释。在UDAP里，资产元数据是用一个存放在链外(off-chain)的P2P存储里的、以JSON-LD规范来描述的JSON数据来定义。区块链上(on-chain)存放的只是该文件内容的一个Multihash值，应用开发者通过UDAP获取该Hash值来定位并取得相关的资产元数据。
->JSON-LD描述了如何通过JSON表示有向图，以及如何在一个文档中混合表示互联数据及非互联数据。例如，对于一个用JSON格式记录的食谱资产元数据（如下所示），UDAP通过IPFS把这些数据发布到IPFS上（考虑数据的隐私性，资产元数据可以先加密然后再发布到P2P存储空间。这里仅为示例）：
+元数据一般被称为“关于数据的数据”。UDAP的资产元数据概念是指关于资产的描述性信息，包括资产的基本属性等由资产发布者定义的属性。这些元数据的结构以及数据的含义是由资产发布者及相关的应用来解释。在UDAP里，资产元数据是用一个存放在链外(off-chain)的P2P存储里的、以JSON-LD规范来描述的JSON数据来定义。在UDAP的资产模型里，区块链上(on-chain)的加密资产只包括链下元数据的一个Multihash值，智能合约可以通过metadataHash()接口来获取该Hash值，从而定位并取得相关的资产元数据。
+````
+  function metadataHash() public view returns (bytes);
+````
 
->     {
-       "name": "Mojito",
-       "ingredient": [
-         "12 fresh mint leaves",
-         "1/2 lime, juiced with pulp",
-         "1 tablespoons white sugar",
-         "1 cup ice cubes",
-         "2 fluid ounces white rum",
-         "1/2 cup club soda"
-        ],
-       "yield": "1 cocktail",
-       "instructions": [
-          {
-            "step": 1,
-            "description": "Crush lime juice, mint and sugar together in glass."
-          },
-          {
-            "step": 2,
-            "description": "Fill glass to top with ice cubes."
-          },
-          {
-            "step": 3,
-            "description": "Pour white rum over ice."
-          },
-          {
-            "step": 4,
-            "description": "Fill the rest of glass with club soda, stir."
-          },
-          {
-            "step": 5,
-            "description": "Garnish with a lime wedge."
-          }
-       ]
-    }
-
+>JSON-LD描述了如何通过JSON表示有向图，以及如何在一个文档中混合表示互联数据及非互联数据。例如，对于一个用JSON格式记录的食谱资产元数据（如下所示），UDAP通过IPFS把这些数据发布到IPFS上（通常，考虑到数据的隐私性，资产元数据可以先加密然后再发布到P2P存储空间。这里仅为示例）：
+````
+{
+   "name": "Mojito",
+   "ingredient": [
+     "12 fresh mint leaves",
+     "1/2 lime, juiced with pulp",
+     "1 tablespoons white sugar",
+     "1 cup ice cubes",
+     "2 fluid ounces white rum",
+     "1/2 cup club soda"
+    ],
+   "yield": "1 cocktail",
+   "instructions": [
+      {
+        "step": 1,
+        "description": "Crush lime juice, mint and sugar together in glass."
+      },
+      {
+        "step": 2,
+        "description": "Fill glass to top with ice cubes."
+      },
+      {
+        "step": 3,
+        "description": "Pour white rum over ice."
+      },
+      {
+        "step": 4,
+        "description": "Fill the rest of glass with club soda, stir."
+      },
+      {
+        "step": 5,
+        "description": "Garnish with a lime wedge."
+      }
+   ]
+}
+````
 >上述资产元数据在区块链上可以记录为一个merkle-link，这样应用就可以通过merkle-link进行寻址，获得相关的资产元数据。
-
->      {"md",{"/","QmdnuRNwdmZzHfHVUMVHZFXKXAe6DjvBvPdKy27HpJUN9H"}}
-
->或者更简单地只在链上记录hash值，由UDAP规范如何用hash值生成可寻址的网络地址:
->
->      {"mdhash","QmdnuRNwdmZzHfHVUMVHZFXKXAe6DjvBvPdKy27HpJUN9H"}
+```
+{"md",{"/","QmdnuRNwdmZzHfHVUMVHZFXKXAe6DjvBvPdKy27HpJUN9H"}}
+```
+>UDAP资产模型采用的是更简单的方法，只在链上记录hash值，由UDAP规范如何用hash值生成可寻址的网络地址:
+```
+{"metadataHash","QmdnuRNwdmZzHfHVUMVHZFXKXAe6DjvBvPdKy27HpJUN9H"}
+```
 >
 通常应用需要对每一个元数据项进行寻址，获得相关数据的解析，那么，这时候就需要采用内容可寻址的网络数据模型通过merkle-path对资产元数据进行寻址，这时，可以通过IPFS DAG的javascript接口（ipfs.dag.put)把菜谱资产元数据描述上传到IPFS，这样，上述菜谱资产元数据的每一个元数据项都可以用"ipfs.dag.get"获取。
 >
@@ -285,16 +290,17 @@ contract Asset is ERC721 {
 
 ###### 5.1.5 资产证明（Proof of Asset）
 
-资产证明是UDAP资产模型的一个重要概念，是确定资产的真实性的关键要素之一。同时，资产证明也是UDAP资产模型里资产元数据的一种数据类型，在JSON-LD或者IPLD里表示为一个数组数据项(proofs)，每一个资产证明包括一个关键字和一个MultiHash值，这个关键字代表发布者给予资产证明的命名，而Hash值代表寻址地址。
+资产证明是UDAP资产模型的一个重要概念，是确定资产的真实性的关键要素之一。同时，资产证明也是UDAP资产模型里资产元数据的一种数据类型，在JSON-LD或者IPLD里表示为一个数组数据项(proofs)，每一个资产证明包括一个关键字和一个MultiHash值，这个关键字代表发布者给予资产证明的命名，而Hash值代表这个证明的地址，它可能是一个数字签名的PDF文件，也可能是一张扫描的购物收据。
 ```
 "proofs":[
-  {""}
+  {"storage_contract":"QmWwr4ZfeLJfbWNAuCQfefwo1aHtxC5yjyU8C5WG4DYrYe"}，
+  {"pruchase_receipt":"QmXF4LR4QkuRVh3WQbB56seTX2aPm3Tz7b4Y8heoLAiTkk"}
 ]
 ```
 
-资产证明并不是资产元数据的必要要素，即使没有资产证明，资产也仍然可以进行交易。资产证明的几种场景及解决方案见5.3。
+资产证明是加密资产的一个重要属性，但并不是资产的必要要素。即使没有资产证明，资产也仍然可以进行交易。资产证明的几种场景及解决方案见5.3。
 
-在不同的应用场景里，资产证明可能有不同的形式，例如，在供应链仓储环境，仓单就是存货人所拥有资产的证明之一（其他相关的资产证明包括入库单、采购合同、仓储合同、第三方认证等），谁拥有仓单，谁就拥有仓单所代表的仓储货物的货权；在生产环节，生产商可以采用RFID标签或者二维码来唯一地标识它所生产出来的商品。这时候，RFID就是一种资产证明。因此，资产证明是由资产发布者或者资产拥有者来定义和提供的用于证明资产的真实性的数据，这些资产证明数据没有相应的规范，可以是数字，也可以是文件或者图片。
+在不同的应用场景里，资产证明可能有不同的形式，例如，在供应链仓储环境，仓单就是存货人所拥有资产的证明之一（其他相关的资产证明包括入库单、采购合同、仓储合同、第三方认证等），谁拥有仓单，谁就拥有仓单所代表的仓储货物的货权；在生产环节，生产商可以采用RFID标签或者二维码来唯一地标识它所生产出来的商品。这时候，RFID就是一种资产证明。因此，资产证明是由加密资产发布者来定义和提供的用于证明资产的真实性的数据，这些资产证明数据可以是数字，也可以是文件或者图片，但都是用JSON-LD的方式来进行描述。
 
 
 ###### 5.1.6 资产标签（Tag）
