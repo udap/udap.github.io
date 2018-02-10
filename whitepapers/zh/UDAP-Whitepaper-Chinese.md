@@ -258,22 +258,24 @@ contract Asset is ERC721 {
 >
 把元数据以DAG节点的方式记录到IPFS：
 ```javascript
-  ipfs.dag.put(metadata, { format: 'dag-cbor', hashAlg: 'sha3-512' }, (err, cid) => {
-    console.log(cid.toBaseEncodedString())
+  ipfs.dag.put(metadata, { format: 'dag-cbor', hashAlg: 'sha3-512' },
+    (err, cid) => {
+      console.log(cid.toBaseEncodedString())
     // zdpuAz4HbUHTKQbdpnn42Zo4GUsU7yrBpvb2W9BF2NwvBaLn6
   })；
 ```
 >      
 通过merkle-path获取DAG节点的数据       
 ```javascript
- ipfs.dag.get('zdpuAz4HbUHTKQbdpnn42Zo4GUsU7yrBpvb2W9BF2NwvBaLn6/name',(err,result)=>{
+ ipfs.dag.get('zdpuAz4HbUHTKQbdpnn42Zo4GUsU7yrBpvb2W9BF2NwvBaLn6/name',
+  (err,result)=>{
     if (err) {
       console.error('error:'+ err);
     }
     else {
       console.log(result.value);
     }
-  });
+ });
 ```
 
 ###### 5.1.3 资产权属（Ownership）
