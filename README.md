@@ -1,13 +1,5 @@
-Grayscale Jekyll theme
+UDAP Whitepapers
 =========================
+- Technical Whitepaper [EN]() | [CN](https://drive.google.com/file/d/1eo-7OVxk9bj3L1xHM1BCIM0u4Ql4JYpc/view?usp=sharing)
 
-Jekyll theme based on [Grayscale bootstrap theme ](http://ironsummitmedia.github.io/startbootstrap-grayscale/)
-
-## Demo
-View this jekyll theme in action [here](https://jeromelachaud.github.io/grayscale-theme)
-
-## Screenshot
-![screenshot](https://raw.githubusercontent.com/jeromelachaud/grayscale-theme/master/screenshot.png)
-
-=========
-For more details, read the [documentation](http://jekyllrb.com/)
+- Business Whitepaper [EN]() | [CN]()
