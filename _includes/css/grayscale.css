@@ -116,7 +116,7 @@ figure {
 
 hr {
     height: 0;
-    -webkit-box-sizing: content-box;
+    -webkit-box-sizing: content-section-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box
 }
@@ -8094,6 +8094,12 @@ a:focus {
     }
 }
 
+@media(min-width:1920px) {
+    .content-section {
+        padding: 180px 0px;
+    }
+}
+
 .btn {
     text-transform: uppercase;
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -8223,6 +8229,9 @@ body {
     font-size: 18px;
     margin-top: 25px;
     margin-bottom: 2px;
+}
+.caption h4{
+    margin: 15Px 0!important;
 }
 
 #team h4,
@@ -8374,6 +8383,8 @@ footer .social-buttons {
 
 .about .media a img {
     display: inline-block;
+    width: 30px;
+    height: auto;
 }
 
 .about .pull-left img {
@@ -8381,12 +8392,12 @@ footer .social-buttons {
 }
 
 .about .media .text-left {
-    padding-top: 15px;
+    padding-top: 25px;
     padding-left: 15px;
 }
 
 .about .media .text-right {
-    padding-top: 15px;
+    padding-top: 25px;
     padding-right: 15px;
 }
 
@@ -8416,7 +8427,7 @@ footer .social-buttons {
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
     position: relative;
-    top:-5px;
+    top:-3px;
 }
 
 .linkedin-icon:hover {
@@ -8424,14 +8435,28 @@ footer .social-buttons {
     color:#fff;
 }
 
-.linkedin-icon i {
-    /* margin-left:3px; */
+.eco-system li a{
+    max-height: 50px;
+    margin-bottom: 30px!important;
+    line-height: 50px;
+}
+
+.eco-system img{
+    width: 100%;
+    height: auto;
+    display: inline-block;
 }
 
 .team-container {
     width: 80%;
     margin: 0 auto;
 }
+
+/* .team-bx h4~p{
+width: 240px;
+height: auto;
+margin:  auto;
+} */
 
 @media(min-width:767px) {
     .timeline-road {
