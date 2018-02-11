@@ -88,7 +88,7 @@ contract.  \[ <https://github.com/ethereum/wiki/wiki/Design-Rationale>\]
 1.  立即的流动性。 协议和实现中将提供同类资产和跨类资产交易的能力， 特别是提供和成熟加密货币交易的能力。
 
 <!-- -->
-## 5.  协议
+## 5.  协议。
 协议是去中心化信息系统数据交流和通讯的规范和指南。UDAP的资产链协议规范了资产如何在区块链上获得表达、存储、通讯和交互，如何确认资产的真实性，以及UDAP区块链的资产共识机制。
 
 #### 5.1.  链上资产模型（On-Chain Asset Model)
@@ -280,7 +280,14 @@ contract Asset is ERC721 {
 
 ###### 5.1.3 资产权属（Ownership）
 
-资产的权属是资产元数据的一种类型，它记录了某个资产的拥有者信息。一个资产可以有多个拥有者。资产的权属在资产的生命周期里是可以改变的，例如，当资产被当前拥有人转让给其他人后，资产的权属就发生了改变。因此，虽然资产权属属于元数据的一种类型，但是，UDAP的资产模型把资产权属作为资产的一个独立属性。
+资产的权属是资产元数据的一种类型，它记录了某个资产的拥有者信息。一个资产可以有多个拥有者。资产的权属在资产的生命周期里是可以改变的，例如，当资产被当前拥有人转让给其他人后，资产的权属就发生了改变。因此，虽然资产权属属于元数据的一种类型，但是，UDAP的资产模型把资产权属作为资产的一个独立属性，可以用一个独立的智能合约管理并追踪资产的权属。
+```
+contract Ownership {
+  function ownerOf(address asset) public view returns (address);
+  function ownerOf(address asset, uint asOf) public view returns (address);
+}
+```
+以上接口用来获得某个资产在当前的拥有者以及在过往某个时候的拥有者区块链账号地址。
 
 ###### 5.1.4 资产状态（State）与资产生命周期（Lifecycle）
 
@@ -288,13 +295,31 @@ contract Asset is ERC721 {
 
 资产的生命周期是指资产在不同时间点的状态。UDAP的一个主要功能就是提供链上的资产生命周期管理API，允许应用追踪资产从发布到销毁的整个过程，从而满足特定应用领域的需求。
 
+资产的生命周期也可以用一个独立的智能合约来管理，例如，下面是一种可能的接口定义：
+```
+contract Lifecycle {
+  // returns current state of a given asset
+  function stateOf(address asset) public view returns (bytes32);
+  // returns the state of asset at given asOf time
+  function stateOf(address asset, uint asOf) public view returns (bytes32);
+}
+```
+
 ###### 5.1.5 资产证明（Proof of Asset）
 
-资产证明是UDAP资产模型的一个重要概念，是确定资产的真实性的关键要素之一。同时，资产证明也是UDAP资产模型里资产元数据的一种数据类型，在JSON-LD或者IPLD里表示为一个数组数据项(proofs)，每一个资产证明包括一个关键字和一个MultiHash值，这个关键字代表发布者给予资产证明的命名，而Hash值代表这个证明的地址，它可能是一个数字签名的PDF文件，也可能是一张扫描的购物收据。资产证明也可以通过元数据的merkle-path来获得。
+资产证明是UDAP资产模型的一个重要概念，是确定资产的真实性的关键要素之一。同时，资产证明也是UDAP资产模型里资产元数据的一种数据类型，在JSON-LD或者IPLD里表示为一个数组数据项(proofs)，每一个资产证明是一个一段自定义的JSON数据。name代表发布者给予资产证明的命名，而linkHash值代表可以定位这个证明的一个MultiHash值，它可能是一个数字签名的PDF文件，也可能是一张扫描的购物收据。资产证明也可以通过元数据的merkle-path来获得。
 ```
 "proofs":[
-  {"storage_contract":"QmWwr4ZfeLJfbWNAuCQfefwo1aHtxC5yjyU8C5WG4DYrYe"}，
-  {"pruchase_receipt":"QmXF4LR4QkuRVh3WQbB56seTX2aPm3Tz7b4Y8heoLAiTkk"}
+  {
+    "name":"Storage Contract",
+    "description":"Storage contract for warehouse receipt #123456",
+    "linkHash":"QmWwr4ZfeLJfbWNAuCQfefwo1aHtxC5yjyU8C5WG4DYrYe"
+  }，
+  {
+    "name":"Purchase Receipt",
+    "description": "Purchase receipt for warehouse receipt #123456",
+    "linkHash" :"QmXF4LR4QkuRVh3WQbB56seTX2aPm3Tz7b4Y8heoLAiTkk"
+  }
 ]
 ```
 
@@ -309,7 +334,7 @@ contract Asset is ERC721 {
 
 ###### 5.1.7 资产注册表（Asset Registry）
 
-资产注册表维护了一个区块链上加密资产和现实世界资产之间的加密绑定。所有到UDAP区块链上发布的资产都需要记录在资产注册表里。同时，资产注册表也维护了多个不同的数据结构和索引方式来简化外部应用对资产的查询和检索。不同的机构或应用拥有私有的资产注册表，记录该机构或应用所发布的资产。同时，资产发布者也可以对全网或者指定地址广播其发布的资产，这样，私有的资产注册表也可以通过Listener的方式来获得这些不同应用广播的资产信息。例如，房东可以同时在多家租房网站发布租赁信息、卖家可以同时在A网站以及E网站发起拍卖。
+资产注册表维护了一个区块链上加密资产和现实世界资产之间的加密绑定。所有到UDAP区块链上发布的资产都需要记录在资产注册表里。同时，资产注册表也维护了多个不同的数据结构和索引方式来简化外部应用对资产的查询和检索。不同的机构或应用拥有各自私有的资产注册表，记录该机构或应用所发布的资产。同时，资产发布者也可以对全网或者指定地址广播其发布的资产，这样，私有的资产注册表也可以通过Listener的方式来获得这些不同应用广播的资产信息。例如，房东可以同时在多家租房网站发布租赁信息、卖家可以同时在A网站以及E网站发起拍卖。
 
 ###### 5.1.8 账号（Account）、资产钱包（Wallet）及身份（Identity）
 
@@ -484,15 +509,13 @@ UDAP天然定义应用程序的边界：
 
 现在占据垄断型地位的 Ethereum 智能合同运行在 EVM 之上。 EVM 解释性执行智能合同opcode流。 同时智能合同中的收费模式是按照每一次执行一个opcode做一个费用核查。 这些因素使得智能合约的执行速度非常低下。
 
-UDAP 首先废除了用户自定义的智能合约。 所有的API虽然都是以某种智能合约的方式来提供， 但是这些智能合同以原生系统语言来编制，并且把计费机制推倒了粗颗粒的API级别。 这样的智能合约能同时获得高级别的安全性和性能。 
+UDAP 首先废除了用户自定义的智能合约。 所有的API虽然都是以某种智能合约的方式来提供， 但是这些智能合同以原生系统语言来编制，并且把计费机制推倒了粗颗粒的API级别。 这样的智能合约能同时获得高级别的安全性和性能。
 
 总结：
 
 由于在所有节点之间没有竞争性的重复计算，并且在节点软件中的事务处理中具有优化的并行性，加上原生的智能合约， UDAP在水平和垂直方向都提供了优秀的性能和显着更好的可伸缩性。我们预计UDAP网络将在全球600个节点的网络上提供10K〜100K范围内的TPS。
 
 与此同时，我们正密切关注由Joseph Poon和Vitalik Buterin领导的[Plasma Project](http://plasma.io/)的进展。等离子项目提出了基于区块链的递归Map-Reduce体系结构，旨在提供高达数十亿级别的TPS。Plasma项目的的发展将成为2018年行业中最优秀人才团队的核心努力之一。我们计划利用Plasma未来的工作来长久地解决可扩展性问题。 具体而言， UDAP 的每一条App 链将成为Plasma体系中的二级或者三级Plasma Chain， 以Ethereum 的 root chain作为最终的安全保护和正确的状态转换的确保。 同时， UDAP 将充分利用Map/Reduce 的设计， 实现根据QOS合同的动态计算资源的分配保证UDAP上运行的App 链得到最理想的商业级别的计算和存储服务。
-
-
 
 ## 6. 通用资产钱包(UAW)
 
@@ -781,22 +804,22 @@ UDAP支持公司通过把公司的权益或者产品使用的权利代币化，�
 4. JSON for Linking Data, https://json-ld.org
 5. IPLD - The data model of the content-addressable web, https://ipld.io
 6.  http://www.linkedcontentcoalition.org/phocadownload/framework/The%20LCC%20Rights%20Reference%20Model%20v1.0.pdf
-4. Linked Data Signatures 1.0, https://w3c-dvcg.github.io/ld-signatures/
-5. JSON-LD: Building Meaningful Data APIs, https://blog.codeship.com/json-ld-building-meaningful-data-apis/
-6. The Building Blocks Of Digital Asset Management Interoperability, Ralph Windsor, CMS Wire,  https://www.cmswire.com/cms/digital-asset-management/the-building-blocks-of-digital-asset-management-interoperability-021996.php
-7. Adopting Blockchain for enterprise asset management (EAM), https://www.ibm.com/developerworks/cloud/library/cl-adopting-blockchain-for-enterprise-asset-management-eam/index.html
-8. Re-Defining The Meaning And Scope Of Digital Assets, http://digitalassetmanagementnews.org/features/re-defining-the-meaning-and-scope-of-digital-assets-part-1/
-9. https://docs.oracle.com/middleware/1221/wcs/develop/GUID-D76319B9-602D-44F0-8C05-1D4660EC4B7C.htm#WBCSD1365
-10. https://snipe-it.readme.io/v3.6.2/docs/asset-models
-9. BANKEX Proof-of-Asset Protocol, https://bankex.com/en/whitepaper
-10. BYTOM, http://bytom.io
-11. Digix, https://digix.global
-12. Powering decentralized exchange, https://0xproject.com
-13. Achain: Smart Contract Platform, https://www.achain.com
-14. hSelfSell----Nasdaq Based on 'People' as Assets, https://www.selfsell.com
-15. BitShares, https://bitshares.org
-16. Linkeye: Blockchain-based Credit Alliance, https://www.linkeye.com
-17. Fusion, https://fusion.org
-18. Oraclize, http://www.oraclize.it
-19. CoinSpark, http://coinspark.org
-20. Mediachain - an open, universal media library, http://docs.mediachain.io
+7. Linked Data Signatures 1.0, https://w3c-dvcg.github.io/ld-signatures/
+8. JSON-LD: Building Meaningful Data APIs, https://blog.codeship.com/json-ld-building-meaningful-data-apis/
+9. The Building Blocks Of Digital Asset Management Interoperability, Ralph Windsor, CMS Wire,  https://www.cmswire.com/cms/digital-asset-management/the-building-blocks-of-digital-asset-management-interoperability-021996.php
+10. Adopting Blockchain for enterprise asset management (EAM), https://www.ibm.com/developerworks/cloud/library/cl-adopting-blockchain-for-enterprise-asset-management-eam/index.html
+11. Re-Defining The Meaning And Scope Of Digital Assets, http://digitalassetmanagementnews.org/features/re-defining-the-meaning-and-scope-of-digital-assets-part-1/
+12. https://docs.oracle.com/middleware/1221/wcs/develop/GUID-D76319B9-602D-44F0-8C05-1D4660EC4B7C.htm#WBCSD1365
+13. https://snipe-it.readme.io/v3.6.2/docs/asset-models
+14. BANKEX Proof-of-Asset Protocol, https://bankex.com/en/whitepaper
+15. BYTOM, http://bytom.io
+16. Digix, https://digix.global
+17. 0x: Powering decentralized exchange, https://0xproject.com
+18. Achain: Smart Contract Platform, https://www.achain.com
+19. hSelfSell: Nasdaq Based on 'People' as Assets, https://www.selfsell.com
+20. BitShares, https://bitshares.org
+21. Linkeye: Blockchain-based Credit Alliance, https://www.linkeye.com
+22. Fusion, https://fusion.org
+23. Oraclize, http://www.oraclize.it
+24. CoinSpark, http://coinspark.org
+25. Mediachain - an open, universal media library, http://docs.mediachain.io
