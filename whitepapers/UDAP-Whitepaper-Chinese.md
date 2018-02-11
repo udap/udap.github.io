@@ -2,13 +2,13 @@
 
 A White Paper
 
-通用分布式资产协议
+一个通用的、去中心化的资产协议
 
 白皮书
 
 Working Draft (Ver 0.7)
 
-**UDAP Foundation， 2/9/2018**
+**UDAP Foundation， 2/11/2018**
 
 ## 1.  背景
 
