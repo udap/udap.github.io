@@ -1,14 +1,16 @@
-## UDAP - A Universal Decentralized Asset Protocol
+UDAP - A Universal Decentralized Asset Protocol
+===============================================
+一个通用的、去中心化的资产协议
+-------------------------
 
 A White Paper
-
-一个通用的、去中心化的资产协议
 
 白皮书
 
 Working Draft (Ver 0.7)
 
 **UDAP Foundation， 2/11/2018**
+<div class="page-break"></div>
 
 ## 1.  背景
 
@@ -23,6 +25,8 @@ Working Draft (Ver 0.7)
 我们也看到，以太坊这两年在逐渐成熟的过程中，已经产生了非常大的性能问题和安全隐私问题，例如，2017年底在以太坊主链上发布的加密猫（一种虚拟资产）游戏的流行导致了以太坊全面的网络拥堵，以至于以太坊上Ether的转移和确认时间急剧增长。因此，以太坊核心开发团队当前的主要工作方向并不在于提供一套便捷的可供任何现实世界的各种应用所利用的资产发布、管理和应用平台，而是把注意力集中在更底层的性能吞吐量和安全隐私等更为基础的环节，这些都是非常有必要的，因为如果没有这些最基础的非功能性需求指标，那么在链上建筑的任何具有真正意义上的杀手级的应用，都会导致整个系统的性能迟缓和用户体验的急剧下降。
 
 同时，智能合同的编程语言的成熟性远不如传统应用使用的编程语言的功能强大，在健壮性方面也还处于童年时期。对大多数没有多少智能合同编写经验的程序员而言，编写智能合同可能是一个安全和性能上的"nightmare"。
+
+<div class="page-break"></div>
 
 ## 2.  目标
 
@@ -40,6 +44,7 @@ UDAP基金会的目标是建设一个"资产互联网"（The Internet of Asset�
 ![](media/image1.png)
 
 
+<div class="page-break"></div>
 
 
 ## 3.  设计理念
@@ -67,6 +72,8 @@ contract.  \[ <https://github.com/ethereum/wiki/wiki/Design-Rationale>\]
 
 ![](media/image2.png)
 
+<div class="page-break"></div>
+
 ## 4. 对应用开发者的价值陈述
 
 <!-- -->
@@ -86,6 +93,8 @@ contract.  \[ <https://github.com/ethereum/wiki/wiki/Design-Rationale>\]
 1.  工作流支持。工作流的支持，主要体现在多重签名的支持上。关键性的资产的动作，例如资产的转移，资产的交换和资产的销售，往往需要多重签名的保护。应用可以非常简单的设置对关键性动作的签名保护，策略和规则。一旦受到保护的动作被发现或者调用的时候，用户所持的通用资产钱包会自动提示用户进行签名的处理。我可以在自己的资产钱包中实时地对其他人发起的需要多重签名对资产的操作，进行签字或者拒绝的处理。这种工作流，不仅仅可以简单的在持有通用资产钱包的个人用户之间进行，也可以在第三方的应用的界面和拥护者通用钱包之间进行。这一类的多点信息的交流和沟通，是由资产网络底层的基于P2P的消息协议所支持的。
 
 1.  立即的流动性。 协议和实现中将提供同类资产和跨类资产交易的能力， 特别是提供和成熟加密货币交易的能力。
+
+<div class="page-break"></div>
 
 <!-- -->
 ## 5.  协议
@@ -517,6 +526,8 @@ UDAP 首先废除了用户自定义的智能合约。 所有的API虽然都是�
 
 与此同时，我们正密切关注由Joseph Poon和Vitalik Buterin领导的[Plasma Project](http://plasma.io/)的进展。等离子项目提出了基于区块链的递归Map-Reduce体系结构，旨在提供高达数十亿级别的TPS。Plasma项目的的发展将成为2018年行业中最优秀人才团队的核心努力之一。我们计划利用Plasma未来的工作来长久地解决可扩展性问题。 具体而言， UDAP 的每一条App 链将成为Plasma体系中的二级或者三级Plasma Chain， 以Ethereum 的 root chain作为最终的安全保护和正确的状态转换的确保。 同时， UDAP 将充分利用Map/Reduce 的设计， 实现根据QOS合同的动态计算资源的分配保证UDAP上运行的App 链得到最理想的商业级别的计算和存储服务。
 
+<div class="page-break"></div>
+
 ## 6. 通用资产钱包(UAW)
 
 ![](media/image3.png)
@@ -644,6 +655,8 @@ UAW为第三方的应用使用系统提供的标准plugin 的JavaScript API，�
 
 更多的API将分批提供， 包括各种auction方式，escrow方式的P2P交易。
 
+<div class="page-break"></div>
+
 ## 7.  关键技术
 
 ### 7.1 权限及存取控制
@@ -704,6 +717,9 @@ UDAP为资产拥有者和资产数据本身进行隐私保护。
 <p align="middle">
 <img src="media/infrastructure-deployment-example.png" alt="Deployment Diagram" style="width: 500px;"/>
 </p>
+
+<div class="page-break"></div>
+
 ## 8.  和类似平台比较分析
 
 |       | UDAP  | BankEx | Bytom | Digix | 0x    | Achain | Selfsell | Linkeye |Bitshares| WAX |veritaseum|fusion|
@@ -719,6 +735,8 @@ UDAP为资产拥有者和资产数据本身进行隐私保护。
 | 原生Multisig | Yes |       |       |       |       |       |       |       |类似  | | | 类似|
 | 资产存在形态 | 地址 | ？ | UTXO | 合约内token | 合约内token | 合约内token | 合约内token | 合约内token |?| 合约内token| |合约内token|
 | 双花保证 | 资产地址nonce | ？ | UTXO特性 | 地址nonce | 地址nonce | 地址nonce | 地址nonce | 地址nonce |?|地址nonce | |地址nonce |
+
+<div class="page-break"></div>
 
 ## 9.  应用案例分析
 
@@ -752,6 +770,7 @@ UDAP为资产拥有者和资产数据本身进行隐私保护。
 UDAP支持公司通过把公司的权益或者产品使用的权利代币化，并且立即通过平台提供的交易能力获得流动性。
 
 <!-- -->
+<div class="page-break"></div>
 
 ## 10. 总结
 
@@ -795,6 +814,8 @@ UDAP支持公司通过把公司的权益或者产品使用的权利代币化，�
 最终UDAP将运行一个专注于全球资产的专门化分布式计算和存储的网络，这个网络和比特币网络， 以太坊网络等等区块链网络并存，并且有可能通过跨链技术实现网络之间的资产的流动。
 
 我们相信这个一个具有高度针对性的网络对于大量的能沉淀各类资产的应用领域提供前所未有的新技术平台。
+
+<div class="page-break"></div>
 
 ## 参考文献
 
