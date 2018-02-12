@@ -1,14 +1,16 @@
 # UDAP - A Universal Decentralized Asset Protocol
 
-A White Paper
+一个通用的、去中心化的资产协议
 
-通用分布式资产协议
+
+A White Paper
 
 白皮书
 
-Working Draft (Ver 0.7)
+Working Draft (Ver 0.7.1)
 
-**UDAP Foundation， 2/9/2018**
+**UDAP Foundation， 2/11/2018**
+<div class="page-break"></div>
 
 
 
@@ -30,6 +32,8 @@ Working Draft (Ver 0.7)
 
 同时，智能合同的编程语言的成熟性远不如传统应用使用的编程语言的功能强大，在健壮性方面也还处于童年时期。对大多数没有多少智能合同编写经验的程序员而言，编写智能合同可能是一个安全和性能上的"nightmare"。
 
+<div class="page-break"></div>
+
 ## 2.  目标
 
 UDAP基金会的目标是建设一个"资产互联网"（The Internet of Asset），在这个资产互联网上，无论是企业还是个人，都可以方便地发布、转移和交易各种虚拟的以及实物的资产。因此，我们对拟议中的资产互联网制定了一个明确且清楚的边界，包括以下三个目标：
@@ -46,6 +50,7 @@ UDAP基金会的目标是建设一个"资产互联网"（The Internet of Asset�
 ![](media/image1.png)
 
 
+<div class="page-break"></div>
 
 
 ## 3.  设计理念
@@ -72,6 +77,8 @@ contract.  \[ <https://github.com/ethereum/wiki/wiki/Design-Rationale>\]
 我们认为这种"Thick Protocol + Thin Application"的模式将是区块链应用的核心架构模式，它将极大地为互联网的新型应用带来极大的繁荣。这种模式从技术说有革新性的意义。从价值上分析，它会让互联网的价值从应用层下沉到协议层，让协议层变成一个跨应用的大数据沉积层。客观的结果是协议层变得更有战略价值和投资价值。
 
 ![](media/image2.png)
+
+<div class="page-break"></div>
 
 ## 4. 对应用开发者的价值陈述
 
@@ -110,9 +117,12 @@ contract.  \[ <https://github.com/ethereum/wiki/wiki/Design-Rationale>\]
 
 1.  立即的流动性。 协议和实现中将提供同类资产和跨类资产交易的能力， 特别是提供和成熟加密货币交易的能力。
 
+<div class="page-break"></div>
+
 <!-- -->
 
 ## 5.  协议。
+
 协议是去中心化信息系统数据交流和通讯的规范和指南。UDAP的资产链协议规范了资产如何在区块链上获得表达、存储、通讯和交互，如何确认资产的真实性，以及UDAP区块链的资产共识机制。
 
 #### 5.1.  链上资产模型（On-Chain Asset Model)
@@ -135,7 +145,7 @@ contract.  \[ <https://github.com/ethereum/wiki/wiki/Design-Rationale>\]
 
 针对那些不可置换的数字化的资产目前开始出现一些标准化的努力和规范，例如ERC721协议，体现这个规范的是2017年12月在以太坊网络上流行的加密小猫，以及后来的各种各样的拷贝复制者。
 
-UDAP的资产模型是通过对现实世界各种资产的分析和抽象，并结合MediaChain、Digix、BankEx等区块链项目而提出的概念性资产模型：
+UDAP的资产模型是通过对现实世界各种资产的分析和抽象，并结合[MediaChain](http://www.mediachain.io)、[Digix](https://digix.global)、[BankEx](https://bankex.com)等区块链项目而提出的概念性资产模型：
 
 <p align="middle">
 <img src="media/asset-model-diagram.png" alt="Asset Model" style="width: 500px;"/>
@@ -453,7 +463,7 @@ UDAP本身是一个分布式的体系，UDAP网络本身并没有一个单一的
 
 4）托管
 
-资产最终的价值是通过资产的流通来实现的。托管机制是不信任个体之间进行资产交易的常见手段。 网络商店的店主可以声称自己拥有任何商品，平台并不对这种声明的可靠性进行确认， 但是提供托管担保机制，通常把交易双方中容易托管的资产在交易中暂时保管，例如在购买普通商品的电子商城中，买方支付的货币不是直接进入到货物拥有者的账户中，而是首先进入托管合同，然后必须等到买方收到商品后，由买方来确认商品的真实性。传统的电子商务平台基本上都是采用这种托管的方式，例如在类www.localbitcoins.com平台上，被托管的对象则是交易的商品，也就是比特币，而购买比特币的资金是通过线下的方式支付。
+资产最终的价值是通过资产的流通来实现的。托管机制是不信任个体之间进行资产交易的常见手段。 网络商店的店主可以声称自己拥有任何商品，平台并不对这种声明的可靠性进行确认， 但是提供托管担保机制，通常把交易双方中容易托管的资产在交易中暂时保管，例如在购买普通商品的电子商城中，买方支付的货币不是直接进入到货物拥有者的账户中，而是首先进入托管合同，然后必须等到买方收到商品后，由买方来确认商品的真实性。传统的电子商务平台基本上都是采用这种托管的方式，例如在类[localbitcoins.com](http://www.localbitcoins.com)平台上，被托管的对象则是交易的商品，也就是比特币，而购买比特币的资金是通过线下的方式支付。
 
 而对于那些价值非常昂贵的产品。有可能需要多重保护机制，也就是上述几种机制的混合使用， 使得资产交换过程中可能出现的诈骗行为得到防范。UDAP提供API让第三方应用建立灵活的多层面的机制，来保证财产的真实性和保证财产转移过程的，可靠性。
 
@@ -494,6 +504,8 @@ UDAP主要目的是管理现实生活中的资产，以及如何对这些资产�
 我们同时也在观察第三方专注于身份管理的体系的演化， 考虑利用其服务的可能性。 这些系统包括（不限于）：uPort, ShoCard, Civic, Mooti, 等等。
 
 
+
+<div class="page-break"></div>
 
 ## 6. 通用资产钱包(UAW)
 
@@ -622,6 +634,8 @@ UAW为第三方的应用使用系统提供的标准plugin 的JavaScript API，�
 
 更多的API将分批提供， 包括各种auction方式，escrow方式的P2P交易。
 
+<div class="page-break"></div>
+
 ## 7.  关键技术
 
 ### 7.1 权限及存取控制
@@ -731,6 +745,8 @@ UDAP 首先废除了用户自定义的智能合约。 所有的API虽然都是�
 
 与此同时，我们正密切关注由Joseph Poon和Vitalik Buterin领导的[Plasma Project](http://plasma.io/)的进展。等离子项目提出了基于区块链的递归Map-Reduce体系结构，旨在提供高达数十亿级别的TPS。Plasma项目的的发展将成为2018年行业中最优秀人才团队的核心努力之一。我们计划利用Plasma未来的工作来长久地解决可扩展性问题。 具体而言， UDAP 的每一条App 链将成为Plasma体系中的二级或者三级Plasma Chain， 以Ethereum 的 root chain作为最终的安全保护和正确的状态转换的确保。 同时， UDAP 将充分利用Map/Reduce 的设计， 实现根据QOS合同的动态计算资源的分配保证UDAP上运行的App 链得到最理想的商业级别的计算和存储服务。
 
+<div class="page-break"></div>
+
 ## 8.  和类似平台比较分析
 
 |       | UDAP  | BankEx | Bytom | Digix | 0x    | Achain | Selfsell | Linkeye |Bitshares| WAX |veritaseum|fusion|
@@ -746,6 +762,8 @@ UDAP 首先废除了用户自定义的智能合约。 所有的API虽然都是�
 | 原生Multisig | Yes |       |       |       |       |       |       |       |类似  | | | 类似|
 | 资产存在形态 | 地址 | ？ | UTXO | 合约内token | 合约内token | 合约内token | 合约内token | 合约内token |?| 合约内token| |合约内token|
 | 双花保证 | 资产地址nonce | ？ | UTXO特性 | 地址nonce | 地址nonce | 地址nonce | 地址nonce | 地址nonce |?|地址nonce | |地址nonce |
+
+<div class="page-break"></div>
 
 ## 9.  应用案例分析
 
@@ -779,6 +797,7 @@ UDAP 首先废除了用户自定义的智能合约。 所有的API虽然都是�
 UDAP支持公司通过把公司的权益或者产品使用的权利代币化，并且立即通过平台提供的交易能力获得流动性。
 
 <!-- -->
+<div class="page-break"></div>
 
 ## 10. 总结
 
@@ -822,6 +841,8 @@ UDAP支持公司通过把公司的权益或者产品使用的权利代币化，�
 最终UDAP将运行一个专注于全球资产的专门化分布式计算和存储的网络，这个网络和比特币网络， 以太坊网络等等区块链网络并存，并且有可能通过跨链技术实现网络之间的资产的流动。
 
 我们相信这个一个具有高度针对性的网络对于大量的能沉淀各类资产的应用领域提供前所未有的新技术平台。
+
+<div class="page-break"></div>
 
 ## 参考文献
 
