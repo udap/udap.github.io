@@ -12,40 +12,40 @@ In the beginning, there was Bitcoin.
 
 Although touted by its inventor as "digital cash", Bitcoin has been pushed to play pivotal roles beyond crypto-currency.  Many projects have created protocols on top of Bitcoin to facilitate the exchange of general assets. [Mastercoin][Counterparty][Prism]
 
-But because Bitcoin has been first and foremost designed to work as a fungible currency, using it beyond as such has proved to be clunky and limited. 
+But because Bitcoin has been first and foremost designed to work as a fungible currency, using it beyond as such has proved to be clunky and limited.
 
 Ethereum (the E, for short reference) has emerged from the crowed to carry its inventor’s destiny as a general and abstract protocol of general blockchain based world computer. A general-purposed smart contract architecture lends its well to building a variety of on-chain applications to fulfill blockchain’s promise of being the backbone of the "Internet of Values".
 
-But the most challenging thing posed to E is how to represent the "values". For the moment, like almost all the other open ledger platforms, E  is exclusively handling digital currency transfers, as Buterin put in one of his podcasting in early 2018: 
+But the most challenging thing posed to E is how to represent the "values". For the moment, like almost all the other open ledger platforms, E  is exclusively handling digital currency transfers, as Buterin put in one of his podcasting in early 2018:
 
 "The very first vision was basically a general purpose platform for financial contracts. If X happens then send $5 to account Y, if Z happens send $5 to account B. That was basically what I thought Ethereum would be for" [http://unchainedpodcast.co/vitalik-buterin-creator-of-ethereum-on-the-big-guy-vs-the-little-guy]
 
-E’s model of "value" is primitive. In the basic model, for any kind of value/asset the only attribute associated with this asset is the balance of it, a number. This simplified model probably will fit financial transactions well, but it's very lacking dealing with variety of asset types in the operation of the world economy. 
- 
+E’s model of "value" is primitive. In the basic model, for any kind of value/asset the only attribute associated with this asset is the balance of it, a number. This simplified model probably will fit financial transactions well, but it's very lacking dealing with variety of asset types in the operation of the world economy.
+
 The three-year-old smart contract implementation in Ethereum, although has attracted thousands of development teams to deploy applications, mostly in Solidity, on the platform, is far from being mature and productive towards becoming the world computer:
 - Limited in features and functions. For instances:
     - Limited parameter types.
-    - Lack advanced language features that JavaScript, Python, Java can offer. 
+    - Lack advanced language features that JavaScript, Python, Java can offer.
     - Primitive collection processing and manipulations.
-- Slow performance. The EVM is not really a modern virtual machine like JVM or V8 JavaScript engine. It’s an interpreter that parse the smart contract opcode and run the underlying supporting libraries.  The EVM is at least an order slower than regular system programming languages. The total throughput of the blockchain is directly impacted by the slow performance of the virtual machine. There are many reasons that faster and mature virtual machines cannot be used in the current version of Ethereum.  And there are quite a few efforts in development to enhance the performance of the virtual machine. 
+- Slow performance. The EVM is not really a modern virtual machine like JVM or V8 JavaScript engine. It’s an interpreter that parse the smart contract opcode and run the underlying supporting libraries.  The EVM is at least an order slower than regular system programming languages. The total throughput of the blockchain is directly impacted by the slow performance of the virtual machine. There are many reasons that faster and mature virtual machines cannot be used in the current version of Ethereum.  And there are quite a few efforts in development to enhance the performance of the virtual machine.
 - The general purpose computing power in the  current version of EVM, on the other hand, has rendered itself vulnerable to many security breaches, as documented by [Making Smart Contract Smarter, https://www.comp.nus.edu.sg/~loiluu/papers/oyente.pdf, Loi Luu, et. al., 2016]. It's very hard for relatively inexperienced programmers to get the Smart contract right. Considering many of the smart contract are handling many millions of dollars of assets, customers take a huge risk in moving forward with a smart contract strategy.
 
 If we can draw some analogies between web application development and blockchain application development, smart contract is to blockchain development what CGI is to web app development. It’s rather young.
 
-The limitations of the current mainstream Smart contract platforms have become a serious impediment to peoples ever-growing interest in tokenization of everything. 
+The limitations of the current mainstream Smart contract platforms have become a serious impediment to peoples ever-growing interest in tokenization of everything.
 Tokenization has become the symbol of The new economy, short named as token economy. In this new economy enabled by block team technologies, every bit of value is represented by a crypto-graphical token. With the security feature enabled by blockchain technologies, tokens have basically transformed the asset we deal with every day into capital, characterized by its high liquidity. Tokens make the people who own assets to realize the economic returns that those assets are capable of, in the meantime, tokens will make those people who are in need of capital to get the capital in a most feasible way. Tokens are basically the gasoline of the new economy. If there is one thing that will happen in the next few year for the Internet industry, this "one thing" is to "tokenize everything".
 
 
 - Crypto tokens represent (or be pegged to) shares of right, access to services, voting power, real world financial assets, etc.  
 - Tokens serve as accounting units in bookkeeping and payments.
 - Tokens eliminate the requirement of intermediaries in many trading scenarios thus simplify and expedite the trading process at very low cost. Fungible tokens are very easy to trade en mass, while none-fungible tokens can help to track the asset flow in an economy thus to help people understand the dynamics of the economy.  
-- In short, crypto-tokens are the private money for applications. 
+- In short, crypto-tokens are the private money for applications.
 
-Tokens have been used in crowdfunding a new wave of innovative applications based on blockchain and related technologies. This has disrupted the startup model based on VC funding.  On one side startups can receive funding much earlier in their product development. On the other side, everyone can invest in projects they believe in and gain the potential for investment return which used to the privilege of so called "accredited investors". 
+Tokens have been used in crowdfunding a new wave of innovative applications based on blockchain and related technologies. This has disrupted the startup model based on VC funding.  On one side startups can receive funding much earlier in their product development. On the other side, everyone can invest in projects they believe in and gain the potential for investment return which used to the privilege of so called "accredited investors".
 
 Tokens are the tickets to the next Internet banquet.
 
-UDAP has been designed to support tokenizing everything movement natively, in the low-level storage model and communications. We are shifting away from the lump sum description of values into individually identifying each every and every items in the physical world in virtual world alike. On top of the identifications, we are going to beauty brand-new user experience to deal with their personal properties intuitively, to sell them, to trade them, to pledge them for capital, to lead them to friends, or to give them away. In the back, UDAP is any neighborly protocol for any third parties to port their existing applications easily and quickly to open ledger technologies and a decentralized storage Technologies. Therefore from the back end to the user experience end, UDAP is created to become the native enabling technology to fulfill the promise of the Internet of values. 
+UDAP has been designed to support tokenizing everything movement natively, in the low-level storage model and communications. We are shifting away from the lump sum description of values into individually identifying each every and every items in the physical world in virtual world alike. On top of the identifications, we are going to beauty brand-new user experience to deal with their personal properties intuitively, to sell them, to trade them, to pledge them for capital, to lead them to friends, or to give them away. In the back, UDAP is any neighborly protocol for any third parties to port their existing applications easily and quickly to open ledger technologies and a decentralized storage Technologies. Therefore from the back end to the user experience end, UDAP is created to become the native enabling technology to fulfill the promise of the Internet of values.
 
 Blockchain technology is nicknamed the Internet of the moment
 However, when we look closely at the carrier of value transfer currently carried by the blockchain, 99% of the applications are actually limited to the best liquidity and the most easily solved type of asset, which is cryptocurrency.
@@ -181,189 +181,405 @@ Immediate liquidity. The agreement and implementation will provide the ability t
 
 <!-- -->
 
-## 5.  协议
+## 5.  Protocol
+A protocol is a specification of and a normative guide to the exchange and communication of information between and within systems. UDAP's asset protocol regulates how asset are presented, stored, communicated and interacted on the blockchain, how authenticity of assets is verified, and how consensus is reached.
 
-protocol
+#### 5.1.  On-Chain Asset Model
 
-#### 5.1.  资产模型
+Traditional ERP systems have established their asset models based on centralized storage and computation. The asset model is an abstraction of the assets created by their issuers, which governs how the systems manage the attributes, operations, and security of assets. Unlike traditional ERPs, UDAP's asset model focuses on an on-chain standardization of the description, interaction, security, privacy, and authenticity of assets.
 
-Asset model
+> Why assets need to be tracked and managed on the blockchain? In general, Crypto assets have the following advantages over digital assets (in this case, traditional ERP-managed assets):
+>
+1) Clear ownership: The rights and interests of asset issuers, asset owners and transaction signers can all be clearly defined and cryptographically protected. Asset owners can easily provide irrefutable proof of their rights and interests; without the consent of the transaction signers, the assets can not be exchanged and traded on the blockchain; meanwhile, asset issuers have the rights to determine some of the basic attributes of the assets, for example, an asset issuer can restrict the transfer and trading of assets.
+>
+2) Information Permanence: Digital assets requires a permanent storage to manage their lifecycle. The advent of blockchain and decentralized storage finally gives us confidence that we can save information for a long time.
+>
+3) Anti-counterfeiting and anti-tampering: Once the assets are on the chain, the relevant data and transaction records can be effectively protected. Anti-counterfeiting and anti-tampering goals can be achieved, and thus moral hazard and financial risks can be reduced.
+>
+>4) Liquidity Demand: The relationship between value and liquidity is inextricably correlated. Liquidity is the term used to describe how easy it is to convert assets to cash. The more liquid the assets are, the easier their values are to be recognized. So liquidity has a very important influence on asset's value. Money, as medium of exchange, has a very high liquidity. In facet, it is the most liquid asset compared to everything else. Assets with fair liquidity includes cash equivalents such as stocks, bonds and options. And assets such as houses, cars, or farms, factory equipments, etc., have relatively low liquidity and are difficult to value. Therefore their market values may differ significantly. Traditionally, liquidity and value realization are implemented through intermediaries like eBay and Taobao, however, through tokenization blockchain has more potential for liquidity optimization.
+>
+>
+In addition to the above requirements, privacy is also a mandatory need that crypto assets must meet.
 
-现实社会的资产为什么需要代币化成为加密资产？
+Most of the so-called crypto assets in current blockchain world are aimed at a special kind of fungible assets, that is, crypto-currency. Blockchain-based application protocols or platforms are mainly to facilitate the creation, distribution and exchange of crypto assets. Protocols that govern crypto-currencies include ERC20 and some of its simple extensions. For example, one famous third-party trading protocol for fungible assets is 0x protocol. This protocol assumes that digital currencies have been fully distributed among different owners, and that the problem this protocol addresses is to become a decentralized digital asset trading venue, especially for transactions between fungible assets.
 
-Why does real-world assets need to be tokenized to become encrypted assets?
+Various efforts have been put on standardization and specifications of non-fungible assets, such as ERC721 protocol, which was implemented in the popular CryptoKitties game and its various clones.
 
-1.  拥有权的明晰：任何人都应该很方便的无可辩驳的证明自己拥有某些资产。
+UDAP defines a conceptual model based on the analysis and abstraction of various real-world assets in combination with efforts and achievements by MediaChain<sup>\[25\]</sup>, Digix<sup>\[16\]</sup>, BankEx<sup>\[14\]</sup> and other blockchain projects<sup>\[9\]\[10\]</sup>:
 
-      Clear ownership: Anyone should find it convenient to prove that they own some assets.
+<p align="middle">
+<img src="media/asset-model-diagram.png" alt="Asset Model" style="width: 500px;"/>
+</p>
 
-2.  信息的永久化：存储数字化资产需要一个永久的方式。区块链和去中心化存储经济的到来终于让我们有信心能长久保存信息。
+This on-chain asset model defines assets and related objects, as well as the relationships between these objects. This asset model is compatible with ERC721 but offers a richer set of attributes and operations as described below.
 
-    Permanence of Information: The storage of digitized assets requires a permanent way. The advent of blockchain and decentralized storage finally gives us confidence that we can save information for a long time.
+###### 5.1.1 Asset
 
-3.  流动性需求：资产价值和流动性具有密不可分的联系，流动性越高的价值产品，越容易被人接受。一个价值对象的流动性越高，那么这个价值实际上就得到了更多的确认，能够被广泛的接受，所以流动性对于任何价值具有非常重要的作用。货币这一类价值载体，具有极高的流动性，所以货币毫无疑问是所有价值中最乐于被人接受的财产，另外具有高度流动性的还包括股票，债券等价值载体。而类似于房屋汽车，或者农场，工厂设备等这样的资产，流动性相对较差，它的定价和能够被市场所接受的价格，因为流动性的不足，使得可能具有较大的差异，所以拥有这一类资产，就面临着流动性不足，资产价值难以确认的局面。更多的我们周边所知道的资产，包括普通的物件等，实际上已经通过我们现在已经习以为常的网络平台，例如一倍，淘宝网，以及各种二手商品市场具有了流动性，因此能够产生价值的确认。
+Anything that is capable of being owned or controlled to produce value, is considered asset. For example, goods, services, trademarks, securities, warehouse receipts, purchase agreements, licenses, copyrights, music, videos, games, loyalty program points, game equipment, event tickets, collectibles and other physical assets and digital assets. Currency (including cryptocurrencies) is also an asset. When you see "asset" in the white paper of a blockchain project, it most likely refers to cryptocurrency.
 
-    Liquidity needs: Asset value and liquidity are inextricably linked, the more liquid value products, the more easily accepted. The higher the liquidity of a value object, then the value is actually more confirmed, can be widely accepted, so liquidity for any value has a very important role. Money, a kind of value carrier, has a very high liquidity. Therefore, there is no doubt that currency is the most acceptable property among all the values. In addition, the currency with high liquidity includes the value carriers such as stocks and bonds. And assets such as a house car, or a farm, factory equipment, etc., are relatively liquid and their pricing and market-acceptable prices may differ significantly because of lack of liquidity, This type of assets, facing the lack of liquidity, the value of the assets is difficult to confirm the situation. The more assets we know around us, including ordinary items, have actually gained value through the fact that we are now accustomed to online platforms such as Doubles, Taobao, and various second hand commodity markets that have liquidity Confirmation.
+Assets have attributes. Some common attributes, for example, asset identifier, namespace, issuer, fungibility, transferability, etc., are determined by asset issuers and can not be modified after assets are issued. Other attributes, such as name, description, owner, and states, can be modified during the life cycle of assets. Based on the fungibility of assets, UDAP presents a hierarchical model as described in the following diagram, which defines a standard interface, an abstract type that provides basic attributes and operations, and multiple derived asset types.
 
-以上需求同时还要保证不能牺牲用户的隐私。 这是一种不言而喻的的需求。
+<p align="middle">
+<img src="media/asset-hierarchy.png" alt="Asset Hierarchy" style="width: 500px;"/>
+</p>
 
-The above requirements also ensure that you can not sacrifice the user's privacy. This is an obvious need.
+The UDAP protocol itself does not specify any implementation details, however, to better describe the model Solidity is used to illustrate the components and their relationships. We may use a more implementation-neutral interface description language to describe the component model in a later version of the protocol.
 
-区块链世界中的所谓 Crypto Asset基本上都是针对可置换资产，也就是加密货币。这一类应用协议或者平台主要是方便加密资产产生分发交换。规范这一类协议有，ERC20以及一些简单的延伸协议。第三方的较为著名的可置换资产交易协议有0xProtocol。这个协议假设数字货币已经被完全的发布，分布到了不同的拥有者的手中，那么这个协议所解决的问题就是，成为一个去中心化的数字资产交易场所，尤其用于可置换的资产的数字化交易。
+```
+contract Asset is ERC721 {
+  event AssetCreated(address indexed _asset, uint indexed _id);
+  event AssetTransferred(address indexed _to, uint indexed _id);
+  event AssetDestroyed(uint indexed _assetId);
 
-The so-called Crypto Asset in the blockchain world is basically about replaceable assets, which is cryptocurrencies. This type of application protocol or platform is mainly to facilitate the encrypted assets generated distribution exchange. There are two types of agreements that govern this type of agreement, the ERC20 and some simple extensions. The more prominent third-party exchangeable assets trading agreement has 0xProtocol. The agreement assumes that digital currencies have been fully distributed and distributed among different owners, and that the problem this agreement addresses is to become a decentralized digital asset trading venue, especially for digitized transactions in exchangeable assets .
+  function id() public view returns (uint);
+  function issuer() public view returns (address);
+  function owner() public view returns (address);
+  function namespace() public view returns (bytes);
+  function transferrable() public view returns (bool);
+  function fungible() public view returns (bool);
+  function metadataHash() public view returns (bytes);
 
-针对那些不可置换的数字化的资产目前开始出现一些标准化的努力和规范，例如ERC721规范，体现这个规范的是最近在网络上流行的加密小猫，以及后来的各种各样的拷贝复制者。
+  function transfer(address _to) public;
+  function destroy() public;
+}
+```
 
-There are currently some standardized efforts and specifications for digitized assets that are not interchangeable, such as the ERC721 specification, which embodies the recently popular Encrypted Kittens on the Web, and later copywriters.
+* Asset Issuer
 
-下面是本协议抽象出来的一些关键性的资产对象类别和关键属性：
+  An asset issuer in UDAP refers to the address of a UDAP account that issues and registers assets on asset blockchains. This is a immutable attribute.
 
-Here are some of the key asset classes and key attributes that are abstracted from this agreement:
+* Asset Owner
 
-1.  Asset： 顶级的抽象类型资产
- 
-    Asset: the top abstract type asset
+  An asset owner refers to the address of a UDAP account that owns crypto assets registered on the asset blockchains.
 
-2.  个体可区分的资产（None Fungible Asset）和个体不可区分的资产(Fungible Asset)。
+* Fungibility
 
-    None Fungible Asset and Fungible Asset.
+ Fungibility refers to interchangeability of assets with the same amount and of the same type. Based on asset fungibility, assets are usually classified into two categories: that can be replaced and that can not be replaced. In the asset model, the two types correspond to FungibleAsset and StandardAsset, respectively. An non-interchangeable asset means that although both individual assets have similar attributes and external behaviors, their possession is not replaceable for a particular owner because they have different identities. This is analogous to the fact that although both have iPhones, there is no substitute between an iPhone and another iPhone because each iPhone has its own unique attributes that make it disappear if the iPhone is switched. Each iPhone has its own unique phone number and a unique purchase time, so between the two iPhone they are not interchangeable with each other, at least in most cases.
 
-    个体可区分的资产，含义是：虽然两个个体的属性和外部感官都相似，但是因为他们有自己不同的身份，所以他们的拥有对于特定的拥有者而言是不可置换的。这类似于说，虽然两个人都拥有iPhone手机，但是一个iPhone和另外一个iPhone之间是不可替换的，因为每一个iPhone都有它独特的一些属性，使得如果iPhone交换以后用户的使用就消失了，每一个iPhone都有自己的独特的电话号码也有独特的购买时间，所以两个iPhone之间是无法做到自由交换的，至少在大多数情况下如此。
-    
-    Individual distinguishable assets, the meaning is: Although the two individuals have the same attributes and external senses, but because they have their own different identities, so their ownership is not replaceable for a particular owner. This is analogous to the fact that although both have iPhones, there is no substitute between an iPhone and another iPhone because each iPhone has its own unique attributes that make it disappear if the iPhone is switched , Each iPhone has its own unique phone number also has a unique purchase time, so between the two iPhone is not free to exchange, at least in most cases.
+ In the physical world, there are a large number of assets that can not be easily interchanged. For example, most of the real estate properties can not be replaced during the transaction. Other examples include financial assets such as stocks and debts, which are non-fungible assets in many business scenarios.
 
-    在现实生活中存在大量的不可简单置换的资产，除了大部分的不动产在交易的环节不可置换以外，现实生活中还有非常多的票券系统和对未来的服务的预期的信用债务资产以及股票债务期权等金融资产，在很多技术背景的场景下是不可置换的资产。
-    
-    In real life, there are a large number of assets that can not be easily replaced. In addition to the fact that most of the real estate can not be exchanged during the transaction, real life still has a lot of ticket systems and expected credit debt assets for future services as well as stocks Financial assets such as debt options are non-replaceable assets in many technical contexts.
+ The most common of what we call fungible assets is money or digital currency (AssetToken in UDAP term, which is also an ERC20 token). In most cases, one hundred dollar bill is completely equal to and replaceable with another one hundred dollar bill because the main purpose of using one hundred dollar bill is to use one of its most prominent attribute, medium of exchange. Although each bill has some special attributes, such as its unique serial number printed on the the paper bill, it has no specific significance and influence in most cases. Therefore two hundred dollar bills are completely replaceable. Another example of fungible assets is commercial goods, such as apples in a warehouse. Although apples have some special attributes, such as origin, variety, grade, size, color, etc, however, when we say that we have 600 tons of Yantai-produced first class Red Fuji apples with a size of 85mm, these 600-tonne apples are traded as fungible assets because the 600-tonne apples are classified as one group according to industry specific standard. There is no difference to the buyer in the trade.
 
-    而我们称之为可置换的资产中，最常见的就是货币，我们说一百美元的货币和另外一张一百美元的货币，他们之间几乎就是完全可置换的，因为人们使用这类资产的主要目的是使用它的一个极为突出的属性，也就是它的货币所代表的流通价值，而每一个货币所含有的某种特殊的属性，例如货币上印刷的独特的序列号，对于人们使用这个物品而言是没有特定的意义和影响力的，所以在两张一百美元的纸币之间是完全可以兑换的。
-    
-    And the most common of what we call replaceable assets is money. When we say one hundred dollars and another hundred dollars, they are almost completely replaceable, because people use such assets 'S main purpose is to use one of its most salient attributes, namely, the currency value of its currency, and each currency contains a special property, such as the unique serial number printed on the currency, for people to use This item is of no particular significance and influence, so it is perfectly convertible between two hundred-dollar bills.
+ One special type of non-fungible assets, which is referred as CompositeAsset in the asset hierarchical model, is composite asset or asset portfolio. This type of assets typically contains a number of other assets, for example, asset portfolio in the financial sector, warehouse receipts in the supply chain, and many asset bundles that require the packaging of different assets as a whole for trading. Below is the definition of the interface.
 
-3.  Transferable: 可转让的资产
+ ```
+ contract CompositeAsset is StandardAsset {
+   function getAmount() public returns (uint);
+   function getAsset(uint idx) public returns (address);
+ }
+ ```
 
-    Transferable: Transferable assets
+* Transferability
 
-4.  Future Asset：未来交割的资产：这一类资产，是某种服务或者产品的提供方答应给顾客或者消费者在未来的某个时间提供这种产品或者服务的承诺，这种承诺被数字化和加密化以后，成为一类加密资产，它可能具有明确的现金价值，但是这些资产，它的拥有者和属性都是有特定的关联，并且不是随意可置换。这些资产在转移的过程中并不是转移简单的票面价值，而是转移这种对未来的某种服务或者产品的拥有权力。最简单的例子是一场演唱会门票，它是活动的主办方对未来的某个时间点，允许持票者进入特定的场所，然后得到演出表演服务的这么一种信用的承诺的具体体现。这种资产有一个发生，转移，交换，流通，最后交割的这么一个过程。如果拿金融市场的产品比喻的话，它类似于期货产品，可惜的是，这种在现实生活中大量发生的资产却是没有通过金融手段形成良好流通性的一个市场。
+  The transferability of assets determines whether an asset can be transferred to other institutions or individuals after being issued. Transfer of asset can be done either by direct sale or through exchange. If an asset is not transferrable, then its ownership cannot be changed.
 
-    Future Asset: Asset to be delivered in the future: This type of asset is a promise by a service or product provider that the customer or consumer is offered the product or service at some point in the future, digitized and encrypted After that, it becomes a type of encrypted asset that may have a definite cash value, but these assets, their owners, and attributes are all specifically linked and not arbitrary replaceable. The transfer of these assets is not the transfer of simple face value, but the transfer of this future for a service or product ownership. The simplest example is a concert ticket, which is a concrete manifestation of the promised commitment of the event's sponsor to such a credit at some point in the future, allowing the ticket holder to enter a particular place and then getting the performance service. There is such a process of occurrence, transfer, exchange, circulation and final delivery of such assets. It is similar to a futures product if it uses the metaphor of a financial market product. Unfortunately, this massive occurrence in real life is a market without the formation of good liquidity through financial means.
+* Resellability
+
+  Resellability is a special attribute that asset issuers can use to restrict the resale of assets. Although in most scenarios assets are re-sellable, in certain special cases, such as shopping vouchers, issuers can restrict the resale of vouchers. In this way, the vouchers can not be transferred or sold after the vouchers have been issued to them, thus limiting the circulation of such assets in the secondary market and ensuring that such assets are available only to recipients designated by the issuer.
+
+* Namespace
+
+  An asset namespace refers to the naming rules for asset classification and grouping so as to facilitate the distinction between different assets. Namespaces are commonly structured as hierarchies to allow reuse of names in different contexts, for example, a warehouse receipt can be identified via udap://xinong/wr/WR-12345678, where "xinong" is the registered app name (or chain name), "/wr/WR-12345678" is the namespace id given by the app (or chain) to identify a warehouse receipt coded as WR-12345678.
 
-    我们称之为期货类的资产有非常大的潜力能够在区块链或者是去中心化的记账系统中得到非常好的应用，并且能够促进所在行业的经济流转、价值提升。一个典型的应用场景，就是我们日常交通中所购买的飞机票或者火车票，这一类的资产每天都在产生。一张票所代表的是航空公司或者轨道运输公司对某一个消费者承诺的在某一个时间，把他从特定地点运送到另外地点的一种服务的承诺。这一类资产具有极大的体谅，但是我们考察后却发现这些资产的流动性还是远远不足。实际上，乘坐飞机或者火车这一类主流交通工具所遇到的麻烦和不方便，都是因为这些资产的流动性严重不足。另外的例子，是旅馆的房间，旅馆房间这种资产目前的销售渠道主要是在线订阅。这些资产实际上并没有得到完全的抽象化和数字化，其重点并不在于数字化，而是进行抽象化，把他这种日常生活中似乎可以触及和使用的资产变成一种具有流通性的资产。资产的流通性，能够为整个市场带来活力。需求和服务方的完全的对接，降低整个供应链中的损耗，对行业的发展起着非常重要的作用。
-    
-    The assets we call futures have great potential to be used very well in the blockchain or decentralized billing system and to promote economic mobility and value enhancement in our industry. A typical scenario is the purchase of airline tickets or train tickets in our daily traffic, a class of assets that is generated daily. A ticket represents a commitment by an airline or rail company to a service that a consumer delivers at some point to deliver a service from a particular location to another location. This kind of asset has great understanding, but after examining, we find that the liquidity of these assets is still far from adequate. In fact, the inconveniences and inconveniences that come with using mainstream vehicles such as airplanes or trains are due to the serious lack of liquidity of these assets. Another example is the hotel rooms, hotel rooms, the current sales channels for such assets are mainly online subscriptions. These assets have not actually been completely abstracted and digitized, and the focus is not on digitization but on abstraction, turning what appears to be palpable and useable in his everyday life into a liquid asset . The liquidity of assets can bring vitality to the entire market. The complete connection between demand and service sides and the reduction of losses in the entire supply chain play a very important role in the development of the industry.
+* Asset Identifier（AID）
+
+  Asset identifiers are unique identification codes set by the UDAP platform for assets and are automatically created for each asset by a standard algorithm as follows:
+
+  ```
+  AID = uint(keccak256(issuer_address, namespace, metadata_multihash))
+  ```
+  This algorithm generates a unique AID for an asset with its issuer's account address, its namespace, and the hash value of the asset metadata description file in IPLD or JSON-LD format. Assets issued by different asset issuers, or assets issued by the same asset issuer but with different namespace id, or different asset metadata descriptions, will receive different AIDs.
+
+* Metadata MultiHash
+
+  It refers to the content-addressable MultiHash value that is generated from asset metadata to uniquely address the asset's metadata. See 5.1.2 for details about asset metadata.
+
+* Other Attributes
+
+  In addition to the above attributes that usually can not be changed once identified, assets also have mutable attributes that can be updated after issuance, such as the amount of fungible assets (e.g., 1 kg of gold, or 500 tonnes of apples), the state of the asset (leased, unused, listed, etc.), ownership, proof of assets, description, etc.
+
+###### 5.1.2 Asset MetaData
+
+Metadata is commonly referred to as "data about data." In UDAP asset metadata refers to the descriptive information applied to assets and is defined by asset issuers. The structure and meanings of these metadata are known to asset issuers and the associated applications. In UDAP, asset metadata is presented as JSON data in conformity with JSON-LD specification, and is stored off-chain, while on-chain crypto assets must hold Multihash values of their off-chain metadata. Smart contracts can obtain the multihash value through the metadataHash() method to address and retrieve the related asset metadata.
+
+````
+  function metadataHash() public view returns (bytes);
+````
+> JSON-LD, or JavaScript Object Notation for Linked Data, describes how linked data is represented in JSON as a directed graph, and how to represent interlinked and non-interlinked data in a single document. For example, metadata about a recipe asset can be recorded in JSON-LD format (shown below) and published to IPFS or other P2P storage. Typically, asset metadata can be encrypted before posted to P2P storage to enforce data privacy.
+
+````
+{
+   "name": "Mojito",
+   "ingredient": [
+     "12 fresh mint leaves",
+     "1/2 lime, juiced with pulp",
+     "1 tablespoons white sugar",
+     "1 cup ice cubes",
+     "2 fluid ounces white rum",
+     "1/2 cup club soda"
+    ],
+   "yield": "1 cocktail",
+   "instructions": [
+      {
+        "step": 1,
+        "description": "Crush lime juice, mint and sugar together in glass."
+      },
+      {
+        "step": 2,
+        "description": "Fill glass to top with ice cubes."
+      },
+      {
+        "step": 3,
+        "description": "Pour white rum over ice."
+      },
+      {
+        "step": 4,
+        "description": "Fill the rest of glass with club soda, stir."
+      },
+      {
+        "step": 5,
+        "description": "Garnish with a lime wedge."
+      }
+   ]
+}
+````
+> The above metadata can be recorded as a merkle-link on the blockchain so that applications can address through merkle-link to obtain the relevant off-chain asset metadata.
+
+```
+{"md",{"/","QmdnuRNwdmZzHfHVUMVHZFXKXAe6DjvBvPdKy27HpJUN9H"}}
+```
+
+> UDAP adopts a simple method to record only the multihash value on the blockchain which points to the off-chain metadata. The specification defines how to obtain content-addressed objects through the hash value.
+
+```
+{"metadataHash","QmdnuRNwdmZzHfHVUMVHZFXKXAe6DjvBvPdKy27HpJUN9H"}
+```
+
+>Usually applications need to address each item of metadata to obtain the resolution of the related data. Therefore, the content-addressable network data model is used to address the asset metadata through the merkle-path. For example, IPFS DAG's javascript interface (ipfs.dag.put) can be used to upload metadata of the recipe asset to the IPFS so that each metadata item is available by invoking "ipfs.dag.get".
+
+>Metadata on IPFS as DAG node:
+```javascript
+  ipfs.dag.put(metadata, { format: 'dag-cbor', hashAlg: 'sha3-512' },
+    (err, cid) => {
+      console.log(cid.toBaseEncodedString())
+    // zdpuAz4HbUHTKQbdpnn42Zo4GUsU7yrBpvb2W9BF2NwvBaLn6
+  })；
+```
+>DAG node through merkle-path:
+```javascript
+ ipfs.dag.get('zdpuAz4HbUHTKQbdpnn42Zo4GUsU7yrBpvb2W9BF2NwvBaLn6/name',
+  (err,result)=>{
+    if (err) {
+      console.error('error:'+ err);
+    }
+    else {
+      console.log(result.value);
+    }
+ });
+```
 
-5.  Debt Asset： 债权资产， 也是未来交割的资产。
+###### 5.1.3 Ownership
 
-    Debt Asset: debt assets, but also the assets of future delivery.
+The ownership of an asset is a type of asset metadata that tracks who owns an asset. An asset can have multiple owners. The ownership of assets can be changed over their lifecycle, for example, when an asset is transferred to another person from current owner, the ownership of this asset is changed. In UDAP asset protocol, while asset ownership belongs to a type of metadata, UDAP manages asset ownership as an independent attribute that can be tracked by a smart contract defined as follows:
 
-    a.  Organizational Debt
+```
+contract Ownership {
+  function ownerOf(address asset) public view returns (address);
+  function ownerOf(address asset, uint asOf) public view returns (address);
+}
+```
 
-    b.  Personal Debt
+The above interface gives the caller the capability of obtaining current owner account of an asset as well as the owner account as of a given time in the past.
 
-6.  Receivable: 应收账资产
+###### 5.1.4 Asset State and Lifecycle
 
-7.  Inventory: 库存实物资产
+Asset states can be used to accurately track assets at a detailed level. In addition to a few pre-defined asset states such as CREATED, TRANSFERRED, PLEDGED, LEASED, applications can define and name their own states according to business needs and record asset states on the blockchain via UDAP.
 
-8.  PureCryptoAsset：纯粹数字货币资产。
+The life cycle of an asset refers to asset state at different points in time. One of the main functions of UDAP is to provide asset lifecycle management APIs on the blockchain that allows applications to track the entire lifecycle of assets from issuance to destruction to meet various business needs.
 
-9.  Pledgeable: 可质押资产。 质押过程有复杂的多方签名关系。
+Asset lifecycle can be represented with a smart contract as follows:
 
-    Pledgeable: Pledgeable assets. The pledge process has a complex multi-signature relationship.
+```
+contract Lifecycle {
+  // returns current state of a given asset
+  function stateOf(address asset) public view returns (bytes32);
+  // returns the state of asset at given asOf time
+  function stateOf(address asset, uint asOf) public view returns (bytes32);
+}
+```
 
-10. Lendable: 可借出资产
+###### 5.1.5 Proof of Asset
 
-11. Leasable： 可租赁资产
+Proof of Asset (PoA) is an important concept of the UDAP asset model. It is one of the key elements in determining the authenticity of assets. It is also a type of asset metadata in the UDAP asset model, represented as an array of JSON objects in JSON-LD or IPLD format. Each of the JSON objects defines a proof including name, description, and a content-addressable linkHash value of the "proof". The "linkHash" represents a MultiHash value that can pinpoint this proof, which may be a digitally signed PDF file or a scanned shopping receipt. Proofs are stored off-chain and can be obtained through the metadata's merkle-path.
 
-12. Depreciable: 定期减值资产
+```
+"proofs":[
+  {
+    "name":"Storage Contract",
+    "description":"Storage contract for warehouse receipt #123456",
+    "linkHash":"QmWwr4ZfeLJfbWNAuCQfefwo1aHtxC5yjyU8C5WG4DYrYe"
+  }，
+  {
+    "name":"Purchase Receipt",
+    "description": "Purchase receipt for warehouse receipt #123456",
+    "linkHash" :"QmXF4LR4QkuRVh3WQbB56seTX2aPm3Tz7b4Y8heoLAiTkk"
+  }
+]
+```
 
-13. GeoTrackable: 物理位置可定位资产。
+Proof of Asset is an optional but important attribute of crypto assets. Usually asset buyers will require some sort of proofs, however, without a proof an asset can still be traded or exchanged on the market. More discussions about Proof of Asset can be found in 5.3.
 
-#### 5.2.  主要API
-The main API
+Proof of Asset may have different forms in different use cases. For example, in the supply chain warehouse environment, a warehouse receipt is a proof to demonstrate the authenticity of the assets. Other relevant proofs include purchase agreement, storage contract, third-party certificates, etc. Who owns the warehouse receipt owns the rights of goods stored in the warehouse; in the manufacturing sector, manufacturers can use RFID tags or two-dimensional bar codes to uniquely identify their products. In this case, RFID of a product is a proof that demonstrates the authenticity of this product. As such, proofs are data defined and provided by crypto asset issuers to prove the authenticity of assets that can be either numbers or files or images, all in JSON-LD format.
 
-<!-- -->
+###### 5.1.6 Tags
 
-1)  **用户登记**：建立应用的用户空间和公开账本用户空间的映射关系。
-    不同应用之间的用户账号完全隔离。
-    
-    User Registration: Establishes the mapping between the user space of the application and the public account user space.User accounts between different applications are completely isolated.
+Asset tags are keywords or labels that are attached to assets to facilitate identification, classification, retrieval, and inventory control of assets. Multiple tags can be given to an asset by its issuer or owner. Asset tags enable applications in a variety of industries to track and monitor valuable assets.
 
-2)  **应用登记**：获得资产的命名空间
+###### 5.1.7 Asset Registry
 
-     Application Registration : Get the namespace of the asset
+An asset registry maintains a bi-directional binding between crypto assets and real-world assets on the blockchain. All assets posted to the UDAP blockchains need to be recorded in the asset registry by its issuer. At the same time, the asset registry also maintains a number of different data structures and indexes to simplify search and retrieval of assets. Different institutions or applications have their own proprietary registry of assets. Asset issuers can broadcast their assets across the entire network or just to some designated addresses, so that a proprietary registry has access to assets registered in other registries via listeners. For example, landlords can post rental information on multiple rental sites simultaneously, and sellers can initiate auctions on both Site A and Site E. When an asset on Chain A is transferred to an address on Chain B, UDAP must ensure the removal of this asset from the registry of Chain A, and the addition of this asset to the registry of Chain B.
 
-3)  **资产类型登记**：资产的原型（prototype）决定了资产的一些基本操作，例如 fungible asset 和 none-fungible asset
-    的数据结构和操作方式有非常大的区别。 前者就像货币一样，只有其balance 有意义，并且使用数量可以有分数。后者是按单个数量进行操作， 最小"balance"为1， 不可再分。
-    
-     Asset Type Registration: The prototype of an asset determines some basic operations on the asset, such as fungible asset and none-fungible asset The data structure and mode of operation has a very big difference. The former is like money, only its balance makes sense, and the number of uses can have points. The latter is based on a single number of operations, the minimum "balance" is 1, can not be divided.
+###### 5.1.8 Account, Wallet, and Identity
 
-4)  **资产代币的生成**： 这一步操作是最为频繁的操作步骤，也就是资产发行方把隶属所在应用上下文的一个实际资产登记到UDAP中，完成从现实世界到加密资产世界的映射。资产登记过程调用资产登记API。 这个过程有时被称之为 "Tokenize"，有时被称之为"mint"。资产创建者可以对资产属性做细致的配置， 例如：
+Accounts are users' address on the blockchain. A user may have multiple accounts, while an account may have multiple assets. An asset may be associated with multiple accounts. For example, an asset can have multiple owners, an issuer, and multiple signatories. An account can also play different roles in different trading scenarios, e.g., asset issuer, asset owner, or transaction signer.
 
-    Generation of Asset tokens : This step of operation is the most frequent step in the process of registering an actual asset belonging to the application context of the UDAP with the asset issuer to complete the mapping from the real world to the world of encrypted assets. The asset registration process calls the Asset Registration API. This process is sometimes referred to as "Tokenize," sometimes called "mint." Asset creators can make detailed configuration of asset attributes, for example:
+> Asset signatory refers to the account that signature of transactions is required before trading the asset on the UDAP blockchains.
 
--   是否可以转让：一个资产如果不能转让，那么这个资产通常只能是权证资产，
-    其唯一有意义的操作是"交割"，
-    也就是权证拥有者向原始的签发方进行交割获得被许诺的产品或者服务。
+An asset wallet, similar to a safe or a deposit box, is a universal wallet provided by UDAP to allows tracking and management of assets associated to a user's account. An asset wallet can manage multiple accounts, each associated with multiple assets on the blockchain.
 
-    Is it transferable: If an asset can not be transferred, then this asset is usually only a warrant asset,The only meaningful operation is "delivery",That is, the warrant owner delivers to the original issuer the promised product or service.
+Identity refers to the user's personal or social information, for example, ID card, Facebook account, e-mail address, phone number and other information that can represent the user's identity. Blockchain accounts are anonymous, but in some scenarios users have to provide proof of identity to complete the regulatory requirements for KYC and AML. UDAP, in conjunction with a self-governed third-party identity management system such as uPort, provides the application with a mapping of identities to UDAP accounts and asset wallets.
 
+###### 5.1.9 Transactions and Events
 
--   是否可以公开销售：是指是否允许标价投放到UDAP提供的公开市场销售。如果资产被配置为不可转让，那么这个资产本质上也就是不可销售。
-    用户通过其他的手段和另外的用户达成交易，资产也无法在账本上过户。
+Transactions refers to any operation on the assets on the UDAP blockchain. For example, issuance, exchange, ownership change, minting, recasting, pledge, approval and so on are all transactions. When a user initiates a transaction on the UDAP blockchain, the UDAP generates related events and broadcasts to related listeners, which are responsible for processing the transaction.
 
-    Whether or not to sell in the open: Refers to whether the price is allowed to be put on the open market provided by UDAP. If the asset is configured to be non-negotiable, the asset is essentially unsaleable. Users through other means and other users to complete the transaction, the assets can not transfer in the books.
+#### 5.2.  Asset Services
 
--   配置资产操作所需要的多重签名规则。一个签名要求代表着调用资产操作时所附带的签名列表必须匹配的数字签名的清单。
-    一个特殊的签名要求是"prohibited"，
-    其含义是资产发布者设置资产的某种操作被禁止。
-    下面是一些可设置多重签名要求的资产操作：
+On top of the asset model, UDAP has defined a service model for asset operations and management.  Common services are exposed to application developers through micro-services (REST APIs and WebSockets). Unlike the traditional centralized cloud service model, UDAP provides a decentralized service architecture. In this decentralized service architecture, the API gateway and service host are a special type of miners that provide the host container for running UDAP asset services. The gateway is the entry point for third-party applications to connect to the UDAP blockchain, and is responsible for automatic routing application requests, and provides service metering capability as a basis for service charges. At the same time, the nodes that provide the service gateway and the service container are also rewarded by the network. Hosts providing asset services need to deposit a small amount of locked-in tokens and need to broadcast their identities to the UDAP blockchain. UDAP chooses the node serving the service based on the proof of the node.
 
-     Configure Multiple Signature Rules Required for Asset Operations. A signature requirement represents the list of digital signatures that the signature list that accompanies the invocation of the asset operation must match. A special signature requirement is "prohibited",The implication is that certain actions by asset publishers to set assets are forbidden. Here are some of the asset operations that set multiple signatures:
+<!-- 图 -->
 
-    -   资产登记：对于价值昂贵的资产，App 可以选择要求在做资产登记的时候需要提供指定的账户的签名。 这些共同签名者可能是资产审查人， 见证人。
-    
-        Asset Registration: For expensive assets, App may choose to require the signature of a designated account to be provided when making an asset registration. These co-signers may be asset reviewers, witnesses.
-    -   属性修改：描述性属性的修改
-    
-        Attribute modification: Descriptive attribute modification
+###### 5.2.1 User Registration
+User registration establishes the mapping between the user space of an application and the user space of UDAP blockchain. User accounts between different applications are completely isolated. See 5.4 for more description.
 
-    -   资产转让：资产装让给第三方。
-    
-        Asset Transfer: Assets are assigned to a third party.
+###### 5.2.2 Application Registration
+The main purpose of application registration is that developers can get the App Key and App Secret to connect to the UDAP blockchain, and the registered app name is used as the level 0 namespace id of the managed assets.
 
-    -   资产出售
-    
-        Asset sale
+###### 5.2.3 Asset Registration
+Assets need to be registered on the UDAP blockchain for applications to query and manage their states on the blockchain. In the meantime, applications receive asset registration information broadcast by other applications, enabling cross-application and cross-chain asset transfer and trading. Assets registration is a two-way binding process between real world assets and crypto assets. Asset metadata is identified and uploaded to off-chain P2P storage network at this stage, and a hash value of the off-chain metadata is stored and associated to the crypto assets. In this process, asset issuers need to make detailed configuration of asset attributes, for example:
 
-    -   资产抵押
-    
-        Assets mortgage
+-   Transferability：an asset can be either transferrable or non-transferrable. If an asset is not transferrable, the asset is usually a warrant asset. The only meaningful operation is "delivery", which means that the warrant owner delivers to the original issuer the promised product or service.
 
-    -   资产冻结
-    
-        Asset freeze
+-   Sellability：an asset can be either sellable or non-sellable, which defines the ability to be sold. If the asset is configured to be non-transferrable, the asset is essentially non-sellable.
 
-    -   资产核销
-    
-        Asset write-off
+-   Multi-signature requirements: A multiple signature (or multisig for short) requirement represents that a transaction requires multiple approvals from different participants. Multi-signature addresses and transactions broaden this model by creating identities on the chain which are managed collectively by multiple parties. UDAP uses “m-of-n” bitcoin-style multi-signatures, in which a multisig address A is defined as: Given n regular addresses, at least m of the private keys corresponding to those addresses must sign a transaction to perform an action for A.
 
--   
+###### 5.2.4 Tokenization
 
-5)  资产的各类操作  Assets of all types of operations
-   - transfer
-   - rent
-   - buy and sell
-   - exchange
-   - destroy
-   - pledge
-   - auction
-   - escrow
-   - destroy
+The purpose of asset tokenization is to make asset transfer and trading more easier. This is a fairly frequent operation that the asset issuer completes mapping from the real world to the crypto world after registering a real asset attached to the application context to UDAP. Token issuance allows assets to be traded in part rather than as a whole. For example, a painting can be tokenized as a certain amount of tokens through what is sometimes called "tokenization" (sometimes referred to as "minting,") so that the painting can be sold to multiple owners, where each owns a portion of the rights and interests of the painting.
 
-API 的实现主要提供 RESTFul 的实现接口。
+As seen from the UDAP asset model, tokens are fungible assets. Fungible assets are usually tokenized at the time of registration, whereas non-fungible assets are traded as a whole in most scenarios and therefore do not require the issuance of tokens. It is only necessary for issuers to mint tokens when they want to trade their assets partially.
 
-API to achieve the main RESTFul implementation of the interface.
+###### 5.2.5 Asset Recast
+Recasting refers to the process of burning tokens for the rights to redeem goods or services, which creates new proof of asset for the token owner. This process is usually valid for physical assets in specific scenarios. This is because tokens themselves do not necessarily have the associated attributes of physical assets and the tokens are issued by the asset owner to enhance liquidity. When the physical asset is in the custody of a third party, the tokens issued by the asset owner may not always be accepted directly by the custodian of physical assets. Therefore, in many cases, tokens can not be used to directly redeem physical assets and new crypto assets need to be generated through the process of "recasting". For example, after Alice registers her 500-tonne apple on the blockchain to form a crypto asset (crypto warehouse receipt), Alice can issue a token per tonne. Alice then transfers 100 tokens (corresponding to 100 tonnes of apples) to Bob. After Bob receives 100 tokens, he can submit the tokens to the UDAP recast contract to generate a certificate to redeem asset (e.g., bill of lading) and destroy the corresponding tokens. Then Bob can redeem goods with this bill of lading. After redemption, the related crypto assets (warehouse receipts) are automatically destroyed on the blockchain to prevent double spending.
+
+###### 5.2.6 Multisig
+Multisig is an additional security protection mechanism in the process of asset trading. It refers to the process that multiple accounts digitally sign the same transaction before it is executed. Only when required signatures are collected will the transaction be broadcast to the chain. In many scenarios multiple signatures are required to complete a specific asset operations, for example:
+
+- Registration: For expensive assets, the application may require signatures of the designated accounts be provided at the time of asset registration in order to prove the authenticity of the asset. Auditors and witnesses are possible co-signers in this process.
+- State Change: Some key state changes may need to be confirmed by multiple parties.
+- Trading: Co-ownership of assets requires the signatures of multiple owners when assets are transferred or sold to a third party.
+- Pledging: Pledges usually require multiple approvals to ensure authenticity of assets, accuracy of price, and security of transaction.
+- Asset freeze (冻结): The asset freeze may require the signature of the court and the parties involved.
+- Asset write-off (核销): This operation usually requires the approval from multiple supervisors. For example, reimbursement process requires the signatures of direct managers and CFO to complete expense reimbursement.
+
+###### 5.2.7 Other Asset Services
+
+In addition to the basic services described above, UDAP provides the following services:
+
+- transfer
+- rent
+- buy and sell
+- C2C trade
+- pledge
+- auction
+- escrow
+- redemption and destruction
+
+#### 5.3. Authenticity and Proof of Asset
+
+UDAP assumes a few basic principles about the authenticity of assets:
+
+- 任何资产的真实性必须在管理这种相关应用中的上下文里谈论才有意义。
+- 资产的权威性和真实性可以由第三方的应用通过他们认为可靠的和足够的机制来确立。
+-
+- Authenticity is not protected by the UDAP protocol.
+- Authenticity is only valuable in its application context.
+- The authority and authenticity of assets can be confirmed through a mechanism that is considered to be reliable and adequate by participants.
+
+UDAP is a distributed system. It does not have a single operating entity to verify the authenticity of assets. While asset verification may be done in a distributed and decentralized manner, UDAP currently does not design such mechanism.
+
+However, if a person claims a crypto asset that he owns on the UDAP network is backed by a real-world asset, how could he prove this claim? UDAP proposes following guidance:
+
+1）Proofs of Asset
+
+Under normal circumstances anyone can issue assets on the blockchain via an app. At the time of asset issuance, the issuer has to provide a detailed description about the asset in the form of texts, images and other media. The issuer may also present some real-world confirmation of the asset, for example, a certificate of property, an impartial letter, a warehouse receipt, a purchase receipt, and so on. All of these supporting documents do not necessarily guarantee the authenticity of the assets, but these additional attributes to a certain extent increase the authenticity of the assets.
+
+2）Guarantee or Insurance
+
+Asset issuers or owners can guarantee the authenticity of the assets by providing some form of guarantees or insurance.
+
+3）Multisig
+
+Asset issuers can leverage the multi-sig mechanism in the registration process to enhance the authenticity of assets. In this process, multiple proofs from related parties are usually required.
+
+The first step in enhancing the credibility of assets is when assets are mapped from the real world to the crypto world, which is what we mean by registration. With the support of UDAP, a multi-party signature must be provided when an issuer declares an asset on blockchain. The signature comes from the current owner of the asset. Other signatures may be obtained from current custodian of the asset, the notary and the third party auditor who verify and confirm the ownership of the asset.
+
+If a third-party application considers that the registration of a user's asset is important, it can leverage the multi-signature mechanism provided by UDAP to allow the relevant guarantor (including asset custodian, notary and auditor) of the asset during asset registration to submit proofs of asset and sign the transactions. For example, if a person claims that he owns a gold bar himself, the application requires that the user must, at the same time as the declaration, submit a gold asset certificate issued and signed by a custodian that certifies such ownership, as well as the digital signatures and associated certificates from other third party auditors. In the absence of any of these digital signatures will result in the denial of asset registration.
+
+4）Escrow
+
+The ultimate value of assets is achieved through circulation. Escrow is a common method of trading assets between untrustworthy individuals. The owner of an online store may claim to own any goods. The platform does not recognize the credibility of such claims. Instead it offers a custodian mechanism that usually holds temporarily assets that are easily deposited by both parties in the transaction, for example, purchases of ordinary merchandise from an e-Mall, the money paid by the buyer does not go directly to the owner of the goods, but goes into the escrow contract first, and then the buyer must confirm the authenticity of the goods after the buyer receives the goods. The traditional e-commerce platform basically adopts this kind of mechanism. For example, on the localbitcoin.com platform (http://www.localbitcoins.com), the escrowed objects are the commodities to be traded, that is, bitcoin, while the money to buy bitcoin is paid offline.
+
+For those products that are very expensive, there may be a need for multiple protection mechanisms, for example, a combination of above mechanisms, which prevents possible fraudulent activity during asset trading. UDAP provides API for third-party applications to establish a flexible mechanism to ensure the authenticity of assets and to ensure the reliability of the transfer process.
+
+#### 5.4. Identity Management
+
+The main purpose of UDAP is to manage real-life assets with blockchain technologies, and to use these technologies to increase their liquidity and thus enhance its permanent durability. At the same time, one important goal of UDAP is to allow these real world assets in the form of crypto assets to be easily transferred among owners.
+
+The first and foremost problem is the identity of the participants in the asset related transaction. For real-world asset transfers, it may not be enough to know only the account numbers. Because the conversion of these assets may involve the requirements of the real identity, for example, a contractual relationship established by the two sides through the asset network, if traceability is important, then the identity of the parties have very clear requirements. The two parties to the contract need to know each other very clearly, that is, the individual that they want to make the transaction. Once the contract is in trouble during execution, there is always another way for the contract party to track and confirm the problem in the real world. Considering again that if third parties' law enforcement agencies are able to participate in this process, the identification of the identities of both parties to the contract is a prerequisite for their participation.
+
+Each application will determine how much they need to be aware of the identity of the user in the real world. In more stringent applications, they may need to be fully aware of the ID of the user of the application in the real world, his address, and his contact details. For example, a cryptocurrency exchange may require users to submit their own proof of identity in real life, such as ID cards, passport photos, and to verify their phone number and EMAIL address. Moreover, proof of their places of residence may be required and fully verified. In fact, this is the basic verification process that most of the major crypto exchanges are conducting. Other applications may not have such KYL requirements. Maybe they just need to know the registered user's EMAIL address, or maybe they are not interested in knowing any of these information.
+
+There are several types of identity management systems on the Internet:
+
+- Fully centralized identity management system, such as citizen ID card system.
+- Fully siloed authentication system, for example, each application has its own authentication system.
+- Federation Identity System: Internet applications that have taken shape to a large scale provide authentication for other applications through OpenID, OAuth, or similar mechanisms. The provided process can add user's confirmation of identity and additional property exposure.
+- Self-Sovereign Identity Management.
+
+Given that UDAP provides an open ledger service to third-party applications, we decide to adopt an evolutionary path for UDAP to transition from a Siloed identity system to a Self-Sovereign identity system:
+
+In the first phase of UDAP Identity Management:
+
+- 一个人的身份由第三方的应用所确定。在应用之外没有抽象的身份。也就是每一个应用对应于一个 persona。 UDAP 不追求作为单一的identity provider。 应用身份的独立性能够提供隐私保护和账号的安全。
+- 在应用级别的用户的创建是应用自身的工作， UDAP不参与。
+- 应用用户需要注册到UDAP体系中也是通过相应的应用完成。
+- identity认证过程和资产认证一样留给应用或第三方认证机构。identity认证对某些场景来说是必须的，但是不是UDAP的责任，应用只需要保证提交给UDAP存放的hash和提交给第三方认证的是一致的，这样一旦第三方认证机构认可了用户的identity，那么UDAP就可以确认这个用户是他所申明的身份。
+
+- A person's identity is provided by a third-party application. There is no abstract identity outside of the application. That is, each application corresponds to a persona. UDAP does not pursue as a single identity provider. The independence of application identity can provide privacy protection and account security.
+- Applications are responsible for user account setup. UDAP is not involved in this process.
+- Applications are also responsible for creating UDAP blockchain accounts for their users.
+- Identity verification is the responsibility of applications or third-party certification organization. Applications need to ensure that the hash value submitted to UDAP is the same as the one submitted to the third-party certification organization. Once the third-party certification organization has approved the identity of the user, then UDAP can confirm that the user is his identity.
+
+In the second phase of UDAP Identity Management:
+
+- UDAP provides a decentralized PKI interface (dPKI) to third party apps.
+- UDAP integrates a Self-Sovereign identity system that allows users to have multiple identities and have full control over the use of their identities across applications.
+- Asset Wallet (UAW) provides Hierarchical Deterministic account creation and management mechanisms.
+- UDAP supports account recovery to prevent users from losing their identities if their devices or passwords are stolen or lost.
+
+We are looking closely at the development of some third-party identity management systems and will consider the possibilities of integrating their services into UDAP network. These systems include (but not limited to) uPort, ShoCard, Civic, Mooti, ​​and others.
 
 ## 6.  通用资产钱包 (Universal Asset Wallet， UAW)
 
@@ -452,8 +668,8 @@ Think carefully about this function, which is an extremely powerful functional d
     c.  个人债务可以转让流通
 
     d.  合约交割及其简单。
-    
-    
+
+
 
      a. Saving notarization and costs
 
@@ -586,7 +802,7 @@ UAW is an ecosystem. He provides a programmable excuse for third-party applicati
      Deliveries refer to the promise of future services provided by asset issuers who need to deliver the final product or service within a certain period of time. A process of redemption of a future asset commitment is actually a promised process of recovery, which we will simply call a "ticket examination." Once the delivery has taken place. An asset in the "futures" form has its life cycle completed. Such scenes are ideal for tickets such as ticket tickets for shows, coupon coupons for restaurants and personal debts.
 
     某种票证的持有人，在进行服务的兑现的时候，点击，对线或者验票的按钮，出示给服务厅工整，服务提供者使用验票或者验证的按钮，就完成了，对这笔债务的回收，然后他可以在线下提供，这笔债务的纸面所指定的服务，或者产品。也就是说，通用资产钱包也可以拿来作为演出会的门票，或者电影院工作人员使用的验票工具。
-    
+
     When a holder of a certain type of ticket clicks on a line or a check-out button to present the service, he / she presents the button for the service hall to be neat and the service provider uses the ticket or the verification, and this is done The debt is recovered, and then he can be offered offline, on the paper designated by the debt service, or product. In other words, the Universal Wallet can also be used as a ticket for a show or a ticket checking tool used by movie theater staff.
 
 4.  售卖： UDAP自带市场工具，提供资产拥有者在市场销售资产。
@@ -630,7 +846,7 @@ More API will be provided in batches, including various auction methods, escrow 
 In UDAP, address is divided into account address, asset address, and assetProto address. Where account represents the actual account of the user, organization, service provider, etc. Asset represents an asset, AssetProto is a prototype of a type of asset, and an asset must be associated with an asset prototype in a one-to-one correspondence.
 
 这3类address都具有具有一个versionHash和lastCommitTimestamp属性. versionHash代表这一个地址的改动状态,
-一个地址的每一次改动都将产生一个新的随机且永不重复versionHash值. lastCommitTimestamp则记录一个地址最后一次接到交易处理后完成的时间点. 
+一个地址的每一次改动都将产生一个新的随机且永不重复versionHash值. lastCommitTimestamp则记录一个地址最后一次接到交易处理后完成的时间点.
 
 These three types of address have a versionHash and lastCommitTimestamp property. VersionHash represents the changing status of this address,
 Each change of an address will generate a new random and never duplicate versionHash value.lastCommitTimestamp will record the last point in time when an address was received after the transaction was processed.
@@ -702,7 +918,7 @@ With similar platforms for comparative analysis
     Various performances, live shows, sporting events, ticket management for various gatherings under the line. A third-party third-party application platform that focuses on the complete ticketing and full lifecycle offering of various ticketing distribution and streaming services. It is often the case that viewers who hold concert tickets may not be able to attend the show for whatever reason, and that they need to be able to transfer the votes to others in the best way possible, in the opposite direction, When you see a concert, you may have missed the time of the concert tickets, they do not have a reasonable and convenient way to get tickets for the event, that is, this type of asset lacks a convenient secondary market. The performance market is still a relatively good market, because in private, the people we call the ox play a liquidity role, though not through a formal channel, but they did indeed confirm through the liquidity The value of the specific activity and the purpose of meeting the supply and demand, they get the middle of the difference.
 
     可以利用我们提供的API为他们每一次活动数字化和加密资产化或者代币化后的，各种票券可以在朋友之间赠送、转让，也可以放到资产钱包所提供的标准的资产市场，进行二级市场的交易。在加密化资产的交易流通过程中，资产的原始发行方可以控制资产交易的频率，流动性，以及在资产交易中价格的浮动范围。他们还可以控制每一个资产是否允许进行转手、转让等刺激市场的交易。这为票务管理的app提供了极为方便的特性，同时有一般的票务系统中不可比拟的安全性和流动性。我们的数字资产钱包，甚至包括了灵巧的资产转移的功能，完全可以直接用来完成演出演唱会，电影票等票务所需要的现场验票和交割环节的基本手续。因为我们的资产钱包把这一类资产所需要的交割，或者称之为已资产支付进行了抽象化。这样第三方应用叫至需要进行数字资产的铸造代币化。并且对这些资产的二级市场流通性进行配置，以后的后续工作都可以被消费者试用数字资产钱包。
-    
+
     After we digitize and encrypt each of their events using our API for asset or tokenization, various tickets can be donated, transferred between friends, or put in the standard asset market provided by the wallet, Conduct secondary market transactions. During the transaction flow of encrypted assets, the original issuer of the asset can control the frequency of asset transactions, liquidity, and the range of price fluctuations in asset transactions. They can also control whether each asset is allowed to be resold, transferred, etc. to stimulate market transactions. This provides an extremely handy feature for ticket management apps with the unparalleled security and fluidity of a typical ticketing system. Our digital asset wallets, even including the smart asset transfer function, can be used directly to complete the basic procedure of on-site ticket inspection and delivery of tickets for concerts, movie tickets and other ticketing needs. Because our asset wallets abstracted from the delivery of what is required for this type of asset, or what is called asset payout. This third-party application is called tokens for casting that requires digital assets. And the secondary market liquidity of these assets to configure, follow-up work can be consumer trial digital asset wallets.
 
 2.  个人形象，品牌代币（或者叫个人品牌"上市"）。
