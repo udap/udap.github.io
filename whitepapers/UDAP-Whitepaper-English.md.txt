@@ -92,10 +92,11 @@ subcurrency, bitcoin/litecoin/dogecoin sidechain, etc) inside of a
 contract.  \[ <https://github.com/ethereum/wiki/wiki/Design-Rationale>\]
 
 
-Ethereum clearly has the main goal of building a blockchain platform for general financial computing. Any high-level abstraction is pushed up to user-defined smart contracts. This rational and restrained approach is agreeable, but it is not the "Asset Internet" protocol we have conceived and the direction we sought to pursue. Smart contracts offer dApp developers relatively great flexibility because of their "Turning Complete" computing power, but they also bear obvious technical obstacles and real risks. Although Smart Contract "Turning Complete", but provide programming ability is still very limited, for ordinary application developers have a lot of "holes" they need to patch. In the meantime, because of all the code being exposed, user-defined smart contracts have exposed a large attack surface, as evidenced by several incidents that have caused serious economic losses in the past two years in Ethereum based dApps. Bitcoin networks have very limited smart contract capabilities. However, many loyal fans of Bitcoin networks see the limited design as a very good way to prevent bitcoin networks from being subjected to attacks. A very important indicator of the bitcoin network robustness is that bitcoin networks have endured countless attacks for the last eight yeas, yet essentially no major failure has happened in the protocol level.
+Ethereum clearly has the main goal of building a blockchain platform for general financial computing. Any high-level abstraction is pushed up to user-defined smart contracts. The rational and restrained approach is agreeable, but it is not the "Asset Internet" protocol we have conceived and the direction we sought to pursue. Smart contracts offer dApp developers relatively great flexibility because of their "Turing Complete" computing power, but they also bear obvious technical obstacles and real risks. Although Smart Contract "Turing Complete", but provide programming ability is still very limited, for ordinary application developers have a lot of "holes" they need to patch. In the meantime, because of all the code being exposed, user-defined smart contracts have exposed a large attack surface, as evidenced by several incidents that have caused serious economic losses in the past two years in Ethereum based dApps. Bitcoin networks have very limited smart contract capabilities. However, many loyal fans of Bitcoin networks see the limited design as a very good way to prevent bitcoin networks from being subjected to attacks. A very important indicator of the bitcoin network robustness is that bitcoin networks have endured countless attacks for the last eight yeas, yet essentially no major failure has happened in the protocol level.
 
 
-"Asset Internet" is not a universal computing platform by design, but a platform that handles general assets encoded and protected by blockchain technology. It is a "Featured Chain." From a protocol perspective, it is a thicker and more specialized protocol that natively supports the tokenization of assets and general asset behavior such as storage, transfer, trading, sales, etc. We are delivering a robust, secure, and high-performing asset management and trading platform for everyone. We will not be supporting custom smart contracts (or at least not exposing the capabilities of smart contracts to end users), for safety and performance reasons. In other words, we at the expense of general-purpose smart contracts or general-purpose computing power, the ability to directly asset management capabilities and performance as the most important platform for the development. This level of realization may be carefully considered in the progress of the project.
+"Asset Internet" is not a universal computing platform by design, but a platform that handles general assets encoded and protected by blockchain technology. It is a "Featured Chain." From a protocol perspective, it is a thicker and more specialized protocol that natively supports the tokenization of assets and general asset behavior such as storage, transfer, trading, sales, etc. We are delivering a robust, secure, and high-performing asset management and trading platform for everyone. We will not be supporting custom smart contracts (or at least not exposing the capabilities of smart contracts to end users), for safety and performance reasons. 
+
 
 
 We think this "Thick Protocol + Thin Application" model will be the core architecture model for blockchain applications and will greatly boost the new applications of blockchain and Internet in general. This model is technically innovative and value-conscious, allowing the value of the Internet to sink from the application layer to the protocol layer, turning the protocol layer into a cross-application big data repository. The result is that the protocol layer becomes more strategic and investment value.
@@ -110,6 +111,7 @@ UDAP offers a selected set of features that simplify blockchain application deve
 - The Universal Asset Wallet is considered a significant part of UDAP package. It must offer generalized asset operations across applications such that the third party apps do not have to implement the common user interactions. In the meantime, it must offer a pluggable architecture such that asset interactions can be customized and enhanced if the apps choose to do so.
 - UDAP offers asset market and exchange API and implementation in the wallet. Once registered, assets can acquire liquidity immediately without relying on other space to provide liquidity.
 - UDAP does not provide built-in people and assets identifications that are detached from applications. All logics are defined by applications. Even those that look like built-in features are actually applications that are built on the UDAP API. 
+- Sovereignty for each application: 
 
 UDAP basic code comes from Ethereum. UDAP is not a patch of Ethereum code base. The Ethereum transaction and block structure are modified to natively support none-currency assets, thus it is a solid foundation to be extended to provide advanced features in asset management. We’ll keep the strategy open so sometime in the future if Ethereum would have become a pluggable platform we might be able to backport UDAP features to Ethereum or a variation of it.
 
@@ -128,7 +130,7 @@ UDAP basic code comes from Ethereum. UDAP is not a patch of Ethereum code base. 
 
 5. Identity management. Blockchain technology is based on the modern cryptography and, to a large extent, provides new security standards for third-party applications. It requires that all users behave in a secure manner. Each user, after their authentication, signs their own behavior with their own keys and assumes the corresponding responsibilities. Managing digital identity is itself a relatively complex process that requires a set of programming methodologies. Our asset management agreement brings a simple but effective package of identity management tools. Third-party applications use this third-party application based on guaranteed security to fully enjoy the convenience provided by blockchain encryption. Identity management, the identity of third-party in-app users, is often only relevant in the context of their own applications in the past world. After entering the blockchain event, the asset behavior of all users must be bound to one or more accounts in the blockchain.
 
-6.  Privacy. Asset Protocol will provide encryption for all types of assets managed by third party users. Users have complete control over the storage of their assets in the network and the information they control over their assets is open to specific populations or applications. Users can control their own asset transfer path is open, or have complete privacy. At the asset-user level, users and applications within each application are isolated from each other. The primary purpose of doing so is to ensure the privacy of users. Our universal digital wallet can import multiple third-party applications simultaneously. Because each application is isolated from each other, in fact, one by one for a wallet can be entered at the same time the user knows the password, multiple third-party applications corresponding to the blockchain account. From the user's point of view, these accounts belong to the user. From a unified asset wallet, observe all the types of real-world bond with their own possession of encrypted assets, as well as those purely encrypted currency assets.
+6.  Privacy. Asset Protocol will provide encryption for all types of assets managed by third party users. Users have complete control over the storage of their assets in the network and the information they control over their assets is open to specific populations or applications. Users can control their own asset transfer path, leaving it open, or completely private. Users and applications within each application are completely isolated from each other to ensure the privacy of users and their assets. Our universal asset wallet can import multiple third-party applications, each configured with a separated account. 
 
 7. Workflow support. UDAP has built-in support of multi-sig signing flow. Key asset actions, such as the transfer of assets, the exchange of assets and the sale of assets, often require the protection of multiple signatures. Applications can be very easy to set the key action signature protection, strategy and rules. Once a protected action is discovered or invoked, the user's generic asset wallet automatically prompts the user for the signature. In my own wallet, I can sign, or refuse, the processing of assets by multiple signatures of other people in real time. This type of workflow can be done not just between individual users holding Universal Asset Wallets, but also between the third-party application's interface and the Advocate Universal Wallets. This type of multipoint communication and communication is supported by the underlying P2P-based messaging protocol on the asset network.
 
@@ -621,13 +623,12 @@ The signature includes the time of signature, the signature's validity period, a
 
 Our users should note that as part of our conceptual network, the first phase of our product launch will be based on Ethereum's reliance on the architecture, bringing together Tendermint as the consensus mechanism. Although our plan to build a brand new asset network that reflects the key attributes of Ethernet or bitcoin is a mid-term goal. In our first-of-its-kind environment for our users, our operating environment will depend primarily on the capabilities our existing Ethernet environment can deliver to us, depending on a few other technologies that are compatible with Ethernet's smart contract environment We also do not rule out the goals of our first phase to consider using other platform technologies that are compatible with Ethereum, or similar.
 
-#### 7.2. Performance implementation
-
+#### 7.2. Performance Implementation
 
 There are three major factors that are accountable for the abysmal throughput typical of Bitcoin network and Ethereum: 
 
-1. The same transaction must be replayed on all the nodes, no matter how expensive they might be.  A great deal of computing power is wasted in competing repetitive calculations. 
-2. On a node, all the transactions are serialized in building into the blocks and there is no way to build the blocks in parallel because there is no partitioning of the transactions which is required to avoid race conditions in reading and writing account information. 
+1. The same transaction must be replayed on all the nodes, no matter how expensive they might be.  A great deal of computing power is wasted in competing repetitive calculations. This has been proved to be one important way to make sure all the nodes behave by the rule and great security is maintained. However, this first-gen technique is very expensive in nature and is the primary reason that blockchains’ throughputs are incredibly poor, considering how much computing power is behind each network.
+2. On each node, all the transactions are serialized in building into the blocks and there is no way to build the blocks in parallel because there is no partitioning of the transactions which is required to avoid race conditions in reading and writing account information. 
 3. Smart contracts as implemented in Ethereum are slow. They’re interpreted at runtime instead of running in native speed or in highly optimized VMs, such as JVM. 
 
 The first issue is being tackled by a few solutions such as POS based consensus and some other protocols which do not use blockchain at all.  UDAP RI specifically uses [Cosmos](http://cosmos.network/) as the general network architecture. Cosmos offers the following features that UDAP can immediately leverage:
@@ -652,7 +653,15 @@ In UDAP, each application is assigned an application ID and owns an independent 
 
 The following picture shows how the transactions received by a node are properly dispatched to separate transaction queues for each application. All the CPU cores are assigned to process the transactions in parallel and the transactions are Merklized in an application specific blockchain. 
 
-One chain per application is a major design choice we have made that is very flexible in optimizing the performance and security, which are the primary two requirements for anything that claims to deal with a great number of  bbds 
+![](media/AppChains.png)
+
+One chain per application is a major design choice we have made that is very flexible in optimizing the performance and security, which are the primary two requirements for any applications that claim to deal with any assets. Each chain is an overlay chain on top of the generic UDAP transaction streams. We call the mechanism Virtual Private Chain(VPC), in analogue of VPN on top of TCP/IP.
+
+The root chain is there for 
+- application registration and configurations. 
+- Generic user account registration, which provides custodian service for the account of the third-party applications running in UAW. Users can optionally choose to register them with UDAP to take advantage of the identity attestation service. 
+- It also periodically takes snapshots of the application chains states in case that fraudulent or faulty behaviors are reported from the app chains and state enforcement is required. Eventually the root chain will probably become a Plasma chain which is the parent chain of all the applications chains. 
+
 
 Although we have improved the parallelism at the application level, there is still chance of blocking in a single application level. Transactions for a particular application still have to be processed serially. If one application becomes so popular that it consumes most of the bandwidth in a period of time, all the transactions coming to a node might just be from it, and they will be processed one of another. The workload cannot be spread over to the multiple cores on the same machine. 
 
@@ -662,11 +671,68 @@ With no competitive and repetitive computing among all nodes, and with the optim
 
 In the meantime, we’re closely monitoring the progress of the [Plasma Project](http://plasma.io/) led by Joseph Poon and Vitalik Buterin. The Plasma project proposes a recursive Map-Reduce architecture for general computing based on blockchains and aims to offer TPS up to billion+ level. The Plasma development will be one of the core effort from a team of the best talents in the industry in 2018. We plan to leverage the work in the future to solve the scalability issue for once and all. 
 
+### 7.3 Privacy Enforcement
+
+Privacy on blockchains is counter-intuitive for many people, because blockchains usually promote openness and publicity, at least for public chains. 
+
+Bitcoins and Ethereum are not really privacy centered blockchains. In fact, most public chains can be trusted with correctness but not confidentiality.  There are indeed multiple levels of solutions today that cover the privacy issues in part. Coin mixers and Monero provide partial transaction confidentiality. ZCash, with Zero-knowledge Succinct Non-Interactive Arguments of Knowledge provides strong confidentiality, at a much higher cost of computation power and engineering complexity.  Basically they are of data obfuscation type or crypto-encryption type.  
+Data obfuscation techniques try to hide the identity of data and cut the traceability of the data flows, so that the connections between people and their assets are decoupled. Coin mixers, ring signatures are of this type. Data anonymity is achieved with an extra layer of processing either locally or as a network service. Performance takes a hit necessarily.
+
+Using cryptography to encrypt data is the other major mechanism to preserve privacy. It ranges from simple symmetric/asymmetric encryption to the sophisticated zero-knowledge scheme based mechanisms. 
+
+
+In UDAP, VPC (Virtual Private Chain) is the first line of defense of privacy. UDAP respects that and by default it allows app developers to choose the private deployment model whereby only trusted nodes are allowed to process the transactions and store the state. Private deployment mode is the default mode of application chain.  Specifically, VPC features:
+
+1. Streamlined chain access only from the exposed high level API. 
+2. No block browsing for participants;
+3. Auditing as requested by authenticated application operators and by authorized personal customers. 
+
+Although we believe most of the third-party apps will be deployed on permissioned UDAP app chains, thus having the basic firewall to fend off privacy attacks, we also believe   
+The second defense line is with data obfuscation and encryption, as shown in the following diagram. 
+
+![](media/AssetAnonymity.png)
+
+User account has an encrypted pointer pointing to one of the storage slots, which are the vaults for asset tokens. Think of the design like the custodian vaults in banks where customers use their own key to open the storage of assets.  No one knows who owns which vault. The vaults are anonymous; thus privacy is protected.
+
+The connections between the wallet and the chains are protected in three layers of encryption, slightly similar to what the TOR protocol does:
+
+1. Secure Socket.
+2. Data is encrypted with a user’s key and the data packets are signed by the user.
+3. Data stream goes through the application’s endpoint which in turn encrypts and signs the already encrypted data with the application key.  
+4. The UDAP nodes must make sure all the traffic coming from an application’s client carry the proper signature of the application and and the check cannot be circumvented. 
+The use of the layered encryption and signing is not so much about concealing the IP address of the function invoker, rather it’s for the purpose of letting the application to verify the validity of the API call of the user in the context of a specific application. Theoretically some functions calls made by users can be directly targeted to the UDAP node which does the chain dispatching. But we feel most applications need a mechanism to intercept function calls from their users and may decide to activate more business logic upon such invocations, such as more involving authorization. UDAP nodes which receives such transactions would definitely know that the transactions have been authorized by the corresponding applications, such that a higher level of security is ensured. 
+In the future we are considering:
+1. either implementing the zkSNARKs in the protocol level to meet the rigorous privacy requirement of data sensitive rules;
+2. Or other emerging technologies such as [Solidus]( https://eprint.iacr.org/2017/317.pdf) for more streamlined privacy architecture. 
+3. Quantum computing resistance will be placed in our road map in the next couple of years to keep our platform up to date and future proof.
+
+
+### 7.4 Key Rings and Identity
+
+User accounts are application specific. Any account is associated with an app. Different apps don’t share accounts. 
+
+But account registering needs the help from the Universal Asset Wallet, for security. 
+
+
+#### 7.4.1 Acount creation
+
+
+#### 7.4.2 Key 
+Today’s cryptocurrency wallets put too much burden on end users in managing their accounts/passwords. People feel so much pressure in keeping the account credentials in safe place and in the meantime still feeling convenient to use them.
+
+
+We believe a key ring technology similar to Apple’s iCloud key ring is required to make a first class secure experience with the asset wallet. UDAP Key Ring should:
+
+- Have a single lock key to protect all the accounts/passwords.
+- All the private keys must not be saved to the network.
+- Two factor authorization must be tuned on. UAW will provide TFA service to all the applications registered with UDAP.
+- In case of password loss, a combination of email and cell phone is required to recover the parent account with UDAP.
 
 
 
-## 8.  和类似平台比较分析
-With similar platforms for comparative analysis
+## 8. Related Work
+
+
 
 |       | UDAP  | BankEx | Bytom | Digix | 0x    | Achain | Selfsell | Linkeye |
 |-------|-------|-------|-------|-------|-------|-------|-------|-------|

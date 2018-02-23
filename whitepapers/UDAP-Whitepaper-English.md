@@ -14,7 +14,7 @@ Although touted by its inventor as "digital cash", Bitcoin has been pushed to pl
 
 But because Bitcoin has been first and foremost designed to work as a fungible currency, using it beyond as such has proved to be clunky and limited.
 
-Ethereum (the E, for short reference) has emerged from the crowed to carry its inventor’s destiny as a general and abstract protocol of general blockchain based world computer. A general-purposed smart contract architecture lends its well to building a variety of on-chain applications to fulfill blockchain’s promise of being the backbone of the "Internet of Values".
+Ethereum (the E, for short reference) has emerged from the crowed to carry its inventor’s destiny, initially as “programmable money”, then as a general blockchain based “world computer” usable for financial and non-financial applications. A general-purposed smart contract architecture lends its well to building a variety of on-chain applications to fulfill blockchain’s promise of being the backbone of the "Internet of Values".
 
 But the most challenging thing posed to E is how to represent the "values". For the moment, like almost all the other open ledger platforms, E  is exclusively handling digital currency transfers, as Buterin put in one of his podcasting in early 2018:
 
@@ -45,7 +45,7 @@ Tokens have been used in crowdfunding a new wave of innovative applications base
 
 Tokens are the tickets to the next Internet banquet.
 
-UDAP has been designed to support tokenizing everything movement natively, in the low-level storage model and communications. We are shifting away from the lump sum description of values into individually identifying each every and every items in the physical world in virtual world alike. On top of the identifications, we are going to beauty brand-new user experience to deal with their personal properties intuitively, to sell them, to trade them, to pledge them for capital, to lead them to friends, or to give them away. In the back, UDAP is any neighborly protocol for any third parties to port their existing applications easily and quickly to open ledger technologies and a decentralized storage Technologies. Therefore from the back end to the user experience end, UDAP is created to become the native enabling technology to fulfill the promise of the Internet of values.
+UDAP has been designed to support tokenizing everything movement natively, in the low-level storage model and communications. We are shifting away from the lump sum description of values into individually identifying each every and every items in the physical world in virtual world alike. On top of the identifications, we are going to beauty brand-new user experience to deal with their personal properties intuitively, to sell them, to trade them, to pledge them for capital, to lead them to friends, or to give them away. In the back, UDAP is a protocol for any third parties to port their existing applications easily and quickly to open ledger technologies and a decentralized storage Technologies. From the back end to the user experience end, UDAP has been designed to as a enabling technology to fulfill the promise of the Internet of values. 
 
 Blockchain technology is nicknamed the Internet of the moment
 However, when we look closely at the carrier of value transfer currently carried by the blockchain, 99% of the applications are actually limited to the best liquidity and the most easily solved type of asset, which is cryptocurrency.
@@ -53,71 +53,36 @@ So the current blockchain is more accurately "The Internet of Money" \ [* The In
 Money *, A.M. Antonopoulos \].
 But our neighborhood faces massive, palpable and non-palpable assets. Are these good blockchain, or related decentralized, bookkeeping techniques, good value, discovery, value recognition, and value transfer? There is no doubt that the answer is yes. There have been quite a few blockchain-based technologies that are attempting to address real-world non-monetary assets and how to decentralize their networks in recognition of the exchange of recognition. However, we find these protocol offerings and platforms based on the existing blockchain, the second-level structure based on currency transfers. Around 2014, when Bitcoin technology was recognized by the majority, many projects proposed the notion of a colored currency, one that is grafted onto the currency of permutable value - Unique identification technology that allows us to use currency symbols to represent real-life accessible and non-accessible assets.
 
-早期的"颜色货币"靠在比特币网络传输的协议中增加交易的顺序来进行特殊含义的赋予。这种方法，当然是对比特币协议的特殊扩展应用。当然因为比特币独特的简化协议，使得任何第三方的应用想对自己的资产进行数字化和加密，货币化都需要比较大的工作和一定的技术门槛。以太坊作为另外一个主流的加密货币，一开始的初衷，就是希望能够把区块链的网络变成一个高度可编程的，可应用于对现实世界的价值节点进行确认，传输转移和交换的平台，它的目的是建立一个通用的，去中心化的计算平台，逐渐的，他也加入了更多去中心化的存储功能在内，虽然这两种功能尚未在成熟的版本中发布。
 
-The early "color money" was given special meaning by increasing the order of transactions in the protocol transmitted by the Bitcoin network. This approach, of course, is a special extension of the Bitcoin protocol. Of course, because Bitcoin's unique simplified protocol makes any third-party application want to digitize and encrypt its own assets, monetization requires relatively large work and certain technical thresholds. Ethereum, as another mainstream cryptocurrency, initially aimed to turn the blockchain network into a highly programmable platform that can be used to identify, transfer, and exchange value for the real world , Whose purpose is to create a common, decentralized computing platform that, gradually, he has also added more decentralized storage capabilities, though both features have not yet been released in the mature release.
+## 2. The Goals
 
-以太坊所体现的我们称之为颜色货币的概念，是通过智能合同来进行的，在常见的智能合同的应用场景中，外部世界的资产被智能合同中的电子对类型的数据库来进行存储，通过用户自定义的一些基本逻辑和安全机制来管理这些资产的登记，发售和流转。
+Our ultimate goal is to build The Internet of Asset. Its value proposition has a clear and clear boundary, and we have three concreate deliverables:
 
-Ethereum reflects what we call the concept of color money through smart contracts. In common applications of smart contracts, the assets in the outside world are stored electronically in a type of database by an intelligent contract, The registration, offering and circulation of these assets are governed by some basic logic and security mechanisms that are user-defined.
+1.  Develop a concept framework of understanding the "assets" in our world from a blockchain perspective, and abstraction of the general behavior; Define a convenient API for traditional vertical application developers. Such an API does not require users to have a deep understanding of blockchain technology and decentralized technology.
 
-智能合同编写远非易事。我们看到，以太坊这两年在逐渐成熟的过程中，已经有自身非常大的性能问题和安全隐私问题，其主要的工作方向并不在于提供一套便捷的可供任何现实世界应用、利用的资产管理和应用平台，而是把注意力集中在更底层的性能吞吐量和安全隐私等更为基础的环节，当然这是非常好的，因为如果没有这些最基础的应用指标，那么在之上建筑的任何具有真正意义上的杀手级的应用，都会导致整个系统的性能迟缓和用户体验的急剧下降。最近在一台仿世界的加密小毛，一款简单的资产应用，就导致了一段时间内以太坊网络中25\~30%的流量都是被这一款应用所占据，以至于以太资产的转移和确认时间急剧增长。
+2.  Provide a reference implementation of UDAP protocol, so that they can catch the express train of decentralized computing and decentralized storage without changing the existing application architecture. We abstract the most central part of decentralized computing, decentralized storage technology and decentralized messaging mechanism into a concise and effective API. Considering that the decentralized computing and storage technologies are still in an immature phase and are in a period of rapid growth, we believe such technology platforms will bring tremendous value to third-party application developers.
 
-Smart contract preparation is far from easy. We see that Ethereum has gradually had its own great performance problems and security privacy problems during its gradual maturity in the past two years. The main goal of Ethereum is not to provide a convenient and practical application for any real-world application Asset management and application platform, but instead focuses on the more basic aspects of bottom-level performance throughput and security privacy, which of course is very good because without these most basic application metrics, Any real killer application on the building can result in slow performance and dramatic user experience degradation across the entire system. Recently, in an imitation of the world's small encrypted hair, a simple asset application, resulting in a period of time Ethereum network 25 ~ ~ 30% of the traffic is occupied by this one application, so that the transfer of Ethernet assets And confirm the rapid growth of time.
+3.  Provide an implementation of Universal Asset Wallet(UAW) for end-users. The UAW will capture the most useful interaction patterns with assets that allows users to store, copy, transfer, sell/buy, and trade a variety of assets deposit from third party applications in one place. Such a design for third-party application development, in fact, is a very favorable news, because the third-party platforms can focus on the current core business logic without having to figure out how to build their own assets blockchain and user Interaction.
 
-智能合同的编程语言的成熟性远不如传统应用使用的编程语言的功能强大，
-同时在健壮性方面还处于童年时期。 对大多数没有经验的程序员而言，
-编写智能合同是一个"nightmare"。
 
-The maturity of the programming language of smart contracts is far less powerful than the programming languages used by traditional applications,
-At the same time in terms of robustness is still in childhood. For most inexperienced programmers,
-Writing a smart contract is a "nightmare."
+4. Offer an architecture that allows for linear scalability. The reference implementation must be able to support thousands of applications and near one-second response with finality, with a total throughput of 10k~100k TPS. 
 
-## 2.  目标
+5. Provide end-to-end privacy to applications that may handle highly sensitive asset information for their customers. 
 
-goal
 
-我们的终极目标是建设一个"资产互联网"（The Internet of Asset）。
-其价值定位有一个明确且清楚的边界，我们有三个目标：
 
-Our ultimate goal is to build The Internet of Asset.
-Its value proposition has a clear and clear boundary, and we have three goals:
-1.  制定一个从区块链的角度理解和认识我们世界中的"资产"的概念，
-    并且抽象出通常对于资产的各种处置行为， 并为之制定一个协议，
-    为传统的各垂直行业的软件开发商提供一个便捷的API。这样的API不要求用户对区块链技术和去中心化的技术有较为深刻的认识和较为熟练的编程经验。
-
-     Develop a concept of understanding and understanding "assets" in our world from a blockchain perspective,And abstraction of the various assets for the disposal of the general behavior and to develop an agreement,A convenient API for traditional vertical developers. Such an API does not require users to have a deeper understanding of blockchain technology and decentralized technology and a more experienced programming experience.
-
-2.  提供一个资产互联网协议的参考实现，
-    让他们能够在不改变现有应用架构的情况下，搭上去中心化的计算和去中心化存储的快车。
-    我们把去中心化的计算，去中心化的存储技术和去中心化的信息机制中最核心的部分，抽象成简洁有效的API供他们使用，这样可以大大弥补目前你快练技术和去中心化的一整套技术对第三方垂直应用开发者的巨大的技术障碍和挑战。并且，考虑到去中心化的计算和存储技术目前还处于不成熟的阶段，还处于快速发展的时期，我们认为这样的技术平台会给第三方应用开发者带来巨大的价值。
-
-    Provide a reference implementation of asset internet protocol,So that they can catch the decentralized computing and decentralized storage of express trains without changing the existing application architecture.We abstract the most central part of decentralized computing, decentralized storage technology and decentralized information mechanism into a concise and effective API for their use, which can greatly make up for your current skills and decentralization A set of technologies for third-party vertical application developers huge technical obstacles and challenges. And considering that the decentralized computing and storage technologies are still in an immature phase and are in a period of rapid growth, we believe such technology platforms will bring tremendous value to third-party application developers.
-
-3.  我们平台将提供一个面向终端用户的通用资产钱包的实现，在这个通用资产钱包中，我们把一般性资产管理所面临的主要的问题都做出足够理性的抽象，并且把各种对资产的处置方式和手段都集中在那，对个人用户而言，操作简明易懂。这个通用资产钱包对个人用户提供了极大的便利来管理自己在使用各种应用中所积累的有形和无形资产。这样的设计对第三方应用开发平台而言，其实是一个非常有利的消息，原因是第三方平台可以专注于目前核心的用户体验，而无需考虑如何让自己的资产以区块链的方式和用户交互。
-
-    Our platform will provide an implementation of a general-purpose wallet for end-users in which we capitalize on the rationale for the major issues that general asset management faces and rationalize various asset disposal Ways and means are focused on that, for individual users, the operation is easy to understand. This universal asset wallet offers great convenience to individual users to manage the tangible and intangible assets that they have accumulated in the use of various applications. Such a design for third-party application development platform, in fact, is a very favorable news, because the third-party platform can focus on the current core user experience, without having to consider how to make their own assets blockchain and user Interaction.
 
 ![](media/image1.png)
 
 
+## 3.  Designing Principles
 
 
-## 3.  设计理念
+The basic idea of UDAP is to build a "thick protocol layer," supporting "Thick Protocol + Thin Application." pattern generally formed from blockchain application development practices.
 
-design concept
+The main concern at the application level is the interaction with the particular vertical customer base. Many of the common asset disposal aspects are handled by the universal wallet. One of the visions of UDAP is that application developers need only have enough knowledge and understanding of their vertical industry, then based on our thick protocol layer they can quickly develop the features asked by their customers, thus they would take the shortest time to the market.
 
-资产互联网协议的基本理念是建设一个"厚协议层"，支撑"薄应用层" （Thick Protocol + Thin Application）。
-
-The basic idea of an asset internet protocol is to build a "thick protocol layer," supporting "Thick Protocol + Thin Application."
-
-应用层主要关心的问题是和自己所在的特殊人群的交互行为，而这种行为的有些通用的资产处置部分，实际上也是可以由通用资产钱包来帮助解决的，所以，我们给第三方应用开发者提供的一个愿景就是，第三方应用开发者只需要对自己所垂直的行业有足够的知识和认识，那么基于我们的厚协议层就可以迅速开发出自己客户所需要的功能，并且以最短的时间投入市场，产生自己想追求的商业效益。
-
-The main concern at the application level is the interaction with the particular population in which they are located, and some of the common asset disposal aspects of such behavior can in fact be helped by the universal wallet, so we give third-party application development One of the visionaries is that third-party application developers need only have enough knowledge and understanding of their vertical industry, then based on our thick protocol layer can quickly develop the features required by their customers, and the shortest Time into the market, have their own want to pursue business benefits.
-
-用Ethereum区块链来作为参照的设计是我们的起点。 我们的设计思维和Ethereum 最大的差别是关于"Feature"。 Vitalik Buterin 认为Ethereum 的设计思想之一是Ethereum 是一个 "Feature-less" 的计算平台。
-
-Designing as a reference using the Ethereum blockchain is our starting point. The biggest difference between our design thinking and Ethereum is about "Feature." Vitalik Buterin believes that one of Ethereum's design ideas is that Ethereum is a "Feature-less" computing platform.
+In comparison to Ethereum, which is our starting point, the biggest difference between UDAP design philosophy and Ethereum’s is about "Features." Vitalik Buterin believes that one of Ethereum's design ideas is that Ethereum is a "Feature-less" computing platform.
 
 **We Have No Features**: as a corollary to generalization, we often
 refuse to build in even very common high-level use cases as intrinsic
@@ -127,57 +92,49 @@ subcurrency, bitcoin/litecoin/dogecoin sidechain, etc) inside of a
 contract.  \[ <https://github.com/ethereum/wiki/wiki/Design-Rationale>\]
 
 
-Ethereum 显然主要目标是建设成一个通用的区块链平台。 任何有针对性的高层次的功能性抽象都被推给了用户自定义的智能合约中。这种理性的有节制的目标是令人赞同的， 但是却不是我们构思的"Asset Internet"协议以及参考实现追求的方向。 智能合同因为其"Turning Complete" 的计算能力为DAPP开发者提供了相对而言的极大的灵活性, 但是也表现出明显的技术障碍和现实风险。智能合同虽然"Turning Complete"，但是提供的编程能力还是有很大的局限性，对于普通应用开发者而言有很多"坑"需要绕过。 同时因为一切代码被暴露的原因，用户自定义的智能合约暴露了很大的受攻击表面， 就像Ethereum 近两年所发生的几起造成严重的经济损失的事故所展现的一样。比特币网络拥有非常有限的智能合同能力。但是说到底，这并不是比特网络的一个明显的局限性，实际上很多比特币网络的忠实粉丝认为这种有限的设计是一种非常好的措施来防止比特币网络受到各种各样的攻击。比特币网络引以为傲的一个非常重要的指标就是，一段时间来比特币网络经受了无数的冲击，但是，比特币网络从本质上来说，还没有出现一次真正的巨大的漏洞。
+Ethereum clearly has the main goal of building a blockchain platform for general financial computing. Any high-level abstraction is pushed up to user-defined smart contracts. The rational and restrained approach is agreeable, but it is not the "Asset Internet" protocol we have conceived and the direction we sought to pursue. Smart contracts offer dApp developers relatively great flexibility because of their "Turing Complete" computing power, but they also bear obvious technical obstacles and real risks. Although Smart Contract "Turing Complete", but provide programming ability is still very limited, for ordinary application developers have a lot of "holes" they need to patch. In the meantime, because of all the code being exposed, user-defined smart contracts have exposed a large attack surface, as evidenced by several incidents that have caused serious economic losses in the past two years in Ethereum based dApps. Bitcoin networks have very limited smart contract capabilities. However, many loyal fans of Bitcoin networks see the limited design as a very good way to prevent bitcoin networks from being subjected to attacks. A very important indicator of the bitcoin network robustness is that bitcoin networks have endured countless attacks for the last eight yeas, yet essentially no major failure has happened in the protocol level.
 
-Ethereum clearly has the main goal of building a common blockchain platform. Any targeted high-level functional abstraction is pushed to user-defined smart contracts. This rational and restrained goal is agreeable, but it is not the "Asset Internet" protocol we conceived and the direction we sought to pursue. Smart contracts offer DAPP developers relatively great flexibility because of their "Turning Complete" computing power, but also show obvious technical obstacles and real risks. Although Smart Contract "Turning Complete", but provide programming ability is still very limited, for ordinary application developers have a lot of "pit" need to bypass. At the same time, because of all the code being exposed, user-defined smart contracts have exposed a large attack surface, as evidenced by several incidents that have caused serious economic losses in the past two years in Ethereum. Bitcoin networks have very limited smart contract capabilities. Ultimately, however, this is not a clear limitation of a bit-based network. In fact, many loyal fans of bitcoin networks see this limited design as a very good way to prevent bitcoin networks from being subjected to a variety of attacks . A very important indicator of the bitcoin network's pride is that bitcoin networks have endured countless shocks for some time, but essentially no major loophole has emerged in the bitcoin network.
 
-"Asset Internet" 从目标而言不是一个通用计算平台，而是一个专门处置财务角度和更一般的角度处理现实资产和加密资产的平台，是一个"Featured Chain". 从protocol 的角度评价是一个更thick 和更专门化的协议，这个协议natively 支持资产的代币化和通用的资产行为，例如存储，转移， 交易， 销售等等，面向的是一般软件开发者。并且我们希望在这个垂直领域中，我们能为我们第三方的客户提供一个健壮的，高性能的，持续有效，并且不会出错的一个资产管理和交易平台。为了达到这个目的，更为了从安全和性能的角度实现这个目的，我们甚至考虑不支持智能合约（或者至少不把智能合约的能力暴露给终用户）。也就是说我们不惜牺牲掉通用智能合约或者通用计算能力，直接把资产管理的能力的安全性和性能作为平台最主要的发展方向。这个实现级别的考虑也许会在项目进展中仔细推敲。
+"Asset Internet" is not a universal computing platform by design, but a platform that handles general assets encoded and protected by blockchain technology. It is a "Featured Chain." From a protocol perspective, it is a thicker and more specialized protocol that natively supports the tokenization of assets and general asset behavior such as storage, transfer, trading, sales, etc. We are delivering a robust, secure, and high-performing asset management and trading platform for everyone. We will not be supporting custom smart contracts (or at least not exposing the capabilities of smart contracts to end users), for safety and performance reasons. 
 
-"Asset Internet" is not a universal computing platform from the goal, but a platform that handles financial assets and encrypted assets from a financial perspective and a more general perspective. It is a "Featured Chain." From a protocol perspective, it is a more thick and more specialized protocol that natively supports the tokenization of assets and common asset behavior such as storage, transfer, trading, sales, etc., for the average software developer. And we hope that in this vertical field we can provide our third-party clients with a robust, high-performing, asset management and trading platform that is both effective and error-free. To do this, we even consider not supporting smart contracts (or at least not exposing the capabilities of smart contracts to end users), even more for safety and performance reasons. In other words, we at the expense of general-purpose smart contracts or general-purpose computing power, the ability to directly asset management capabilities and performance as the most important platform for the development. This level of realization may be carefully considered in the progress of the project.
 
-我们认为这种"Thick Protocol + Thin Application"的模式将是区块链应用的核心架构模式，它将极大地为互联网的新型应用带来极大的繁荣。这种模式从技术说有革新性的意义， 从价值上分析，会让互联网的价值从应用层下沉到协议层，让协议层变成一个跨应用的大数据沉积层。客观的结果是协议层变得更有战略价值和投资价值。
 
-We think this "Thick Protocol + Thin Application" model will be the core architecture model for blockchain applications and will greatly boost the new applications of the Internet. This model is technically innovative and value-conscious, allowing the value of the Internet to sink from the application layer to the protocol layer, turning the protocol layer into a cross-application big data deposition layer. The objective result is that the protocol layer becomes more strategic and investment value.
+We think this "Thick Protocol + Thin Application" model will be the core architecture model for blockchain applications and will greatly boost the new applications of blockchain and Internet in general. This model is technically innovative and value-conscious, allowing the value of the Internet to sink from the application layer to the protocol layer, turning the protocol layer into a cross-application big data repository. The result is that the protocol layer becomes more strategic and investment value.
 
 ![](media/image2.png)
 
-## 4. 对应用开发者的价值陈述
+UDAP offers a selected set of features that simplify blockchain application development, without sacrificing performance and security. Particular UDAP offers API in the following area:
 
-App developer value statement
+- Identity Management: multi-persona identities are supported.
+- Multiple Signature are used across all the major functions, so proper authorization can be set up to authenticate users to interact with asset in a secure way. Multi-Sig can be applied to identity management, asset registration and asset transfers.
+- UDAP offers a set of rich abstractions of asset operations, including transfers, sell/buy, and trading. 
+- The Universal Asset Wallet is considered a significant part of UDAP package. It must offer generalized asset operations across applications such that the third party apps do not have to implement the common user interactions. In the meantime, it must offer a pluggable architecture such that asset interactions can be customized and enhanced if the apps choose to do so.
+- UDAP offers asset market and exchange API and implementation in the wallet. Once registered, assets can acquire liquidity immediately without relying on other space to provide liquidity.
+- UDAP does not provide built-in people and assets identifications that are detached from applications. All logics are defined by applications. Even those that look like built-in features are actually applications that are built on the UDAP API. 
+- Sovereignty for each application: 
+
+UDAP basic code comes from Ethereum. UDAP is not a patch of Ethereum code base. The Ethereum transaction and block structure are modified to natively support none-currency assets, thus it is a solid foundation to be extended to provide advanced features in asset management. We’ll keep the strategy open so sometime in the future if Ethereum would have become a pluggable platform we might be able to backport UDAP features to Ethereum or a variation of it.
+
+
+## 4. Value Statements to Application Developers
 
 <!-- -->
 
-1.  块链带来的坚不可摧的数据库能力。这种数据库能力，是过去传统的数据库体系里面梦寐以求的，并且可能是需要非常昂贵的设置和管理才能带来的效益。因为这其中牵涉了很复杂的数据库同步、备份、灾难恢复等等关键性的技术。这些能力在过去都是需要高级的数据库管理人员专注才能够得到较为妥善解决的技术能力，维护成本极为高昂。如果考虑到区块链本身能够提供一个全球性的覆盖的话，那么相对于传统的数据库技术，这种优势就更为明显。
+1.  Unbreakable database capabilities brought by blockchain. This kind of database capability is what the traditional database system was dreaming of in the past and could be very expensive to set up and manage, because it involves very complex database synchronization, backup, disaster recovery, and other key technologies. In the past, these abilities required the attention of senior DBAs and network engineers to get it right. 
 
-    Unbreakable database capabilities brought by blockchain. This kind of database capability is what the traditional database system was dreaming of in the past and could be the result of the need for very expensive setup and management. Because it involves a very complex database synchronization, backup, disaster recovery, and other key technologies. In the past, these abilities required the attention of senior DBAs to get a better technical solution and the maintenance cost was extremely high. This is especially true when compared to traditional database technologies, given that the blockchain itself provides a global reach.
+2. Easier integration solutions for business partners. The second type of value is captured when the application of the blockchain is not limited to the users within its walled domain. Blockchain technology provides a secure, open ledger system that naturally applies to the upstream and downstream integration in business partners in an industry. The integration of upstream and downstream data in a vertical supply chain is a continuing technical challenge in the traditional applications. Integration solutions in the upstream and downstream process, due to the lack of trust between each other, or a more complex commercial agreement and a third party that both trust, or a leadership, are often outdated and have a high cost. Now the blockchain technology offers the ability to act as the trusted party.
 
-2.  第二类的价值发生在，当区块链的应用不仅仅局限于自己所在的用户范围内的时候。因为区块链技术提供的是一个有保障的，公开的记账体系，天然的适用于一个企业在自己所属的产业链中的上下游的整合。产业链中上下游数据的整合是过去传统应用中持续会面临的技术挑战。在上下游整合的过程中，由于缺乏互相之间的信任，如果没有一个较为复杂的商业协定，或者双方都可信任的第三者商业体（有时候是政府机构）来推动的话，这种整合的周期往往遥遥无期，并且整合中的责任和成本都很高昂，而区块链技术提供了这种不信任的商业环境中无需第三方信任实体的存在，又能提供数据价值整合的能力。
+3. Support of “Token Economy”. Tokenization has never been easier and formalized by smart contract mechanism. Tokens can be used in in-app marketing, incentives, payment, and new models of distribution of benefits. However, using Ethereum's standard means of setting up your own economic currency requires the ability to program smarter contracts or hire a consulting team to do the job. UDAP enables users to distribute tokens that can be used in their economy simply by configuring a few standardized parameters. This values represented by the tokens immediately show up in the universal asset wallet we offer. Not only that, the UAW themselves provide the ability as a Decentralized Exchange that enables the trading of custom-issued assets. The immediate liquidity offered by UDAP and the Universal Asset Wallet greatly empower the applications.
 
-    The second type of value occurs when the application of the blockchain is not limited to the users within its own domain. Because blockchain technology provides a secure, open accounting system that naturally applies to the upstream and downstream integration of an enterprise in the industry chain to which it belongs. The integration of upstream and downstream data in the industry chain is a continuing technical challenge in the traditional applications. Integration in the upstream and downstream process, due to the lack of trust between each other, without a more complex commercial agreement, or both trusted third party business (sometimes government agencies) to promote this integration Are often outdated and have a high burden of integration and cost, and blockchain technology offers the ability to trust data in this distrusted business environment without the existence of third-party trust entities.
+4. Buffering and performance improvements. The Ethereum network is now capable of handling millions of applications a day, but this ability is still far behind that of traditional centralized applications such as VISA and SWIFT. Performance problems will be gradually resolved in the next 2-3 years[https://blog.ethereum.org/2018/01/02/ethereum-scalability-research-development-subsidy-programs]. For third-party applications that require high-throughput today, UDAP will provide this ability. 
 
-3.  为第三方应用提供立即的实现应用内经济代币化的手段。第三方应用可以把应用类的经济流动时所需要的手段使用加密货币的代币模型进行重新规划。应用内的市场营销手段，激励手段，用户付费的新模式，甚至包括利益分配的新模式。用以太坊的标准的手段来建立自己的经济货币的时候，需要较为熟练的智能合同的编程能力或者是雇佣具有这种编程能力的咨询团队来建立自己的应用内加密货币的智能合同提供的能力，我们的协议能够使用户只需要配置一些标准化的参数，就可以发行能够在自己的经济体系中使用的加密数字货币。这样的加密货币将立刻能够在我们提供的通用数字资产钱包中得以展现。不仅如此，通用资产协议本身还提供资产的分布是交易(Decentralized Exchange)的能力，这种能力能够把用户发行的自定义加密数字化资产和目前加密数字资产行业主流的加密货币建立交易对，能够让App内数字资产立刻产生流通性和流动性，极大地激活在应用内的经济体中较为复杂和多变的灵活的金融手段。这种应用内的代币满足ERC20协议，所以也能在绝大多数的兼容ERC20的钱包中存储。
+5. Identity management. Blockchain technology is based on the modern cryptography and, to a large extent, provides new security standards for third-party applications. It requires that all users behave in a secure manner. Each user, after their authentication, signs their own behavior with their own keys and assumes the corresponding responsibilities. Managing digital identity is itself a relatively complex process that requires a set of programming methodologies. Our asset management agreement brings a simple but effective package of identity management tools. Third-party applications use this third-party application based on guaranteed security to fully enjoy the convenience provided by blockchain encryption. Identity management, the identity of third-party in-app users, is often only relevant in the context of their own applications in the past world. After entering the blockchain event, the asset behavior of all users must be bound to one or more accounts in the blockchain.
 
-    For third-party applications to provide immediate means of realization of economic tokens within the application. Third-party applications can reprogram the tokens used in cryptocurrencies for the means needed by the economy of the application class. In-app marketing, Incentives, new models for users to pay, and even new modes of distribution of benefits. Using Ethereum's standard means of setting up your own economic currency requires the ability to program smarter, smarter contracts or hire an in-house consulting team with this ability to set up their own in-app smarter contracts for cryptocurrencies , Our agreement enables users to distribute encrypted digital currencies that can be used in their economy simply by configuring a few standardized parameters. This cryptocurrency will immediately show up in the universal digital asset wallet we offer. Not only that, the GVAs themselves provide the ability to distribute assets as a Decentralized Exchange that enables the trading of custom-issued digitized assets issued by users with the cryptocurrencies in the mainstream of the current cryptographic digital asset industry The immediate emergence of liquidity and liquidity in digital assets within App greatly stimulates the more sophisticated and volatile financial instruments in an in-app economy. The token in this application fulfills the ERC20 protocol and can therefore also be stored in the vast majority of ERC20-compatible wallets.
+6.  Privacy. Asset Protocol will provide encryption for all types of assets managed by third party users. Users have complete control over the storage of their assets in the network and the information they control over their assets is open to specific populations or applications. Users can control their own asset transfer path, leaving it open, or completely private. Users and applications within each application are completely isolated from each other to ensure the privacy of users and their assets. Our universal asset wallet can import multiple third-party applications, each configured with a separated account. 
 
-4.  提供交易的缓冲和性能的提升。第三方应用利用区块链使的性能和吞吐量的支撑在现在能够支持智能合同的最常见的平台，也就是以太坊。Ethereum网络现在每天处理能力达到百万级，但是这个能力相对传统集中式的大型应用还是有极大的差距。 性能问题在未来2到3年里面，才有可能逐步地得到解决。[https://blog.ethereum.org/2018/01/02/ethereum-scalability-research-development-subsidy-programs] 对于立刻需要这种高吞吐能力的区块链技术的第三方应用来说，我们的通用的资产互联网将提供这种能力。这是如果用户绕开我们的资产互联网直接使用底层的已开放的智能合同的技术所不能达到的。
+7. Workflow support. UDAP has built-in support of multi-sig signing flow. Key asset actions, such as the transfer of assets, the exchange of assets and the sale of assets, often require the protection of multiple signatures. Applications can be very easy to set the key action signature protection, strategy and rules. Once a protected action is discovered or invoked, the user's generic asset wallet automatically prompts the user for the signature. In my own wallet, I can sign, or refuse, the processing of assets by multiple signatures of other people in real time. This type of workflow can be done not just between individual users holding Universal Asset Wallets, but also between the third-party application's interface and the Advocate Universal Wallets. This type of multipoint communication and communication is supported by the underlying P2P-based messaging protocol on the asset network.
 
-    Provide transaction buffering and performance improvements. Third-party applications leverage blockchain performance and throughput support in the most common platform now able to support smart contracts, which is Ethereum. The Ethereum network is now capable of handling millions of applications a day, but this ability is still far behind that of traditional centralized applications. Performance problems in the next two to three years, it is possible to gradually be resolved. [https://blog.ethereum.org/2018/01/02/ethereum-scalability-research-development-subsidy-programs] For third-party applications that immediately require this high-throughput blockchain technology, we The universal asset internet will provide this ability. This can not be achieved if the user bypasses our asset internet and uses the underlying open smart contract directly.
-
-5.  用户的身份管理。区块链技术是基于最主流的密码学技术，在很大程度上，为第三方的应用提供新的安全的标准。它要求所有用户的行为都是安全的，经过认证的，每一个用户都通过自己的密钥为自己的行为进行签字，承担相应的责任。但是管理自己的数字身份本身是一个相对较为复杂的过程和计划，需要缜密管理的一套编程的方法学。我们资产管理协议，能够把较为复杂的，在区块链上的身份管理的工作，提供一个简化的包装。第三方的应用程序使用这样在保证安全性的基础之上的第三方应用，能够充分享受到区块链加密技术提供的方便。身份管理，第三方应用内用户的身份，在过去的世界中往往都是只在自己的应用内的上下文中有意义。进入区块链事件以后，所有用户的资产行为必须和区块链中的一个或者多个账号产生绑定关系。
-
-    User's identity management. Blockchain technology is based on the most popular cryptography and, to a large extent, provides new security standards for third-party applications. It requires that all users behave in a secure manner. Each user, after their authentication, signs their own behavior with their own keys and assumes the corresponding responsibilities. But managing your own digital identity is itself a relatively complex process and plan that requires a well-managed set of programming methodologies. Our asset management agreement is able to bring a more sophisticated package of identity management jobs on the blockchain to provide a simplified package. Third-party applications use this third-party application based on guaranteed security to fully enjoy the convenience provided by blockchain encryption. Identity management, the identity of third-party in-app users, is often only relevant in the context of their own applications in the past world. After entering the blockchain event, the asset behavior of all users must be bound to one or more accounts in the blockchain.
-
-6.  隐私管理。资产互联网协议，将为使用本协议的第三方用户所管理的各类资产提供加密。用户可以完全控制自己的资产在网络中的存储，去控制自己资产的信息向特定的人群或者应用开放。用户可以控制自己资产的转移路径是否公开，或者享有完全的隐私。在资产户联网的层面上，每一个应用内的用户和应用之间是互相隔离的，这样做的主要目的是为了保证用户的隐私。我们的通用数字钱包能够同时导入多个第三方的应用。因为每一个应用之间的互相隔离，实际上一一为着一个钱包可以同时导入用户所知道密码，多个第三方应用所对应的区块链账号。从用户的角度看来，这些账号都隶属于用户自己。能够从统一的资产钱包中，观察自己所拥有的所有的各类和现实世界绑定的加密化资产，以及那些纯粹的加密货币资产。
-
-    Privacy management. Asset Internet Protocol, which will provide encryption for all types of assets managed by third party users using this Agreement. Users have complete control over the storage of their assets in the network and the information they control over their assets is open to specific populations or applications. Users can control their own asset transfer path is open, or have complete privacy. At the asset-user level, users and applications within each application are isolated from each other. The primary purpose of doing so is to ensure the privacy of users. Our universal digital wallet can import multiple third-party applications simultaneously. Because each application is isolated from each other, in fact, one by one for a wallet can be entered at the same time the user knows the password, multiple third-party applications corresponding to the blockchain account. From the user's point of view, these accounts belong to the user. From a unified asset wallet, observe all the types of real-world bond with their own possession of encrypted assets, as well as those purely encrypted currency assets.
-
-7.  工作流支持。工作流的支持，主要体现在多重签名的支持上。关键性的资产的动作，例如资产的转移，资产的交换和资产的销售，往往需要多重签名的保护。应用可以非常简单的设置对关键性动作的签名保护，策略和规则。一旦受到保护的动作被发现或者调用的时候，用户所持的通用资产钱包会自动提示用户进行签名的处理。我可以在自己的资产钱包中实时地对其他人发起的需要多重签名对资产的操作，进行签字或者拒绝的处理。这种工作流，不仅仅可以简单的在持有通用资产钱包的个人用户之间进行，也可以在第三方的应用的界面和拥护者通用钱包之间进行。这一类的多点信息的交流和沟通，是由资产网络底层的基于P2P的消息协议所支持的。
-
-Workflow support. Workflow support, mainly reflected in the support of multiple signatures. Key asset actions, such as the transfer of assets, the exchange of assets and the sale of assets, often require the protection of multiple signatures. Applications can be very easy to set the key action signature protection, strategy and rules. Once a protected action is discovered or invoked, the user's generic asset wallet automatically prompts the user for the signature. In my own wallet, I can sign, or refuse, the processing of assets by multiple signatures of other people in real time. This type of workflow can be done not just between individual users holding Universal Asset Wallets, but also between the third-party application's interface and the Advocate Universal Wallets. This type of multipoint communication and communication is supported by the underlying P2P-based messaging protocol on the asset network.
-
-8.  立即的流动性。 协议和实现中将提供同类资产和跨类资产交易的能力， 特别是提供和成熟加密货币交易的能力。
-
-Immediate liquidity. The agreement and implementation will provide the ability to trade similar assets and cross-border assets, especially to provide and mature cryptocurrency trading.
+8.  Immediate liquidity. The protocol and implementation will provide the ability to trade similar assets and cross-border assets, especially to provide and mature cryptocurrency trading.
 
 <!-- -->
 
@@ -839,14 +796,14 @@ The user's purchase behavior occurs uniformly in the UAW. A user found in an App
 
 More API will be provided in batches, including various auction methods, escrow P2P transactions.
 
-## 7.  实现
+## 7.  Implementations
 
-在UDAP中, address分为account address, asset address和assetProto address。其中account代表现实中的用户, 组织, 服务方等的账户. Asset是代表一个资产. AssetProto是代表一类资产的原型. 一个资产必须和一个资产原型做一一对应的关联.
+#### 7.1 Protocol Implementation
 
-In UDAP, address is divided into account address, asset address, and assetProto address. Where account represents the actual account of the user, organization, service provider, etc. Asset represents an asset, AssetProto is a prototype of a type of asset, and an asset must be associated with an asset prototype in a one-to-one correspondence.
+As mentioned before, UDAP at the highest level is a conceptual model of real-world assets. The following section provides the descriptions of the ongoing implementation of the model. It’s subjected to change as the development work moves along. 
 
-这3类address都具有具有一个versionHash和lastCommitTimestamp属性. versionHash代表这一个地址的改动状态,
-一个地址的每一次改动都将产生一个新的随机且永不重复versionHash值. lastCommitTimestamp则记录一个地址最后一次接到交易处理后完成的时间点.
+
+UDAP addresses are divided into account address, asset address, and assetProto address. Where account represents the actual account of the user, organization, service provider, etc. Asset represents an asset, AssetProto is a prototype of a type of asset, and an asset must be associated with an asset prototype in a one-to-one correspondence.
 
 These three types of address have a versionHash and lastCommitTimestamp property. VersionHash represents the changing status of this address,
 Each change of an address will generate a new random and never duplicate versionHash value.lastCommitTimestamp will record the last point in time when an address was received after the transaction was processed.
@@ -889,8 +846,116 @@ The signature includes the time of signature, the signature's validity period, a
 
 Our users should note that as part of our conceptual network, the first phase of our product launch will be based on Ethereum's reliance on the architecture, bringing together Tendermint as the consensus mechanism. Although our plan to build a brand new asset network that reflects the key attributes of Ethernet or bitcoin is a mid-term goal. In our first-of-its-kind environment for our users, our operating environment will depend primarily on the capabilities our existing Ethernet environment can deliver to us, depending on a few other technologies that are compatible with Ethernet's smart contract environment We also do not rule out the goals of our first phase to consider using other platform technologies that are compatible with Ethereum, or similar.
 
-## 8.  和类似平台比较分析
-With similar platforms for comparative analysis
+#### 7.2. Performance Implementation
+
+There are three major factors that are accountable for the abysmal throughput typical of Bitcoin network and Ethereum: 
+
+1. The same transaction must be replayed on all the nodes, no matter how expensive they might be.  A great deal of computing power is wasted in competing repetitive calculations. This has been proved to be one important way to make sure all the nodes behave by the rule and great security is maintained. However, this first-gen technique is very expensive in nature and is the primary reason that blockchains’ throughputs are incredibly poor, considering how much computing power is behind each network.
+2. On each node, all the transactions are serialized in building into the blocks and there is no way to build the blocks in parallel because there is no partitioning of the transactions which is required to avoid race conditions in reading and writing account information. 
+3. Smart contracts as implemented in Ethereum are slow. They’re interpreted at runtime instead of running in native speed or in highly optimized VMs, such as JVM. 
+
+The first issue is being tackled by a few solutions such as POS based consensus and some other protocols which do not use blockchain at all.  UDAP RI specifically uses [Cosmos](http://cosmos.network/) as the general network architecture. Cosmos offers the following features that UDAP can immediately leverage:
+
+1. A POS consensus implementation (Tendermint) that provides 1000+ TPS performance. 
+2. An API that provides _finality_, which is a must for UDAP to become an easy to use API. 
+3. Cosmo can scale linearly with adding more "zones" to the blockchain hub. 
+4. It gives 1-2 seconds response delay for API invocations. 
+
+
+For the second limiting factor, the lacking parallelism in transaction processing is caused by lacking transaction demarcation, which is in turn because there is no sufficient information about account dependencies in general blockchains. One transaction may be depositing money to an account while another is taking money out of it. Working on the same account needs synchronization, which basically serialize the access to accounts. 
+
+Fortunately, UDAP defines boundaries for applications natively:
+
+1. User accounts for each application are unique. In fact, a user must register for each application and receive an address. There is no chance that the same account is used in more than one application. 
+2. Transactions always executed between the same type of account. 
+3. Security models and transactions are application specific. There is no shared information among applications.
+
+In comparison, Ethereum ERC20 tokens are not the naturally wall between applications.  Some transactions may involve multiple tokens. An user’s account (external account) is not bound to a single type of token. User accounts are generic accounts that are not bound to any specific dApp, therefore there is no natural demarcation boundary for transaction verification and mining to operate concurrently on multiple cores of a machine. 
+
+In UDAP, each application is assigned an application ID and owns an independent chain, meaning there will be a thousand blockchains in UDAP network if there are a thousand application registered. Each chain has its own branch of state trie, storage trie and transaction receipts. State transitions in each application takes place in a separate thread. 
+
+The following picture shows how the transactions received by a node are properly dispatched to separate transaction queues for each application. All the CPU cores are assigned to process the transactions in parallel and the transactions are Merklized in an application specific blockchain. 
+
+![](media/AppChains.png)
+
+One chain per application is a major design choice we have made that is very flexible in optimizing the performance and security, which are the primary two requirements for any applications that claim to deal with any assets. Each chain is an overlay chain on top of the generic UDAP transaction streams. We call the mechanism Virtual Private Chain(VPC), in analogue of VPN on top of TCP/IP.
+
+The root chain is there for 
+- application registration and configurations. 
+- Generic user account registration, which provides custodian service for the account of the third-party applications running in UAW. Users can optionally choose to register them with UDAP to take advantage of the identity attestation service. 
+- It also periodically takes snapshots of the application chains states in case that fraudulent or faulty behaviors are reported from the app chains and state enforcement is required. Eventually the root chain will probably become a Plasma chain which is the parent chain of all the applications chains. 
+
+
+Although we have improved the parallelism at the application level, there is still chance of blocking in a single application level. Transactions for a particular application still have to be processed serially. If one application becomes so popular that it consumes most of the bandwidth in a period of time, all the transactions coming to a node might just be from it, and they will be processed one of another. The workload cannot be spread over to the multiple cores on the same machine. 
+
+The above issue can be solved by a smart thread dispatcher in a UDAP node, presuming that UDAP APIs mostly affect one account at a time. The dispatcher carefully inspects the incoming transactions and separates them by affected accounts. With transaction partitioning still feasible, the transaction verifications and block constructions can still be done in parallel. 
+
+With no competitive and repetitive computing among all nodes, and with the optimized parallelism in the transaction processing in the node software, UDAP provides significant better scalability both horizontally and vertically. We expect UDAP network offers TPS in the 10K~100K range with 600 nodes. 
+
+In the meantime, we’re closely monitoring the progress of the [Plasma Project](http://plasma.io/) led by Joseph Poon and Vitalik Buterin. The Plasma project proposes a recursive Map-Reduce architecture for general computing based on blockchains and aims to offer TPS up to billion+ level. The Plasma development will be one of the core effort from a team of the best talents in the industry in 2018. We plan to leverage the work in the future to solve the scalability issue for once and all. 
+
+### 7.3 Privacy Enforcement
+
+Privacy on blockchains is counter-intuitive for many people, because blockchains usually promote openness and publicity, at least for public chains. 
+
+Bitcoins and Ethereum are not really privacy centered blockchains. In fact, most public chains can be trusted with correctness but not confidentiality.  There are indeed multiple levels of solutions today that cover the privacy issues in part. Coin mixers and Monero provide partial transaction confidentiality. ZCash, with Zero-knowledge Succinct Non-Interactive Arguments of Knowledge provides strong confidentiality, at a much higher cost of computation power and engineering complexity.  Basically they are of data obfuscation type or crypto-encryption type.  
+Data obfuscation techniques try to hide the identity of data and cut the traceability of the data flows, so that the connections between people and their assets are decoupled. Coin mixers, ring signatures are of this type. Data anonymity is achieved with an extra layer of processing either locally or as a network service. Performance takes a hit necessarily.
+
+Using cryptography to encrypt data is the other major mechanism to preserve privacy. It ranges from simple symmetric/asymmetric encryption to the sophisticated zero-knowledge scheme based mechanisms. 
+
+
+In UDAP, VPC (Virtual Private Chain) is the first line of defense of privacy. UDAP respects that and by default it allows app developers to choose the private deployment model whereby only trusted nodes are allowed to process the transactions and store the state. Private deployment mode is the default mode of application chain.  Specifically, VPC features:
+
+1. Streamlined chain access only from the exposed high level API. 
+2. No block browsing for participants;
+3. Auditing as requested by authenticated application operators and by authorized personal customers. 
+
+Although we believe most of the third-party apps will be deployed on permissioned UDAP app chains, thus having the basic firewall to fend off privacy attacks, we also believe   
+The second defense line is with data obfuscation and encryption, as shown in the following diagram. 
+
+![](media/AssetAnonymity.png)
+
+User account has an encrypted pointer pointing to one of the storage slots, which are the vaults for asset tokens. Think of the design like the custodian vaults in banks where customers use their own key to open the storage of assets.  No one knows who owns which vault. The vaults are anonymous; thus privacy is protected.
+
+The connections between the wallet and the chains are protected in three layers of encryption, slightly similar to what the TOR protocol does:
+
+1. Secure Socket.
+2. Data is encrypted with a user’s key and the data packets are signed by the user.
+3. Data stream goes through the application’s endpoint which in turn encrypts and signs the already encrypted data with the application key.  
+4. The UDAP nodes must make sure all the traffic coming from an application’s client carry the proper signature of the application and and the check cannot be circumvented. 
+The use of the layered encryption and signing is not so much about concealing the IP address of the function invoker, rather it’s for the purpose of letting the application to verify the validity of the API call of the user in the context of a specific application. Theoretically some functions calls made by users can be directly targeted to the UDAP node which does the chain dispatching. But we feel most applications need a mechanism to intercept function calls from their users and may decide to activate more business logic upon such invocations, such as more involving authorization. UDAP nodes which receives such transactions would definitely know that the transactions have been authorized by the corresponding applications, such that a higher level of security is ensured. 
+In the future we are considering:
+1. either implementing the zkSNARKs in the protocol level to meet the rigorous privacy requirement of data sensitive rules;
+2. Or other emerging technologies such as [Solidus]( https://eprint.iacr.org/2017/317.pdf) for more streamlined privacy architecture. 
+3. Quantum computing resistance will be placed in our road map in the next couple of years to keep our platform up to date and future proof.
+
+
+### 7.4 Key Rings and Identity
+
+User accounts are application specific. Any account is associated with an app. Different apps don’t share accounts. 
+
+But account registering needs the help from the Universal Asset Wallet, for security. 
+
+
+#### 7.4.1 Acount creation
+
+
+#### 7.4.2 Key 
+Today’s cryptocurrency wallets put too much burden on end users in managing their accounts/passwords. People feel so much pressure in keeping the account credentials in safe place and in the meantime still feeling convenient to use them.
+
+
+We believe a key ring technology similar to Apple’s iCloud key ring is required to make a first class secure experience with the asset wallet. UDAP Key Ring should:
+
+- Have a single lock key to protect all the accounts/passwords.
+- All the private keys must not be saved to the network.
+- Two factor authorization must be tuned on. UAW will provide TFA service to all the applications registered with UDAP.
+- In case of password loss, a combination of email and cell phone is required to recover the parent account with UDAP.
+
+
+
+## 8. Related Work
+
+
 
 |       | UDAP  | BankEx | Bytom | Digix | 0x    | Achain | Selfsell | Linkeye |
 |-------|-------|-------|-------|-------|-------|-------|-------|-------|
