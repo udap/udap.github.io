@@ -2,11 +2,11 @@
 
 A White Paper
 
-Version 0.6
+Version 0.7
 
-**UDAP Foundation， 1/13/2007**
+**UDAP Foundation， 2/23/2007**
 
-## 1.  background
+## 1.  Background
 
 In the beginning, there was Bitcoin.  
 
@@ -16,7 +16,7 @@ But because Bitcoin has been first and foremost designed to work as a fungible c
 
 Ethereum (the E, for short reference) has emerged from the crowed to carry its inventor’s destiny, initially as “programmable money”, then as a general blockchain based “world computer” usable for financial and non-financial applications. A general-purposed smart contract architecture lends its well to building a variety of on-chain applications to fulfill blockchain’s promise of being the backbone of the "Internet of Values".
 
-But the most challenging thing posed to E is how to represent the "values". For the moment, like almost all the other open ledger platforms, E  is exclusively handling digital currency transfers, as Buterin put in one of his podcasting in early 2018:
+But the most challenging thing posed to E is how to represent the "values". For the moment, like almost all the other open ledger platforms, Ethereum is exclusively handling digital currency transfers, as Buterin put in one of his podcast in early 2018:
 
 "The very first vision was basically a general purpose platform for financial contracts. If X happens then send $5 to account Y, if Z happens send $5 to account B. That was basically what I thought Ethereum would be for" [http://unchainedpodcast.co/vitalik-buterin-creator-of-ethereum-on-the-big-guy-vs-the-little-guy]
 
@@ -425,7 +425,7 @@ The main purpose of application registration is that developers can get the App 
 ###### 5.2.3 Asset Registration
 Assets need to be registered on the UDAP blockchain for applications to query and manage their states on the blockchain. In the meantime, applications receive asset registration information broadcast by other applications, enabling cross-application and cross-chain asset transfer and trading. Assets registration is a two-way binding process between real world assets and crypto assets. Asset metadata is identified and uploaded to off-chain P2P storage network at this stage, and a hash value of the off-chain metadata is stored and associated to the crypto assets. In this process, asset issuers need to make detailed configuration of asset attributes, for example:
 
--   Transferability：an asset can be either transferrable or non-transferrable. If an asset is not transferrable, the asset is usually a warrant asset. The only meaningful operation is "delivery", which means that the warrant owner delivers to the original issuer the promised product or service.
+-   Transferability：an asset can be either transferable or non-transferable. If an asset is not transferable, the asset is usually a warrant asset. The only meaningful operation is "delivery", which means that the warrant owner delivers to the original issuer the promised product or service.
 
 -   Sellability：an asset can be either sellable or non-sellable, which defines the ability to be sold. If the asset is configured to be non-transferrable, the asset is essentially non-sellable.
 
@@ -467,9 +467,6 @@ In addition to the basic services described above, UDAP provides the following s
 
 UDAP assumes a few basic principles about the authenticity of assets:
 
-- 任何资产的真实性必须在管理这种相关应用中的上下文里谈论才有意义。
-- 资产的权威性和真实性可以由第三方的应用通过他们认为可靠的和足够的机制来确立。
--
 - Authenticity is not protected by the UDAP protocol.
 - Authenticity is only valuable in its application context.
 - The authority and authenticity of assets can be confirmed through a mechanism that is considered to be reliable and adequate by participants.
@@ -502,9 +499,9 @@ For those products that are very expensive, there may be a need for multiple pro
 
 #### 5.4. Identity Management
 
-The main purpose of UDAP is to manage real-life assets with blockchain technologies, and to use these technologies to increase their liquidity and thus enhance its permanent durability. At the same time, one important goal of UDAP is to allow these real world assets in the form of crypto assets to be easily transferred among owners.
+The main purpose of UDAP is to manage real-life assets with blockchain technologies, and to use these technologies to increase their liquidity and thus enhance its permanent durability. At the same time, one important goal of UDAP is to allow these real world assets in the form of crypto-assets to be easily transferred between owners.
 
-The first and foremost problem is the identity of the participants in the asset related transaction. For real-world asset transfers, it may not be enough to know only the account numbers. Because the conversion of these assets may involve the requirements of the real identity, for example, a contractual relationship established by the two sides through the asset network, if traceability is important, then the identity of the parties have very clear requirements. The two parties to the contract need to know each other very clearly, that is, the individual that they want to make the transaction. Once the contract is in trouble during execution, there is always another way for the contract party to track and confirm the problem in the real world. Considering again that if third parties' law enforcement agencies are able to participate in this process, the identification of the identities of both parties to the contract is a prerequisite for their participation.
+The first and foremost problem is the identity of the participants in the asset related transaction. For real-world asset transfers, it may not be good enough to know only the account numbers. Because the conversion of these assets may involve the requirements of the real identity, for example, a contractual relationship established by the two sides through the asset network, if trackability is important, then the identity of the parties have very clear requirements. The two parties to the contract need to know each other very clearly, that is, the individual that they want to make the transaction. Once the contract is in trouble during execution, there is always another way for the contract party to track and confirm the problem in the real world. Considering again that if third parties' law enforcement agencies are able to participate in this process, the identification of the identities of both parties to the contract is a prerequisite for their participation.
 
 Each application will determine how much they need to be aware of the identity of the user in the real world. In more stringent applications, they may need to be fully aware of the ID of the user of the application in the real world, his address, and his contact details. For example, a cryptocurrency exchange may require users to submit their own proof of identity in real life, such as ID cards, passport photos, and to verify their phone number and EMAIL address. Moreover, proof of their places of residence may be required and fully verified. In fact, this is the basic verification process that most of the major crypto exchanges are conducting. Other applications may not have such KYL requirements. Maybe they just need to know the registered user's EMAIL address, or maybe they are not interested in knowing any of these information.
 
@@ -515,19 +512,12 @@ There are several types of identity management systems on the Internet:
 - Federation Identity System: Internet applications that have taken shape to a large scale provide authentication for other applications through OpenID, OAuth, or similar mechanisms. The provided process can add user's confirmation of identity and additional property exposure.
 - Self-Sovereign Identity Management.
 
-Given that UDAP provides an open ledger service to third-party applications, we decide to adopt an evolutionary path for UDAP to transition from a Siloed identity system to a Self-Sovereign identity system:
-
-In the first phase of UDAP Identity Management:
-
-- 一个人的身份由第三方的应用所确定。在应用之外没有抽象的身份。也就是每一个应用对应于一个 persona。 UDAP 不追求作为单一的identity provider。 应用身份的独立性能够提供隐私保护和账号的安全。
-- 在应用级别的用户的创建是应用自身的工作， UDAP不参与。
-- 应用用户需要注册到UDAP体系中也是通过相应的应用完成。
-- identity认证过程和资产认证一样留给应用或第三方认证机构。identity认证对某些场景来说是必须的，但是不是UDAP的责任，应用只需要保证提交给UDAP存放的hash和提交给第三方认证的是一致的，这样一旦第三方认证机构认可了用户的identity，那么UDAP就可以确认这个用户是他所申明的身份。
+Given that UDAP provides an open ledger service to third-party applications, we decide to adopt an evolutionary path for UDAP to transition from a siloed identity system to a Self-Sovereign identity system:
 
 - A person's identity is provided by a third-party application. There is no abstract identity outside of the application. That is, each application corresponds to a persona. UDAP does not pursue as a single identity provider. The independence of application identity can provide privacy protection and account security.
-- Applications are responsible for user account setup. UDAP is not involved in this process.
-- Applications are also responsible for creating UDAP blockchain accounts for their users.
-- Identity verification is the responsibility of applications or third-party certification organization. Applications need to ensure that the hash value submitted to UDAP is the same as the one submitted to the third-party certification organization. Once the third-party certification organization has approved the identity of the user, then UDAP can confirm that the user is his identity.
+- Applications are responsible for user account setup. But the process to create a public/private pair in creating an account on the chain is executed by UDAP and the private keys are not supposed to be touched by the applications. Private keys are never stored in applications. They must be kept in the mobile phone in an encrypted form. 
+- UDAP provides a key ring to securely store the private keys of the accounts in each of the applications that a user choose to register. 
+- Private keys are mainly used to sign transactions initiated by a user, either from the application plugins in UAW, or from standalone mobile apps.
 
 In the second phase of UDAP Identity Management:
 
@@ -538,7 +528,7 @@ In the second phase of UDAP Identity Management:
 
 We are looking closely at the development of some third-party identity management systems and will consider the possibilities of integrating their services into UDAP network. These systems include (but not limited to) uPort, ShoCard, Civic, Mooti, ​​and others.
 
-## 6.  通用资产钱包 (Universal Asset Wallet， UAW)
+## 6.  Universal Asset Wallet
 
 ![](media/image3.png)
 
