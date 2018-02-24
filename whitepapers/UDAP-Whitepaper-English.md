@@ -9,7 +9,18 @@ Version 0.7
 
 ## Executive Summary
 
-UDAP is 
+UDAP provides an objected oriented API and a Universal Asset Wallet for third party application developers to create powerful blockchain based application efficiently to deal with crypto-token encoded real-world assets, without the steep learning curve and concerns of scalability and securities.
+
+UDAP's core architecture is "Virtual Private Chain", where each applications runs on its own private secure blockchain and storage, with user configured privacy level and blockchain nodes. UDAP uses both vertical sharding and horizontal sharding to achieve potentially millions of transactions per second. Massive parallelism is realized in the nodes where all the cores can process all the transactions in parallel. Multiple nodes form processing zones and zones form zone clusters to create enormous transaction processing power. 
+
+Multiple levels of encryptions and obfuscations are used to ensure of the privacy of the assets registered on the chains. 
+
+A Universal Asset Wallet is provided for application developers to write exciting applications directly in the wallet as a plug-in.
+
+Applications can immediately register token-based assets on chain and offer the built-in market to their customers. Applications can even create their own in-app currencies backed by blockchains and use it to build the in-app economy. The app-specific currencies can eventually be traded in the UDAP platform to offer unlimited liquidity.
+
+UDAP is a standalone public chain cloud that offers itself as an advanced streamlined BAAS for the booming real world token-economy beyond crypto-currencies.
+
 
 ## 1.  Background
 
@@ -25,7 +36,7 @@ But the most challenging thing posed to E is how to represent the "values". For 
 
 "The very first vision was basically a general purpose platform for financial contracts. If X happens then send $5 to account Y, if Z happens send $5 to account B. That was basically what I thought Ethereum would be for" [http://unchainedpodcast.co/vitalik-buterin-creator-of-ethereum-on-the-big-guy-vs-the-little-guy]
 
-E’s model of "value" is primitive. In the basic model, for any kind of value/asset the only attribute associated with this asset is the balance of it, a number. This simplified model probably will fit financial transactions well, but it's very lacking dealing with variety of asset types in the operation of the world economy.
+Ethereuem’s model of "value" is primitive. In the basic model, for any kind of value/asset the only attribute associated with this asset is the balance of it, a number. This simplified model probably will fit financial transactions well, but it's very lacking dealing with variety of asset types in the operation of the world economy.
 
 The three-year-old smart contract implementation in Ethereum, although has attracted thousands of development teams to deploy applications, mostly in Solidity, on the platform, is far from being mature and productive towards becoming the world computer:
 - Limited in features and functions. For instances:
