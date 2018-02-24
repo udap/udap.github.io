@@ -419,14 +419,17 @@ On top of the asset model, UDAP has defined a service model for asset operations
 <!-- 图 -->
 
 ###### 5.2.1 User Registration
-User registration establishes the mapping between the user space in the application domain and the user space of UDAP blockchain. User accounts between different applications are completely isolated. Applications are responsible for registering their user accounts with UDAP blockchain to create the mapping. See 5.4 for more description.
+User registration establishes the mapping between the user space in the application domain and the user space of UDAP blockchain. User accounts between different applications are completely isolated. Applications are responsible for registering their user accounts with UDAP blockchain to create a mapping. See 5.4 for more description.
 
 ###### 5.2.2 Application Registration
 A UDAP-based application has either an independent asset chain (deployed and owned by application vendor) or a virtual chain sitting on top of UDAP main chain. These two deployment settings support both private/consortium and public blockchain configuration. In either case, applications need to connect to UDAP main chain and register themselves with the Application Registry on the UDAP main chain. When applications are registered, each application is given a unique App Id and a unique App Name. App Name is used as the level 0 namespace id of the managed assets. In the registration process, each application also receives an App Key and an App Secret that are used to securely connect to the UDAP main chain.
 
-<!-- figure -->
+<!-- figure to illustrate two configurations-->
+<p align="middle">
+<img src="media/app-reg.png" alt="Asset Model" style="width: 500px;"/>
+</p>
 
-When application prefers a private or consortium configuration for asset lifecycle management, it means assets on a UDAP-enabled permissioned blockchain are stored in a private ledger on the managed nodes. This permissioned blockchain needs to communicate with UDAP main chain through an Inter Blockchain Communication protocol. If an application doesn't want to have an independent network, it can choose a virtual chain configuration, where application's ledger is stored and managed on the validator nodes of UDAP main chain.  
+When application prefers a private or consortium configuration for asset lifecycle management, it can leverage UDAP's Asset Blockchain as a Service (ABaaS) to deploy a private or consortium asset chain. This UDAP-enabled permissioned blockchain is specific to this application and is by default automatically registered with the UDAP main chain. Transactions on the app chain are stored locally in a private ledger on the ABaaS managed nodes. This configuration gives the app chain the capability of broadcasting asset information to or communicating with other UDAP-enabled chains through an Inter Blockchain Communication protocol. If an application doesn't want to have an independent network, it can choose a virtual private chain configuration, where application's ledger is stored and managed on the validator nodes of UDAP main chain.  
 
 ###### 5.2.3 Asset Registration
 Assets need to be registered on the UDAP blockchain for applications to query and manage their states on the blockchain. In the meantime, applications receive asset registration information broadcast by other applications, enabling cross-application and cross-chain asset transfer and trading. Assets registration is a two-way binding process between real world assets and crypto assets. Asset metadata is identified and uploaded to off-chain P2P storage network at this stage, and a hash value of the off-chain metadata is stored and associated to the crypto assets. In this process, asset issuers need to make detailed configuration of asset attributes, for example:
@@ -459,7 +462,7 @@ Multisig is an additional security protection mechanism in the process of asset 
 
 ###### 5.2.7 Base Coin Issuance
 
-App chains may need to issue their own tokens as utility tokens for users to use their services or as base coins for pricing managed assets. For example, if a person wants to use event ticketing application to sell an event ticket, he may need to price the ticket with the base coin and pay the service fee with the base coin. UDAP supports application to issue base coins just like Ethereum supports Dapps to issue ERC20 tokens.   
+App chains may need to issue their own tokens as utility tokens for users to use their services or as base coins for pricing managed assets. For example, if a person wants to use event ticketing application to sell an event ticket, he may need to price the ticket with the base coin and pay the service fee with the base coin. UDAP supports application to issue base coins just like Ethereum supports Dapps to issue ERC20 tokens. As base coins are also assets, they can be traded against UDAP token (UP) or other application-specific tokens through an exchange.   
 
 ###### 5.2.8 Other Asset Services
 
