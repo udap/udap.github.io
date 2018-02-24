@@ -6,6 +6,11 @@ Version 0.7
 
 **UDAP Foundation， 2/23/2007**
 
+
+## Executive Summary
+
+UDAP is 
+
 ## 1.  Background
 
 In the beginning, there was Bitcoin.  
@@ -56,14 +61,13 @@ But our neighborhood faces massive, palpable and non-palpable assets. Are these 
 
 ## 2. The Goals
 
-Our ultimate goal is to build The Internet of Asset. Its value proposition has a clear and clear boundary, and we have three concreate deliverables:
+Our ultimate goal is to build The Internet of Asset. Its value proposition has a clear and clear boundary, and we have three concrete deliverables:
 
 1.  Develop a concept framework of understanding the "assets" in our world from a blockchain perspective, and abstraction of the general behavior; Define a convenient API for traditional vertical application developers. Such an API does not require users to have a deep understanding of blockchain technology and decentralized technology.
 
-2.  Provide a reference implementation of UDAP protocol, so that they can catch the express train of decentralized computing and decentralized storage without changing the existing application architecture. We abstract the most central part of decentralized computing, decentralized storage technology and decentralized messaging mechanism into a concise and effective API. Considering that the decentralized computing and storage technologies are still in an immature phase and are in a period of rapid growth, we believe such technology platforms will bring tremendous value to third-party application developers.
+2.  Provide a reference implementation of UDAP protocol that blockchain app developers can use immediately, . We abstract the most central part of decentralized computing, decentralized storage technology and decentralized messaging mechanism into a concise and effective API. Considering that the decentralized computing and storage technologies are still in an immature phase and are in a period of rapid growth, we believe such technology platforms will bring tremendous value to third-party application developers.
 
 3.  Provide an implementation of Universal Asset Wallet(UAW) for end-users. The UAW will capture the most useful interaction patterns with assets that allows users to store, copy, transfer, sell/buy, and trade a variety of assets deposit from third party applications in one place. Such a design for third-party application development, in fact, is a very favorable news, because the third-party platforms can focus on the current core business logic without having to figure out how to build their own assets blockchain and user Interaction.
-
 
 4. Offer an architecture that allows for linear scalability. The reference implementation must be able to support thousands of applications and near one-second response with finality, with a total throughput of 10k~100k TPS. 
 
@@ -945,6 +949,7 @@ We believe a key ring technology similar to Apple’s iCloud key ring is require
 
 ## 8. Related Work
 
+The world is in a transition from cryptocurrencie to cryptoassets. 
 
 
 |       | UDAP  | BankEx | Bytom | Digix | 0x    | Achain | Selfsell | Linkeye |
