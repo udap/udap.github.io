@@ -6,7 +6,6 @@ Version 0.7
 
 **UDAP Foundation， 2/25/2007**
 
-
 ## Executive Summary
 
 UDAP is a blockchain-based asset protocol that provides Restful APIs and a Universal Asset Wallet for third party application developers to create powerful blockchain based application efficiently to deal with crypto-token encoded real-world assets, without the steep learning curve and concerns of scalability, privacy and security.
@@ -573,261 +572,123 @@ As a very important part of the platform, wallet plays a key role in the entire 
 
 As a general-purpose assets wallet, UAW's  role has been significantly expanded. Think of it as a personal safe on one's cell phone. It can contain any stuff you would put in a safe, such as certificates, important documents, diamond rings, antiques, securities, IOUs, etc. In fact the asset wallet store the unique tokens that cryptographically represent the assets. These asset-backed tokens are created by various applications running on the UDAP chain are organized by applications.
 
-General Assets Wallets are more than just the storage of assets, but are also very handy for supporting common operations on assets such as asset transfers, sales, trading, auctions, cancellation and more.
+General Assets Wallets are more than just the storage of assets, but are also very handy for supporting common operations on assets such as asset transfers, sales, trading, auctioning, cancellation and more.
 
 
 #### 6.1.  Assets precipitated from third party apps
 
 UAW is the user of the assets obtained in a variety of third-party applications. Each application has its own unique user management system that generates user accounts that correspond to a unique account on the blockchain, with the help of UAW. Obviously account will not be shared or reused between applications.
 
-An account has security significance and identity only in the context of third-party applications. The purpose of doing so is to ensure that the user's privacy. In this context, a wallet, in fact, must import the assets from each application. After the account is imported, the assets of the corresponding user in the third-party application are displayed in the general-purpose assets wallet in different groups. Users can interact with the asset in a generic way, such as transferring, submitting to marketing, auction auctions, or sending copies to third parties.
+An account has security significance and identity only in the context of third-party applications. The purpose of doing so is to ensure that the user's privacy. In this context, a wallet, in fact, must import the assets from each application. After the account is imported, the assets of the corresponding user in the third-party application are displayed in the general-purpose assets wallet in different groups. Users can interact with the asset in a generic way, such as transferring, submitting to markets, auctioning and sending copies to third parties.
 
 #### 6.2.  Personal Assets
 
-UAW not only imports assets from various third-party application contexts from third-party applications, but it also allows users to create personalized digitally encrypted assets directly in the wallet.
+UAW not only imports assets from third-party applications, it also allows users to create personalized digitally encrypted assets directly in the wallet. In fact this feature is also an application from the architectural point of view.
 
-One scenario is that users can create either [Encryption Contracts] {.underline} or Encryption Contracts in the asset wallet directly . The purpose of IOUs in daily life is to show that a users owes a particular piece of asset to a user B because of borrowing and can pay for it at some time in the future. In real life, people may write down this kind of agreement and promise about assets on a piece of paper. Crypto-IOUs are actually superior to real-life handwritten IOUs, easier to create, more expressive with support of voice, pictures and even videos, tamper-proof and irrefutable, no worry of loss.
+One scenario is that users can create IOUs. The purpose of IOUs in daily life is to show that a person owes a particular piece of asset to another person and he/she promised to return/pay back at some time in the future. People used to write down IOUs on a piece of paper. Now UDAP client gives users an easier and securer way to write Crypto-IOU, with support of voice, pictures and even videos, tamper-proof and irrefutable, no worry of loss.
 
 <img src="media/image4.png" alt="Asset Hierarchy" style="float:left; width:200px;height:400px;padding-right:5px"/>
 
-In the process of personal loans or IOUs, one can also use the wallet to conduct multi-signature signing. For example, when creating an IOU, a third-party witness may be required to witness the contract. The borrower can send the original IOU to the witness, who then signs  it and sends it to the creditor.
+In the process of personal loans or IOUs, one can also use the wallet to conduct multi-sig signing. For an example, in the process of creating an IOU, a third-party witness may be required to witness the contract. The borrower can send the original IOU to the witness, who then signs it and sends it to the creditor.
 
-Encrypted contracts can contain rich media content, for example, pictures, voices and even video can be used together with text.
+User can even introduce the [guarantor] role. Unlike the [witness], the guarantor has to assume the corresponding obligation of security if the debtor can not execute the contract in the agreed time for debt repayment, then the guarantor must bear the repayment obligations. 
 
-创建用户打开个人功能然后点击书写借条或者欠条。描述发生的借贷关系和偿还安排。然后就可以发送给债权人。债权人确认签名后就成为自己个人资产的一部分。等到未来的某个时刻交割，就完成了这个借条或者欠条的生命周期。
-
-Create a user to open personal features and then click to write IOUs or IOUs. Describe the loan relationships and reimbursements that take place. Then it can be sent to creditors. Creditors confirm the signature became part of their personal assets. Wait until sometime in the future delivery, to complete the IOU or IOU life cycle.
-
-在个人打借条或者欠条的过程中，还可以利用钱包所提供的多重签名的属性。例如在做一张借条或欠条的时候，可能需要一个第三方的见证人见证这张欠条额内容有增强的，这个可靠性和有第三方的在场，那么在书写欠条借条的过程中，他可以把原始的欠条发送给见证人，然后见证人进行签收以后，最后发送给债权人。
-
-In the process of personal loans or IOUs, you can also use the wallet to provide multi-signature properties. For example, when making a IOU or IOU, a third-party witness may be required to witness the increase, the reliability and the presence of a third party, so that he can Send the original IOU to the witness, who then signs the receipt and sends it to the creditor.
-
-甚至引入[担保人]的角色。和[见证人]不同，担保人和，债务人，要承担，相应的担保的义务，如果债务人不能。约定的时间进行债务的偿还，那么担保人要负连带的偿还义务。能和通常的。见证人的多方签名的流程相似，使用的都是相似的机制。从侧面表明了通用资产钱包所自带的多重签名的功能的强大性。
-
-Even introduce the [guarantor] role. Unlike the [witness], the guarantor and the obligor have to assume the corresponding obligation of security if the debtor can not. The agreed time for debt repayment, then the guarantor to bear the repayment obligations. Can and usual. Witness multi-signature process is similar, using a similar mechanism. From the side of the common asset wallet that comes with the power of multiple signatures.
-
-如果合同的资金交付方式选择系统支持的加密货币，那么合约的交割方式更为便捷，用户只需向合约汇入相应的款项，合约即可自动执行完毕，债务债权关系自动解除。基于加密货币的偿还安排还可以支持利息处理，合约会按照双方约定的利息在触发条件（例如，出现偿还逾期）满足以后， 自动开始计息。
-
-If the contract's funds are delivered in the form of cryptocurrencies supported by the system, the delivery method of the contract is more convenient. The user only needs to import the corresponding payment into the contract, the contract can be automatically executed and the debt claims are automatically released. Reimbursement arrangements based on cryptocurrencies can also support the treatment of interest and the contract automatically begins to accrue interest upon satisfaction of the trigger conditions (eg, overdue repayments) as agreed between the parties.
-
-加密契约可以是高度格式化的， 也可以是用高度灵活形式，例如除了文字以外， 可以使用图片， 语音甚至视频。所有的这些媒体形式都会被签名加密，具有高度的隐私和高度的安全性。
-
-Encryption contracts can be highly formatted or highly flexible, for example, pictures, voices and even video can be used other than text. All of these forms of media are signed and encrypted with a high degree of privacy and high security.
-
-Think carefully about this function, which is an extremely powerful functional design,
+In summary, crypto-IOU is an extremely powerful.
 
      a. Saving notarization and costs
-     b. Very convenient to store
-     c. Personal debt can be transferred and circulated
-     d. Contract delivery and its simplicity.
+     b. Very convenient to keep safe
+     c. Personal debt can further be traded.
 
+In other scenarios, a user of UAW can register any personal belongs through the description of words or pictures or videos. Once tokenized, the person belongs can enter a market for sale. 
 
-2)  个人物件资产代币化。 此种模式下, 用户可以自己通过文字或者图片或者视频的描述，产生一个用户资产登记卡。完成以后可以把它进行转移，或者放到市场进行销售，就和普通的电子商务平台的产品上架的过程一样。个人用户完全可以把，通用资产钱包，当成一个电子商务平台来对待。
-
-    Personal property assets tokenization. In this mode, the user can create a user asset registration card by himself or herself through the description of words or pictures or videos. After the completion of the transfer can be carried out, or put on the market for sale, and ordinary e-commerce platform products on the shelves of the same process. Personal users can put, general-purpose assets wallet, as an e-commerce platform to treat.
-
-#### 6.3.  负债：the Bills
-
-UAW除了管理财务意义上的资产，同时还管理负债， 或者称之为"负资产"。
+#### 6.3.  Debts
 
 UAW manages assets in the financial sense while also managing liabilities, or "negative assets."
 
-通常我们所说的资产一般是指的对自己有价值的部分，但是在很多场景下。一个人不仅需要知道自己拥有多少资产，同时也需要拥有多少负债，以及这些负债的偿还要求和条件。
-从严格的意义上来说，UAW
-呈现的不仅仅财务记账中的体现"资产"的一半，而且体现了自己的整个财务状况，包括资产和负债。
+Often times, what we mean by assets is something that is valuable to ourselves. In many scenarios though, we not only need to know how much assets we owns, we also need to manage liabilities and the reimbursement requirements and conditions for those liabilities.
 
-Often, what we mean by assets is something that is valuable to ourselves, but in many scenarios. A person not only needs to know how much assets he owns, how many liabilities he also owns, and the reimbursement requirements and conditions for those liabilities.
-In a strict sense, UAW
-Present not only half of "assets" in financial books but also one's own financial position, including assets and liabilities.
+The most common example of "negative assets" is the various types of "utility bills" that arrive on a monthly basis: water / electricity / gas / telephone bills. 
 
-当一个人向第三者开出一张借条，或者欠条的时候，对方作为债权人拥有的是正资产，而己方作为债务人拥有的是负资产。作为负资产，虽然你希望它消失，
-或者倾向于把它忘掉，但是实际上债务人需要经常提醒自己不能违约。
+Of course there needs to be an application that connects the utility companies to UAW. Once we have it, users can use the wallet to pay directly in the UAW, or the user can ask someone else to pay for them.
 
-When a person places an IOU or IOU with a third party, the other person owns a positive asset as a creditor and the other person owns the negative asset as a debtor. As a negative asset, though you want it to disappear,
-Or tend to forget it, but in fact the debtor needs to constantly remind himself that he can not default.
+Universal Asset Wallet is a very powerful tool for everyone to handle their finances. Not only does it handle some of the personal lending activities of everyday life just as it is, but it can also be used by small businesses such as family hotels or family restaurants as a tool for sending discount coupons or vouchers.
 
-在UAW中，
-当使用者开出一张欠条或者借条的时候，他/她会在钱包中看到一个代表这个债务的负资产。
+#### 6.4. Multi-Sig Support
 
-In UAW,
-When a user places an IOU or IOU, he or she will see in the wallet a negative equity representing the debt.
-
-负资产最常见的例子就是每月如期到来的各种"utility bills":
-水/电/气/电话账单。 电力公司， 电话公司，
-甚至信用卡公司通过我们标准的借口，
-可以把用户的各种账单直接投资到用户手中。
-用户可以利用钱包自带的支付能力（法币的或者加密货币的）直接在UAW中支付，
-或者可以转给其他人代为支付， 例如夫妻之间可以商量选择支付人，
-孩子可以让父母为自己的电话或者信用卡支付账单。
-
-The most common example of negative equity is the various types of "utility bills" that arrive on a monthly basis:
-Water / electricity / gas / telephone bills. Power companies, telephone companies,
-Even credit card companies through our standard excuse,
-Users can invest various bills directly to the user.
-Users can use the wallet comes with the ability to pay (legal currency or cryptocurrency) to pay directly in the UAW,
-Or can be transferred to other people to pay on behalf of, for example, the couple can negotiate the choice of payers,
-Children can have their parents pay bills for their phone or credit card.
-
-不仅如此， 电子商务网站产生的支付账单也可以被导入到钱包进入支付流程，
-虽然可以想像法币的电子商务网站可能不愿意这么做，
-因为通常他们已经有自己的支付通道， 例如PayPal或者Alipay。
-
-Not only that, e-commerce sites pay bills can also be imported into the wallet into the payment process,
-Although it is conceivable that the e-commerce website of the French currency may not be willing to do so,
-Because usually they already have their own payment channels, such as PayPal or Alipay.
-
-通用资产钱包，即使在没有第三方应用的上下文中，也是各人处理自己财务的一个非常强有力的工具。它不仅仅像刚才一样可以处理一些日常生活中的个人的借贷行为，同时也可以供小型企业，例如家庭旅馆或者家庭餐馆作为发送折扣卷或者代金券的一种工具。
-
-Universal Asset Wallets, even in the absence of third-party applications, are a very powerful tool for everyone to handle their finances. Not only does it handle some of the personal lending activities of everyday life just as it is, but it can also be used by small businesses such as family hotels or family restaurants as a tool for sending discount coupons or vouchers.
-
-#### 6.4.  多重签名 （Multi-Sig）
-
-UAW内置多重签名所需要的用户界面的支持。
-
-AW built-in multi-signature required user interface support.
+UAW supports multi-sig transactions.
 
 <img src="media/image5.png" alt="Asset Hierarchy" style="float:left; width:200px;height:400px;padding-right:5px"/>
-但一笔交易被提出并且需要多重签名，UAW 会发消息到相应的签名者的钱包，
-提示制定的签名者审核交易细节， 然后作出 "同意"或者"拒绝"的动作。
-UAW消息队列中会呈现需要签字的交易清单。 签字的历史也将被保留。
 
-However, a transaction is made and requires multiple signatures, UAW will send a message to the appropriate signer's wallet,
-Prompts the developer to review the transaction details and then "agree" or "reject" the action.
+When a transaction is made and requires multiple signatures, UAW will send a message to the appropriate signer's wallet and prompts the designated signer to review the transaction details and then "agree" or "reject" the action.
+
 The UAW message queue presents the list of transactions that need to be signed. The history of the signature will also be preserved.
 
-交易的发起可以是从另外一个UAW， 也可以是从已经加入 UDAP
-生态的第三方APP。 这对第三方APP是非常方便的，
-它们不需要再建设自己的多重签名的工作流，
-就可以获得数字签名的强大安全性支持。
+Initiation of the transaction can be from another UAW user, can also be from a UDAP application. This is very convenient for third-party APP, since they do not need to build their own multiple-signature workflow.
 
-Initiation of the transaction can be from another UAW, can also be from has joined UDAP
-Eco third-party APP. This is very convenient for third-party APP,
-They do not need to build their own multiple-signature workflow,
-You can get a strong digital signature security support.
+#### 6.5.  App Store
 
-#### 6.5.  Plugin Store
-
-UAW是一个powerful的可扩展的插件架构，实际上它的主要目的是支撑大量的能产生各类资产的第三方App。它在UDAP为第三方App提供后台整合的功能上提供了一个统一的用户端体验的整合。这些用户端的plugin构成了用户能体验到的整个资产互联网的生态。所有的第三方应用集中地出现在UAW的Plugin Store 中， 用户已经开户的plugin和尚未使用过的plugin均在这里出现供用户快速进入。
-
-UAW is a powerful and extensible plugin architecture, and its main purpose in fact is to support a large number of third-party apps that generate a wide range of assets. It provides a unified user experience integration with UDAP's ability to provide background integration for third-party apps. The plugin for these clients constitutes the ecology of the entire asset Internet that users can experience. All third-party applications appear in the Plugin Store of the UAW, and the plugin and unused plugin that the user has already opened account for the user to quickly enter here.
+UAW is a powerful and extensible plug-in architecture, and its main purpose in fact is to support a large number of third-party apps that can generate a wide range of assets. It provides a unified user experience integration with UDAP's ability to provide background integration for third-party apps. The plug-ins for these clients constitute the ecology of the entire Asset Internet. All third-party applications appear in the App Store of the UAW for the users to choose from.
 
 <img src="media/image6.png" alt="Plugins" style="float:left; width:200px;height:400px;padding-right:5px"/>
 
-技术上UAW是一个分层的架构体系， 相当多的用户体验部分已经固化在UAW中，另外的可展示部分由第三方plugin 提供。 例如演出票务是一个plugin，个人资产管理是一个plugin，微合同是一个plugin，甚至个人所拥有的大宗商品资产是plugin。
+Technically UAW is a hierarchical architecture, and a considerable part of the user experience has been built in the UAW. Applications from third-parties range from ticketing, memberships, financial assets, health records, academic records, IOUs and crypto-contracting. 
 
-Technically UAW is a hierarchical architecture, a considerable part of the user experience has been cured in the UAW, the other part of the display is provided by a third-party plugin. For example, the show ticket is a plugin, the personal asset management is a plugin, the micro contract is a plugin, and even an individual owned commodity asset is a plugin.
-
-并非所有的第三方应用会提供一个UAW的plugin。 一个App可以有自己的原生的App， 或者只有基于PC 的网站。 这个在UAW的App用UDAP提供的API和整个计算链和存储链发生关联。
-
-Not all third-party applications provide a UAW plugin. An App can have its own native app, or only a PC-based web site. This API provided by UAW's UDAP is associated with the entire compute and storage chain.
+Not all third-party applications provide a UAW plug-in. An App can have its own native app, or only a PC-based web site. 
 
 <img src="media/image7.png" alt="Plugins" style="float:right; width:400px;padding-left:5px"/>
 
-UAW 是一个生态系统。他提供可编程的借口让第三方的应用可以开发完整的用户体验。当然UAW本身提供内置的一系列的功能能够节省大量的第三方应用推向自己的用户群所需要的时间。
+UAW is an eco-system. It provides a programmable UI for third-party applications to develop a complete user experience. The UAW itself provides a series of built-in features that save the time it takes for a large number of third-party applications to reach their own user base.
 
-UAW is an ecosystem. He provides a programmable excuse for third-party applications to develop a complete user experience. Of course, the UAW itself provides a series of built-in features that save the time it takes for a large number of third-party applications to reach their own user base.
+1.  Simple Asset Transfers: Users are like sending emails, or as usual Crypto Currency. Encrypted assets are sent from one account to another.
 
-1.  简单资产转移：用户就像发送email一样， 或者像通常的转移Crypto Currency一样吧加密资产从一个账户发送到另外一个账户。
+2.  Obtain permission to transfer: In order to prevent the rubbish assets from flooding wallets, users can set to require other parties to obtain permissions to send any transfers.
 
-    Simple Asset Transfers: Users are like sending emails, or as usual Crypto Currency. Encrypted assets are sent from one account to another.
+3.  Ticketing: This is the _deliver_ tool that comes with the UAW. Event tickets are in fact the promise of services provided by asset issuers who will deliver the final product or service within a certain period of time. The redemption process is actually transferring the tokens back to issuer.  
 
-2.  获得接受许可的转移： 为了防止垃圾资产充斥钱包，用户可以设置自己的账号要求发送方在获得许可的情况下才能发送资产。
+4.  Market: UDAP comes with market tools that asset owners to sell their assets.
 
-    Obtain permission to transfer: In order to prevent the rubbish assets flooded wallets, users can set their own account requirements to send the sender in the case of permission to send assets.
+5.  Multiple Signatures support.
 
-3.  检票： 这是通用资产钱包中所自带的[交割]{.underline}工具。
-    所为交割是指一些资产发行方提供的未来的服务的许诺，他们都需要在一定的时间内进行最终的产品或者服务的兑现。一个对未来的资产承诺书的兑现过程，实际上是承诺的回收的过程，我们简单称之为"检票"。一旦交割发生完毕以后。一个在"期货"形式资产就完成了它的生命周期。这样的场景，非常适用于例如演出会的门票电影票，餐馆的优惠券折扣券以及个人的债务。
+UAW offers JavaScript APIs for third-party application developers. Some of the functions are as follows:
 
-    Ticketing: This is the [Deliver] {. Underline} tool that comes with the General Assets wallets.
-     Deliveries refer to the promise of future services provided by asset issuers who need to deliver the final product or service within a certain period of time. A process of redemption of a future asset commitment is actually a promised process of recovery, which we will simply call a "ticket examination." Once the delivery has taken place. An asset in the "futures" form has its life cycle completed. Such scenes are ideal for tickets such as ticket tickets for shows, coupon coupons for restaurants and personal debts.
+1.  getCurrentUser: Get the current user's identity information, including the chain address.
 
-    某种票证的持有人，在进行服务的兑现的时候，点击，对线或者验票的按钮，出示给服务厅工整，服务提供者使用验票或者验证的按钮，就完成了，对这笔债务的回收，然后他可以在线下提供，这笔债务的纸面所指定的服务，或者产品。也就是说，通用资产钱包也可以拿来作为演出会的门票，或者电影院工作人员使用的验票工具。
+2.  getAssetCollection: Get the current user's list of assets.
 
-    When a holder of a certain type of ticket clicks on a line or a check-out button to present the service, he / she presents the button for the service hall to be neat and the service provider uses the ticket or the verification, and this is done The debt is recovered, and then he can be offered offline, on the paper designated by the debt service, or product. In other words, the Universal Wallet can also be used as a ticket for a show or a ticket checking tool used by movie theater staff.
+3.  initTransfer：Transfer specific assets. Activate UAW's multi-signature mechanism if asset transfer requires multiple signatures.
 
-4.  售卖： UDAP自带市场工具，提供资产拥有者在市场销售资产。
-    交易使用的货币可以是任意的加密货币，这是所谓的[场内交易]{.underline}。市场同时提供线上交易和线下交易混合的模式，使用escrow服务来促成使用法币购买资产的交易，这和 localbitcoins 这样的[场外交易]{.underline}模式类似。
+4.  offerToSellInMarket：Offer to sell an asset in the market.
 
-    Sell: UDAP comes with market tools that provide asset owners to market assets in the market.The currency used for the transaction can be any cryptocurrency, which is called [OTC] {.underline}. The market offers a mix of both online and offline transactions, using the escrow service to facilitate transactions that use the French currency to buy assets, similar to the [off-market] {.underline} mode, such as localbitcoins.
-
-5.  多重签名：检测操作的签字需求，并且自动推送签字通知到相应签字人的钱包消息队列。
-
-    ultiple Signatures: Detects signature requirements for operations and automatically sends sign-off notifications to the wallet message queue of the appropriate signatory.
-
-UAW为第三方的应用使用系统提供的标准plugin 的JavaScript API，
-主要函数如下（都在操作都在App沙盒上下文中）：
-
-UAW uses the standard plugin's JavaScript APIs for third-party applications,
-The main functions are as follows (both in action in the sandbox context):
-
-1.  getCurrentUser: 获得当前用户的身份信息， 包括链上地址。Get the current user's identity information, including the chain address.
-
-2.  getAssetCollection: 获得当前用户的资产列表。Get the current user's list of assets.
-
-3.  initTransfer：转移特定资产。激发UAW的多重签名机制，如果资产转移需要多重签名的话。Transfer specific assets. Stimulate UAW's multi-signature mechanism if asset transfer requires multiple signatures.
-
-4.  offerToSellInMarket：在market中挂价销售，指定货币类型。Sale in the market price, the designated currency type.
-
-5.  offerToSellInExchange: 在exchange 中挂价销售。In exchange for sale price.
+More API will be provided in the future, including various auction methods, escrowed P2P transactions and decentralized exchanges.
 
 
-用户的购买行为统一发生在UAW中。 一个用户在某个 App plugin中发现想购买的资产，点击详情后统一进入UAW提供的详情页面并且下单购买。
-
-The user's purchase behavior occurs uniformly in the UAW. A user found in an App plugin want to buy the assets, click on the details unified into the details page provided by UAW and place an order to buy.
-
-更多的API将分批提供， 包括各种auction方式，escrow 方式的P2P交易。
-
-More API will be provided in batches, including various auction methods, escrow P2P transactions.
-
-## 7.  Implementation Considerations
+## 7.  Implementation
 
 #### 7.1 Protocol Implementation
 
 As mentioned before, UDAP at the highest level is a conceptual model of real-world assets. The following section provides the descriptions of the ongoing implementation of the model. It’s subjected to change as the development work moves along.
 
-
 UDAP addresses are divided into account address, asset address, and assetProto address. Where account represents the actual account of the user, organization, service provider, etc. Asset represents an asset, AssetProto is a prototype of a type of asset, and an asset must be associated with an asset prototype in a one-to-one correspondence.
 
-These three types of address have a versionHash and lastCommitTimestamp property. VersionHash represents the changing status of this address,
-Each change of an address will generate a new random and never duplicate versionHash value.lastCommitTimestamp will record the last point in time when an address was received after the transaction was processed.
+These three types of address have a versionHash and lastCommitTimestamp property. VersionHash represents the changing status of this address. Each change of an address will generate a new random and never duplicated versionHash value. The lastCommitTimestamp will record the last point in time when an address was received after the transaction was processed.
 
-UDAP的交易总是关联着规则(rule). 规则是寻求一系列满足给定address的数字签名的逻辑. UDAP的各种操作都有着权限管控, 权限的管控就是由规则来实现的. 在UDAP中,需要对地址进行一系列的操作, 等同与对地址发起一系列的交易.
-一个交易, 通常包括以下数据
+UDAP transactions are always 
 
-UDAP transactions are always related to rules (rules) is to find a series of logic to meet the given address of the digital signature UDAP various operations have permission control, permission control is achieved by the rules in the UDAP , Need to address a series of operations, equivalent to the address and initiate a series of transactions.
 A transaction usually includes the following data
 
--   交易的发起者The originator of the transaction
+-   The originator of the transaction
+-   Recipient of the transaction
+-   The method of trading
+-   Trading method parameters
+-   The digital signatures required for the action
+-   versionHash, optional transaction acceptor versionHash.
 
--   交易的接受者Recipient of the transaction
+The originator of the transaction must be an account address, and the recipient of the transaction can be an asset address or an assetProto address. 
 
--   交易的方法The method of trading
+When the UDAP accepts the transaction, the rule matcher verifies whether the signature is of the transaction request, whether the signature is out of date, whether the signature time is later than the lastCommitTimestamp of the transaction acceptor, and if the versionHash of the transaction acceptor is given if the versionHash is given Given conditions and all legitimate signers would meet the signature rule. If so, UDAP API then accepts the transaction request to complete the operation and generate a new versionHash. 
 
--   交易方法的参数Trading method parameters
+The signature includes the time of signing, the signature's validity period, and the versionHash that may contain the current asset. When the app collects enough required signatures, it initiates the transaction to UDAP, which verifies that the provided list of signatures satisfies the rule by interpreting the method parameters. If so, it changes the state of the asset, generate a new versionHash and record the latest lastCommitTimestamp in all signatures as the signature is for the transaction method parameters. UDAP creates an optional versionHash and lastCommitTimestamp Time guarantee to prevent replay attack. VersionHash transaction request and digital signature are optional. It is designed to ensure that the asset data will not be phantom read, similar to what optimistic locking does. Whether you need to verify that versionHash is in the hands of the originator of the transaction.
 
--   满足条件的数字签名Meet the conditions of digital signatures
-
--   可选的交易接受者的versionHash.Optional transaction acceptor versionHash.
-
-其中交易的发起者必须是account address, 交易的接受者可以是asset address或者assetProto address. 数字签名的签名人通常情况下是account address, 但也可是是自己设置的地址. 数字签名是针对包括交易的发起者, 交易的接受者, 交易的方法, 交易方法的参数, 签名时间, 签名有效期和可选的交易接受者的versionHash在内但不限于其中的摘要的签名.
-
-The originator of the transaction must be an account address, and the recipient of the transaction can be an asset address or an assetProto address. The digitally signed signer is usually an account address, but it is also an address that you set yourself. The initiator of the transaction, the recipient of the transaction, the method of the transaction, the parameters of the transaction method, the signature time, the validity period of the signature, and the versionHash of the optional transaction recipient but not limited to the signature of the digest therein.
-
-当UDAP接受到交易时, 规则匹配器会校验签名是否是对该交易请求的签名, 签名是否过期, 签名时间是否晚于交易接受者的lastCommitTimestamp, 若给出versionHash则交易接受者的versionHash是否满足给出条件,所有合法签名的签名人能否满足规则等等. 如果满足, 则接受这次交易请求, 完成操作, 交易接受者的lastCommitTimestamp改为该次交易结束的时间, 并且产生新的versionHash. 如果不满足, 则驳回.
-
-When the UDAP accepts the transaction, the rule matcher verifies whether the signature is a signature of the transaction request, whether the signature is out of date, whether the signature time is later than the lastCommitTimestamp of the transaction acceptor, and if the versionHash of the transaction acceptor is given if the versionHash is given Given conditions, all legitimate signatory signers can meet the rules, etc. If so, then accept the transaction request to complete the operation, the lastCommitTimestamp of the transaction recipient to the end of the transaction, and generate a new versionHash. If not, then rejected.
-
-例如, 某个资产的所有者O需要将该资产抵押给A, 抵押资产这种操作的权限对应的规则是需要B, C, D这3个人物中至少2个人的签名.发起这个请求的是app应用. App将这个请求交易的发起者, 接受者, 以及所有方法参数设置完毕, 然后将这段数据求情的发送给B, C, D三人展示意图并请求审批. 其中交易的发起者为O, 交易的接受者为资产A, 方法是抵押, 参数依照方法而定. B, C, D三人审阅后决定是否就批准该交易请求的摘要进行数字签名.
-
-For example, the owner O of an asset needs to mortgage the asset to A. The rule corresponding to the right of the mortgage asset operation is to sign the signature of at least two of the three characters B, C and D. The request App App App will be the initiator of the transaction, the recipient, and all the method parameters are set, and then this data is forbidden to send to the B, C, D three intents and requests for approval.The transaction was initiated by O, the recipient of the transaction is the asset A, the method is mortgage, and the parameters are determined according to the method B, C, D After review, the trio decides whether to sign the digest that approves the transaction request.
-
-签名里包括了签名的时间, 签名的有效期, 以及可能包含当前资产的versionHash. 当App收集齐足够的签名后,就向UDAP发起交易, UDAP通过解读方法参数, 验证列出的签名是否满足规则. 若满足, 改变资产的状态, 将资产抵押出去, 同时生成新的versionHash,所有签名时间里最晚的时间记录为新的lastCommitTimestamp. 因为签名是针对交易方法参数,可选的versionHash, 又有lastCommitTimestamp在时间上保证, 故签名一次使用就作废, 为Replay Attack做出了充分的保证. versionHash在交易请求和数字签名内是可选的, 它的设计是为了保证资产数据不会被幻影读, 是一种类似的乐观锁. 是否需要验证versionHash的主动权掌握在交易的发起方, 并需要批准人的认可.
-
-The signature includes the time of signature, the signature's validity period, and the versionHash that may contain the current asset.When the app collects enough signatures, it initiates the transaction to the UDAP, which UDAP verifies if the listed signature satisfies the rule by interpreting the method parameters. If satisfied, change the state of the asset, mortgage out the asset, generate a new versionHash, and record the latest lastCommitTimestamp in all signatures as the signature is for the transaction method parameters, optional versionHash, and lastCommitTimestamp Time guarantee, so the signature of a use of obsolete, Replay Attack made full guarantee. VersionHash transaction request and digital signature is optional, it is designed to ensure that the asset data will not be phantom read, is a Similar optimistic locking. Whether you need to verify that versionHash is in the hands of the originator of the transaction and requires approval from the approver.
-
-我们的使用者要注意的是，作为我们的概念网络，我们第一期的产品推出的时候，将以Ethereum作为基础的依托架构， 集合Tendermint 作为consensus机制。虽然我们的计划建设一个体现以太网或者比特币关键属性的一个崭新的资产网络，这个属于中期的目标。在我们第一期推出给用户使用的环境中，我们的运行环境将主要依赖于现有的以太网环境所能给我们提供的能力，取决于和以太网的智能合约环境相兼容的一些其他技术的发展和成熟的速度，我们也不排除我们第一期的目标考虑使用和以太坊兼容，或者相似的其他的平台技术。
-
-Our users should note that as part of our conceptual network, the first phase of our product launch will be based on Ethereum's reliance on the architecture, bringing together Tendermint as the consensus mechanism. Although our plan to build a brand new asset network that reflects the key attributes of Ethernet or bitcoin is a mid-term goal. In our first-of-its-kind environment for our users, our operating environment will depend primarily on the capabilities our existing Ethernet environment can deliver to us, depending on a few other technologies that are compatible with Ethernet's smart contract environment We also do not rule out the goals of our first phase to consider using other platform technologies that are compatible with Ethereum, or similar.
 
 #### 7.2. The Architecture of Virtual Private Chain (VPC)
 
@@ -945,15 +806,6 @@ In the future we are considering:
 
 ### 7.5 Key Rings and Identity
 
-User accounts are application specific. Any account is associated with an app. Different apps don’t share accounts.
-
-But account registering needs the help from the Universal Asset Wallet, for security.
-
-
-#### 7.5.1 Acount creation
-
-
-#### 7.5.2 Key
 Today’s cryptocurrency wallets put too much burden on end users in managing their accounts/passwords. People feel so much pressure in keeping the account credentials in safe place and in the meantime still feeling convenient to use them.
 
 
@@ -963,6 +815,13 @@ We believe a key ring technology similar to Apple’s iCloud key ring is require
 - All the private keys must not be saved to the network.
 - Two factor authorization must be tuned on. UAW will provide TFA service to all the applications registered with UDAP.
 - In case of password loss, a combination of email and cell phone is required to recover the parent account with UDAP.
+
+User accounts are application specific. Any account is associated with an app. Different apps don’t share accounts. But account registering needs the help from the Universal Asset Wallet, for absolute security.
+
+Private keys are created in the UAW. They never should be exposed to applications. Once the public/private key pair is created, the public key is presented to the application's account creating process which may require more information from the users. The private key is encrypted and stored in UAW key ring.
+
+Each application must repeat the above process to acquire new customers. A UAW user will have as many identities as the number of applications he/she uses.
+
 
 ### 7.6 Data Storage Strategy
 
@@ -991,24 +850,7 @@ The world is in a transition from cryptocurrencie to cryptoassets.
 
 In the Bircoin world, there are CoinSpark, Colu, Counterparty, EPOBC, Omni Layer and MultiChain. 
 
-
-
-
-|       | UDAP  | BankEx | Bytom | Digix | 0x    | Achain | Selfsell | Linkeye |
-|-------|-------|-------|-------|-------|-------|-------|-------|-------|
-| 简介Introduction  | 一个专精于实现广义资产管理的区块链A blockchain that specializes in generalized asset management | 银行资产管理服务区块链Bank Asset Management Services Blockchain | 包含资产业务逻辑的重量级资产链Heavyweight asset chain with asset business logic | 只做黄金资产管理平台Only gold asset management platform | 基于ERC20的资产交易协议ERC20-based asset trading agreement | 和以太坊类相似的图灵完整区块链Similar to the Ethereum Turing complete blockchain | 针对个人能力投资的区块链，基于AChainBlockchain for Individual Capacity Investment, based on AChain | 针对征信业的区块链应用Blockchain application for credit information industry |
-| 支持智能合约Support smart contracts |  | ？  | Yes  | Yes  | Yes  | Yes | Yes| Yes |
-| 能否接受通用型资产Can accept generic assets | Yes |    | Yes   |       | ERC20 | Yes   |       |       |
-| 支持分布式文件存储Support for distributed file storage | Yes | ？ |       | Yes   | N.A.  |       |       |       |
-| 链属性Chain attributes | 联盟链Alliance chain | ？  | 公有Public  | 公有Public  | 公有Public  | 公有Public  | 公有Public  | 公有Public  |
-| 共识consensus  | PoS   | 特有Unique  | PoW   | 特有Unique  | PoA/PoS | DPoS  | DPoS  | DPoS  |
-| 固化常见抽象方法Curing the common abstract method | Yes | Yes |      |       | N.A.  |       |       |      |
-| 第三方提交代码Third-party submission code |  | Yes   | Yes   | Yes   | Yes   | Yes   | Yes   | Yes   |
-| 原生Multisig Native Multisig | Yes |       |       |       |       |       |       |       |
-| 资产存在形态The existence of assets | 地址address | ？ | UTXO | 合约内token Contract within the token | 合约内token Contract within the token | 合约内token Contract within the token | 合约内token Contract within the token | 合约内token Contract within the token |
-| 双花保证Double flower guarantee | 资产地址nonce Asset address nonce | ？ | UTXO特性 UTXO features | 地址nonce Address nonce | 地址nonce Address nonce | 地址nonce Address nonce | 地址nonce Address nonce | 地址nonce Address nonce |
-
-
+Ethereum has been designed to create any flavored coins with the smart contract. 
 
 ## 9.  Use Cases
 
