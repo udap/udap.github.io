@@ -567,10 +567,7 @@ We are looking closely at the development of some third-party identity managemen
 
 ## 6.  Universal Asset Wallet
 
-<p align="middle">
-<img src="media/image3.png" alt="Asset Hierarchy" style="width: 300px;"/>
-</p>
-
+<img src="media/image3.png" alt="Asset Hierarchy" style="float:left; width: 200px;height:400px;padding-right:5px"/>
 As a very important part of the platform, wallet plays a key role in the entire agreement and interaction between system and user. The usual crypto-wallets are a single-function wallet that shows the amount of particular cryptocurrencies.
 
 As a general-purpose assets wallet, UAW's  role has been significantly expanded. Think of it as a personal safe on one's cell phone. It can contain any stuff you would put in a safe, such as certificates, important documents, diamond rings, antiques, securities, IOUs, etc. In fact the asset wallet store the unique tokens that cryptographically represent the assets. These asset-backed tokens are created by various applications running on the UDAP chain are organized by applications.
@@ -590,10 +587,7 @@ UAW not only imports assets from various third-party application contexts from t
 
 One scenario is that users can create either [Encryption Contracts] {.underline} or Encryption Contracts in the asset wallet directly . The purpose of IOUs in daily life is to show that a users owes a particular piece of asset to a user B because of borrowing and can pay for it at some time in the future. In real life, people may write down this kind of agreement and promise about assets on a piece of paper. Crypto-IOUs are actually superior to real-life handwritten IOUs, easier to create, more expressive with support of voice, pictures and even videos, tamper-proof and irrefutable, no worry of loss.
 
-<p align="middle">
-<img src="media/image4.png" alt="Asset Hierarchy" style="width: 300px;"/>
-</p>
-
+<img src="media/image4.png" alt="Asset Hierarchy" style="float:left; width:200px;height:400px;padding-right:5px"/>
 
 In the process of personal loans or IOUs, one can also use the wallet to conduct multi-signature signing. For example, when creating an IOU, a third-party witness may be required to witness the contract. The borrower can send the original IOU to the witness, who then signs  it and sends it to the creditor.
 
@@ -687,16 +681,13 @@ Because usually they already have their own payment channels, such as PayPal or 
 
 Universal Asset Wallets, even in the absence of third-party applications, are a very powerful tool for everyone to handle their finances. Not only does it handle some of the personal lending activities of everyday life just as it is, but it can also be used by small businesses such as family hotels or family restaurants as a tool for sending discount coupons or vouchers.
 
-<p align="middle">
-<img src="media/image5.png" alt="Asset Hierarchy" style="width: 300px;"/>
-</p>
-
 #### 6.4.  多重签名 （Multi-Sig）
 
 UAW内置多重签名所需要的用户界面的支持。
 
 AW built-in multi-signature required user interface support.
 
+<img src="media/image5.png" alt="Asset Hierarchy" style="float:left; width:200px;height:400px;padding-right:5px"/>
 但一笔交易被提出并且需要多重签名，UAW 会发消息到相应的签名者的钱包，
 提示制定的签名者审核交易细节， 然后作出 "同意"或者"拒绝"的动作。
 UAW消息队列中会呈现需要签字的交易清单。 签字的历史也将被保留。
@@ -717,13 +708,11 @@ You can get a strong digital signature security support.
 
 #### 6.5.  Plugin Store
 
-<p align="middle">
-<img src="media/image6.png" alt="Asset Hierarchy" style="width: 300px;"/>
-</p>
-
 UAW是一个powerful的可扩展的插件架构，实际上它的主要目的是支撑大量的能产生各类资产的第三方App。它在UDAP为第三方App提供后台整合的功能上提供了一个统一的用户端体验的整合。这些用户端的plugin构成了用户能体验到的整个资产互联网的生态。所有的第三方应用集中地出现在UAW的Plugin Store 中， 用户已经开户的plugin和尚未使用过的plugin均在这里出现供用户快速进入。
 
 UAW is a powerful and extensible plugin architecture, and its main purpose in fact is to support a large number of third-party apps that generate a wide range of assets. It provides a unified user experience integration with UDAP's ability to provide background integration for third-party apps. The plugin for these clients constitutes the ecology of the entire asset Internet that users can experience. All third-party applications appear in the Plugin Store of the UAW, and the plugin and unused plugin that the user has already opened account for the user to quickly enter here.
+
+<img src="media/image6.png" alt="Plugins" style="float:left; width:200px;height:400px;padding-right:5px"/>
 
 技术上UAW是一个分层的架构体系， 相当多的用户体验部分已经固化在UAW中，另外的可展示部分由第三方plugin 提供。 例如演出票务是一个plugin，个人资产管理是一个plugin，微合同是一个plugin，甚至个人所拥有的大宗商品资产是plugin。
 
@@ -733,8 +722,7 @@ Technically UAW is a hierarchical architecture, a considerable part of the user 
 
 Not all third-party applications provide a UAW plugin. An App can have its own native app, or only a PC-based web site. This API provided by UAW's UDAP is associated with the entire compute and storage chain.
 
-
-![](media/image7.png){width="6.5in" height="3.013888888888889in"}
+<img src="media/image7.png" alt="Plugins" style="float:right; width:400px;padding-left:5px"/>
 
 UAW 是一个生态系统。他提供可编程的借口让第三方的应用可以开发完整的用户体验。当然UAW本身提供内置的一系列的功能能够节省大量的第三方应用推向自己的用户群所需要的时间。
 
@@ -965,7 +953,7 @@ These advantages are particularly well suited for the management of asset metada
 In addition to asset metadata, applications often have large volume of business data that are usually stored in their own databases. While decentralized storage may not be a good place for storing large volume of frequently changed business data, from the application point of view, many business systems need to adopt a hybrid storage model through careful data analysis. Business systems need to put some of their data on the chain (including decentralized storage). Meanwhile,  business systems also serve as off-chain Oracles that provide data services to smart contracts. For example, in the case of warehouse receipts as collaterals in supply chain finance, after warehouse receipts are registered as crypto assets, their market values are calculated by smart contracts with real-time price data obtained from business systems or third-party Oracles via Oraclize service. The price data is then signed and recorded on the decentralized storage as a basis for future value verification. The following is an example of an infrastructure deployment view from one of our demos, where xncang is a business system that manages warehouses and inventories, which connects to a PoC blockchain via an API gateway.
 
 <p align="middle">
-<img src="media/infrastructure-deployment-example.png" alt="Deployment Diagram" style="width: 500px;"/>
+<img src="media/infrastructure-deployment-example.png" alt="Deployment Diagram" style="width: 300px;"/>
 </p>
 
 ## 8. Related Work
@@ -1009,7 +997,7 @@ In the crypto world, people are gradually realizing that tokens are a brand new 
 Nearly 82% of businesses fail because of cash-flow problems, however, the complexity and scale of existing supply chain finance (SCF) solutions has posed major challenges in ensuring adequate funding and efficient operations. Finance instruments in SCF include factoring, reverse factoring, payables financing, inventory finance, and dynamic discounting. The following figure illustrates the transaction flow of a typical inventory finance solution (source from Global SCF Forum)
 
 <p align="middle">
-<img src="media/inventory-finance.png" alt="Inventory Finance" style="width: 500px;"/>
+<img src="media/inventory-finance.png" alt="Inventory Finance" style="width: 300px;"/>
 </p>
 
 UDAP will essentially enable all parties in SCF solutions to act on a shared ledger, where suppliers and manufacturers, along with every other participant, will solely update their parts of the transaction, enabling efficiency and an “unprecedented” level of trust and transparency on a ledger record that is immutable.
