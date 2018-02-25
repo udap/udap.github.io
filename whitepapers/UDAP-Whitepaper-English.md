@@ -597,6 +597,29 @@ In the process of personal loans or IOUs, one can also use the wallet to conduct
 
 Encrypted contracts can contain rich media content, for example, pictures, voices and even video can be used together with text. 
 
+创建用户打开个人功能然后点击书写借条或者欠条。描述发生的借贷关系和偿还安排。然后就可以发送给债权人。债权人确认签名后就成为自己个人资产的一部分。等到未来的某个时刻交割，就完成了这个借条或者欠条的生命周期。
+
+Create a user to open personal features and then click to write IOUs or IOUs. Describe the loan relationships and reimbursements that take place. Then it can be sent to creditors. Creditors confirm the signature became part of their personal assets. Wait until sometime in the future delivery, to complete the IOU or IOU life cycle.
+
+在个人打借条或者欠条的过程中，还可以利用钱包所提供的多重签名的属性。例如在做一张借条或欠条的时候，可能需要一个第三方的见证人见证这张欠条额内容有增强的，这个可靠性和有第三方的在场，那么在书写欠条借条的过程中，他可以把原始的欠条发送给见证人，然后见证人进行签收以后，最后发送给债权人。
+
+In the process of personal loans or IOUs, you can also use the wallet to provide multi-signature properties. For example, when making a IOU or IOU, a third-party witness may be required to witness the increase, the reliability and the presence of a third party, so that he can Send the original IOU to the witness, who then signs the receipt and sends it to the creditor.
+
+甚至引入[担保人]的角色。和[见证人]不同，担保人和，债务人，要承担，相应的担保的义务，如果债务人不能。约定的时间进行债务的偿还，那么担保人要负连带的偿还义务。能和通常的。见证人的多方签名的流程相似，使用的都是相似的机制。从侧面表明了通用资产钱包所自带的多重签名的功能的强大性。
+
+Even introduce the [guarantor] role. Unlike the [witness], the guarantor and the obligor have to assume the corresponding obligation of security if the debtor can not. The agreed time for debt repayment, then the guarantor to bear the repayment obligations. Can and usual. Witness multi-signature process is similar, using a similar mechanism. From the side of the common asset wallet that comes with the power of multiple signatures.
+
+如果合同的资金交付方式选择系统支持的加密货币，那么合约的交割方式更为便捷，用户只需向合约汇入相应的款项，合约即可自动执行完毕，债务债权关系自动解除。基于加密货币的偿还安排还可以支持利息处理，合约会按照双方约定的利息在触发条件（例如，出现偿还逾期）满足以后， 自动开始计息。
+
+If the contract's funds are delivered in the form of cryptocurrencies supported by the system, the delivery method of the contract is more convenient. The user only needs to import the corresponding payment into the contract, the contract can be automatically executed and the debt claims are automatically released. Reimbursement arrangements based on cryptocurrencies can also support the treatment of interest and the contract automatically begins to accrue interest upon satisfaction of the trigger conditions (eg, overdue repayments) as agreed between the parties.
+
+加密契约可以是高度格式化的， 也可以是用高度灵活形式，例如除了文字以外， 可以使用图片， 语音甚至视频。所有的这些媒体形式都会被签名加密，具有高度的隐私和高度的安全性。
+
+Encryption contracts can be highly formatted or highly flexible, for example, pictures, voices and even video can be used other than text. All of these forms of media are signed and encrypted with a high degree of privacy and high security.
+
+仔细思考这个功能， 这是一个极为强大的功能设计，
+>>>>>>> branch 'master' of git@github.com:udap/udap.github.io.git
+
 Think carefully about this function, which is an extremely powerful functional design,
 
      a. Saving notarization and costs
