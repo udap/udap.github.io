@@ -4,16 +4,16 @@ A White Paper
 
 Version 0.7
 
-**UDAP Foundation， 2/23/2007**
+**UDAP Foundation， 2/25/2007**
 
 
 ## Executive Summary
 
 UDAP provides an objected oriented API and a Universal Asset Wallet for third party application developers to create powerful blockchain based application efficiently to deal with crypto-token encoded real-world assets, without the steep learning curve and concerns of scalability and securities.
 
-UDAP's core architecture is "Virtual Private Chain", where each applications runs on its own private secure blockchain and storage, with user configured privacy level and blockchain nodes. UDAP uses both vertical sharding and horizontal sharding to achieve potentially millions of transactions per second. Massive parallelism is realized in the nodes where all the cores can process all the transactions in parallel. Multiple nodes form processing zones and zones form zone clusters to create enormous transaction processing power. 
+UDAP's core architecture is "Virtual Private Chain", where each applications runs on its own private secure blockchain and storage, with user configured privacy level and blockchain nodes. UDAP uses both vertical sharding and horizontal sharding to achieve potentially millions of transactions per second. Massive parallelism is realized in the nodes where all the cores can process all the transactions in parallel. Multiple nodes form processing zones and zones form zone clusters to create enormous transaction processing power.
 
-Multiple levels of encryptions and obfuscations are used to ensure of the privacy of the assets registered on the chains. 
+Multiple levels of encryptions and obfuscations are used to ensure of the privacy of the assets registered on the chains.
 
 A Universal Asset Wallet is provided for application developers to write exciting applications directly in the wallet as a plug-in.
 
@@ -562,7 +562,9 @@ We are looking closely at the development of some third-party identity managemen
 
 ## 6.  Universal Asset Wallet
 
-![](media/image3.png)
+<p align="middle">
+<img src="media/image3.png" alt="Asset Hierarchy" style="width: 300px;"/>
+</p>
 
 作为平台的一个非常重要的部分，钱包扮演了一个整个协议和系统和用户之间交互的关键角色。一般加密货币的钱包是单一功能的钱包，展示的是某一种特定的加密货币的数量。多功能的钱包同时能够支持多种数字加密货币的结余展示和资金发送和收取。
 
@@ -614,7 +616,9 @@ Individuals create assets into two categories:
 
     One scenario is that users can create either [Encryption Contracts] {.underline} or Encryption Contracts in the generic asset wallet directly under {IOU} {underline} or {IOU} {underline}. The purpose of IOUs and IOUs in daily life is to show that A users owe a particular asset to a B user because of borrowing and can pay for it at some time. In real life, people may write down this kind of restraint and commitment about assets on a piece of paper. Its legal significance is determined by such a signature, in the event of a dispute, the need for verification and arbitration authority. General Assets Wallets are based on blockchain forensics and arbitration. IOUs and IOUs are derived from wallets because they can not be tampered with and can not be invented, and their evidence capabilities are actually superior to real-life handwritten IOUs or IOUs , The authenticity of the document at a glance, so encrypted contract is more convenient and more binding contract.
 
-![](media/image4.png)
+<p align="middle">
+<img src="media/image4.png" alt="Asset Hierarchy" style="width: 300px;"/>
+</p>
 
 创建用户打开个人功能然后点击书写借条或者欠条。描述发生的借贷关系和偿还安排。然后就可以发送给债权人。债权人确认签名后就成为自己个人资产的一部分。等到未来的某个时刻交割，就完成了这个借条或者欠条的生命周期。
 
@@ -717,7 +721,9 @@ Because usually they already have their own payment channels, such as PayPal or 
 
 Universal Asset Wallets, even in the absence of third-party applications, are a very powerful tool for everyone to handle their finances. Not only does it handle some of the personal lending activities of everyday life just as it is, but it can also be used by small businesses such as family hotels or family restaurants as a tool for sending discount coupons or vouchers.
 
-![](media/image5.png){width="1.975in" height="4.277777777777778in"}
+<p align="middle">
+<img src="media/image5.png" alt="Asset Hierarchy" style="width: 300px;"/>
+</p>
 
 #### 6.4.  多重签名 （Multi-Sig）
 
@@ -745,8 +751,9 @@ You can get a strong digital signature security support.
 
 #### 6.5.  Plugin Store
 
-![](media/image6.png){width="2.0229166666666667in"
-height="4.38125in"}
+<p align="middle">
+<img src="media/image6.png" alt="Asset Hierarchy" style="width: 300px;"/>
+</p>
 
 UAW是一个powerful的可扩展的插件架构，实际上它的主要目的是支撑大量的能产生各类资产的第三方App。它在UDAP为第三方App提供后台整合的功能上提供了一个统一的用户端体验的整合。这些用户端的plugin构成了用户能体验到的整个资产互联网的生态。所有的第三方应用集中地出现在UAW的Plugin Store 中， 用户已经开户的plugin和尚未使用过的plugin均在这里出现供用户快速进入。
 
@@ -759,6 +766,7 @@ Technically UAW is a hierarchical architecture, a considerable part of the user 
 并非所有的第三方应用会提供一个UAW的plugin。 一个App可以有自己的原生的App， 或者只有基于PC 的网站。 这个在UAW的App用UDAP提供的API和整个计算链和存储链发生关联。
 
 Not all third-party applications provide a UAW plugin. An App can have its own native app, or only a PC-based web site. This API provided by UAW's UDAP is associated with the entire compute and storage chain.
+
 
 ![](media/image7.png){width="6.5in" height="3.013888888888889in"}
 
@@ -818,7 +826,7 @@ The user's purchase behavior occurs uniformly in the UAW. A user found in an App
 
 More API will be provided in batches, including various auction methods, escrow P2P transactions.
 
-## 7.  Implementations
+## 7.  Implementation Considerations
 
 #### 7.1 Protocol Implementation
 
@@ -973,11 +981,30 @@ We believe a key ring technology similar to Apple’s iCloud key ring is require
 - Two factor authorization must be tuned on. UAW will provide TFA service to all the applications registered with UDAP.
 - In case of password loss, a combination of email and cell phone is required to recover the parent account with UDAP.
 
+### 7.5 Data Storage Strategy
 
+Every transaction on the blockchain incurs a fee. This is partly due to the fact that the public blockchain is a public support resource, which requires some incentive mechanism to encourage the participation and voluntarily provide public blockchain computing and storage infrastructure. On the other hand, transaction fees can greatly limit any malicious attacks on the blockchain network, because such attacks are economically unrealistic. So while we believe the transaction costs on the blockchain will decrease dramatically when the performance and scalability issues of the blockchain are resolved, however, as a decentralized asset chain even though the entire lifecycle of assets is required to be managed on chain, it is impossible for us to store all the data related to managed assets on the blockchain. Therefore, an important architectural decision is what kind of data needs to be stored on chain and what kind of data needs to be stored off-chain. Such an architecture decision needs to be considered in many aspects such as context, processes, costs, performance, and realizability.
+
+From the perspective of business, costs and performance, blockchain is not suitable for storing frequently updated data and large volume of data. Any changes to the data may trigger commitment of transactions and data replication on each node. Through the analysis of the on-chain asset model, we believe that the basic attributes and the metadata of assets can be separately stored. The basic attributes and transaction data of asset management are stored either on the blockchain while the metadata is stored off-chain. For example, for a Multiple Listing Service (MLS) in the real estate industry, metadata about a property such as description and pictures are stored on cloud storage or P2P storage, however, owner information and transaction history are stored on the blockchain. Therefore, a UDAP full node has two logically isolated "nodes" (a blockchain node that stores transactions and assets, and a storage node for asset metadata storage). Assets have access to their related metadata via merkle-link. Application developers don't have to understand where the data are stored.
+
+In general, there are two options for metadata storage: a centralized cloud storage such as Amazon S3 and a decentralized P2P storage like Swarm, IPFS, StorJ, or MaidSafe. Both options have their own advantages and disadvantages, but for an asset of great economic value, it may be more reassuring to have a decentralized storage that does not rely on any centrally managed storage services. Although UDAP prefers a decentralized storage to offer a comprehensive decentralized service with a decentralized computing infrastructure, this protocol does not directly define a physical P2P storage technology. It only requires the data is presented as merkle-link and merkle-dag, so that the application can address and query any relevant data via merkle-path. This merkle-link represents a link between two objects, which maps the cryptographically hashed values ​​of the target object's content to the source object, and therefore allows us to get the target object through this link. This approach has at least four advantages.
+
+- data can be easily presented in JSON-LD format
+- data encryption and integrity check are supported
+- data is immutable
+- data is addressable through merkle-path
+
+These advantages are particularly well suited for the management of asset metadata, as most metadata items are static and descriptive data with few changes over the life of an asset. And in many scenes, once metadata is uploaded to storage it is not allowed for modification, for example, university diploma, license agreement, and contracts and so on. Even a slight change on the metadata will lead to an obcious change of the hash value of the metadata. Therefore either the hash value on the blockchain needs to be updated, or a naming service such as IPNS is required as a tag of the metadata. The former needs to submit a transaction on the chain, which incurs a small amount of costs. The later needs to introduce a new level of data abstraction. In either case it is transparent to applications. Services provided by UDAP allow application developers to completely ignore the underlying storage logic and operate directly on assets.
+
+In addition to asset metadata, applications often have large volume of business data that are usually stored in their own databases. While decentralized storage may not be a good place for storing large volume of frequently changed business data, from the application point of view, many business systems need to adopt a hybrid storage model through careful data analysis. Business systems need to put some of their data on the chain (including decentralized storage). Meanwhile,  business systems also serve as off-chain Oracles that provide data services to smart contracts. For example, in the case of warehouse receipts as collaterals in supply chain finance, after warehouse receipts are registered as crypto assets, their market values are calculated by smart contracts with real-time price data obtained from business systems or third-party Oracles via Oraclize service. The price data is then signed and recorded on the decentralized storage as a basis for future value verification. The following is an example of an infrastructure deployment view from one of our demos, where xncang is a business system that manages warehouses and inventories, which connects to a PoC blockchain via an API gateway.
+
+<p align="middle">
+<img src="media/infrastructure-deployment-example.png" alt="Deployment Diagram" style="width: 500px;"/>
+</p>
 
 ## 8. Related Work
 
-The world is in a transition from cryptocurrencie to cryptoassets. 
+The world is in a transition from cryptocurrencie to cryptoassets.
 
 
 |       | UDAP  | BankEx | Bytom | Digix | 0x    | Achain | Selfsell | Linkeye |
