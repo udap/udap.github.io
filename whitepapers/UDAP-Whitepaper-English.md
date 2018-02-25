@@ -32,7 +32,7 @@ But because Bitcoin has been first and foremost designed to work as a fungible c
 
 Ethereum (the E, for short reference) has emerged from the crowed to carry its inventor’s destiny, initially as “programmable money”, then as a general blockchain based “world computer” usable for financial and non-financial applications. A general-purposed smart contract architecture lends its well to building a variety of on-chain applications to fulfill blockchain’s promise of being the backbone of the "Internet of Values".
 
-But the most challenging thing posed to E is how to represent the "values". For the moment, like almost all the other open ledger platforms, Ethereum is exclusively handling digital currency transfers, as Buterin put in one of his podcast in early 2018:
+But the most challenging thing posed to Ethereum is how to represent the "values". For the moment, like almost all the other open ledger platforms, Ethereum is exclusively handling digital currency transfers, as Buterin put in one of his podcast in early 2018:
 
 "The very first vision was basically a general purpose platform for financial contracts. If X happens then send $5 to account Y, if Z happens send $5 to account B. That was basically what I thought Ethereum would be for" [http://unchainedpodcast.co/vitalik-buterin-creator-of-ethereum-on-the-big-guy-vs-the-little-guy]
 
@@ -45,6 +45,7 @@ The three-year-old smart contract implementation in Ethereum, although has attra
     - Primitive collection processing and manipulations.
 - Slow performance. The EVM is not really a modern virtual machine like JVM or V8 JavaScript engine. It’s an interpreter that parse the smart contract opcode and run the underlying supporting libraries.  The EVM is at least an order slower than regular system programming languages. The total throughput of the blockchain is directly impacted by the slow performance of the virtual machine. There are many reasons that faster and mature virtual machines cannot be used in the current version of Ethereum.  And there are quite a few efforts in development to enhance the performance of the virtual machine.
 - The general purpose computing power in the  current version of EVM, on the other hand, has rendered itself vulnerable to many security breaches, as documented by [Making Smart Contract Smarter, https://www.comp.nus.edu.sg/~loiluu/papers/oyente.pdf, Loi Luu, et. al., 2016]. It's very hard for relatively inexperienced programmers to get the Smart contract right. Considering many of the smart contract are handling many millions of dollars of assets, customers take a huge risk in moving forward with a smart contract strategy.
+- Smart contract makes 
 
 If we can draw some analogies between web application development and blockchain application development, smart contract is to blockchain development what CGI is to web app development. It’s rather young.
 
@@ -617,7 +618,7 @@ If the contract's funds are delivered in the form of cryptocurrencies supported 
 
 Encryption contracts can be highly formatted or highly flexible, for example, pictures, voices and even video can be used other than text. All of these forms of media are signed and encrypted with a high degree of privacy and high security.
 
-仔细思考这个功能， 这是一个极为强大的功能设计，
+ 仔细思考这个功能， 这是一个极为强大的功能设计，
 >>>>>>> branch 'master' of git@github.com:udap/udap.github.io.git
 
 Think carefully about this function, which is an extremely powerful functional design,
@@ -841,13 +842,44 @@ The signature includes the time of signature, the signature's validity period, a
 
 Our users should note that as part of our conceptual network, the first phase of our product launch will be based on Ethereum's reliance on the architecture, bringing together Tendermint as the consensus mechanism. Although our plan to build a brand new asset network that reflects the key attributes of Ethernet or bitcoin is a mid-term goal. In our first-of-its-kind environment for our users, our operating environment will depend primarily on the capabilities our existing Ethernet environment can deliver to us, depending on a few other technologies that are compatible with Ethernet's smart contract environment We also do not rule out the goals of our first phase to consider using other platform technologies that are compatible with Ethereum, or similar.
 
-#### 7.2. Performance Implementation
+#### 7.2. The Architecture of Virtual Private Chain (VPC)
 
-There are three major factors that are accountable for the abysmal throughput typical of Bitcoin network and Ethereum:
+A flat network of blockchain nodes is not scalable. It requires enormous amount traffic to reach consensus and synchronization. 
 
-1. The same transaction must be replayed on all the nodes, no matter how expensive they might be.  A great deal of computing power is wasted in competing repetitive calculations. This has been proved to be one important way to make sure all the nodes behave by the rule and great security is maintained. However, this first-gen technique is very expensive in nature and is the primary reason that blockchains’ throughputs are incredibly poor, considering how much computing power is behind each network.
+The transitions from POW to various POS designs or other BFT consensus mechanisms are inevitable to scale up, which is to achieve higher total throughput at the cost of some bearable amount of security.
+
+In the meantime, homogeneous sharding mechanisms have being proposed and being implemented in various projects, such as Ethereum Sharding, Zilliqa and Polkadot. 
+
+Cosmos uses interconnected zones to realize linear scalability. It's a sharding scheme both at the consensus level and state level.
+
+UDAP architecture is largely based Cosmos architecture and loosely based on Plasma. It will eventually phase in the Plasma hierarchy, for best security and scalability.
+
+At the root is the UDAP root chain, which stores the meta information of UDAP applications. Each application is assigned an application chain which is by default a private chain that's only visible to application nodes. An application can choose to deploy to the shared infrastructure of UDAP or to specific private nodes. 
+
+A number of nodes are grouped to form a "zone" under the UDAP root. The number of nodes is chosen such that the POS (Tendermint to be specific) works the best in terms of the balance of security and TPS/# of nodes. 
+
+Application chains are logical chains that can span multiple "zones" to achieve near-linear scalability. Each zone becomes a shard of a VPC. 
+
+Multiple applications are supported concurrently on UDAP network, just like multiple VPN sessions run on the same TCP network.
+
+Each node can run every application too, supporting the transactions of each application and store the transaction history, the global state trie and receipt trie. This does not exclude the possibility that some applications choose to localize to some subset of the nodes to form a pure exclusive private chain, in which case, the "virtual" part of the VPC is transformed to "real". 
+
+Some applications may also localized to particular zones, either because the other zone are already fully loaded and not accepting new application deployment or they choose to do so for geological proximity. 
+
+In each node, the application transactions are processed in parallel. This is possible because there is no dependencies between applications. All the cores of any modern server will be able to participate in processing transactions at the same time, in contrast to the serialized transaction processing which can use one core only no matter how many cores the computer has.  
+
+There are support for parallel processing of single application transactions too. This is made possible by the fact that all the UDAP API exposed to the applications are deterministic in terms of what account are affected by each API call. The smart dispatcher in each node will able to group transactions in multiple queues that are not dependent on or otherwise interfere with each. Thus the queues can work in parallel to take advantage the multiple cores available.
+   
+ 
+#### 7.3. Performance Implementation
+
+
+There are four major factors that are accountable for the abysmal throughput typical of Bitcoin network and Ethereum:
+
+1. The same transaction must be replayed on all the nodes, no matter how expensive they might be.  A great deal of computing power is wasted in competing repetitive calculations. This has been proved to be one important way to make sure all the nodes behave by the rule and great security is maintained. However, this first-gen technique is very expensive in nature and is the primary reason that blockchains’ throughput are incredibly poor, considering how much computing power is behind each network.
 2. On each node, all the transactions are serialized in building into the blocks and there is no way to build the blocks in parallel because there is no partitioning of the transactions which is required to avoid race conditions in reading and writing account information.
 3. Smart contracts as implemented in Ethereum are slow. They’re interpreted at runtime instead of running in native speed or in highly optimized VMs, such as JVM.
+4. API does not give finality. Transaction initiators basically send transactions and wait for confirmations, which varies from a few minutes to hours. 
 
 The first issue is being tackled by a few solutions such as POS based consensus and some other protocols which do not use blockchain at all.  UDAP RI specifically uses [Cosmos](http://cosmos.network/) as the general network architecture. Cosmos offers the following features that UDAP can immediately leverage:
 
@@ -880,7 +912,6 @@ The root chain is there for
 - Generic user account registration, which provides custodian service for the account of the third-party applications running in UAW. Users can optionally choose to register them with UDAP to take advantage of the identity attestation service.
 - It also periodically takes snapshots of the application chains states in case that fraudulent or faulty behaviors are reported from the app chains and state enforcement is required. Eventually the root chain will probably become a Plasma chain which is the parent chain of all the applications chains.
 
-
 Although we have improved the parallelism at the application level, there is still chance of blocking in a single application level. Transactions for a particular application still have to be processed serially. If one application becomes so popular that it consumes most of the bandwidth in a period of time, all the transactions coming to a node might just be from it, and they will be processed one of another. The workload cannot be spread over to the multiple cores on the same machine.
 
 The above issue can be solved by a smart thread dispatcher in a UDAP node, presuming that UDAP APIs mostly affect one account at a time. The dispatcher carefully inspects the incoming transactions and separates them by affected accounts. With transaction partitioning still feasible, the transaction verifications and block constructions can still be done in parallel.
@@ -889,7 +920,7 @@ With no competitive and repetitive computing among all nodes, and with the optim
 
 In the meantime, we’re closely monitoring the progress of the [Plasma Project](http://plasma.io/) led by Joseph Poon and Vitalik Buterin. The Plasma project proposes a recursive Map-Reduce architecture for general computing based on blockchains and aims to offer TPS up to billion+ level. The Plasma development will be one of the core effort from a team of the best talents in the industry in 2018. We plan to leverage the work in the future to solve the scalability issue for once and all.
 
-### 7.3 Privacy Enforcement
+### 7.4 Privacy Enforcement
 
 Privacy on blockchains is counter-intuitive for many people, because blockchains usually promote openness and publicity, at least for public chains.
 
@@ -925,17 +956,17 @@ In the future we are considering:
 3. Quantum computing resistance will be placed in our road map in the next couple of years to keep our platform up to date and future proof.
 
 
-### 7.4 Key Rings and Identity
+### 7.5 Key Rings and Identity
 
 User accounts are application specific. Any account is associated with an app. Different apps don’t share accounts.
 
 But account registering needs the help from the Universal Asset Wallet, for security.
 
 
-#### 7.4.1 Acount creation
+#### 7.5.1 Acount creation
 
 
-#### 7.4.2 Key
+#### 7.5.2 Key
 Today’s cryptocurrency wallets put too much burden on end users in managing their accounts/passwords. People feel so much pressure in keeping the account credentials in safe place and in the meantime still feeling convenient to use them.
 
 
@@ -946,7 +977,7 @@ We believe a key ring technology similar to Apple’s iCloud key ring is require
 - Two factor authorization must be tuned on. UAW will provide TFA service to all the applications registered with UDAP.
 - In case of password loss, a combination of email and cell phone is required to recover the parent account with UDAP.
 
-### 7.5 Data Storage Strategy
+### 7.6 Data Storage Strategy
 
 Every transaction on the blockchain incurs a fee. This is partly due to the fact that the public blockchain is a public support resource, which requires some incentive mechanism to encourage the participation and voluntarily provide public blockchain computing and storage infrastructure. On the other hand, transaction fees can greatly limit any malicious attacks on the blockchain network, because such attacks are economically unrealistic. So while we believe the transaction costs on the blockchain will decrease dramatically when the performance and scalability issues of the blockchain are resolved, however, as a decentralized asset chain even though the entire lifecycle of assets is required to be managed on chain, it is impossible for us to store all the data related to managed assets on the blockchain. Therefore, an important architectural decision is what kind of data needs to be stored on chain and what kind of data needs to be stored off-chain. Such an architecture decision needs to be considered in many aspects such as context, processes, costs, performance, and realizability.
 
@@ -970,6 +1001,10 @@ In addition to asset metadata, applications often have large volume of business 
 ## 8. Related Work
 
 The world is in a transition from cryptocurrencie to cryptoassets.
+
+In the Bircoin world, there are CoinSpark, Colu, Counterparty, EPOBC, Omni Layer and MultiChain. 
+
+
 
 
 |       | UDAP  | BankEx | Bytom | Digix | 0x    | Achain | Selfsell | Linkeye |
