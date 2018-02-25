@@ -569,9 +569,9 @@ We are looking closely at the development of some third-party identity managemen
 <img src="media/image3.png" alt="Asset Hierarchy" style="width: 300px;"/>
 </p>
 
-As a very important part of the platform, wallet plays a key role in the entire agreement and interaction between system and user. The usual crypto-wallets are a single-function wallet that shows the amount of particular cryptocurrencies. 
+As a very important part of the platform, wallet plays a key role in the entire agreement and interaction between system and user. The usual crypto-wallets are a single-function wallet that shows the amount of particular cryptocurrencies.
 
-As a general-purpose assets wallet, UAW's  role has been significantly expanded. Think of it as a personal safe on one's cell phone. It can contain any stuff you would put in a safe, such as certificates, important documents, diamond rings, antiques, securities, IOUs, etc. In fact the asset wallet store the unique tokens that cryptographically represent the assets. These asset-backed tokens are created by various applications running on the UDAP chain are organized by applications. 
+As a general-purpose assets wallet, UAW's  role has been significantly expanded. Think of it as a personal safe on one's cell phone. It can contain any stuff you would put in a safe, such as certificates, important documents, diamond rings, antiques, securities, IOUs, etc. In fact the asset wallet store the unique tokens that cryptographically represent the assets. These asset-backed tokens are created by various applications running on the UDAP chain are organized by applications.
 
 General Assets Wallets are more than just the storage of assets, but are also very handy for supporting common operations on assets such as asset transfers, sales, trading, auctions, cancellation and more.
 
@@ -595,7 +595,7 @@ One scenario is that users can create either [Encryption Contracts] {.underline}
 
 In the process of personal loans or IOUs, one can also use the wallet to conduct multi-signature signing. For example, when creating an IOU, a third-party witness may be required to witness the contract. The borrower can send the original IOU to the witness, who then signs  it and sends it to the creditor.
 
-Encrypted contracts can contain rich media content, for example, pictures, voices and even video can be used together with text. 
+Encrypted contracts can contain rich media content, for example, pictures, voices and even video can be used together with text.
 
 创建用户打开个人功能然后点击书写借条或者欠条。描述发生的借贷关系和偿还安排。然后就可以发送给债权人。债权人确认签名后就成为自己个人资产的一部分。等到未来的某个时刻交割，就完成了这个借条或者欠条的生命周期。
 
@@ -618,7 +618,6 @@ If the contract's funds are delivered in the form of cryptocurrencies supported 
 Encryption contracts can be highly formatted or highly flexible, for example, pictures, voices and even video can be used other than text. All of these forms of media are signed and encrypted with a high degree of privacy and high security.
 
 仔细思考这个功能， 这是一个极为强大的功能设计，
->>>>>>> branch 'master' of git@github.com:udap/udap.github.io.git
 
 Think carefully about this function, which is an extremely powerful functional design,
 
