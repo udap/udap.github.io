@@ -9,15 +9,15 @@ Version 0.7
 
 ## Executive Summary
 
-UDAP provides an objected oriented API and a Universal Asset Wallet for third party application developers to create powerful blockchain based application efficiently to deal with crypto-token encoded real-world assets, without the steep learning curve and concerns of scalability and securities.
+UDAP is a blockchain-based asset protocol that provides Restful APIs and a Universal Asset Wallet for third party application developers to create powerful blockchain based application efficiently to deal with crypto-token encoded real-world assets, without the steep learning curve and concerns of scalability, privacy and security.
 
-UDAP's core architecture is "Virtual Private Chain", where each applications runs on its own private secure blockchain and storage, with user configured privacy level and blockchain nodes. UDAP uses both vertical sharding and horizontal sharding to achieve potentially millions of transactions per second. Massive parallelism is realized in the nodes where all the cores can process all the transactions in parallel. Multiple nodes form processing zones and zones form zone clusters to create enormous transaction processing power.
+UDAP uses a Multi-Chain architecture that supports both "Virtual Private Chains" and physical application zones, where each applications runs on its own private secure blockchain and storage, with user configured privacy level and blockchain nodes. UDAP uses both vertical sharding and horizontal sharding to achieve potentially millions of transactions per second. Massive parallelism is realized in the nodes where all the cores can process all the transactions in parallel. Multiple nodes form processing zones and zones form zone clusters to create enormous transaction processing power.
 
 Multiple levels of encryptions and obfuscations are used to ensure of the privacy of the assets registered on the chains.
 
-A Universal Asset Wallet is provided for application developers to write exciting applications directly in the wallet as a plug-in.
+A Universal Asset Wallet is provided for application developers to write exciting applications directly in the wallet as plug-ins.
 
-Applications can immediately register token-based assets on chain and offer the built-in market to their customers. Applications can even create their own in-app currencies backed by blockchains and use it to build the in-app economy. The app-specific currencies can eventually be traded in the UDAP platform to offer unlimited liquidity.
+Applications can immediately register token-based assets on chain and offer the built-in marketplace to their customers. Applications can even create their own in-app currencies backed by blockchains and use it to build the in-app economy. The app-specific currencies can eventually be traded in the UDAP platform to offer unlimited liquidity.
 
 UDAP is a standalone public chain cloud that offers itself as an advanced streamlined BAAS for the booming real world token-economy beyond crypto-currencies.
 
@@ -80,15 +80,17 @@ Our ultimate goal is to build the Internet of Assets. Its value proposition has 
 
 2)  Provide a reference implementation of UDAP protocol, and deploy a permissionless asset blockchain so that app vendors can catch the express train of decentralized computing and decentralized storage without changing the existing application architecture. We abstract the most central part of decentralized computing, decentralized storage technology and decentralized messaging mechanism into a concise and effective API. Considering that the decentralized computing and storage technologies are still in an immature phase and are in a period of rapid growth, we believe such technology platforms will bring tremendous value to third-party application developers.
 
-3) Provide a Universal Asset Wallet(UAW) for end-users. The UAW will capture the most useful interaction patterns with assets that allows users to store, copy, transfer, sell/buy, and trade a variety of assets deposit from third party applications in one place. Such a design for third-party application development, in fact, is a very favorable news, because the third-party platforms can focus on the current core business logic without having to figure out how to build their own assets blockchain and user Interaction.
+3) Implement a Universal Asset Wallet(UAW) for end-users. The UAW will capture the most useful interaction patterns with assets that allows users to store, copy, transfer, sell/buy, and trade a variety of assets deposit from third party applications in one place. Such a design for third-party application development, in fact, is a very favorable news, because the third-party platforms can focus on the current core business logic without having to figure out how to build their own assets blockchain and user Interaction.
 
 4) Provide Asset Blockchain as a Service (ABaaS) so that organizations can easily create their own private or consortium asset chains that can connect to the UDAP public chain for value exchange.
 
-5) Provide a global C2C marketplace to enable asset trading and exchange without intermediaries.
+5) Build a global C2C marketplace to enable asset trading and exchange without intermediaries.
 
-6) Support business to transform to token economy as a technology enabler thorough
+6) Support business to transform to token economy as a technology enabler through
  - a highly scalable architecture that allows for linear scalability and supports thousands of applications and near one-second response with finality, with a total throughput of 10k~100k TPS.
- - an end-to-end privacy protection to applications that may handle highly sensitive asset information for their customers.
+ - an end-to-end privacy protection mechanism that may handle highly sensitive asset information for their customers.
+ - a unique security model to reduce attack surface.
+ - a multi-chain architecture with inter-blockchain communication support that bridges permissioned blockchains and public blockchains.
 
 
 ![](media/image1.png)
@@ -987,134 +989,73 @@ The world is in a transition from cryptocurrencie to cryptoassets.
 
 
 
-## 9.  应用案例分析
+## 9.  Use Cases
+
+<!-- -->
+### 9.1 Event Ticketing
+
+This use case includes performances, live shows, sporting events, ticket management for various gatherings.
+
+A third-party event ticketing platform that focuses on ticketing issuance, distribution and marketplace services. It is often the case that event ticket holders may not be able to attend a event for whatever reason, and that they need to be able to transfer the tickets to others in the best way possible. In the opposite direction, some people may have missed the ticket sale event and do not have a reasonable and convenient way to get tickets for the event, that is, this type of assets lacks a convenient secondary market. The performance market is still a relatively good market, because in private, scalpers play a liquidity role. Though not through a formal channel, they indeed improve the liquidity, help balance the supply and demand and thus get incentivized.
+
+By tokenizing event tickets, tickets can be easily sent to or transferred between friends, or put on a secondary market through UAW for resale. In the process of trading, the original issuer can put control over the trading frequency, liquidity, and price range. They can also set restrictions on whether an asset is allowed to be resold or transferred. This provides an extremely handy feature for ticket management apps with unparalleled security and liquidity. Our universal asset wallet (UAW) can be used directly to execute operations such as ticket transfer, trading or on-site check-in, which are common to concerts, movies and other types of events.   
+
+### 9.2 Brand Valuation
+
+In the crypto world, people are gradually realizing that tokens are a brand new economic model. The essence of tokens is actually to digitize all kinds of accessible and inaccessible assets in the real world and to manage them with cryptographic and blockchain technologies. Tokens corresponding to these assets can make full use of the high liquidity brought by blockchains and cryptocurrency exchanges to form a brand new token economy. One of these very innovative ideas is the emergence of a new possibility for everyone to issue tokens that represent their reputation and brand. Imagine that in the future, everyone will be able to issue their own crypto currency which is backed by their personal image and reputation, credibility, and promises. This type of tokens represents some kind of credit and commitment individuals make to the world and other people. Because of the liquidity of tokens, values of individuals can be more accurately represented. With the support of our platform, individuals can easily build their fan clubs and control issuance and distribution of membership cards. Those who can provide services could tokenize their services and put tokens on the market. When demands for their services change, the value of their tokens changes accordingly. This scenario offers an unprecedented possibility of full employment and customer demand satisfaction.
+
+### 9.3 Supply Chain Finance
+
+Nearly 82% of businesses fail because of cash-flow problems, however, the complexity and scale of existing supply chain finance (SCF) solutions has posed major challenges in ensuring adequate funding and efficient operations. Finance instruments in SCF include factoring, reverse factoring, payables financing, inventory finance, and dynamic discounting. The following figure illustrates the transaction flow of a typical inventory finance solution (source from Global SCF Forum)
+
+<p align="middle">
+<img src="media/inventory-finance.png" alt="Inventory Finance" style="width: 500px;"/>
+</p>
+
+UDAP will essentially enable all parties in SCF solutions to act on a shared ledger, where suppliers and manufacturers, along with every other participant, will solely update their parts of the transaction, enabling efficiency and an “unprecedented” level of trust and transparency on a ledger record that is immutable.
+
+### 9.4 Marketing and Promotions
+
+In the retail industry, cash vouchers, discount coupons, membership vouchers and promotional certificates can all be tokenized for monetization to create a more convenient and more liquidity asset. With the support of UDAP, these assets from different issuers can be easily exchanged, traded, transferred, and redeemed. Like event tickets issuers can also set resale rules on the crypto assets to protect or increase their interests.
+
+### 9.5 Sharing Economy
+
+UDAP enables businesses to quickly build decentralized marketplaces on the blockchain for a sharing economy. Buyers and sellers of decentralized "airbnb" or "uber" like car-sharing or home-sharing could transact on a decentralized and open platform without traditional intermediaries. All facility sharing rules are transparent to customers. A decentralized arbitration mechanism resolves disputes fairly and grow a network of mediators through incentives. In some scenarios, reservations can become assets. When buyers have to cancel the bookings for some reasons they may face penalties at present, however, with UDAP it is possible for buyers to resell their reservations on the marketplace to reduce loss.  
+
+### 9.6 Game Assets
+
+Gray markets exist for exchange and trade of digital assets (e.g. equipment, resources, accounts, points) in all kinds of e-sports games. Game developers may be reluctant to allow the players to freely trade the game equipment and resources, so that players have to obtain new equipment and resources through in-game purchase. However, there are quite a few games that realize that providing an open marketplace for game props is a way to enhance the user experience, attract more users, and increase revenues via the resell of game resources. UDAP offers APIs that enable game developers to register certain types of crypto assets they issue and manage the trading rules for those types in trading and exchange. At the same time, the ecology of asset trading conforms to the dynamic model expected by game designers.
+
+### 9.7 Arts and Collectibles
+
+Spot trading of collectibles is a very promising application of our asset management network. Our platform not only provides basic computing functions, but also provides the file storage and multimedia storage capabilities required for the preservation of art collection information. Therefore, all kinds of digitization, encryption and tokenization required in the circulation of artwork can be used to directly manage the trading. There are two main types of transactions that existed in the past: antique and art shops with direct acquisitions from individuals, which were then offered to consumers for purchase. In addition, A trading model takes place in the private, free-market model where art owners and potential buyers make deals directly; a common selling model for art is the auction model because artwork is usually an asset with insufficient liquidity that have huge disagreements about the pricing of artwork, and have huge gray spaces, sometimes used for money laundering and improper business activities. Blockchain technology will help eliminate frauds and provide traceability and authenticity guarantee with a flexible transaction model.
+
+### 9.8 ICO
+
+UDAP supports applications to issue their own tokens as utility tokens for exchange of services or application specific base coins for asset pricing. The application tokens can be exchanged with other tokens. This will help transform business into a token economy.
 
 <!-- -->
 
-1.  各类演出、实况表演、体育活动、线下的各种聚会的票务管理。
-    一个第三方的专注于各种票务发行流转服务提供等完整的票务，全生命周期的第三方应用平台。经常会发生这样的情况，持有演唱会票的观众可能因为什么原因不能出席演出，他需要能够以最能体现票面价值的方式把票转移给他人，反方向来说，另外一类人在他们看到某个演唱会的时候，可能已经错过了演唱会门票发售的时间，他们没有一个合理便捷的方式能够获得这个活动的门票，就是说这一类资产缺乏一个便捷的二级市场。演出市场相对而言还算一个较好的市场，因为私下里，我们称之为黄牛的人扮演了一个流动性的角色，虽然不是通过一个正规的渠道，但是他们的确起到了通过流通性来确认特定的活动的价值和满足供需对接的目的，他们从中获得了中间的差价。
+## 10. Conclusion
 
-    Various performances, live shows, sporting events, ticket management for various gatherings under the line. A third-party third-party application platform that focuses on the complete ticketing and full lifecycle offering of various ticketing distribution and streaming services. It is often the case that viewers who hold concert tickets may not be able to attend the show for whatever reason, and that they need to be able to transfer the votes to others in the best way possible, in the opposite direction, When you see a concert, you may have missed the time of the concert tickets, they do not have a reasonable and convenient way to get tickets for the event, that is, this type of asset lacks a convenient secondary market. The performance market is still a relatively good market, because in private, the people we call the ox play a liquidity role, though not through a formal channel, but they did indeed confirm through the liquidity The value of the specific activity and the purpose of meeting the supply and demand, they get the middle of the difference.
+Capital market is an engine for economic growth, both for business entities and individuals. Monetization is the main way to profit from the economy.
 
-    可以利用我们提供的API为他们每一次活动数字化和加密资产化或者代币化后的，各种票券可以在朋友之间赠送、转让，也可以放到资产钱包所提供的标准的资产市场，进行二级市场的交易。在加密化资产的交易流通过程中，资产的原始发行方可以控制资产交易的频率，流动性，以及在资产交易中价格的浮动范围。他们还可以控制每一个资产是否允许进行转手、转让等刺激市场的交易。这为票务管理的app提供了极为方便的特性，同时有一般的票务系统中不可比拟的安全性和流动性。我们的数字资产钱包，甚至包括了灵巧的资产转移的功能，完全可以直接用来完成演出演唱会，电影票等票务所需要的现场验票和交割环节的基本手续。因为我们的资产钱包把这一类资产所需要的交割，或者称之为已资产支付进行了抽象化。这样第三方应用叫至需要进行数字资产的铸造代币化。并且对这些资产的二级市场流通性进行配置，以后的后续工作都可以被消费者试用数字资产钱包。
+In the next few years, world economy will be reshaped greatly by token-based businesses. The nature of the "universal assets" that we are advocating here is the store and the realization of value.
 
-    After we digitize and encrypt each of their events using our API for asset or tokenization, various tickets can be donated, transferred between friends, or put in the standard asset market provided by the wallet, Conduct secondary market transactions. During the transaction flow of encrypted assets, the original issuer of the asset can control the frequency of asset transactions, liquidity, and the range of price fluctuations in asset transactions. They can also control whether each asset is allowed to be resold, transferred, etc. to stimulate market transactions. This provides an extremely handy feature for ticket management apps with the unparalleled security and fluidity of a typical ticketing system. Our digital asset wallets, even including the smart asset transfer function, can be used directly to complete the basic procedure of on-site ticket inspection and delivery of tickets for concerts, movie tickets and other ticketing needs. Because our asset wallets abstracted from the delivery of what is required for this type of asset, or what is called asset payout. This third-party application is called tokens for casting that requires digital assets. And the secondary market liquidity of these assets to configure, follow-up work can be consumer trial digital asset wallets.
+Blockchain supports permanent retention of asset information through its tamper-proof feature. In a sense, it is the permanent existence of assets.
 
-2.  个人形象，品牌代币（或者叫个人品牌"上市"）。
-    在加密数字资产世界中，人们逐渐意识到，代币是一个崭新的经济模式。代币的核心其实就是把现实世界中形形色色的各类可触及的以及不可触及的资产进行数字化，并且纳入到了严格的计算机密码学和区块链技术的约束范畴。这些资产对应的代币，可以充分利用区块链以及围绕区块链的交易所所提供的巨大的流动性，形成一个崭新的代币经济。这其中一个非常有创新性的构思，就是出现了一种新的可能，让每一个人都能够发行代表自己的声誉和形象的代币。我们设想在未来的世界中，每一个人都可以发行自己的数字货币，以自己个人的形象和声誉、信誉，为自己的代币承诺。个人的代币可以代表了个人对世界及周边其他相关人群的某种信用和承诺。同时因为代币带来的流动性，能够比较准确的两个人的价值得到准确的体现。由此避免了个人自我价值确认过程中发生的自我估值过高，所带来的有价无市或者是自我估值偏低，形成的对自己的实质上的损失。有了我们平台的支持，个人非常容易的能够创建自己的粉丝俱乐部或者会员俱乐部，能够控制其所发行的会员证的数量以及流通的方式，能够为社会提供服务的个人，你把自己的服务包装成个人代币的形式，投放到市场中。并且，随着市场对个人服务需求的变化，浮动的定价。这种场景，对于服务提供方的充分就业和服务需求方的充分满足来说，都提供了一个前所未有的可能性。
+At the same time, the blockchain-derived token economy and the liquidity as the core of the token economy provide the key channel for the value recognition of assets.
 
-    Personal image, brand tokens (or personal brand "listing").In the world of encrypted digital assets, people are gradually realizing that tokens are a brand new economic model. The essence of tokens is actually to digitize all kinds of accessible and inaccessible assets of all kinds in the real world and to include the strict constraints of computer cryptography and blockchain technology. The tokens corresponding to these assets can make full use of the huge liquidity provided by the blockchain and the exchanges around the blockchain to form a brand new tokens economy. One of these very innovative ideas is the emergence of a new possibility for everyone to issue tokens that represent their reputation and image. We envision that in the future world, everyone will be able to issue their own digital currency, with their own personal image and reputation, credibility, promises for their token. Personal tokens represent some kind of credit and commitment individuals make to the world and other related people in the neighborhood. At the same time because of the mobility of tokens, two people can be more accurate value accurately reflected. This avoids the self-worth of individuals in the process of confirmation of self-valuation is too high, resulting in a priceless market or self-valuation is low, the formation of their own substantive losses. With the support of our platform, individuals can easily create their own fan clubs or clubs, have the ability to control the number of membership cards they issue and the means of distribution, individuals who can serve the community, and you package your services Into the form of personal tokens, put on the market. And, as the marketplace demands for personal services change, floating pricing. This scenario offers an unprecedented possibility of full employment of service providers and full satisfaction of service demand side.
+The relationship between liquidity and the health of the entire industry is like a human blood circulation system and human health. Much of what is studied in economics as a whole is actually about how to improve the liquidity of a local system. Although trading liquidity is frequently over-estimated, which is referred as "liquidity illusion", a closer look at various industries around us reveals that lack of liquidity is almost always a continuing challenge for all industries. Even if we are already satisfied with current liquidity provided by a system, at a higher level and in the future, this liquidity may become inadequate again. So in current reality, increasing liquidity is always of importance.
 
-3.  供应链金融。典型的供应链，b2b的商业模式中存在着大量的大宗商品仓储，转运，销售，治一治呀。等等常见的业务流程。本平台提供的API将使得供应链上下游的资产确认、公正、交易、传于、和交割真正的非常容易。尤其是，我们平台提供的有包含关系的资产管理工具和方便的多签名机制和工作流支持，能够对b2b资产的流动服务提供极为便捷的、安全的、高效率的支撑。并列的上下游以及参与到共赢流转的资金方，例如银行是资金借贷方，我可以把自己的资产形成加密数字化以后，在上面方便的进行交易。
+Liquidity is not a panacea. In fact, liquidity itself may also bring system instability and even harm. Just like our blood circulation system, smooth blood circulation does not mean that there is no control of blood circulation. Therefore controlling and optimizing liquidity throughout the market is actually the second challenge for the industry.
 
-supply chain finance. Typical supply chain, b2b business model there is a lot of bulk warehousing, transportation, sales, cure it. Etc. Common business processes. The APIs provided by this platform will make it easy to identify, justify, trade, deliver, and deliver assets upstream and downstream of the supply chain. In particular, our platform includes relational asset management tools and easy multi-signature mechanisms and workflow support that provide extremely convenient, secure and efficient support for mobile services for b2b assets. Side by side with the upstream and downstream and participate in win-win flow of funds, for example, the bank is the lender of funds, I can encrypt their own assets after the formation of digital, convenient to carry out the above transactions.
+Many industries face a big challenge that asset issuers lack control over liquidity of assets. In the past there was no good solution to this problem, but with the advent of distributed ledger technologies we may be able to overcome this challenge for the first time.
 
-4.  零售行业。零售行业中，经常使用的各种现金券，打折券，会员优惠凭证，促销手段均可数字化和加密货币化以后，形成更方便的，刺激流通的资产。通过平台的交易和提供的中间货币，虚拟货币的调节作用，消费者甚至可以在不同的服务提供商之间实现积分的兑换和服务的置换。
+This white paper is about an ongoing project referred to "Internet of Assets", which we are trying to make our unique contribution in three main technology areas:
 
-    Retail industry. In the retail industry, frequently used cash vouchers, discount coupons, membership vouchers and promotional tools can be digitized and encrypted for monetization to create a more convenient and stimulating circulation asset. Through the platform of trading and the provision of intermediate currency, the role of virtual currency regulation, consumers can even achieve integration between different service providers exchange and replacement of services.
+- Blockchain-based Asset Lifecycle Management
+- Decentralized C2C Exchange for Assets
+- Multi-Chain Technology with focus on privacy, security, scalability and inter blockchain communication
 
-5.  旅馆行业。旅馆的房间是一个非常适合于数字加密资产化的一个应用场景。因为旅馆房间的价格的波动性随着节假日和季节，天气等因素的变化非常平凡。由于流动性不足，旅馆的房间经常没有得到充分的销售。从消费者的角度看。在突发的时间经常订不到旅馆的房间，也是一个经常面临的生活障碍。通过本平台，我们可以构建一个崭新的旅馆订阅平台。通过二级市场提供大量的流动性，使得旅馆房间的销售和消费者对于旅馆房间的需求都得到充分的准确的定价和满足。
-
-    Hotel industry. The hotel room is a very suitable application for digital asset encryption. Because the hotel room price volatility with the holidays and the seasons, weather and other factors change is very ordinary. Due to lack of liquidity, hotel rooms are often not fully sold. From the consumer's point of view. In unexpected times often can not set the hotel room, but also a living often face obstacles. Through this platform, we can build a brand new hotel subscription platform. Through the secondary market to provide a lot of liquidity, making the hotel room sales and consumer demand for hotel rooms have been fully accurate pricing and satisfaction.
-
-6.  数字游戏中的虚拟资产交易。市面上流行的各种电子竞技游戏中的数字资产有一个灰色的市场，供玩家们进行道具人物的转让，游戏的发行商也许不愿意让玩家们能够自由的进行武器道具的交易，这样总能保证需要新武器和额外设备的玩家总是从游戏设计者的商店中购买。但是也有不少的游戏意识到，提供一个标准化的游戏道具的交易市场，是提高用户体验，获得更多用户的一种手段。我们的资产服务平台，能够提供标准化的API，够第三方游戏开发者登记他们所发行的数字资产的类型，管理这些类型在交易中的交易规则。同时，资产交易的生态符合游戏设计者所期待的动态模型。
-
-    Virtual game in digital games. There is a gray market for digital assets in all kinds of e-sports games that are popular in the market, for players to transfer the characters of the props. The publisher of the game may be reluctant to allow the players to freely trade the weapon props, so that the total energy Players who promise new weapons and extras are always purchased from the game designer's store. However, there are quite a few games that realize that providing a standardized marketplace for game props is a way to enhance the user experience and get more users. Our asset services platform offers a standardized API that enables third-party game developers to register the types of digital assets they issue and manage the trading rules for those types in the transaction. At the same time, the ecology of asset trading conforms to the dynamic model expected by game designers.
-
-7.  古董字画艺术品资产管理交易。艺术品的现货交易是我们资产管理网络的一个非常有前景的应用。我们的平台不仅仅提供基本的计算功能，同时还提供了艺术品收藏信息保存所需要的文件存储和多媒体存储能力，所以在艺术品流通中所需要的数字化、加密化和代币化的各种手段，都可以被用来直接对艺术品交易周期进行直接的管理。古董字画以及工艺和其他类的艺术品交易，过去存在着两种主流的交易方式：一种是文物艺术品商店直接向个人收购，或者滥授他们的作品，然后提供给消费者选购；另外一种交易模式发生于民间，自由市场的模型，艺术品的拥有者和艺术品的潜在买主直接进行交易和销售；艺术品还有一个常见的销售模型是拍卖模式，因为艺术品是一个流动性不足的产品，对于艺术品的定价有着巨大的分歧，而且有着巨大的灰色空间，有时候艺术品还被用于从事洗钱和非正当的经营活动，区块链技术将有助于把这些交流程中的欺诈行为去除掉，并且在满足非常灵活的交易模型的前提下，保证艺术品交易中最重要的数源保真担保。
-
-    Antique Crafts Art Asset Management Trading. Spot trading of artwork is a very promising application of our asset management network. Our platform not only provides basic computing functions, but also provides the file storage and multimedia storage capabilities required for the preservation of art collection information. Therefore, all kinds of digitization, encryption and tokenization required in the circulation of artwork Means can be used to directly manage the art trade cycle directly. There are two main types of transactions that existed in the past: antique art shops, direct acquisitions from individuals or overprofessionals, which were then offered to consumers for purchase. In addition, A trading model takes place in the private, free-market model where art owners and potential buyers of artwork trade and sell directly; a common selling model for art is the auction model because artwork is a liquidity Insufficient products have huge disagreements about the pricing of artwork, and have huge gray spaces, sometimes used for money laundering and improper business activities, and blockchain technology will help put these exchanges In the fraud to get rid of, and to meet the very flexible transaction model under the premise of ensuring the art auction the most important source fidelity guarantee.
-
-8.  ICO。 平台支持公司通过把公司的权益或者产品使用的权利代币化，
-    并且立即通过平台提供的交易能力获得流动性。
-
-    Platform Support Companies through the company's rights or the right to use the product tokenization, And immediately get liquidity through the trading capabilities provided by the platform.
-
-<!-- -->
-
-10. 总结summary
-
-资本是经济的发动机， 无论对于商业实体和个人而言皆是如此。
-资产的资本化是从经济中获利的主要途径。
-
-Capital is the engine of economics, both for business entities and individuals.
-Capitalization of assets is the main way to profit from the economy.
-
-我们在这里所倡导的"通用资产"资产的本性是存留和价值实现。
-
-The nature of the "general assets" asset we are advocating here is the survival and the realization of the value.
-
-区块链通过不可篡改的特性来支撑资产信息的永久存留。某种意义上也就是资产的永久存留。
-
-Blockchain supports permanent retention of asset information through tamper-evident features. In a sense, it is the permanent existence of assets.
-
-同时区块链衍生的代币经济以及作为代币经济核心的流动性为资产提供了价值确认的关键性渠道。
-
-At the same time, the blockchain-derived tokens economy and the liquidity as the core of the tokens economy provide the key channel for the value recognition of assets.
-
-资产的流动性对于整个行业的健康而言，是一个类似于人体的血液循环系统的通畅性和人体健康的关系的相等、重要的地位。整个经济学中所研究的大部分的内容其实都是研究如何提高一个局部系统的流动性，虽然有部分经济学家过分地夸大了流动性的重要性和流动性的神奇的功能，以至于被冠以流动性幻觉，但是仔细考察我们身边的各种行业，流动性的不足，几乎始终是所有的行业都面临的持续挑战，即使我们已经满足于某种体系提供的流动性，单如果考虑到更高的层面和未来，可能这种流动性又变得非常不足。所以我们认为。在现有的现实情况下，把流动性增加是无论如何也不能过分的表达其重要性的。
-
-
-The liquidity of assets is an equal and important position for the health of the entire industry, similar to the patency of the human circulatory system and human health. Much of what is studied in economics as a whole is actually about how to improve the liquidity of a local system. Although some economists overstate the importance of liquidity and the magical function of liquidity, Is a hallucination of liquidity, but a closer examination of the various industries around us, the lack of liquidity, is almost always a continuing challenge for all industries, even if we are already content with the liquidity provided by a system that, if taken into account At a higher level and in the future, this liquidity may become very inadequate again. So we think. In the current realities, increasing the liquidity can not overemphasize its importance anyway.
-
-流动性并不是一个万能的良药。其实，流动性本身有可能会带来系统的不稳定和伤害，就像人体的血液循环系统一样，顺畅的血液流通并不代表无所节制的血液流通。所以整个市场的流动性的控制和优化，实际上是一个行业面临的第二个挑战。
-
-Liquidity is not a panacea. In fact, liquidity itself may bring system instability and harm, just as the body's blood circulation system, smooth blood circulation does not mean that there is no control of blood circulation. So controlling and optimizing liquidity throughout the market is actually the second challenge for an industry.
-
-许多行业的圈子内部有一个很大的课题。要让资产的拥有者，或者资产流动方能够对资产的流通有所控制，这是资产拥有者或者大批资产的登记和发布者所面临的课题。过去是没有好的手段来解决这些问题，技术或者是公开的去中心化记账技术的出现，使得这些需求第一次有可能得到满足。
-
-Many industries have a big problem within the circle. Enabling asset owners, or asset flowrs, to control the flow of assets is a challenge for registrants and publishers of asset owners or large numbers of assets. In the past there was no good solution to these problems, and the advent of technology or open decentralized accounting techniques made these needs likely to be met for the first time.
-
-本篇白皮书所描述的正在进行的项目，就是通过以下几个方面，对我们所认识的真正的我们称之为价值或者资产的互联网，作出我们独特角度的贡献，这些角度包括：
-
-Ongoing projects described in this paper are our unique perspectives on what we know about the true Internet we call value or assets, from the following perspectives:
-
-1.  现实世界的资产，如何能够非常方便的，在不需要知道区块链技术的情况下，在任何第三方的应用通过调用标准化的协议而得到定义登记和确认。我们提供的方案是建立一个把区块链以及分布式存储技术隐藏在后面的、简单的统一的API，供第三方程序调用。第三方的商业应用程序，可以在不需要知道区块链技术和分布式文件存储技术以及分布式计算技术的前提下，就像使用传统的客户服务器或者云技术一样使用我们的API，但是却获得试用去中心化的计算和存储所带来的所有的价值。
-
-    Real-world assets, how it can be very convenient, without the need to know the blockchain technology in any third-party applications by calling a standardized protocol to get the definition of registration and confirmation. The solution we provide is to build a simple, unified API that hides the blockchain as well as distributed storage technologies for later use by third-party programs. Third-party business applications that use our APIs the same way as traditional client-server or cloud technologies without the knowledge of blockchain technology and distributed file storage technology and distributed computing technology, Try to centralize all the value that comes with computing and storage.
-
-2.  我们的API把区块链、分布技术和第三方应用隔离，原因之一是，我们将提供对区块链写入确认以及各种非常昂贵操作的缓冲，使得用户的性能和简洁性有较大幅度的提升。同时，用户用于资产全周期管理的API完全可以超过现在的以太坊，这样技术智能合同提供的数据类型和有时候令人迷惑和烦恼的、不成熟性都隐藏在后面。可是登录的时候，用户在不需要自己进行更新的情况下，我们的后盾可以切换到更为先进的、随时都在发生着剧烈性能提升和架构提升的区块链或者类似区块链的去中心化的公开记账本。
-
-    One of the reasons that our APIs segregate blockchain, distribution technology and third-party applications is that we will provide a buffer for blockchain writes validation and various very expensive operations that will make the user's performance and simplicity even greater Amplitude increase. At the same time, users' APIs for asset lifecycle management can outweigh current Ethereum so that the data types provided by technology smart contracts and the sometimes confusing and annoying, immature ones are hidden behind. However, when you log in, our users can switch to the more advanced blockchain or similar blockchain that is undergoing dramatic performance improvement and architecture upgrade at any time without the need to update itself. The public bookkeeping.
-
-3.  我们的API服务器把区块链的安全模型也转换成常见的app开发中的安全模式。
-
-Our API server also translates the blockchain's security model into a common security model for app development.
-
-4.  作为我们中期的工作之一，我们正在建设一个原生支持公用资产互联模式的，新的分布式或者去中心化的记账和计算系统。现有的类似于以太坊这样的智能合同的模式，我们认为对编程者而言，提供了过大的随意性和暴露了大量的可被攻击的表面面积。这就导致，对于资产管理而言，产生了一个最为关心的安全性的重要隐患。我们正在设计的原生支持资产的新的网络，将我们认为资产管理的必要的功能环节完全固化在网络本身的协议之中，而不需要用户用自己书写的代码来维护各种资产。这可能在性能和安全上，都会出现一个新的飞跃。
-
-     As part of our mid-term effort, we are building a new distributed or decentralized accounting and computing system that natively supports the public asset-networking paradigm. Existing patterns of smart contracts like Ethereum, we think, provide too much randomness to programmers and expose a lot of surface area that can be attacked. This has led to an important hidden danger to asset management that is of the utmost concern for safety. The new network of native support assets we are designing allows us to fully cure the necessary functional aspects of asset management in the network's own protocol without the need for users to maintain the assets in their own written code. This may be a new leap in performance and safety.
-
-5.  API网关将把通用型的资产生命周期管理所需要的所有的API都包括在内。这种抽象，使得用户不需要通过人工的方式，就能像使用标准化数据库一样，使用基于区块链的服务。这是对现有的区块链作为一种服务的升级，我们称之为自动化的资产管理，作为一种服务，这种模式有别于当前世界上另外一些团队所出的资产管理模型，其中包括了大量的人工审核和客户化的成分，我们的API就因为其管理的抽象性和完备性，而不需要人工的介入，使得几乎我们所知道的现实世界中处理各种形形色色资产的app，都可以像使用标准化服务一样使用我们提供的接口。
-
-    The API Gateway will include all the APIs required for a generic asset lifecycle management. This abstraction allows users to use blockchain-based services the same way they would with a standardized database, without manual means. This is an upgrade to the existing blockchain as a service that we call automated asset management as a service that is different from the asset management models that are currently available in other teams around the world, Including a lot of manual review and customization components, our API because of its management abstraction and completeness, without the need for human intervention, making almost all we know in the real world to deal with all kinds of assets app, Can use the same interface we provide as standard services.
-
-6.  Universal Asset
-    Wallet。我们将创建一个我们新的资产统一接口标准。通过这个标准，我们将提供一个资产钱包。这个钱包包含了像数字货币一样的加密资产，同时可以包含符合我们定义的资产生命周期，API的各类用户自定义的加密资产。在这个钱包中，用户可以浏览使用我们的标准服务的各种API所能创建和维护的形形色色的各类加密化资产，能够通过我们的资产钱包，在不同的用户之间进行转账、转移、赠送，并且我们的钱包将支持签名和安全机制，能够把你见的牵涉到多签名的资产转移过程，内置在资产钱包中。这样第三方应用基本上就不需要再开发专门的钱包，他们的用户可以通过他们各个第三方应用的app，获得数字资产以后，直接在我们通用的资产钱包中浏览、转移甚至是交易。钱包还允许用户动态的自定义个人虚拟化资产，并且在个人之间进行转移。可以理解为，个人用户之间的应用资产的非常简便的流通平台。资产钱包同时将提供和本地化相关的直接支持国家货币的购买和交易。由于本平台所销售的资产都是现实世界中的可理解的资产，而不是在各国的政策中可能引起较大敏感度的虚拟货币资产，将能方便地接入本地化的法币支付通道，供消费者直接通过法币购买app开发商提供的满足本平台协议的数字资产的需求。
-
-     Wallet.We will create a new unified standard for our assets. Through this standard, we will provide an asset wallets. This wallet contains cryptocurrency like digital currency and can contain a variety of user-defined, encrypted assets that fit our defined asset life cycle, API. In this wallet, users can browse a wide variety of encrypted assets created and maintained by APIs that use our standard services and can transfer, transfer, and donate between different users through our wallet , And our wallet will support signatures and security mechanisms that can embed the asset transfer process you see involving multiple signatures into an asset wallet. Such third-party applications basically do not need to develop a special wallet, their users can access their digital assets through their various third-party app, browse, transfer or even trade directly in our common asset wallet. Wallets also allow users to dynamically customize individual virtualized assets and transfer between individuals. Can be understood as a very simple platform for the circulation of assets between individual users. Asset wallets will also provide direct support for the purchase and trading of national currencies in relation to localization. As the assets sold in this platform are all understandable assets in the real world, and not virtual currency assets that may cause greater sensitivity in national policies, they will have easy access to localized legal currency payment channels for Consumers purchase the digital assets that app developers provide to meet the Platform Agreement directly through the French currency.
-
-7.  我们所设计的资产网络，支撑其他所有的协议和平台所部支撑的层次化的资产复杂关系。在现实世界中，资产之间经常出现较为复杂的关系，现实世界的资产不是一个平面化的、相互之间完全独立对等的关系，我们把现实世界的资产模型化为一种树状的包含关系，我们的资产协议将原生的支持多层级的资产关系。这样在资产的转移中。可以用非常简单的API就能完成较为复杂的资产交易流程。
-
-    The asset network we designed supports all the layers of complex relationships between assets that all other protocols and platforms support. In the real world, assets often appear more complex relationships, the real world assets is not a flat, completely independent and reciprocal relationship between each other, we model the real-world assets into a tree-like contains Relationship, our asset agreement will natively support multi-tiered asset relationships. This is the transfer of assets. You can use a very simple API to complete the more complex asset transaction process.
-
-8.  分布式交易系统（DEX）。 应用产生加密资产后立即面临的需求是流动性。
-    我们的通用资产钱包将内置资产交易能力，
-    这种能力不局限在同一种性质的资产之间，
-    而且支持各类资产和通用加密资产的交易， 例如和BTC， ETH
-    等加密货币资产的交易。
-
-     Distributed Transaction System (DEX). The immediate need for an application to generate encrypted assets is liquidity.Our General Assets Wallets will have built-in asset trading capabilities,This ability is not limited to the same nature of the assets, It also supports the trading of various assets and general-purpose cryptographic assets such as BTC and ETH Encryption of monetary assets such as transactions.
-
-最终UDAP将运行一个专注于全球资产的专门化分布式计算和存储的网络，
-这个网络和比特币网络， 以太坊网络等等区块链网络并存，
-并且有可能通过跨链技术实现网络之间的资产的流动。
-
-Ultimately UDAP will run a network of specialized distributed computing and storage focused on global assets,
-This network and bitcoin network, Ethereum network, etc. blockchain network co-exist,
-And it is possible to cross-link the flow of assets between networks.
-
-我们相信这个一个具有高度针对性的网络对于大量的能沉淀各类资产的应用领域提供前所未有的新技术平台。
-
-
-We believe this highly targeted network offers an unprecedented new technology platform for a large number of applications that can precipitate a wide range of assets.
+We believe our highly targeted networks offer an unprecedented new technology platform for a large number of applications that can precipitate a wide range of assets and support businesses to transform into a token-based economy.
