@@ -26,7 +26,7 @@ UDAP is a standalone public chain cloud that offers itself as an advanced stream
 
 In the beginning, there was Bitcoin.  
 
-Although touted by its inventor as "digital cash", Bitcoin has been pushed to play pivotal roles beyond crypto-currency.  Many projects have created protocols on top of Bitcoin to facilitate the exchange of general assets. [Mastercoin][Counterparty][Prism]
+Although touted by its inventor as "digital cash", Bitcoin has been pushed to play pivotal roles beyond cryptocurrency.  Many projects have created protocols on top of Bitcoin to facilitate the exchange of general assets. [Mastercoin][Counterparty][Prism]
 
 But because Bitcoin has been first and foremost designed to work as a fungible currency, using it beyond as such has proved to be clunky and limited.
 
@@ -495,9 +495,11 @@ In addition to the basic services described above, UDAP provides the following s
 - escrow
 - redemption and destruction
 
-#### 5.3. Authenticity and Proof of Asset
+#### 5.3. Counterparty Risk and Proof of Asset
 
-UDAP assumes a few basic principles about the authenticity of assets:
+All the tokens on the UDAP chain are tied to assets. Tokens and assets are the counterparties of the bonding. Since we are dealing with real world situations, anything can happen to the assets without being noticed by the token system. This is the counterparty risk.
+
+UDAP assumes a few basic principles about the authenticity of assets, the counterparty of the token system:
 
 - Authenticity is not protected by the UDAP protocol.
 - Authenticity is only valuable in its application context.
@@ -551,6 +553,7 @@ Given that UDAP provides an open ledger service to third-party applications, we 
 - UDAP provides a key ring to securely store the private keys of the accounts in each of the applications that a user choose to register.
 - Private keys are mainly used to sign transactions initiated by a user, either from the application plugins in UAW, or from standalone mobile apps.
 
+
 In the second phase of UDAP Identity Management:
 
 - UDAP provides a decentralized PKI interface (dPKI) to third party apps.
@@ -564,98 +567,37 @@ We are looking closely at the development of some third-party identity managemen
 
 ![](media/image3.png)
 
-作为平台的一个非常重要的部分，钱包扮演了一个整个协议和系统和用户之间交互的关键角色。一般加密货币的钱包是单一功能的钱包，展示的是某一种特定的加密货币的数量。多功能的钱包同时能够支持多种数字加密货币的结余展示和资金发送和收取。
+As a very important part of the platform, wallet plays a key role in the entire agreement and interaction between system and user. The usual crypto-wallets are a single-function wallet that shows the amount of particular cryptocurrencies. 
 
-As a very important part of the platform, wallet plays a key role in the entire agreement and interaction between system and user. The usual crypto-wallet is a single-function wallet that shows the amount of a particular cryptocurrency. Multi-functional wallets can also support the display of multiple balances of digital cryptocurrencies and the sending and receiving of funds.
+As a general-purpose assets wallet, UAW's  role has been significantly expanded. Think of it as a personal safe on one's cell phone. It can contain any stuff you would put in a safe, such as certificates, important documents, diamond rings, antiques, securities, IOUs, etc. In fact the asset wallet store the unique tokens that cryptographically represent the assets. These asset-backed tokens are created by various applications running on the UDAP chain are organized by applications. 
 
-UAW作为通用资产钱包，他的角色被更加的扩大。 把它想象成是一个个人的保险箱，其中不仅有各种各样的货币，同时还有各种各样的有价证券，文件，以及任何被个人认为是理解成资产的物件的代币。
-通用资产钱包不仅仅是资产的存储空间，同时也非常方便的用于支持对资产的一些通用的操作，例如资产的转移，销售， 交易， 拍卖，注销等。
-
-UAW as a general-purpose assets wallet, his role has been more expanded. Think of it as a personal safe, not only in a wide variety of currencies, but also in a wide variety of securities, documents, and any tokens that individuals perceive as objects of understanding.
 General Assets Wallets are more than just the storage of assets, but are also very handy for supporting common operations on assets such as asset transfers, sales, trading, auctions, cancellation and more.
 
-UAW包含以下资产内容：
 
-1.  从第三方App沉淀的资产： 例如各种票券， 各种权证， 各种契约。
-2.  个人创建的加密资产： 例如个人契约。
-3.  账单和债务： 例如各种应付账单， 借债。
+#### 6.1.  Assets precipitated from third party apps
 
-UAW contains the following asset content:
+UAW is the user of the assets obtained in a variety of third-party applications. Each application has its own unique user management system that generates user accounts that correspond to a unique account on the blockchain, with the help of UAW. Obviously account will not be shared or reused between applications.
 
-1. From the third party App settling assets: such as various tickets, all kinds of warrants, all kinds of contracts.
-2. Encrypted assets created by individuals: for example, personal contracts.
-3. Bills and debts: such as various bills payable, debt.
+An account has security significance and identity only in the context of third-party applications. The purpose of doing so is to ensure that the user's privacy. In this context, a wallet, in fact, must import the assets from each application. After the account is imported, the assets of the corresponding user in the third-party application are displayed in the general-purpose assets wallet in different groups. Users can interact with the asset in a generic way, such as transferring, submitting to marketing, auction auctions, or sending copies to third parties.
 
-#### 6.1.  从第三方App沉淀的资产
-Assets precipitated from third party App
-
-UAW沉淀的是用户在各种第三方应用中得到的资产.
-各种第三方应用中都有独特的帐号， 账号之间没有关联。这被称之为账户隔离。
-每一个应用自身有一个独特的用户管理体系，它所产生的用户账号对应于区块链上的一个独特的账号。账号在应用之间不会重用。
-一个账号只在第三方应用的上下文环境中才有安全意义和身份，这样做的目的是保证，用户的隐私。在这样的前提下，一个钱包，实际上必须从每一个用户所使用到的第三方应用中导入自己的资产。导入资产的过程。和支持ERC20协议的Ethereum链上的发行的加密货币的原理是一样的。导入账号以后，在第三方应用中对应用户的资产，会，分门别类的呈现在通用资产钱包中。用户可以理解使用第三方应用资产发售者所许可的各种操作，例如转移，提交到市场销售，竞价拍卖，或者给第三方发送拷贝。
-
-UAW is the user of the assets obtained in a variety of third-party applications.
-A variety of third-party applications have a unique account, there is no correlation between accounts. This is called account segregation.
-Each application has its own unique user management system that generates user accounts that correspond to a unique account on the blockchain. Account will not be reused between applications.
-An account only in the context of third-party applications have a security significance and identity, the purpose of doing so is to ensure that the user's privacy. In this context, a wallet, in fact, must be from each user to use third-party applications to import their assets. The process of importing assets. The same principle applies to cryptocurrencies issued on the Ethereum chain that supports the ERC20 protocol. After the account is imported, the assets of the corresponding user in the third-party application are displayed in the general-purpose assets wallet in different categories. Users can understand the various actions licensed by third-party application asset vendors, such as transferring, submitting to marketing, auction auctions, or sending copies to third parties.
-
-#### 6.2.  资产来源之二：个人创建资产
-Second sources of assets: individuals to create assets
-
-UAW不仅仅从第三方的应用导入各种用户的在第三方应用上下文中积淀的资产，同时它允许用户直接在钱包中创建个人化数字加密资产。
+#### 6.2.  Personal Assets
 
 UAW not only imports assets from various third-party application contexts from third-party applications, but it also allows users to create personalized digitally encrypted assets directly in the wallet.
 
-个人创建资产分为两类：
-
-Individuals create assets into two categories:
-
-1)  一种场景是用户可以直接在通用资产钱包中创建[借条]{.underline}或者[欠条]{.underline}这一类的"[加密合同]{.underline}"或者"加密契约"。借条和欠条在日常生活中的目的是表明A用户因为借贷的原因欠B用户某种特定的资产，并且相约在某个时间可以进行偿付。在现实生活中，可能人们会在一张纸上写下这种关于资产的约束和承诺。它的法律意义是由这种签名所决定的，一旦出现争执，需要进行权威机构的验证和仲裁。通用资产钱包是基于区块链的取证和仲裁，从钱包中开出的借条和欠条，因为其无法篡改和无法凭空捏造的能力，其证据能力实际上优于现实生活中的手写的欠条或者借条，字据的真实性一目了然，所以加密合同是更为方便和更有约束力的契约。
-
-    One scenario is that users can create either [Encryption Contracts] {.underline} or Encryption Contracts in the generic asset wallet directly under {IOU} {underline} or {IOU} {underline}. The purpose of IOUs and IOUs in daily life is to show that A users owe a particular asset to a B user because of borrowing and can pay for it at some time. In real life, people may write down this kind of restraint and commitment about assets on a piece of paper. Its legal significance is determined by such a signature, in the event of a dispute, the need for verification and arbitration authority. General Assets Wallets are based on blockchain forensics and arbitration. IOUs and IOUs are derived from wallets because they can not be tampered with and can not be invented, and their evidence capabilities are actually superior to real-life handwritten IOUs or IOUs , The authenticity of the document at a glance, so encrypted contract is more convenient and more binding contract.
+One scenario is that users can create either [Encryption Contracts] {.underline} or Encryption Contracts in the asset wallet directly . The purpose of IOUs in daily life is to show that a users owes a particular piece of asset to a user B because of borrowing and can pay for it at some time in the future. In real life, people may write down this kind of agreement and promise about assets on a piece of paper. Crypto-IOUs are actually superior to real-life handwritten IOUs, easier to create, more expressive with support of voice, pictures and even videos, tamper-proof and irrefutable, no worry of loss.
 
 ![](media/image4.png)
 
-创建用户打开个人功能然后点击书写借条或者欠条。描述发生的借贷关系和偿还安排。然后就可以发送给债权人。债权人确认签名后就成为自己个人资产的一部分。等到未来的某个时刻交割，就完成了这个借条或者欠条的生命周期。
 
-Create a user to open personal features and then click to write IOUs or IOUs. Describe the loan relationships and reimbursements that take place. Then it can be sent to creditors. Creditors confirm the signature became part of their personal assets. Wait until sometime in the future delivery, to complete the IOU or IOU life cycle.
+In the process of personal loans or IOUs, one can also use the wallet to conduct multi-signature signing. For example, when creating an IOU, a third-party witness may be required to witness the contract. The borrower can send the original IOU to the witness, who then signs  it and sends it to the creditor.
 
-在个人打借条或者欠条的过程中，还可以利用钱包所提供的多重签名的属性。例如在做一张借条或欠条的时候，可能需要一个第三方的见证人见证这张欠条额内容有增强的，这个可靠性和有第三方的在场，那么在书写欠条借条的过程中，他可以把原始的欠条发送给见证人，然后见证人进行签收以后，最后发送给债权人。
-
-In the process of personal loans or IOUs, you can also use the wallet to provide multi-signature properties. For example, when making a IOU or IOU, a third-party witness may be required to witness the increase, the reliability and the presence of a third party, so that he can Send the original IOU to the witness, who then signs the receipt and sends it to the creditor.
-
-甚至引入[担保人]的角色。和[见证人]不同，担保人和，债务人，要承担，相应的担保的义务，如果债务人不能。约定的时间进行债务的偿还，那么担保人要负连带的偿还义务。能和通常的。见证人的多方签名的流程相似，使用的都是相似的机制。从侧面表明了通用资产钱包所自带的多重签名的功能的强大性。
-
-Even introduce the [guarantor] role. Unlike the [witness], the guarantor and the obligor have to assume the corresponding obligation of security if the debtor can not. The agreed time for debt repayment, then the guarantor to bear the repayment obligations. Can and usual. Witness multi-signature process is similar, using a similar mechanism. From the side of the common asset wallet that comes with the power of multiple signatures.
-
-如果合同的资金交付方式选择系统支持的加密货币，那么合约的交割方式更为便捷，用户只需向合约汇入相应的款项，合约即可自动执行完毕，债务债权关系自动解除。基于加密货币的偿还安排还可以支持利息处理，合约会按照双方约定的利息在触发条件（例如，出现偿还逾期）满足以后， 自动开始计息。
-
-If the contract's funds are delivered in the form of cryptocurrencies supported by the system, the delivery method of the contract is more convenient. The user only needs to import the corresponding payment into the contract, the contract can be automatically executed and the debt claims are automatically released. Reimbursement arrangements based on cryptocurrencies can also support the treatment of interest and the contract automatically begins to accrue interest upon satisfaction of the trigger conditions (eg, overdue repayments) as agreed between the parties.
-
-加密契约可以是高度格式化的， 也可以是用高度灵活形式，例如除了文字以外， 可以使用图片， 语音甚至视频。所有的这些媒体形式都会被签名加密，具有高度的隐私和高度的安全性。
-
-Encryption contracts can be highly formatted or highly flexible, for example, pictures, voices and even video can be used other than text. All of these forms of media are signed and encrypted with a high degree of privacy and high security.
-
-仔细思考这个功能， 这是一个极为强大的功能设计，
+Encryption contracts can contain rich media content, for example, pictures, voices and even video can be used together with text. 
 
 Think carefully about this function, which is an extremely powerful functional design,
 
-    a.  节省了公证的繁琐和成本
-
-    b.  保存极为方便
-
-    c.  个人债务可以转让流通
-
-    d.  合约交割及其简单。
-
-
-
      a. Saving notarization and costs
-
-     b. Very convenient to save
-
+     b. Very convenient to store
      c. Personal debt can be transferred and circulated
-
      d. Contract delivery and its simplicity.
 
 
