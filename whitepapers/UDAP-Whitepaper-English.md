@@ -2,9 +2,11 @@
 
 A White Paper
 
-Version 0.7
+Version 0.7, Draft
 
 **UDAP Foundation， 2/25/2007**
+
+
 
 ## Executive Summary
 
