@@ -506,23 +506,23 @@ All the tokens on the UDAP chain are tied to assets. Tokens and assets are the c
 
 UDAP assumes a few basic principles about the authenticity of assets, the counterparty of the token system:
 
-- Authenticity is not protected by the UDAP protocol.
+- Authenticity is not provided by the UDAP protocol.
 - Authenticity is only valuable in its application context.
-- The authority and authenticity of assets can be confirmed through a mechanism that is considered to be reliable and adequate by participants.
+- The authority and authenticity of assets can be confirmed through a mechanism that is considered to be reliable and adequate by specific applications.
 
 UDAP is a distributed system. It does not have a single operating entity to verify the authenticity of assets. While asset verification may be done in a distributed and decentralized manner, UDAP currently does not design such mechanism.
 
-However, if a person claims a crypto asset that he owns on the UDAP network is backed by a real-world asset, how could he prove this claim? UDAP proposes following guidance:
+However, if a person claims a crypto asset that he owns on the UDAP network is backed by a real-world asset, how could he prove this claim? UDAP proposes following schemes and all the primitives are supported by UDAP:
 
 1）Proofs of Asset
 
-Under normal circumstances anyone can issue assets on the blockchain via an app. At the time of asset issuance, the issuer has to provide a detailed description about the asset in the form of texts, images and other media. The issuer may also present some real-world confirmation of the asset, for example, a certificate of property, an impartial letter, a warehouse receipt, a purchase receipt, and so on. All of these supporting documents do not necessarily guarantee the authenticity of the assets, but these additional attributes to a certain extent increase the authenticity of the assets.
+Under normal circumstances anyone can issue assets on the blockchain via an app. At the time of asset issuance, the issuer has to provide a detailed description about the asset in the form of texts, images and other media. The issuer may also present some real-world confirmation of the asset, for example, a certificate of property, an impartial letter, a warehouse receipt, a purchase receipt, and so on. All of these supporting documents do not necessarily guarantee the authenticity of the assets, but these additional attributes to a certain extent increase the authenticity of the assets. The specific scheme is application specific.
 
 2）Guarantee or Insurance
 
 Asset issuers or owners can guarantee the authenticity of the assets by providing some form of guarantees or insurance.
 
-3）Multisig
+3）Multi-Sig Protection
 
 Asset issuers can leverage the multi-sig mechanism in the registration process to enhance the authenticity of assets. In this process, multiple proofs from related parties are usually required.
 
@@ -534,7 +534,13 @@ If a third-party application considers that the registration of a user's asset i
 
 The ultimate value of assets is achieved through circulation. Escrow is a common method of trading assets between untrustworthy individuals. The owner of an online store may claim to own any goods. The platform does not recognize the credibility of such claims. Instead it offers a custodian mechanism that usually holds temporarily assets that are easily deposited by both parties in the transaction, for example, purchases of ordinary merchandise from an e-Mall, the money paid by the buyer does not go directly to the owner of the goods, but goes into the escrow contract first, and then the buyer must confirm the authenticity of the goods after the buyer receives the goods. The traditional e-commerce platform basically adopts this kind of mechanism. For example, on the localbitcoin.com platform (http://www.localbitcoins.com), the escrowed objects are the commodities to be traded, that is, bitcoin, while the money to buy bitcoin is paid offline.
 
-For those products that are very expensive, there may be a need for multiple protection mechanisms, for example, a combination of above mechanisms, which prevents possible fraudulent activity during asset trading. UDAP provides API for third-party applications to establish a flexible mechanism to ensure the authenticity of assets and to ensure the reliability of the transfer process.
+5) Staking
+
+An application may choose to require the users to put in a stake in the system before registering the assets. The stake is in the form of in-app currencies or UDAP tokens. The stake is used as the collateral in case of malicious behavior. 
+
+For those products that are very expensive, the applications may choose to deploy multiple protection layers, for example, a combination of above mechanisms, which prevents possible fraudulent activity during asset trading. UDAP provides API for third-party applications to establish a flexible mechanism to ensure the authenticity of assets and to ensure the reliability of the transfer process.
+
+
 
 #### 5.4. Identity Management
 
