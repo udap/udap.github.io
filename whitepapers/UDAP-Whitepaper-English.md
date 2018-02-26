@@ -772,7 +772,7 @@ With no competitive and repetitive computing among all nodes, and with the optim
 
 In the meantime, we’re closely monitoring the progress of the [Plasma Project](http://plasma.io/) led by Joseph Poon and Vitalik Buterin. The Plasma project proposes a recursive Map-Reduce architecture for general computing based on blockchains and aims to offer TPS up to billion+ level. The Plasma development will be one of the core effort from a team of the best talents in the industry in 2018. We plan to leverage the work in the future to solve the scalability issue for once and all.
 
-### 7.4 Privacy Enforcement
+#### 7.4 Privacy Enforcement
 
 Privacy on blockchains is counter-intuitive for many people, because blockchains usually promote openness and publicity, at least for public chains.
 
@@ -812,7 +812,7 @@ In the future we are considering:
 3. Quantum computing resistance will be placed in our road map in the next couple of years to keep our platform up to date and future proof.
 
 
-### 7.5 Key Rings and Identity
+#### 7.5 Key Rings and Identity
 
 Today’s cryptocurrency wallets put too much burden on end users in managing their accounts/passwords. People feel so much pressure in keeping the account credentials in safe place and in the meantime still feeling convenient to use them.
 
@@ -831,7 +831,7 @@ Private keys are created in the UAW. They never should be exposed to application
 Each application must repeat the above process to acquire new customers. A UAW user will have as many identities as the number of applications he/she uses.
 
 
-### 7.6 Data Storage Strategy
+#### 7.6 Data Storage Strategy
 
 Every transaction on the blockchain incurs a fee. This is partly due to the fact that the public blockchain is a public support resource, which requires some incentive mechanism to encourage the participation and voluntarily provide public blockchain computing and storage infrastructure. On the other hand, transaction fees can greatly limit any malicious attacks on the blockchain network, because such attacks are economically unrealistic. So while we believe the transaction costs on the blockchain will decrease dramatically when the performance and scalability issues of the blockchain are resolved, however, as a decentralized asset chain even though the entire lifecycle of assets is required to be managed on chain, it is impossible for us to store all the data related to managed assets on the blockchain. Therefore, an important architectural decision is what kind of data needs to be stored on chain and what kind of data needs to be stored off-chain. Such an architecture decision needs to be considered in many aspects such as context, processes, costs, performance, and realizability.
 
@@ -877,7 +877,7 @@ We have also reviewed and researched a few key blockchain projects that focus on
 ## 9.  Use Cases
 
 <!-- -->
-### 9.1 Event Ticketing
+#### 9.1 Event Ticketing
 
 This use case includes performances, live shows, sporting events, ticket management for various gatherings.
 
@@ -885,11 +885,11 @@ A third-party event ticketing platform that focuses on ticketing issuance, distr
 
 By tokenizing event tickets, tickets can be easily sent to or transferred between friends, or put on a secondary market through UAW for resale. In the process of trading, the original issuer can put control over the trading frequency, liquidity, and price range. They can also set restrictions on whether an asset is allowed to be resold or transferred. This provides an extremely handy feature for ticket management apps with unparalleled security and liquidity. Our universal asset wallet (UAW) can be used directly to execute operations such as ticket transfer, trading or on-site check-in, which are common to concerts, movies and other types of events.   
 
-### 9.2 Brand Valuation
+#### 9.2 Brand Valuation
 
 In the crypto world, people are gradually realizing that tokens are a brand new economic model. The essence of tokens is actually to digitize all kinds of accessible and inaccessible assets in the real world and to manage them with cryptographic and blockchain technologies. Tokens corresponding to these assets can make full use of the high liquidity brought by blockchains and cryptocurrency exchanges to form a brand new token economy. One of these very innovative ideas is the emergence of a new possibility for everyone to issue tokens that represent their reputation and brand. Imagine that in the future, everyone will be able to issue their own crypto currency which is backed by their personal image and reputation, credibility, and promises. This type of tokens represents some kind of credit and commitment individuals make to the world and other people. Because of the liquidity of tokens, values of individuals can be more accurately represented. With the support of our platform, individuals can easily build their fan clubs and control issuance and distribution of membership cards. Those who can provide services could tokenize their services and put tokens on the market. When demands for their services change, the value of their tokens changes accordingly. This scenario offers an unprecedented possibility of full employment and customer demand satisfaction.
 
-### 9.3 Supply Chain Finance
+#### 9.3 Supply Chain Finance
 
 Nearly 82% of businesses fail because of cash-flow problems, however, the complexity and scale of existing supply chain finance (SCF) solutions has posed major challenges in ensuring adequate funding and efficient operations. Finance instruments in SCF include factoring, reverse factoring, payables financing, inventory finance, and dynamic discounting. The following figure illustrates the transaction flow of a typical inventory finance solution (source from Global SCF Forum)
 
@@ -899,23 +899,23 @@ Nearly 82% of businesses fail because of cash-flow problems, however, the comple
 
 UDAP will essentially enable all parties in SCF solutions to act on a shared ledger, where suppliers and manufacturers, along with every other participant, will solely update their parts of the transaction, enabling efficiency and an “unprecedented” level of trust and transparency on a ledger record that is immutable.
 
-### 9.4 Marketing and Promotions
+#### 9.4 Marketing and Promotions
 
 In the retail industry, cash vouchers, discount coupons, membership vouchers and promotional certificates can all be tokenized for monetization to create a more convenient and more liquidity asset. With the support of UDAP, these assets from different issuers can be easily exchanged, traded, transferred, and redeemed. Like event tickets issuers can also set resale rules on the crypto assets to protect or increase their interests.
 
-### 9.5 Sharing Economy
+#### 9.5 Sharing Economy
 
 UDAP enables businesses to quickly build decentralized marketplaces on the blockchain for a sharing economy. Buyers and sellers of decentralized "airbnb" or "uber" like car-sharing or home-sharing could transact on a decentralized and open platform without traditional intermediaries. All facility sharing rules are transparent to customers. A decentralized arbitration mechanism resolves disputes fairly and grow a network of mediators through incentives. In some scenarios, reservations can become assets. When buyers have to cancel the bookings for some reasons they may face penalties at present, however, with UDAP it is possible for buyers to resell their reservations on the marketplace to reduce loss.  
 
-### 9.6 Game Assets
+#### 9.6 Game Assets
 
 Gray markets exist for exchange and trade of digital assets (e.g. equipment, resources, accounts, points) in all kinds of e-sports games. Game developers may be reluctant to allow the players to freely trade the game equipment and resources, so that players have to obtain new equipment and resources through in-game purchase. However, there are quite a few games that realize that providing an open marketplace for game props is a way to enhance the user experience, attract more users, and increase revenues via the resell of game resources. UDAP offers APIs that enable game developers to register certain types of crypto assets they issue and manage the trading rules for those types in trading and exchange. At the same time, the ecology of asset trading conforms to the dynamic model expected by game designers.
 
-### 9.7 Arts and Collectibles
+#### 9.7 Arts and Collectibles
 
 Spot trading of collectibles is a very promising application of our asset management network. Our platform not only provides basic computing functions, but also provides the file storage and multimedia storage capabilities required for the preservation of art collection information. Therefore, all kinds of digitization, encryption and tokenization required in the circulation of artwork can be used to directly manage the trading. There are two main types of transactions that existed in the past: antique and art shops with direct acquisitions from individuals, which were then offered to consumers for purchase. In addition, A trading model takes place in the private, free-market model where art owners and potential buyers make deals directly; a common selling model for art is the auction model because artwork is usually an asset with insufficient liquidity that have huge disagreements about the pricing of artwork, and have huge gray spaces, sometimes used for money laundering and improper business activities. Blockchain technology will help eliminate frauds and provide traceability and authenticity guarantee with a flexible transaction model.
 
-### 9.8 ICO
+#### 9.8 ICO
 
 UDAP supports applications to issue their own tokens as utility tokens for exchange of services or application specific base coins for asset pricing. The application tokens can be exchanged with other tokens. This will help transform business into a token economy.
 
