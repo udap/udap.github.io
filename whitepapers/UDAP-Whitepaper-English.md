@@ -46,7 +46,7 @@ The three-year-old smart contract implementation in Ethereum, although has attra
     - Primitive collection processing and manipulations.
 - Slow performance. The EVM is not really a modern virtual machine like JVM or V8 JavaScript engine. It’s an interpreter that parse the smart contract opcode and run the underlying supporting libraries.  The EVM is at least an order slower than regular system programming languages. The total throughput of the blockchain is directly impacted by the slow performance of the virtual machine. There are many reasons that faster and mature virtual machines cannot be used in the current version of Ethereum.  And there are quite a few efforts in development to enhance the performance of the virtual machine.
 - The general purpose computing power in the  current version of EVM, on the other hand, has rendered itself vulnerable to many security breaches, as documented by [Making Smart Contract Smarter, https://www.comp.nus.edu.sg/~loiluu/papers/oyente.pdf, Loi Luu, et. al., 2016]. It's very hard for relatively inexperienced programmers to get the Smart contract right. Considering many of the smart contract are handling many millions of dollars of assets, customers take a huge risk in moving forward with a smart contract strategy.
-- Smart contract makes 
+- Smart contract makes
 
 If we can draw some analogies between web application development and blockchain application development, smart contract is to blockchain development what CGI is to web app development. It’s rather young.
 
@@ -94,9 +94,9 @@ Our ultimate goal is to build the Internet of Assets. Its value proposition has 
  - a unique security model to reduce attack surface.
  - a multi-chain architecture with inter-blockchain communication support that bridges permissioned blockchains and public blockchains.
 
-
-![](media/image1.png)
-
+ <p align="middle">
+ <img src="media/image1.png" alt="archi" style="width: 300px;"/>
+ </p>
 
 ## 3.  Design Principles
 
@@ -124,7 +124,9 @@ Ethereum clearly has the main goal of building a blockchain platform for general
 
 We think this "Thick Protocol + Thin Application" model will be the core architecture model for blockchain applications and will greatly boost the new applications of blockchain and Internet in general. This model is technically innovative and value-conscious, allowing the value of the Internet to sink from the application layer to the protocol layer, turning the protocol layer into a cross-application big data repository. The result is that the protocol layer becomes more strategic and investment value.
 
-![](media/image2.png)
+<p align="middle">
+<img src="media/image2.png" alt="Value Distribution" style="width: 300px;"/>
+</p>
 
 UDAP offers a selected set of features that simplify blockchain application development, without sacrificing performance and security. Particular UDAP offers API in the following area:
 
@@ -188,7 +190,7 @@ Various efforts have been put on standardization and specifications of non-fungi
 UDAP defines a conceptual model based on the analysis and abstraction of various real-world assets in combination with efforts and achievements by MediaChain<sup>\[25\]</sup>, Digix<sup>\[16\]</sup>, BankEx<sup>\[14\]</sup> and other blockchain projects<sup>\[9\]\[10\]</sup>:
 
 <p align="middle">
-<img src="media/asset-model-diagram.png" alt="Asset Model" style="width: 500px;"/>
+<img src="media/asset-model-diagram.png" alt="Asset Model" style="width: 300px;"/>
 </p>
 
 This on-chain asset model defines assets and related objects, as well as the relationships between these objects. This asset model is compatible with ERC721 but offers a richer set of attributes and operations as described below.
@@ -200,7 +202,7 @@ Anything that is capable of being owned or controlled to produce value, is cons
 Assets have attributes. Some common attributes, for example, asset identifier, namespace, issuer, fungibility, transferability, etc., are determined by asset issuers and can not be modified after assets are issued. Other attributes, such as name, description, owner, and states, can be modified during the life cycle of assets. Based on the fungibility of assets, UDAP presents a hierarchical model as described in the following diagram, which defines a standard interface, an abstract type that provides basic attributes and operations, and multiple derived asset types.
 
 <p align="middle">
-<img src="media/asset-hierarchy.png" alt="Asset Hierarchy" style="width: 500px;"/>
+<img src="media/asset-hierarchy.png" alt="Asset Hierarchy" style="width: 300px;"/>
 </p>
 
 The UDAP asset protocol itself does not specify any implementation details, however, to better describe the model Solidity is used to illustrate the components and their relationships. We may use a more implementation-neutral interface description language to describe the component model in a later version of the protocol.
@@ -448,7 +450,7 @@ A UDAP-based application has either an independent asset chain (deployed and own
 
 <!-- figure to illustrate two configurations-->
 <p align="middle">
-<img src="media/app-reg.png" alt="Asset Model" style="width: 500px;"/>
+<img src="media/app-reg.png" alt="Asset Model" style="width: 400px;"/>
 </p>
 
 When application prefers a private or consortium configuration for asset lifecycle management, it can leverage UDAP's Asset Blockchain as a Service (ABaaS) to deploy a private or consortium asset chain. This UDAP-enabled permissioned blockchain is specific to this application and is by default automatically registered with the UDAP main chain. Transactions on the app chain are stored locally in a private ledger on the ABaaS managed nodes. This configuration gives the app chain the capability of broadcasting asset information to or communicating with other UDAP-enabled chains through an Inter Blockchain Communication protocol. If an application doesn't want to have an independent network, it can choose a virtual private chain configuration, where application's ledger is stored and managed on the validator nodes of UDAP main chain.  
@@ -569,7 +571,7 @@ We are looking closely at the development of some third-party identity managemen
 
 ## 6.  Universal Asset Wallet
 
-<img src="media/image3.png" alt="Asset Hierarchy" style="float:left; width: 200px;height:400px;padding-right:5px"/>
+<img src="media/image3.png" alt="Asset Hierarchy" style="float:right; width: 200px;height:400px;padding-left:5px"/>
 As a very important part of the platform, wallet plays a key role in the entire agreement and interaction between system and user. The usual crypto-wallets are a single-function wallet that shows the amount of particular cryptocurrencies.
 
 As a general-purpose assets wallet, UAW's  role has been significantly expanded. Think of it as a personal safe on one's cell phone. It can contain any stuff you would put in a safe, such as certificates, important documents, diamond rings, antiques, securities, IOUs, etc. In fact the asset wallet store the unique tokens that cryptographically represent the assets. These asset-backed tokens are created by various applications running on the UDAP chain are organized by applications.
@@ -589,11 +591,11 @@ UAW not only imports assets from third-party applications, it also allows users 
 
 One scenario is that users can create IOUs. The purpose of IOUs in daily life is to show that a person owes a particular piece of asset to another person and he/she promised to return/pay back at some time in the future. People used to write down IOUs on a piece of paper. Now UDAP client gives users an easier and securer way to write Crypto-IOU, with support of voice, pictures and even videos, tamper-proof and irrefutable, no worry of loss.
 
-<img src="media/image4.png" alt="Asset Hierarchy" style="float:left; width:200px;height:400px;padding-right:5px"/>
+<img src="media/image4.png" alt="Employment Contract" style="float:right; width:200px;height:400px;padding-left:5px"/>
 
 In the process of personal loans or IOUs, one can also use the wallet to conduct multi-sig signing. For an example, in the process of creating an IOU, a third-party witness may be required to witness the contract. The borrower can send the original IOU to the witness, who then signs it and sends it to the creditor.
 
-User can even introduce the [guarantor] role. Unlike the [witness], the guarantor has to assume the corresponding obligation of security if the debtor can not execute the contract in the agreed time for debt repayment, then the guarantor must bear the repayment obligations. 
+User can even introduce the [guarantor] role. Unlike the [witness], the guarantor has to assume the corresponding obligation of security if the debtor can not execute the contract in the agreed time for debt repayment, then the guarantor must bear the repayment obligations.
 
 In summary, crypto-IOU is an extremely powerful.
 
@@ -601,7 +603,7 @@ In summary, crypto-IOU is an extremely powerful.
      b. Very convenient to keep safe
      c. Personal debt can further be traded.
 
-In other scenarios, a user of UAW can register any personal belongs through the description of words or pictures or videos. Once tokenized, the person belongs can enter a market for sale. 
+In other scenarios, a user of UAW can register any personal belongs through the description of words or pictures or videos. Once tokenized, the person belongs can enter a market for sale.
 
 #### 6.3.  Debts
 
@@ -609,7 +611,7 @@ UAW manages assets in the financial sense while also managing liabilities, or "n
 
 Often times, what we mean by assets is something that is valuable to ourselves. In many scenarios though, we not only need to know how much assets we owns, we also need to manage liabilities and the reimbursement requirements and conditions for those liabilities.
 
-The most common example of "negative assets" is the various types of "utility bills" that arrive on a monthly basis: water / electricity / gas / telephone bills. 
+The most common example of "negative assets" is the various types of "utility bills" that arrive on a monthly basis: water / electricity / gas / telephone bills.
 
 Of course there needs to be an application that connects the utility companies to UAW. Once we have it, users can use the wallet to pay directly in the UAW, or the user can ask someone else to pay for them.
 
@@ -617,27 +619,31 @@ Universal Asset Wallet is a very powerful tool for everyone to handle their fina
 
 #### 6.4. Multi-Sig Support
 
+<img src="media/image5.png" alt="Asset Hierarchy" style="float:right; width:200px;height:400px;padding-left:5px"/>
+
 UAW supports multi-sig transactions.
 
-<img src="media/image5.png" alt="Asset Hierarchy" style="float:left; width:200px;height:400px;padding-right:5px"/>
-
-When a transaction is made and requires multiple signatures, UAW will send a message to the appropriate signer's wallet and prompts the designated signer to review the transaction details and then "agree" or "reject" the action.
+When a transaction is made and requires multiple signatures, UAW will send a message to the appropriate signer's wallet and prompts the designated signer to review the transaction details and then "agree" or "reject" the transactions.
 
 The UAW message queue presents the list of transactions that need to be signed. The history of the signature will also be preserved.
 
 Initiation of the transaction can be from another UAW user, can also be from a UDAP application. This is very convenient for third-party APP, since they do not need to build their own multiple-signature workflow.
 
+<br/>
+
 #### 6.5.  App Store
+
+<img src="media/image6.png" alt="Plugins" style="float:right; width:200px;height:400px;padding-left:5px"/>
 
 UAW is a powerful and extensible plug-in architecture, and its main purpose in fact is to support a large number of third-party apps that can generate a wide range of assets. It provides a unified user experience integration with UDAP's ability to provide background integration for third-party apps. The plug-ins for these clients constitute the ecology of the entire Asset Internet. All third-party applications appear in the App Store of the UAW for the users to choose from.
 
-<img src="media/image6.png" alt="Plugins" style="float:left; width:200px;height:400px;padding-right:5px"/>
+Technically UAW is a hierarchical architecture, and a considerable part of the user experience has been built in the UAW. Applications from third-parties range from ticketing, memberships, financial assets, health records, academic records, IOUs and crypto-contracting.
 
-Technically UAW is a hierarchical architecture, and a considerable part of the user experience has been built in the UAW. Applications from third-parties range from ticketing, memberships, financial assets, health records, academic records, IOUs and crypto-contracting. 
-
-Not all third-party applications provide a UAW plug-in. An App can have its own native app, or only a PC-based web site. 
-
-<img src="media/image7.png" alt="Plugins" style="float:right; width:400px;padding-left:5px"/>
+Not all third-party applications provide a UAW plug-in. An App can have its own native app, or a web application.
+<br/>
+<p>
+<img src="media/image7.png" alt="Plugins" style="float:middle; width:400px;padding-left:5px"/>
+</p>
 
 UAW is an eco-system. It provides a programmable UI for third-party applications to develop a complete user experience. The UAW itself provides a series of built-in features that save the time it takes for a large number of third-party applications to reach their own user base.
 
@@ -674,7 +680,7 @@ UDAP addresses are divided into account address, asset address, and assetProto a
 
 These three types of address have a versionHash and lastCommitTimestamp property. VersionHash represents the changing status of this address. Each change of an address will generate a new random and never duplicated versionHash value. The lastCommitTimestamp will record the last point in time when an address was received after the transaction was processed.
 
-UDAP transactions are always 
+UDAP transactions are always
 
 A transaction usually includes the following data
 
@@ -685,42 +691,42 @@ A transaction usually includes the following data
 -   The digital signatures required for the action
 -   versionHash, optional transaction acceptor versionHash.
 
-The originator of the transaction must be an account address, and the recipient of the transaction can be an asset address or an assetProto address. 
+The originator of the transaction must be an account address, and the recipient of the transaction can be an asset address or an assetProto address.
 
-When the UDAP accepts the transaction, the rule matcher verifies whether the signature is of the transaction request, whether the signature is out of date, whether the signature time is later than the lastCommitTimestamp of the transaction acceptor, and if the versionHash of the transaction acceptor is given if the versionHash is given Given conditions and all legitimate signers would meet the signature rule. If so, UDAP API then accepts the transaction request to complete the operation and generate a new versionHash. 
+When the UDAP accepts the transaction, the rule matcher verifies whether the signature is of the transaction request, whether the signature is out of date, whether the signature time is later than the lastCommitTimestamp of the transaction acceptor, and if the versionHash of the transaction acceptor is given if the versionHash is given Given conditions and all legitimate signers would meet the signature rule. If so, UDAP API then accepts the transaction request to complete the operation and generate a new versionHash.
 
 The signature includes the time of signing, the signature's validity period, and the versionHash that may contain the current asset. When the app collects enough required signatures, it initiates the transaction to UDAP, which verifies that the provided list of signatures satisfies the rule by interpreting the method parameters. If so, it changes the state of the asset, generate a new versionHash and record the latest lastCommitTimestamp in all signatures as the signature is for the transaction method parameters. UDAP creates an optional versionHash and lastCommitTimestamp Time guarantee to prevent replay attack. VersionHash transaction request and digital signature are optional. It is designed to ensure that the asset data will not be phantom read, similar to what optimistic locking does. Whether you need to verify that versionHash is in the hands of the originator of the transaction.
 
 
 #### 7.2. The Architecture of Virtual Private Chain (VPC)
 
-A flat network of blockchain nodes is not scalable. It requires enormous amount traffic to reach consensus and synchronization. 
+A flat network of blockchain nodes is not scalable. It requires enormous amount traffic to reach consensus and synchronization.
 
 The transitions from POW to various POS designs or other BFT consensus mechanisms are inevitable to scale up, which is to achieve higher total throughput at the cost of some bearable amount of security.
 
-In the meantime, homogeneous sharding mechanisms have being proposed and being implemented in various projects, such as Ethereum Sharding, Zilliqa and Polkadot. 
+In the meantime, homogeneous sharding mechanisms have being proposed and being implemented in various projects, such as Ethereum Sharding, Zilliqa and Polkadot.
 
 Cosmos uses interconnected zones to realize linear scalability. It's a sharding scheme both at the consensus level and state level.
 
 UDAP architecture is largely based Cosmos architecture and loosely based on Plasma. It will eventually phase in the Plasma hierarchy, for best security and scalability.
 
-At the root is the UDAP root chain, which stores the meta information of UDAP applications. Each application is assigned an application chain which is by default a private chain that's only visible to application nodes. An application can choose to deploy to the shared infrastructure of UDAP or to specific private nodes. 
+At the root is the UDAP root chain, which stores the meta information of UDAP applications. Each application is assigned an application chain which is by default a private chain that's only visible to application nodes. An application can choose to deploy to the shared infrastructure of UDAP or to specific private nodes.
 
-A number of nodes are grouped to form a "zone" under the UDAP root. The number of nodes is chosen such that the POS (Tendermint to be specific) works the best in terms of the balance of security and TPS/# of nodes. 
+A number of nodes are grouped to form a "zone" under the UDAP root. The number of nodes is chosen such that the POS (Tendermint to be specific) works the best in terms of the balance of security and TPS/# of nodes.
 
-Application chains are logical chains that can span multiple "zones" to achieve near-linear scalability. Each zone becomes a shard of a VPC. 
+Application chains are logical chains that can span multiple "zones" to achieve near-linear scalability. Each zone becomes a shard of a VPC.
 
 Multiple applications are supported concurrently on UDAP network, just like multiple VPN sessions run on the same TCP network.
 
-Each node can run every application too, supporting the transactions of each application and store the transaction history, the global state trie and receipt trie. This does not exclude the possibility that some applications choose to localize to some subset of the nodes to form a pure exclusive private chain, in which case, the "virtual" part of the VPC is transformed to "real". 
+Each node can run every application too, supporting the transactions of each application and store the transaction history, the global state trie and receipt trie. This does not exclude the possibility that some applications choose to localize to some subset of the nodes to form a pure exclusive private chain, in which case, the "virtual" part of the VPC is transformed to "real".
 
-Some applications may also localized to particular zones, either because the other zone are already fully loaded and not accepting new application deployment or they choose to do so for geological proximity. 
+Some applications may also localized to particular zones, either because the other zone are already fully loaded and not accepting new application deployment or they choose to do so for geological proximity.
 
 In each node, the application transactions are processed in parallel. This is possible because there is no dependencies between applications. All the cores of any modern server will be able to participate in processing transactions at the same time, in contrast to the serialized transaction processing which can use one core only no matter how many cores the computer has.  
 
 There are support for parallel processing of single application transactions too. This is made possible by the fact that all the UDAP API exposed to the applications are deterministic in terms of what account are affected by each API call. The smart dispatcher in each node will able to group transactions in multiple queues that are not dependent on or otherwise interfere with each. Thus the queues can work in parallel to take advantage the multiple cores available.
-   
- 
+
+
 #### 7.3. Performance Implementation
 
 
@@ -729,7 +735,7 @@ There are four major factors that are accountable for the abysmal throughput typ
 1. The same transaction must be replayed on all the nodes, no matter how expensive they might be.  A great deal of computing power is wasted in competing repetitive calculations. This has been proved to be one important way to make sure all the nodes behave by the rule and great security is maintained. However, this first-gen technique is very expensive in nature and is the primary reason that blockchains’ throughput are incredibly poor, considering how much computing power is behind each network.
 2. On each node, all the transactions are serialized in building into the blocks and there is no way to build the blocks in parallel because there is no partitioning of the transactions which is required to avoid race conditions in reading and writing account information.
 3. Smart contracts as implemented in Ethereum are slow. They’re interpreted at runtime instead of running in native speed or in highly optimized VMs, such as JVM.
-4. API does not give finality. Transaction initiators basically send transactions and wait for confirmations, which varies from a few minutes to hours. 
+4. API does not give finality. Transaction initiators basically send transactions and wait for confirmations, which varies from a few minutes to hours.
 
 The first issue is being tackled by a few solutions such as POS based consensus and some other protocols which do not use blockchain at all.  UDAP RI specifically uses [Cosmos](http://cosmos.network/) as the general network architecture. Cosmos offers the following features that UDAP can immediately leverage:
 
@@ -753,7 +759,9 @@ In UDAP, each application is assigned an application ID and owns an independent 
 
 The following picture shows how the transactions received by a node are properly dispatched to separate transaction queues for each application. All the CPU cores are assigned to process the transactions in parallel and the transactions are Merklized in an application specific blockchain.
 
-![](media/AppChains.png)
+<p align="center">
+<img src="media/AppChains.png" alt="VPC" style="width:300px;"/>
+</p>
 
 One chain per application is a major design choice we have made that is very flexible in optimizing the performance and security, which are the primary two requirements for any applications that claim to deal with any assets. Each chain is an overlay chain on top of the generic UDAP transaction streams. We call the mechanism Virtual Private Chain(VPC), in analogue of VPN on top of TCP/IP.
 
@@ -789,7 +797,9 @@ In UDAP, VPC (Virtual Private Chain) is the first line of defense of privacy. UD
 Although we believe most of the third-party apps will be deployed on permissioned UDAP app chains, thus having the basic firewall to fend off privacy attacks, we also believe   
 The second defense line is with data obfuscation and encryption, as shown in the following diagram.
 
-![](media/AssetAnonymity.png)
+<p align="center">
+<img src="media/AssetAnonymity.png" alt="AssetAnonymity" style="width:300px;"/>
+</p>
 
 User account has an encrypted pointer pointing to one of the storage slots, which are the vaults for asset tokens. Think of the design like the custodian vaults in banks where customers use their own key to open the storage of assets.  No one knows who owns which vault. The vaults are anonymous; thus privacy is protected.
 
@@ -848,11 +858,23 @@ In addition to asset metadata, applications often have large volume of business 
 
 ## 8. Related Work
 
-The world is in a transition from cryptocurrencie to cryptoassets.
+The year of 2018 is an important year for non-fungible crypto assets. The world is in a transition from cryptocurrencies to crypto assets. A lot of efforts have been done to make this transition into reality. We have reviewed related blockchain projects and summarized our key findings as follows:
 
-In the Bircoin world, there are CoinSpark, Colu, Counterparty, EPOBC, Omni Layer and MultiChain. 
+**BankEx** is a blockchain project that targets financial asset management and offers "Bank as a Service" cloud service. This project builds permissioned blockchains on Ethereum and creates smart contract based static asset model. New asset types are manually registered through a centralized approval mechanism.  
 
-Ethereum has been designed to create any flavored coins with the smart contract. 
+**Digix** is a blockchain project specialized in tokenization and trading of gold. It uses gold as collateral to create crypto gold. It creates "recast" concept adopted by UDAP to handle redemption of physical goods or services.
+
+**AChain** is a platform that offers token issuance, smart contracts, and Dapps development. It creates a multi-chain architecture through a forking mechanism.
+
+**Bytom** is an exchange protocol for diversified byte assets that uses POW as a consensus approach, supports limited asset types and mainly focuses on the financial aspect of the assets (in other words, tokens without asset metadata).
+
+**0x Project** is a decentralized exchange for cryptocurrencies. It has a very interesting exchange model that UDAP may adopt to create a C2C exchange for assets.
+
+**Bitshares** is an exchange for trading cryptocurrencies and assets. It is a permissioned blockchain with a single chain architecture.
+
+**WAX** is a marketplace for virtual game assets exchange and trading.
+
+We have also reviewed and researched a few key blockchain projects that focus on multi-chain architecture with inter-blockchain communication. These projects include Plasma, Polkadot, Aion Network, Wanchain, and Cosmos.
 
 ## 9.  Use Cases
 
