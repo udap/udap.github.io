@@ -134,9 +134,8 @@ UDAP offers a selected set of features that simplify blockchain application deve
 - The Universal Asset Wallet is considered a significant part of UDAP package. It must offer generalized asset operations across applications such that the third party apps do not have to implement the common user interactions. In the meantime, it must offer a pluggable architecture such that asset interactions can be customized and enhanced if the apps choose to do so.
 - UDAP offers asset market and exchange API and implementation in the wallet. Once registered, assets can acquire liquidity immediately without relying on other space to provide liquidity.
 - UDAP does not provide built-in people and assets identifications that are detached from applications. All logics are defined by applications. Even those that look like built-in features are actually applications that are built on the UDAP API.
-- Sovereignty for each application:
+- Sovereignty for each application.
 
-UDAP basic code comes from Ethereum. UDAP is not a patch of Ethereum code base. The Ethereum transaction and block structure are modified to natively support none-currency assets, thus it is a solid foundation to be extended to provide advanced features in asset management. We’ll keep the strategy open so sometime in the future if Ethereum would have become a pluggable platform we might be able to backport UDAP features to Ethereum or a variation of it.
 
 
 ## 4. Value Proposition
@@ -176,7 +175,7 @@ Traditional ERP systems have established their asset models based on centralized
 >
 3) Anti-counterfeiting and anti-tampering: Once the assets are on the chain, the relevant data and transaction records can be effectively protected. Anti-counterfeiting and anti-tampering goals can be achieved, and thus moral hazard and financial risks can be reduced.
 >
->4) Liquidity Demand: The relationship between value and liquidity is inextricably correlated. Liquidity is the term used to describe how easy it is to convert assets to cash. The more liquid the assets are, the easier their values are to be recognized. So liquidity has a very important influence on asset's value. Money, as medium of exchange, has a very high liquidity. In facet, it is the most liquid asset compared to everything else. Assets with fair liquidity includes cash equivalents such as stocks, bonds and options. And assets such as houses, cars, or farms, factory equipments, etc., have relatively low liquidity and are difficult to value. Therefore their market values may differ significantly. Traditionally, liquidity and value realization are implemented through intermediaries like eBay and Taobao, however, through tokenization blockchain has more potential for liquidity optimization.
+>4) Liquidity Demand: The relationship between value and liquidity is inextricably correlated. Liquidity is the term used to describe how easy it is to convert assets to cash. The more liquid the assets are, the easier their values are to be recognized. So liquidity has a very important influence on asset's value. Money, as medium of exchange, has a very high liquidity. In facet, it is the most liquid asset compared to everything else. Assets with fair liquidity includes cash equivalents such as stocks, bonds and options. And assets such as houses, cars, or farms, factory equipment, etc., have relatively low liquidity and are difficult to value. Therefore, their market values may differ significantly. Traditionally, liquidity and value realization are implemented through intermediaries like eBay and Taobao, however, through tokenization blockchain has more potential for liquidity optimization.
 >
 >
 In addition to the above requirements, privacy is also a mandatory need that crypto assets must meet.
@@ -277,7 +276,7 @@ The asset component described in the component model have the following attribut
 
 * Other Attributes
 
-  In addition to the above attributes that usually can not be changed once identified, assets also have mutable attributes that can be updated after issuance, such as the amount of fungible assets (e.g., 1 kg of gold, or 500 tonnes of apples), the state of the asset (leased, unused, listed, etc.), ownership, proof of assets, description, etc.
+  In addition to the above attributes that usually can not be changed once identified, assets also have mutable attributes that can be updated after issuance, such as the amount of fungible assets (e.g., 1 kg of gold, or 500 tones of apples), the state of the asset (leased, unused, listed, etc.), ownership, proof of assets, description, etc.
 
 ###### 5.1.2 Asset MetaData
 
@@ -460,7 +459,7 @@ Assets need to be registered on the UDAP blockchain for applications to query an
 
 -   Sellability：an asset can be either sellable or non-sellable, which defines the ability to be sold. If the asset is configured to be non-transferrable, the asset is essentially non-sellable.
 
--   Multi-signature requirements: A multiple signature (or multisig for short) requirement represents that a transaction requires multiple approvals from different participants. Multi-signature addresses and transactions broaden this model by creating identities on the chain which are managed collectively by multiple parties. UDAP uses “m-of-n” bitcoin-style multi-signatures, in which a multisig address A is defined as: Given n regular addresses, at least m of the private keys corresponding to those addresses must sign a transaction to perform an action for A.
+-   Multi-signature requirements: A multiple signature (or multi-sig for short) requirement represents that a transaction requires multiple approvals from different participants. Multi-signature addresses and transactions broaden this model by creating identities on the chain which are managed collectively by multiple parties. UDAP uses “m-of-n” bitcoin-style multi-signatures, in which a multi-sig address A is defined as: Given n regular addresses, at least m of the private keys corresponding to those addresses must sign a transaction to perform an action for A.
 
 ###### 5.2.4 Tokenization
 
@@ -539,7 +538,7 @@ For those products that are very expensive, there may be a need for multiple pro
 
 The main purpose of UDAP is to manage real-life assets with blockchain technologies, and to use these technologies to increase their liquidity and thus enhance its permanent durability. At the same time, one important goal of UDAP is to allow these real world assets in the form of crypto-assets to be easily transferred between owners.
 
-The first and foremost problem is the identity of the participants in the asset related transaction. For real-world asset transfers, it may not be good enough to know only the account numbers. Because the conversion of these assets may involve the requirements of the real identity, for example, a contractual relationship established by the two sides through the asset network, if trackability is important, then the identity of the parties have very clear requirements. The two parties to the contract need to know each other very clearly, that is, the individual that they want to make the transaction. Once the contract is in trouble during execution, there is always another way for the contract party to track and confirm the problem in the real world. Considering again that if third parties' law enforcement agencies are able to participate in this process, the identification of the identities of both parties to the contract is a prerequisite for their participation.
+The first and foremost problem is the identity of the participants in the asset related transaction. For real-world asset transfers, it may not be good enough to know only the account numbers. Because the conversion of these assets may involve the requirements of the real identity, for example, a contractual relationship established by the two sides through the asset network, if traceability is important, then the identity of the parties have very clear requirements. The two parties to the contract need to know each other very clearly, that is, the individual that they want to make the transaction. Once the contract is in trouble during execution, there is always another way for the contract party to track and confirm the problem in the real world. Considering again that if third parties' law enforcement agencies are able to participate in this process, the identification of the identities of both parties to the contract is a prerequisite for their participation.
 
 Each application will determine how much they need to be aware of the identity of the user in the real world. In more stringent applications, they may need to be fully aware of the ID of the user of the application in the real world, his address, and his contact details. For example, a cryptocurrency exchange may require users to submit their own proof of identity in real life, such as ID cards, passport photos, and to verify their phone number and EMAIL address. Moreover, proof of their places of residence may be required and fully verified. In fact, this is the basic verification process that most of the major crypto exchanges are conducting. Other applications may not have such KYL requirements. Maybe they just need to know the registered user's EMAIL address, or maybe they are not interested in knowing any of these information.
 
@@ -570,14 +569,15 @@ We are looking closely at the development of some third-party identity managemen
 ## 6.  Universal Asset Wallet
 
 <img src="media/image3.png" alt="Asset Hierarchy" style="float:left; width: 200px;height:400px;padding-right:5px"/>
+
 As a very important part of the platform, wallet plays a key role in the entire agreement and interaction between system and user. The usual crypto-wallets are a single-function wallet that shows the amount of particular cryptocurrencies.
 
-As a general-purpose assets wallet, UAW's  role has been significantly expanded. Think of it as a personal safe on one's cell phone. It can contain any stuff you would put in a safe, such as certificates, important documents, diamond rings, antiques, securities, IOUs, etc. In fact the asset wallet store the unique tokens that cryptographically represent the assets. These asset-backed tokens are created by various applications running on the UDAP chain are organized by applications.
+As a general-purpose assets wallet, UAW's role has been significantly expanded. Think of it as a personal safe on one's cell phone. It can contain any stuff you would put in a safe, such as certificates, important documents, diamond rings, antiques, securities, IOUs, etc. In fact the asset wallet stores the unique tokens that cryptographically represent the assets. These asset-backed tokens are created by various applications running on the UDAP chain are organized by applications.
 
 General Assets Wallets are more than just the storage of assets, but are also very handy for supporting common operations on assets such as asset transfers, sales, trading, auctioning, cancellation and more.
 
 
-#### 6.1.  Assets precipitated from third party apps
+#### 6.1.  Assets Precipitated From Third Party Apps
 
 UAW is the user of the assets obtained in a variety of third-party applications. Each application has its own unique user management system that generates user accounts that correspond to a unique account on the blockchain, with the help of UAW. Obviously account will not be shared or reused between applications.
 
@@ -654,11 +654,8 @@ UAW is an eco-system. It provides a programmable UI for third-party applications
 UAW offers JavaScript APIs for third-party application developers. Some of the functions are as follows:
 
 1.  getCurrentUser: Get the current user's identity information, including the chain address.
-
 2.  getAssetCollection: Get the current user's list of assets.
-
 3.  initTransfer：Transfer specific assets. Activate UAW's multi-signature mechanism if asset transfer requires multiple signatures.
-
 4.  offerToSellInMarket：Offer to sell an asset in the market.
 
 More API will be provided in the future, including various auction methods, escrowed P2P transactions and decentralized exchanges.
@@ -800,7 +797,9 @@ The connections between the wallet and the chains are protected in three layers 
 3. Data stream goes through the application’s endpoint which in turn encrypts and signs the already encrypted data with the application key.  
 4. The UDAP nodes must make sure all the traffic coming from an application’s client carry the proper signature of the application and and the check cannot be circumvented.
 The use of the layered encryption and signing is not so much about concealing the IP address of the function invoker, rather it’s for the purpose of letting the application to verify the validity of the API call of the user in the context of a specific application. Theoretically some functions calls made by users can be directly targeted to the UDAP node which does the chain dispatching. But we feel most applications need a mechanism to intercept function calls from their users and may decide to activate more business logic upon such invocations, such as more involving authorization. UDAP nodes which receives such transactions would definitely know that the transactions have been authorized by the corresponding applications, such that a higher level of security is ensured.
+
 In the future we are considering:
+
 1. either implementing the zkSNARKs in the protocol level to meet the rigorous privacy requirement of data sensitive rules;
 2. Or other emerging technologies such as [Solidus]( https://eprint.iacr.org/2017/317.pdf) for more streamlined privacy architecture.
 3. Quantum computing resistance will be placed in our road map in the next couple of years to keep our platform up to date and future proof.
@@ -913,14 +912,15 @@ At the same time, the blockchain-derived token economy and the liquidity as the 
 
 The relationship between liquidity and the health of the entire industry is like a human blood circulation system and human health. Much of what is studied in economics as a whole is actually about how to improve the liquidity of a local system. Although trading liquidity is frequently over-estimated, which is referred as "liquidity illusion", a closer look at various industries around us reveals that lack of liquidity is almost always a continuing challenge for all industries. Even if we are already satisfied with current liquidity provided by a system, at a higher level and in the future, this liquidity may become inadequate again. So in current reality, increasing liquidity is always of importance.
 
-Liquidity is not a panacea. In fact, liquidity itself may also bring system instability and even harm. Just like our blood circulation system, smooth blood circulation does not mean that there is no control of blood circulation. Therefore controlling and optimizing liquidity throughout the market is actually the second challenge for the industry.
+Liquidity is not a panacea. In fact, liquidity itself may also bring system instability and even harm. Just like our blood circulation system, smooth blood circulation does not mean that there is no control of blood circulation. Therefore, controlling and optimizing liquidity throughout the market is actually the second challenge for asset owners.
 
-Many industries face a big challenge that asset issuers lack control over liquidity of assets. In the past there was no good solution to this problem, but with the advent of distributed ledger technologies we may be able to overcome this challenge for the first time.
+Many industries face a big challenge that asset issuers lack control over liquidity of assets. In the past there was no good solution to this problem, but with the advent of distributed ledger technologies we are able to overcome this challenge for the first time.
 
 This white paper is about an ongoing project referred to "Internet of Assets", which we are trying to make our unique contribution in three main technology areas:
 
 - Blockchain-based Asset Lifecycle Management
 - Decentralized C2C Exchange for Assets
-- Multi-Chain Technology with focus on privacy, security, scalability and inter blockchain communication
+- Virtual Private Chain Technology that solves sore issues with respect to privacy, security, scalability.
 
 We believe our highly targeted networks offer an unprecedented new technology platform for a large number of applications that can precipitate a wide range of assets and support businesses to transform into a token-based economy.
+
