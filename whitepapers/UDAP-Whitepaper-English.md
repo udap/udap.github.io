@@ -618,8 +618,9 @@ Of course there needs to be an application that connects the utility companies t
 Universal Asset Wallet is a very powerful tool for everyone to handle their finances. Not only does it handle some of the personal lending activities of everyday life just as it is, but it can also be used by small businesses such as family hotels or family restaurants as a tool for sending discount coupons or vouchers.
 
 #### 6.4. Multi-Sig Support
-
-<img src="media/image5.png" alt="Asset Hierarchy" style="float:right; width:200px;height:400px;padding-left:5px"/>
+<p>
+<img src="media/image5.png" alt="Multisig" style="float:right; width:180px;height:340px;padding-left:5px"/>
+</p>
 
 UAW supports multi-sig transactions.
 
@@ -627,23 +628,15 @@ When a transaction is made and requires multiple signatures, UAW will send a mes
 
 The UAW message queue presents the list of transactions that need to be signed. The history of the signature will also be preserved.
 
-Initiation of the transaction can be from another UAW user, can also be from a UDAP application. This is very convenient for third-party APP, since they do not need to build their own multiple-signature workflow.
-
-<br/>
+Initiation of the transaction can be from another UAW user, or from a UDAP-enabled application. This is very convenient for third-party APPs, since they do not need to build their own multiple-signature workflow.
 
 #### 6.5.  App Store
-
-<img src="media/image6.png" alt="Plugins" style="float:right; width:200px;height:400px;padding-left:5px"/>
 
 UAW is a powerful and extensible plug-in architecture, and its main purpose in fact is to support a large number of third-party apps that can generate a wide range of assets. It provides a unified user experience integration with UDAP's ability to provide background integration for third-party apps. The plug-ins for these clients constitute the ecology of the entire Asset Internet. All third-party applications appear in the App Store of the UAW for the users to choose from.
 
 Technically UAW is a hierarchical architecture, and a considerable part of the user experience has been built in the UAW. Applications from third-parties range from ticketing, memberships, financial assets, health records, academic records, IOUs and crypto-contracting.
 
 Not all third-party applications provide a UAW plug-in. An App can have its own native app, or a web application.
-<br/>
-<p>
-<img src="media/image7.png" alt="Plugins" style="float:middle; width:400px;padding-left:5px"/>
-</p>
 
 UAW is an eco-system. It provides a programmable UI for third-party applications to develop a complete user experience. The UAW itself provides a series of built-in features that save the time it takes for a large number of third-party applications to reach their own user base.
 
@@ -656,6 +649,10 @@ UAW is an eco-system. It provides a programmable UI for third-party applications
 4.  Market: UDAP comes with market tools that asset owners to sell their assets.
 
 5.  Multiple Signatures support.
+
+<p>
+<img src="media/image7.png" alt="Plugins" style="float:middle; width:400px;padding-left:5px"/>
+</p>
 
 UAW offers JavaScript APIs for third-party application developers. Some of the functions are as follows:
 
@@ -873,6 +870,8 @@ The year of 2018 is an important year for non-fungible crypto assets. The world 
 
 **WAX** is a marketplace for virtual game assets exchange and trading.
 
+**MediaChain** is a singular data fabric for open-first media applications. It is a decentralized blockchain for applications and users to publish, discover, and collaborate on media metadata. It is built on Ethereum and IPFS.
+
 We have also reviewed and researched a few key blockchain projects that focus on multi-chain architecture with inter-blockchain communication. These projects include Plasma, Polkadot, Aion Network, Wanchain, and Cosmos.
 
 ## 9.  Use Cases
@@ -946,3 +945,30 @@ This white paper is about an ongoing project referred to "Internet of Assets", w
 
 We believe our highly targeted networks offer an unprecedented new technology platform for a large number of applications that can precipitate a wide range of assets and support businesses to transform into a token-based economy.
 
+## References
+
+1. The Internet of Money*, A.M. Antonopoulos
+2. https://github.com/ethereum/wiki/wiki/Design-Rationale
+3. https://blog.ethereum.org/2018/01/02/ethereum-scalability-research-development-subsidy-programs
+4. JSON for Linking Data, https://json-ld.org
+5. IPLD - The data model of the content-addressable web, https://ipld.io
+6.  http://www.linkedcontentcoalition.org/phocadownload/framework/The%20LCC%20Rights%20Reference%20Model%20v1.0.pdf
+7. Linked Data Signatures 1.0, https://w3c-dvcg.github.io/ld-signatures/
+8. JSON-LD: Building Meaningful Data APIs, https://blog.codeship.com/json-ld-building-meaningful-data-apis/
+9. The Building Blocks Of Digital Asset Management Interoperability, Ralph Windsor, CMS Wire,  https://www.cmswire.com/cms/digital-asset-management/the-building-blocks-of-digital-asset-management-interoperability-021996.php
+10. Adopting Blockchain for enterprise asset management (EAM), https://www.ibm.com/developerworks/cloud/library/cl-adopting-blockchain-for-enterprise-asset-management-eam/index.html
+11. Re-Defining The Meaning And Scope Of Digital Assets, http://digitalassetmanagementnews.org/features/re-defining-the-meaning-and-scope-of-digital-assets-part-1/
+12. https://docs.oracle.com/middleware/1221/wcs/develop/GUID-D76319B9-602D-44F0-8C05-1D4660EC4B7C.htm#WBCSD1365
+13. https://snipe-it.readme.io/v3.6.2/docs/asset-models
+14. BANKEX Proof-of-Asset Protocol, https://bankex.com/en/whitepaper
+15. BYTOM, http://bytom.io
+16. Digix, https://digix.global
+17. 0x: Powering decentralized exchange, https://0xproject.com
+18. Achain: Smart Contract Platform, https://www.achain.com
+19. hSelfSell: Nasdaq Based on 'People' as Assets, https://www.selfsell.com
+20. BitShares, https://bitshares.org
+21. Linkeye: Blockchain-based Credit Alliance, https://www.linkeye.com
+22. Fusion, https://fusion.org
+23. Oraclize, http://www.oraclize.it
+24. CoinSpark, http://coinspark.org
+25. Mediachain - an open, universal media library, http://docs.mediachain.io
