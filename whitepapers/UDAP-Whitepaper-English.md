@@ -741,7 +741,7 @@ The first issue is being tackled by a few solutions such as POS based consensus 
 
 1. A POS consensus implementation (Tendermint) that provides 1000+ TPS performance.
 2. An API that provides _finality_, which is a must for UDAP to become an easy to use API.
-3. Cosmo can scale linearly with adding more "zones" to the blockchain hub.
+3. Cosmos can scale linearly with adding more "zones" to the blockchain hub.
 4. It gives 1-2 seconds response delay for API invocations.
 
 
@@ -757,15 +757,15 @@ In comparison, Ethereum ERC20 tokens are not the naturally wall between applicat
 
 In UDAP, each application is assigned an application ID and owns an independent chain, meaning there will be a thousand blockchains in UDAP network if there are a thousand application registered. Each chain has its own branch of state trie, storage trie and transaction receipts. State transitions in each application takes place in a separate thread.
 
-The following picture shows how the transactions received by a node are properly dispatched to separate transaction queues for each application. All the CPU cores are assigned to process the transactions in parallel and the transactions are Merklized in an application specific blockchain.
+The following picture shows how the transactions received by a node are properly dispatched to separate transaction queues for each application. All the CPU cores are assigned to process the transactions in parallel and the transactions are Merkleized in an application specific blockchain.
 
 <p align="center">
 <img src="media/AppChains.png" alt="VPC" style="width:300px;"/>
 </p>
 
-One chain per application is a major design choice we have made that is very flexible in optimizing the performance and security, which are the primary two requirements for any applications that claim to deal with any assets. Each chain is an overlay chain on top of the generic UDAP transaction streams. We call the mechanism Virtual Private Chain(VPC), in analogue of VPN on top of TCP/IP.
+One chain per application is a major design choice we have made that is very flexible in optimizing the performance and security, which are the primary two requirements for any applications that claim to deal with any assets. Each chain is an overlay chain on top of the generic UDAP transaction streams. We call the mechanism Virtual Private Chain(VPC), as analogous to VPN over TCP/IP.
 
-The root chain is there for
+As described previously, the root chain is there for
 - application registration and configurations.
 - Generic user account registration, which provides custodian service for the account of the third-party applications running in UAW. Users can optionally choose to register them with UDAP to take advantage of the identity attestation service.
 - It also periodically takes snapshots of the application chains states in case that fraudulent or faulty behaviors are reported from the app chains and state enforcement is required. Eventually the root chain will probably become a Plasma chain which is the parent chain of all the applications chains.
@@ -774,15 +774,18 @@ Although we have improved the parallelism at the application level, there is sti
 
 The above issue can be solved by a smart thread dispatcher in a UDAP node, presuming that UDAP APIs mostly affect one account at a time. The dispatcher carefully inspects the incoming transactions and separates them by affected accounts. With transaction partitioning still feasible, the transaction verifications and block constructions can still be done in parallel.
 
-With no competitive and repetitive computing among all nodes, and with the optimized parallelism in the transaction processing in the node software, UDAP provides significant better scalability both horizontally and vertically. We expect UDAP network offers TPS in the 10K~100K range with 600 nodes.
+With no competitive and repetitive computing among all nodes, and with the optimized parallelism in the transaction processing in the node software, UDAP would provide significant better scalability both horizontally and vertically. We expect UDAP network offers TPS in the 10K~100K range with 600 nodes. We also note that we need to make sure the disk IO in each node must be optimized to take advantage of parallel IO, by using NVMe interface, rather than simple SATA interface. 
 
-In the meantime, we’re closely monitoring the progress of the [Plasma Project](http://plasma.io/) led by Joseph Poon and Vitalik Buterin. The Plasma project proposes a recursive Map-Reduce architecture for general computing based on blockchains and aims to offer TPS up to billion+ level. The Plasma development will be one of the core effort from a team of the best talents in the industry in 2018. We plan to leverage the work in the future to solve the scalability issue for once and all.
+In the meantime, we’re closely monitoring the progress of the [Plasma Project](http://plasma.io/) led by Joseph Poon and Vitalik Buterin, which is a hierarchical multi-chain architecture that utilizes recursive Map/Reduce computing with faulty behavior correction mechanism to achieve unlimited scalability. The Plasma development will be one of the core effort from a team of the best talents in the industry in 2018. We plan to leverage the work in the future to solve the scalability issue for once and all. In the meantime, other on-chain scaling solution such as the [Ethereum Sharding](https://github.com/ethereum/wiki/wiki/Sharding-FAQ) proposed by Vlad Samfir is regarded by some as the ["true secure scaling solution for Ethereum", and "will provide for all of the scalability requirements of the blockchain without sacrificing on security or the trust model."](https://journal.binarydistrict.com/vlad-zamfir-sharding-is-the-only-true-blockchain-scaling-solution-/) It's our goal that any change or improve deployed underneath won't affect the users of UDAP.    
 
 #### 7.4 Privacy Enforcement
 
 Privacy on blockchains is counter-intuitive for many people, because blockchains usually promote openness and publicity, at least for public chains.
 
-Bitcoins and Ethereum are not really privacy centered blockchains. In fact, most public chains can be trusted with correctness but not confidentiality.  There are indeed multiple levels of solutions today that cover the privacy issues in part. Coin mixers and Monero provide partial transaction confidentiality. ZCash, with Zero-knowledge Succinct Non-Interactive Arguments of Knowledge provides strong confidentiality, at a much higher cost of computation power and engineering complexity.  Basically they are of data obfuscation type or crypto-encryption type.  
+Bitcoin and Ethereum are not really privacy centered blockchains. In fact, most public chains can be trusted with correctness but not confidentiality. Bitcoin, for example, is one of the most traceable currencies that offer little privacy protection. Additionally some form of KYC policies are required of many applications and exchanges, therefore users of most of the on-chain applications are heavily exposed to privacy breaches.  
+
+There are indeed multiple levels of solutions today that cover the privacy issues in part. Coin mixers (such as Mimblewimble and TumbleBit) improves privacies by mixing transactions so it's harder to trace the origin and destination of transactions. Monero provide partial transaction confidentiality. ZCash, with Zero-knowledge Succinct Non-Interactive Arguments of Knowledge provides strong confidentiality, at a much higher cost of computation power and engineering complexity.  
+  
 Data obfuscation techniques try to hide the identity of data and cut the traceability of the data flows, so that the connections between people and their assets are decoupled. Coin mixers, ring signatures are of this type. Data anonymity is achieved with an extra layer of processing either locally or as a network service. Performance takes a hit necessarily.
 
 Using cryptography to encrypt data is the other major mechanism to preserve privacy. It ranges from simple symmetric/asymmetric encryption to the sophisticated zero-knowledge scheme based mechanisms.
@@ -814,9 +817,10 @@ The use of the layered encryption and signing is not so much about concealing th
 In the future we are considering:
 
 1. either implementing the zkSNARKs in the protocol level to meet the rigorous privacy requirement of data sensitive rules;
-2. Or other emerging technologies such as [Solidus]( https://eprint.iacr.org/2017/317.pdf) for more streamlined privacy architecture.
-3. Quantum computing resistance will be placed in our road map in the next couple of years to keep our platform up to date and future proof.
+2. or other emerging technologies such as [Solidus]( https://eprint.iacr.org/2017/317.pdf) for more streamlined privacy architecture;
+3. quantum computing resistance will be placed in our road map in the next few years to keep our platform up to date and future proof.
 
+As required by many states, KYC is integrated with most blockchain exchanges and some blockchain applications. KYC means that people's identifiable information is stored somewhere central. UDAP does not store  
 
 #### 7.5 Key Rings and Identity
 
