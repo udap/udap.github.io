@@ -700,11 +700,13 @@ The signature includes the time of signing, the signature's validity period, and
 
 #### 7.2. The Architecture of Virtual Private Chain (VPC)
 
-A flat network of blockchain nodes is not scalable. It requires enormous amount traffic to reach consensus and synchronization.
+A flat network of blockchain nodes is not scalable. A flat topology requires enormous amount traffic to reach consensus and synchronization and in effect in the throughput of the entire network is constrained by the computing power and IO performance of a single node. 
 
-The transitions from POW to various POS designs or other BFT consensus mechanisms are inevitable to scale up, which is to achieve higher total throughput at the cost of some bearable amount of security.
+The transitions from POW to various POS designs and other BFT consensus variations are inevitable if the blockchains are to place the role of world computers.
 
-In the meantime, homogeneous sharding mechanisms have being proposed and being implemented in various projects, such as Ethereum Sharding, Zilliqa and Polkadot.
+In the meantime, homogeneous sharding mechanisms have being proposed and being implemented in various projects, such as [Ethereum Sharding](https://github.com/ethereum/wiki/wiki/Sharding-FAQ), [ELASTICO](https://www.comp.nus.edu.sg/%7Eloiluu/papers/elastico.pdf).
+
+Plasma and Polkadot are trying t build blockchain of blockchain to integrate heterogeneous blockchains to achieve great scale.
 
 Cosmos uses interconnected zones to realize linear scalability. It's a sharding scheme both at the consensus level and state level.
 
