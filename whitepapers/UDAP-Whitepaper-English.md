@@ -870,13 +870,13 @@ The year of 2018 is an important year for non-fungible crypto assets. The world 
 
 **Digix** is a blockchain project specialized in tokenization and trading of gold. It uses gold as collateral to create crypto gold. It creates "recast" concept adopted by UDAP to handle redemption of physical goods or services.
 
-**AChain** <sup>[\[21\]][achain]</sup> is a platform that offers token issuance, smart contracts, and Dapps development. It creates a multi-chain architecture through a forking mechanism.
+**AChain** <sup>[\[19\]][achain]</sup> is a platform that offers token issuance, smart contracts, and Dapps development. It creates a multi-chain architecture through a forking mechanism.
 
-**Bytom** <sup>[\[22\]][bytom]</sup> is an exchange protocol for diversified byte assets that uses POW as a consensus approach, supports limited asset types and mainly focuses on the financial aspect of the assets (in other words, tokens without asset metadata).
+**Bytom** <sup>[\[20\]][bytom]</sup> is an exchange protocol for diversified byte assets that uses POW as a consensus approach, supports limited asset types and mainly focuses on the financial aspect of the assets (in other words, tokens without asset metadata).
 
-**0x Project** <sup>[\[23\]][0x]</sup>is a decentralized exchange for cryptocurrencies. It has a very interesting exchange model that UDAP may adopt to create a C2C exchange for assets.
+**0x Project** <sup>[\[21\]][0x]</sup>is a decentralized exchange for cryptocurrencies. It has a very interesting exchange model that UDAP may adopt to create a C2C exchange for assets.
 
-**Bitshares** <sup>[\[24\]][bit-shares]</sup>is an exchange for trading cryptocurrencies and assets. It is a permissioned blockchain with a single chain architecture.
+**Bitshares** <sup>[\[22\]][bit-shares]</sup>is an exchange for trading cryptocurrencies and assets. It is a permissioned blockchain with a single chain architecture.
 
 **WAX** is a marketplace for virtual game assets exchange and trading.
 
@@ -990,19 +990,15 @@ We believe our highly targeted networks offer an unprecedented new technology pl
 
 \[17\]: http://cosmos.network
 
-\[18\]: http://plasma.io
+\[18\]: http://www.oraclize.it
 
-\[19\]: https://eprint.iacr.org/2017/317.pdf
+\[19\]: https://www.achain.com
 
-\[20\]: http://www.oraclize.it
+\[20\]: http://bytom.io
 
-\[21\]: https://www.achain.com
+\[21\]: https://0xproject.com
 
-\[22\]: http://bytom.io
-
-\[23\]: https://0xproject.com
-
-\[24\]: https://bitshares.org
+\[22\]: https://bitshares.org
 
 [the-internet-of-money]: https://theinternetofmoney.info
 [design-rationale]: https://github.com/ethereum/wiki/wiki/Design-Rationale
