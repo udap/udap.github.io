@@ -595,7 +595,7 @@ UAW not only imports assets from third-party applications, it also allows users 
 
 One scenario is that users can create IOUs. The purpose of IOUs in daily life is to show that a person owes a particular piece of asset to another person and he/she promised to return/pay back at some time in the future. People used to write down IOUs on a piece of paper. Now UDAP client gives users an easier and securer way to write Crypto-IOU, with support of voice, pictures and even videos, tamper-proof and irrefutable, no worry of loss.
 
-<img src="media/image4.png" alt="Employment Contract" style="float:right; width:200px;height:400px;padding-left:5px"/>
+<img src="media/contract.png" alt="Employment Contract" style="float:right; width:200px;height:400px;padding-left:5px"/>
 
 In the process of personal loans or IOUs, one can also use the wallet to conduct multi-sig signing. For an example, in the process of creating an IOU, a third-party witness may be required to witness the contract. The borrower can send the original IOU to the witness, who then signs it and sends it to the creditor.
 
