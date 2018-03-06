@@ -623,7 +623,7 @@ Universal Asset Wallet is a very powerful tool for everyone to handle their fina
 
 #### 6.4. Multi-Sig Support
 <p>
-<img src="media/image5.png" alt="Multisig" style="float:right; width:180px;height:340px;padding-left:5px"/>
+<img src="media/resale.png" alt="Multisig" style="float:right; width:180px;height:340px;padding-left:5px"/>
 </p>
 
 UAW supports multi-sig transactions.
