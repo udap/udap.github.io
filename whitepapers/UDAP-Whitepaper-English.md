@@ -574,7 +574,7 @@ We are looking closely at the development of some third-party identity managemen
 
 ## 6.  Universal Asset Wallet
 
-<img src="media/image3.png" alt="Asset Hierarchy" style="float:right; width: 200px;height:400px;padding-left:5px"/>
+<img src="media/wallet.png" alt="Asset Hierarchy" style="float:right; width: 200px;height:400px;padding-left:5px"/>
 
 As a very important part of the platform, wallet plays a key role in the entire agreement and interaction between system and user. The usual crypto-wallets are a single-function wallet that shows the amount of particular cryptocurrencies.
 
