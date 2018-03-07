@@ -2,9 +2,9 @@
 
 A White Paper
 
-Version 0.7, Draft
+Version 0.7.1, Draft
 
-**UDAP Foundation， 2/25/2018**
+**UDAP Foundation， 3/7/2018**
 
 
 
@@ -22,6 +22,51 @@ Applications can immediately register token-based assets on chain and offer the 
 
 UDAP is a standalone public chain cloud that offers itself as an advanced streamlined BAAS for the booming real world token-economy beyond crypto-currencies.
 
+## Contents
+
+```
+1. Background
+2. The Goals
+3. Design Principles
+4. Value Proposition
+5. Asset Protocol
+    5.1. On-Chain Asset Model
+        5.1.2 Asset MetaData
+        5.1.3 Ownership
+        5.1.4 Asset State and Lifecycle
+        5.1.5 Proof of Asset
+        5.1.6 Tags
+        5.1.7 Asset Registry
+        5.1.8 Account, Wallet, and Identity
+        5.1.9 Transactions and Events
+    5.2. Asset Services
+        5.2.1 User Registration
+        5.2.2 Application Registration
+        5.2.3 Asset Registration
+        5.2.4 Tokenization
+        5.2.5 Asset Recast
+        5.2.6 Multisig
+        5.2.7 Base Coin Issuance
+        5.2.8 Other Asset Services
+    5.3. Counterparty Risk and Proof of Asset
+    5.4. Identity Management
+6. Universal Asset Wallet
+    6.1. Assets Precipitated From Third Party Apps
+    6.2. Personal Assets
+    6.3. Debts
+    6.4. Multi-Sig Support
+    6.5. App Store
+7. Implementation
+    7.1 Protocol Implementation
+    7.2. The Architecture of Virtual Private Chain (VPC)
+    7.3. Performance Implementation
+    7.4 Privacy Enforcement
+    7.5 Key Rings and Identity
+    7.6 Data Storage Strategy
+8. Related Work
+9. Use Cases
+10. Conclusion
+```
 
 ## 1.  Background
 
@@ -94,7 +139,7 @@ Our ultimate goal is to build the Internet of Assets. Its value proposition has 
  - a multi-chain architecture with inter-blockchain communication support that bridges permissioned blockchains and public blockchains.
 
  <p align="middle">
- <img src="media/image1.png" alt="archi" style="width: 300px;"/>
+ <img src="media/image1.png" alt="archi" style="width: 600px;"/>
  </p>
 
 ## 3.  Design Principles
@@ -124,7 +169,7 @@ Ethereum clearly has the main goal of building a blockchain platform for general
 We think this "Thick Protocol + Thin Application" model will be the core architecture model for blockchain applications and will greatly boost the new applications of blockchain and Internet in general. This model is technically innovative and value-conscious, allowing the value of the Internet to sink from the application layer to the protocol layer, turning the protocol layer into a cross-application big data repository. The result is that the protocol layer becomes more strategic and investment value.
 
 <p align="middle">
-<img src="media/image2.png" alt="Value Distribution" style="width: 300px;"/>
+<img src="media/image2.png" alt="Value Distribution" style="width: 600px;"/>
 </p>
 
 UDAP offers a selected set of features that simplify blockchain application development, without sacrificing performance and security. Particular UDAP offers API in the following area:
@@ -199,7 +244,7 @@ Anything that is capable of being owned or controlled to produce value, is cons
 Assets have attributes. Some common attributes, for example, asset identifier, namespace, issuer, fungibility, transferability, etc., are determined by asset issuers and can not be modified after assets are issued. Other attributes, such as name, description, owner, and states, can be modified during the life cycle of assets. Based on the fungibility of assets, UDAP presents a hierarchical model as described in the following diagram, which defines a standard interface, an abstract type that provides basic attributes and operations, and multiple derived asset types.
 
 <p align="middle">
-<img src="media/asset-hierarchy.png" alt="Asset Hierarchy" style="width: 300px;"/>
+<img src="media/asset-hierarchy.png" alt="Asset Hierarchy" style="width: 600px;"/>
 </p>
 
 The UDAP asset protocol itself does not specify any implementation details, however, to better describe the model Solidity is used to illustrate the components and their relationships. We may use a more implementation-neutral interface description language to describe the component model in a later version of the protocol.
@@ -446,9 +491,8 @@ User registration establishes the mapping between the user space in the applicat
 A UDAP-based application has either an independent asset chain (deployed and owned by application vendor) or a virtual chain sitting on top of UDAP main chain. These two deployment settings support both private/consortium and public blockchain configuration. In either case, applications need to connect to UDAP main chain and register themselves with the Application Registry on the UDAP main chain. When applications are registered, each application is given a unique App Id and a unique App Name. App Name is used as the level 0 namespace id of the managed assets. In the registration process, each application also receives an App Key and an App Secret that are used to securely connect to the UDAP main chain.
 
 <!-- figure to illustrate two configurations-->
-<p align="middle">
-<img src="media/app-reg.png" alt="Asset Model" style="width: 400px;"/>
-</p>
+
+![](media/app-reg.png)
 
 When application prefers a private or consortium configuration for asset lifecycle management, it can leverage UDAP's Asset Blockchain as a Service (ABaaS) to deploy a private or consortium asset chain. This UDAP-enabled permissioned blockchain is specific to this application and is by default automatically registered with the UDAP main chain. Transactions on the app chain are stored locally in a private ledger on the ABaaS managed nodes. This configuration gives the app chain the capability of broadcasting asset information to or communicating with other UDAP-enabled chains through an Inter Blockchain Communication protocol. If an application doesn't want to have an independent network, it can choose a virtual private chain configuration, where application's ledger is stored and managed on the validator nodes of UDAP main chain.
 
@@ -538,8 +582,6 @@ An application may choose to require the users to put in a stake in the system b
 
 For those products that are very expensive, the applications may choose to deploy multiple protection layers, for example, a combination of above mechanisms, which prevents possible fraudulent activity during asset trading. UDAP provides API for third-party applications to establish a flexible mechanism to ensure the authenticity of assets and to ensure the reliability of the transfer process.
 
-
-
 #### 5.4. Identity Management
 
 The main purpose of UDAP is to manage real-life assets with blockchain technologies, and to use these technologies to increase their liquidity and thus enhance its permanent durability. At the same time, one important goal of UDAP is to allow these real world assets in the form of crypto-assets to be easily transferred between owners.
@@ -574,7 +616,9 @@ We are looking closely at the development of some third-party identity managemen
 
 ## 6.  Universal Asset Wallet
 
-<img src="media/wallet.png" alt="Asset Hierarchy" style="float:right; width: 200px;height:400px;padding-left:5px"/>
+<!-- img src="media/wallet.png" alt="Asset Hierarchy" style="float:right; width: 200px;height:400px;padding-left:5px"/ -->
+
+<img align="right" width="300" src="media/wallet.png"/>
 
 As a very important part of the platform, wallet plays a key role in the entire agreement and interaction between system and user. The usual crypto-wallets are a single-function wallet that shows the amount of particular cryptocurrencies.
 
@@ -595,7 +639,9 @@ UAW not only imports assets from third-party applications, it also allows users 
 
 One scenario is that users can create IOUs. The purpose of IOUs in daily life is to show that a person owes a particular piece of asset to another person and he/she promised to return/pay back at some time in the future. People used to write down IOUs on a piece of paper. Now UDAP client gives users an easier and securer way to write Crypto-IOU, with support of voice, pictures and even videos, tamper-proof and irrefutable, no worry of loss.
 
-<img src="media/contract.png" alt="Employment Contract" style="float:right; width:200px;height:400px;padding-left:5px"/>
+<!-- img src="media/contract.png" alt="Employment Contract" style="float:right; width:200px;height:400px;padding-left:5px"/ -->
+
+<img align="right" width="300" src="media/contract.png"/>
 
 In the process of personal loans or IOUs, one can also use the wallet to conduct multi-sig signing. For an example, in the process of creating an IOU, a third-party witness may be required to witness the contract. The borrower can send the original IOU to the witness, who then signs it and sends it to the creditor.
 
@@ -622,9 +668,14 @@ Of course there needs to be an application that connects the utility companies t
 Universal Asset Wallet is a very powerful tool for everyone to handle their finances. Not only does it handle some of the personal lending activities of everyday life just as it is, but it can also be used by small businesses such as family hotels or family restaurants as a tool for sending discount coupons or vouchers.
 
 #### 6.4. Multi-Sig Support
+
+<!--
 <p>
 <img src="media/resale.png" alt="Multisig" style="float:right; width:180px;height:340px;padding-left:5px"/>
 </p>
+-->
+
+<img align="right" width="300" src="media/resale.png"/>
 
 UAW supports multi-sig transactions.
 
@@ -760,7 +811,7 @@ In UDAP, each application is assigned an application ID and owns an independent 
 The following picture shows how the transactions received by a node are properly dispatched to separate transaction queues for each application. All the CPU cores are assigned to process the transactions in parallel and the transactions are Merkleized in an application specific blockchain.
 
 <p align="center">
-<img src="media/AppChains.png" alt="VPC" style="width:300px;"/>
+<img src="media/AppChains.png" alt="VPC" style="width:600px;"/>
 </p>
 
 One chain per application is a major design choice we have made that is very flexible in optimizing the performance and security, which are the primary two requirements for any applications that claim to deal with any assets. Each chain is an overlay chain on top of the generic UDAP transaction streams. We call the mechanism Virtual Private Chain(VPC), as analogous to VPN over TCP/IP.
@@ -801,7 +852,7 @@ Although we believe most of the third-party apps will be deployed on permissione
 The second defense line is with data obfuscation and encryption, as shown in the following diagram.
 
 <p align="center">
-<img src="media/AssetAnonymity.png" alt="AssetAnonymity" style="width:300px;"/>
+<img src="media/AssetAnonymity.png" alt="AssetAnonymity" style="width:600px;"/>
 </p>
 
 User account has an encrypted pointer pointing to one of the storage slots, which are the vaults for asset tokens. Think of the design like the custodian vaults in banks where customers use their own key to open the storage of assets.  No one knows who owns which vault. The vaults are anonymous; thus privacy is protected.
