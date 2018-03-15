@@ -10,17 +10,17 @@ Version 0.7.1, Draft
 
 ## Executive Summary
 
-UDAP is a blockchain-based asset protocol that provides Restful APIs and a Universal Asset Wallet for third party application developers to create powerful blockchain based application efficiently to deal with crypto-token encoded real-world assets, without the steep learning curve and concerns of scalability, privacy and security.
+UDAP is a blockchain-based asset protocol that provides Restful APIs and a Universal Asset Wallet for third party application developers to create powerful blockchain based applications.  These applications could efficiently and fluently manage crypto-token encoded real-world assets, without concerns of scalability, privacy and security.
 
 UDAP uses a Multi-Chain architecture that supports both "Virtual Private Chains" and physical application zones, where each applications runs on its own private secure blockchain and storage, with user configured privacy level and blockchain nodes. UDAP uses both vertical sharding and horizontal sharding to achieve potentially millions of transactions per second. Massive parallelism is realized in the nodes where all the cores can process all the transactions in parallel. Multiple nodes form processing zones and zones form zone clusters to create enormous transaction processing power.
 
-Multiple levels of encryptions and obfuscations are used to ensure of the privacy of the assets registered on the chains.
+Multiple levels of encryptions and obfuscations are used to ensure the privacy of the assets registered on the chains.
 
-A Universal Asset Wallet is provided for application developers to write exciting applications directly in the wallet as plug-ins.
+A Universal Asset Wallet is provided for application developers to create exciting applications directly in the wallet as plug-ins.
 
-Applications can immediately register token-based assets on chain and offer the built-in marketplace to their customers. Applications can even create their own in-app currencies backed by blockchains and use it to build the in-app economy. The app-specific currencies can eventually be traded in the UDAP platform to offer unlimited liquidity.
+Applications can immediately register token-based assets on chain and offer built-in marketplace to their customers. Applications can even create their own in-app currencies backed by blockchains and use them to build the in-app economy. The app-specific currencies can eventually be traded in the UDAP platform to offer substantial liquidity.
 
-UDAP is a standalone public chain cloud that offers itself as an advanced streamlined BAAS for the booming real world token-economy beyond crypto-currencies.
+UDAP is a standalone public chain cloud that serves as an advanced streamlined BAAS for the booming real world token-economy beyond crypto-currencies.
 
 ## Contents
 
@@ -72,43 +72,42 @@ UDAP is a standalone public chain cloud that offers itself as an advanced stream
 
 In the beginning, there was Bitcoin.
 
-Although touted by its inventor as "digital cash", Bitcoin has been pushed to play pivotal roles beyond cryptocurrency.  Many projects have created protocols on top of Bitcoin to facilitate the exchange of general assets. Omni Layer(formly Mastercoin)<sup>[\[1\]][omni-layer]</sup>Counterparty<sup>[\[2\]][counterparty]</sup>Prism<sup>[\[3\]][prism]</sup>
+Although touted as "digital cash", Bitcoin has been pushed to play pivotal roles beyond cryptocurrency.  Many projects have created protocols on top of Bitcoin to facilitate the exchange of general assets. Omni Layer(formly Mastercoin)<sup>[\[1\]][omni-layer]</sup>Counterparty<sup>[\[2\]][counterparty]</sup>Prism<sup>[\[3\]][prism]</sup>
 
-But because Bitcoin has been first and foremost designed to work as a fungible currency, using it beyond as such has proved to be clunky and limited.
+But because Bitcoin was first and foremost designed to work as a fungible currency, adopting it beyond as such has proved to be clunky and limited.
 
-Ethereum (the E, for short reference) has emerged from the crowed to carry its inventor’s destiny, initially as “programmable money”, then as a general blockchain based “world computer” usable for financial and non-financial applications. A general-purposed smart contract architecture lends its well to building a variety of on-chain applications to fulfill blockchain’s promise of being the backbone of the "Internet of Values".
+Ethereum (the E, for short reference) has emerged from the crowd to reach its inventor’s destiny, initially as “programmable money”, then as a general blockchain based “world computer” usable for financial and non-financial applications. A general-purposed smart contract architecture peforms well to building a variety of on-chain applications to fulfill blockchain’s promise of being the backbone of the "Internet of Values".
 
-But the most challenging thing posed to Ethereum is how to represent the "values". For the moment, like almost all the other open ledger platforms, Ethereum is exclusively handling digital currency transfers, as Buterin put in one of his podcast in early 2018:
+But the most challenging issue posed to Ethereum is how to represent the "values". For the moment, like almost all the other open ledger platforms, Ethereum is exclusively handling digital currency transfers, as Buterin put in one of his podcast in early 2018:
 
 "The very first vision was basically a general purpose platform for financial contracts. If X happens then send $5 to account Y, if Z happens send $5 to account B. That was basically what I thought Ethereum would be for"<sup>[\[4\]][vitalik-buterin]</sup>
 
-Ethereuem’s model of "value" is primitive. In the basic model, for any kind of value/asset the only attribute associated with this asset is the balance of it, a number. This simplified model probably will fit financial transactions well, but it's very lacking dealing with variety of asset types in the operation of the world economy.
+Ethereuem’s model of "value" is primitive. In the basic model, for any kind of value/asset the only attribute associated with this asset is the balance of it, a number. This simplified model probably will fit financial transactions well, but it appears inadequate dealing with variety of asset types in the real world economy.
 
-The three-year-old smart contract implementation in Ethereum, although has attracted thousands of development teams to deploy applications, mostly in Solidity, on the platform, is far from being mature and productive towards becoming the world computer:
-- Limited in features and functions. For instances:
-    - Limited parameter types.
-    - Lack advanced language features that JavaScript, Python, Java can offer.
-    - Primitive collection processing and manipulations.
-- Slow performance. The EVM is not really a modern virtual machine like JVM or V8 JavaScript engine. It’s an interpreter that parse the smart contract opcode and run the underlying supporting libraries.  The EVM is at least an order slower than regular system programming languages. The total throughput of the blockchain is directly impacted by the slow performance of the virtual machine. There are many reasons that faster and mature virtual machines cannot be used in the current version of Ethereum.  And there are quite a few efforts in development to enhance the performance of the virtual machine.
-- The general purpose computing power in the  current version of EVM, on the other hand, has rendered itself vulnerable to many security breaches, as documented by Making Smart Contract Smarter<sup>[\[5\]][making-smart-contract-smarter]</sup>. It's very hard for relatively inexperienced programmers to get the Smart contract right. Considering many of the smart contract are handling many millions of dollars of assets, customers take a huge risk in moving forward with a smart contract strategy.
+The three-year-old smart contract implementation in Ethereum, though having attracted thousands of development teams to deploy applications, mostly in Solidity, on the platform, is far from being mature and productive to becoming the world computer:  It is 
+    - Limited in features and functions. For instances, Limited parameter types.
+    - Lack advanced language features that JavaScript, Python, or Java can offer.
+    - Primitive in collection processing and manipulations.
+    - Slow performance. The EVM is not really a modern virtual machine like JVM or V8 JavaScript engine. It’s an interpreter that parse the smart contract opcode and run the underlying supporting libraries.  The EVM is at least an order and slower than regular system programming languages. The total throughput of the blockchain is directly impacted by the slow performance of the virtual machine. There are many reasons that faster and mature virtual machines cannot be used in the current version of Ethereum.  A lot of efforts have been made in development to enhance the performance of the virtual machine.
+    - The general purpose computing power in the  current version of EVM, on the other hand, has rendered itself vulnerable to many security breaches, as documented by Making Smart Contract Smarter<sup>[\[5\]][making-smart-contract-smarter]</sup>. It's very hard for relatively inexperienced programmers to get the Smart contract right. Considering the smart contract are handling millions of dollars of assets, customers take a huge risk in moving forward with a smart contract strategy.
 - Smart contract makes
 
 If we can draw some analogies between web application development and blockchain application development, smart contract is to blockchain development what CGI is to web app development. It’s rather young.
 
-The limitations of the current mainstream Smart contract platforms have become a serious impediment to peoples ever-growing interest in tokenization of everything.
-Tokenization has become the symbol of The new economy, short named as token economy. In this new economy enabled by block team technologies, every bit of value is represented by a crypto-graphical token. With the security feature enabled by blockchain technologies, tokens have basically transformed the asset we deal with every day into capital, characterized by its high liquidity. Tokens make the people who own assets to realize the economic returns that those assets are capable of, in the meantime, tokens will make those people who are in need of capital to get the capital in a most feasible way. Tokens are basically the gasoline of the new economy. If there is one thing that will happen in the next few year for the Internet industry, this "one thing" is to "tokenize everything".
+The limitations of the current mainstream Smart contract platforms have become a serious impediment to people's ever-growing interest in tokenization of everything.
+Tokenization has become the symbol of The new economy, short named as token economy. In this new economy enabled by block team technologies, every bit of value is represented by a crypto-graphical token. With the security feature enabled by blockchain technologies, tokens have basically transformed the asset we deal with every day into capital, characterized by its high liquidity. Tokens make the assets owners to realize the economic returns than those assets are capable of, in the meantime, tokens will make people who are in need of capital to obtain the capital in a most feasible way. Tokens are basically the gasoline of the new economy. If there is one thing that will happen in the next few year for the Internet industry, this "one thing" is to "tokenize everything".
 
 
 - Crypto tokens represent (or be pegged to) shares of right, access to services, voting power, real world financial assets, etc.
 - Tokens serve as accounting units in bookkeeping and payments.
-- Tokens eliminate the requirement of intermediaries in many trading scenarios thus simplify and expedite the trading process at very low cost. Fungible tokens are very easy to trade en mass, while none-fungible tokens can help to track the asset flow in an economy thus to help people understand the dynamics of the economy.
+- Tokens eliminate the requirement of intermediaries in many trading scenarios thus simplify and expedite the trading process at very low cost. Fungible tokens are very easy to trade en mass, while none-fungible tokens can help to track the asset flow in an economy and to help people understand the dynamics of the economy.
 - In short, crypto-tokens are the private money for applications.
 
-Tokens have been used in crowdfunding a new wave of innovative applications based on blockchain and related technologies. This has disrupted the startup model based on VC funding.  On one side startups can receive funding much earlier in their product development. On the other side, everyone can invest in projects they believe in and gain the potential for investment return which used to the privilege of so called "accredited investors".
+Tokens have been used in crowdfunding a new wave of innovative applications based on blockchain and related technologies. It has disrupted the startup model based on VC funding.  On one side startups can receive funding much earlier in their product development. On the other side, everyone can invest in projects they believe in and gain the potential for investment return which used to belong to the privilege of so called "accredited investors".
 
 Tokens are the tickets to the next Internet banquet.
 
-UDAP has been designed to support tokenizing everything movement natively, in the low-level storage model and communications. We are shifting away from the lump sum description of values into individually identifying each every and every items in the physical world in virtual world alike. On top of the identifications, we are going to beauty brand-new user experience to deal with their personal properties intuitively, to sell them, to trade them, to pledge them for capital, to lead them to friends, or to give them away. In the back, UDAP is a protocol for any third parties to port their existing applications easily and quickly to open ledger technologies and a decentralized storage Technologies. From the back end to the user experience end, UDAP has been designed to as a enabling technology to fulfill the promise of the Internet of values.
+UDAP is designed to support tokenizing everything movement natively, in the low-level storage model and communications. We are shifting away from the lump sum description of values into individually identifying each items in the physical world and in virtual world alike. On top of the identifications, we are going to beauty brand-new user experience to deal with their personal properties intuitively, to sell them, to trade them, to pledge them for capital, to lead them to friends, or to give them away. In the back, UDAP is a protocol for any third parties to port their existing applications easily and quickly to open ledger technologies and a decentralized storage Technologies. From the back end to the user experience end, UDAP has been designed to as a enabling technology to fulfill the promise of the Internet of values.
 
 Blockchain technology is nicknamed the Internet of the moment
 However, when we look closely at the carrier of value transfer currently carried by the blockchain, 99% of the applications are actually limited to the best liquidity and the most easily solved type of asset, which is cryptocurrency.
