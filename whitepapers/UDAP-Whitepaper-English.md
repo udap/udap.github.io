@@ -22,51 +22,9 @@ Applications can immediately register token-based assets on chain and offer the 
 
 UDAP is a standalone public chain cloud that offers itself as an advanced streamlined BAAS for the booming real world token-economy beyond crypto-currencies.
 
-## Contents
+## Content
 
-```
-1. Background
-2. The Goals
-3. Design Principles
-4. Value Proposition
-5. Asset Protocol
-    5.1. On-Chain Asset Model
-        5.1.2 Asset MetaData
-        5.1.3 Ownership
-        5.1.4 Asset State and Lifecycle
-        5.1.5 Proof of Asset
-        5.1.6 Tags
-        5.1.7 Asset Registry
-        5.1.8 Account, Wallet, and Identity
-        5.1.9 Transactions and Events
-    5.2. Asset Services
-        5.2.1 User Registration
-        5.2.2 Application Registration
-        5.2.3 Asset Registration
-        5.2.4 Tokenization
-        5.2.5 Asset Recast
-        5.2.6 Multisig
-        5.2.7 Base Coin Issuance
-        5.2.8 Other Asset Services
-    5.3. Counterparty Risk and Proof of Asset
-    5.4. Identity Management
-6. Universal Asset Wallet
-    6.1. Assets Precipitated From Third Party Apps
-    6.2. Personal Assets
-    6.3. Debts
-    6.4. Multi-Sig Support
-    6.5. App Store
-7. Implementation
-    7.1 Protocol Implementation
-    7.2. The Architecture of Virtual Private Chain (VPC)
-    7.3. Performance Implementation
-    7.4 Privacy Enforcement
-    7.5 Key Rings and Identity
-    7.6 Data Storage Strategy
-8. Related Work
-9. Use Cases
-10. Conclusion
-```
+[TOC]
 
 ## 1.  Background
 
@@ -233,8 +191,9 @@ Various efforts have been put on standardization and specifications of non-fungi
 UDAP defines a conceptual model based on the analysis and abstraction of various real-world assets in combination with efforts and achievements by MediaChain<sup>[\[9\]][mediachain]</sup>, Digix<sup>[\[10\]][digix]</sup>, BankEx<sup>[\[11\]][bankex]</sup> and other blockchain projects<sup>[\[12\]][the-building-blocks-of-digital-asset-management-interoperability]</sup><sup>[\[13\]][adopting-blockchain-for-enterprise-asset-management]</sup>:
 
 <p align="middle">
-<img src="media/asset-model-diagram.png" alt="Asset Model" style="width: 300px;"/>
+<img src="media/asset-model-diagram.png" alt="Asset Model" style="width: 600px;"/>
 </p>
+
 This on-chain asset model defines assets and related objects, as well as the relationships between these objects. This asset model is compatible with ERC721 but offers a richer set of attributes and operations as described below.
 
 ###### 5.1.1 Asset
@@ -705,9 +664,7 @@ UAW is an eco-system. It provides a programmable UI for third-party applications
 
 5.  Multiple Signatures support.
 
-<p>
-<img src="media/image7.png" alt="Plugins" style="float:middle; width:400px;padding-left:5px"/>
-</p>
+![Plugins](media/image7.png)
 
 UAW offers JavaScript APIs for third-party application developers. Some of the functions are as follows:
 
@@ -937,7 +894,11 @@ We have also reviewed and researched a few key blockchain projects that focus on
 
 ## 9.  Use Cases
 
-<!-- -->
+
+Most of the Internet applications deals with data. Most of the informational data contains intrinsic values to the data owner hence is valuable asset to the owners. 
+
+UDAP can be immediately used to upgrade those applications to a blockchain-based decentralized model and bring incredible new user experience to the customers. The following use cases just scratch the surface and are by no means exhaustive. 
+
 #### 9.1 Event Ticketing
 
 This use case includes performances, live shows, sporting events, ticket management for various gatherings.
@@ -955,7 +916,7 @@ In the crypto world, people are gradually realizing that tokens are a brand new 
 Nearly 82% of businesses fail because of cash-flow problems, however, the complexity and scale of existing supply chain finance (SCF) solutions has posed major challenges in ensuring adequate funding and efficient operations. Finance instruments in SCF include factoring, reverse factoring, payables financing, inventory finance, and dynamic discounting. The following figure illustrates the transaction flow of a typical inventory finance solution (source from Global SCF Forum)
 
 <p align="middle">
-<img src="media/inventory-finance.png" alt="Inventory Finance" style="width: 300px;"/>
+<img src="media/inventory-finance.png" alt="Inventory Finance" style="width: 600px;"/>
 </p>
 
 UDAP will essentially enable all parties in SCF solutions to act on a shared ledger, where suppliers and manufacturers, along with every other participant, will solely update their parts of the transaction, enabling efficiency and an “unprecedented” level of trust and transparency on a ledger record that is immutable.
@@ -1008,49 +969,27 @@ We believe our highly targeted networks offer an unprecedented new technology pl
 
 ## References
 \[1\]: http://www.omnilayer.org/
-
 \[2\]: https://counterparty.io/
-
 \[3\]: https://prism.exchange
-
 \[4\]: http://unchainedpodcast.co/vitalik-buterin-creator-of-ethereum-on-the-big-guy-vs-the-little-guy
-
 \[5\]: https://www.comp.nus.edu.sg/~loiluu/papers/oyente.pdf
-
 \[6\]: https://theinternetofmoney.info
-
 \[7\]: https://github.com/ethereum/wiki/wiki/Design-Rationale
-
 \[8\]: https://blog.ethereum.org/2018/01/02/ethereum-scalability-research-development-subsidy-programs
-
 \[9\]: http://docs.mediachain.io
-
 \[10\]: https://digix.global
-
 \[11\]: https://bankex.com/en/whitepaper
-
 \[12\]: https://www.cmswire.com/cms/digital-asset-management/the-building-blocks-of-digital-asset-management-interoperability-021996.php
-
 \[13\]: https://www.ibm.com/developerworks/cloud/library/cl-adopting-blockchain-for-enterprise-asset-management-eam/index.html
-
 \[14\]: https://ipld.io
-
 \[15\]: https://json-ld.org
-
 \[16\]: http://www.localbitcoins.com
-
 \[17\]: http://cosmos.network
-
 \[18\]: http://www.oraclize.it
-
 \[19\]: https://www.achain.com
-
 \[20\]: http://bytom.io
-
 \[21\]: https://0xproject.com
-
 \[22\]: https://bitshares.org
-
 [the-internet-of-money]: https://theinternetofmoney.info
 [design-rationale]: https://github.com/ethereum/wiki/wiki/Design-Rationale
 [ethereum-scalability-research-development-subsidy-programs]: https://blog.ethereum.org/2018/01/02/ethereum-scalability-research-development-subsidy-programs
