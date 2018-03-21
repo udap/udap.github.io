@@ -8221,17 +8221,20 @@ body {
     display: block;
     font-size: 12px;
 }
-.team-bx{
-    min-height:330px;
+
+.team-bx {
+    min-height: 330px;
 }
+
 #team h3,
 #about h3 {
     font-size: 18px;
     margin-top: 25px;
     margin-bottom: 2px;
 }
-.caption h4{
-    margin: 15Px 0!important;
+
+.caption h4 {
+    margin: 15Px 0 !important;
 }
 
 #team h4,
@@ -8405,11 +8408,11 @@ footer .social-buttons {
     margin-top: 3%;
 }
 
-.about .pull-right{
+.about .pull-right {
     margin-right: 20px;
 }
 
-.about .pull-left{
+.about .pull-left {
     margin-left: 20px;
 }
 
@@ -8422,26 +8425,26 @@ footer .social-buttons {
     text-align: center;
     line-height: 28px;
     color: #fff;
-    font-size:12px;
+    font-size: 12px;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
     position: relative;
-    top:-3px;
+    top: -3px;
 }
 
 .linkedin-icon:hover {
     background: #219ab3;
-    color:#fff;
+    color: #fff;
 }
 
-.eco-system li a{
+.eco-system li a {
     max-height: 50px;
-    margin-bottom: 30px!important;
+    margin-bottom: 30px !important;
     line-height: 50px;
 }
 
-.eco-system img{
+.eco-system img {
     width: 100%;
     height: auto;
     display: inline-block;
@@ -8450,6 +8453,30 @@ footer .social-buttons {
 .team-container {
     width: 80%;
     margin: 0 auto;
+}
+
+/* cover */
+
+.navbar-header {
+    height: 70px
+}
+
+.navbar-header .page-scroll img {
+    display: block;
+    width: 42px;
+    height: auto;
+    float: left;
+    margin-right: 10px;
+}
+
+.navbar-header .page-scroll span {
+    line-height: 20px;
+    float: left;
+    font-size:14px;
+}
+
+.navbar .collapse {
+    margin-top: 15px;
 }
 
 /* .team-bx h4~p{
