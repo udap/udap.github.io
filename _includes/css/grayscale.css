@@ -8479,11 +8479,42 @@ footer .social-buttons {
     margin-top: 15px;
 }
 
+.social-logo{
+    position: relative;
+    bottom: -60px;
+    text-align: center;
+}
+
+.social-logo .list-inline {
+   width:300px;
+   display: inline-block;
+   list-style: none
+}
+
+.social-logo .list-inline a {
+   font-size:18px;
+   color:#fff;
+}
+
+.social-logo .list-inline a:hover{
+    color:#ccc; 
+}
+
+/* .social-logo img{
+    width: 35px;
+    height: auto;
+} */
+
+/* .social-logo .col-xs-5 {
+    margin-top: 15px;
+} */
+
 /* .team-bx h4~p{
 width: 240px;
 height: auto;
 margin:  auto;
 } */
+
 
 @media(min-width:767px) {
     .timeline-road {
