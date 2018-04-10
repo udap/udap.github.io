@@ -1,4 +1,4 @@
-UDAP - Power a Tokenized Life
+**UDAP - Power a Tokenized Life**
 
 Year 2018 is the year of tokenizing everything movement. Everything we have, everything we use will be digitalized and uniquely secured and identified by a crypto-token, such that the personal assets becomes smart assets and be able to interact with the rest of the world which has been impossible until now. 
 
