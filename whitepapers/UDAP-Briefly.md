@@ -1,14 +1,14 @@
 UDAP - Power a Tokenized Life
 
-Year 2018 is the year of tokenizing everything movement. Everything we have, everything we use will be digitalized and uniquely secured and identified by a crypto-token, such that the personal assets becomes smart assets and be able to interact with the rest of the world which has been impossible until now. 
+Year 2018 is the year of tokenizing everything movement. Everything we have, everything we use will be digitized and uniquely secured and identified by a crypto-token, such that the personal assets becomes smart assets that can interact with the rest of the world, which has been impossible until now. 
 
-The personal assets we are talking about:
+The personal assets we are talking about include:
  
-- Critical personal identifications, such our passport, identification card, our social insurance card
+- Personal identifications, such our passport, identification card, our social insurance card
 - Critical personal information, such as medical records, educational achievements (degree or diploma, training certificates)
-- Palpable assets, such as Our houses, our cars, antiques, collectables, Jewelry. 
+- Tangible assets, such as Our houses, our cars, antiques, collectables, Jewelry. 
 - Consumption records: checks, utility bills and receipts.
-- human capital: personal influence, promise, fan clubs.
+- Human capital: personal influence, promise, fan clubs.
 - Concert tickets, coupons, membership cards. 
 - Intellectual properties: such as articles, songs and photos, even creative ideas.
 - people can issue their own personal tokens representing anything from a Promise to deliver some goods or services to your Family, your friends, or customers. 
