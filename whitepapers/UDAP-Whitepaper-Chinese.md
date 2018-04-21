@@ -7,9 +7,9 @@ A White Paper
 
 白皮书
 
-Working Draft (Ver 0.7.1)
+Working Draft (Ver 0.7.2)
 
-**UDAP Foundation， 2/11/2018**
+**UDAP Foundation， 4/22/2018**
 
 [TOC]
 
