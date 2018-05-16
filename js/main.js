@@ -1,24 +1,24 @@
 $(function () {
   let arrList = [{
-      coverImg: "./img/news/news1.jpg",
-      title: "BTA | LI ZHANG: Why do we ...",
-      content: "As a multi-chain architecture,there are many<br>  different applications...",
-      url:"https://mp.weixin.qq.com/s?__biz=MzU2MTE1NDk2Mg%3D%3D&mid=2247485134&idx=3&sn=056a25361e0f09dbaeec6b25fb8c667e&scene=45#wechat_redirect",
-      date: "28 April 2018"
+      coverImg: "./img/news/newcsdn.png",
+      title: "BTA | LI ZHANG: Why do we need a universal blockchain asset platform?",
+      content: "As a multi-chain architecture, there are many different applications in the UDAP platform.",
+      url: "https://mp.weixin.qq.com/s?__biz=MzU2MTE1NDk2Mg==&mid=2247485134&idx=3&sn=056a25361e0f09dbaeec6b25fb8c667e&chksm=fc7c5833cb0bd125fa27064a6dff51b850484fbd74d96c16a4b40c6fef1643fa16e959b0cb9c&mpshare=1&scene=1&srcid=0516QmeXgH01OIcOKehqZi16&key=7282001dbf9a9df1d799cdd876534113aedd6778d6032ed8924aadb1a70a0f428a40031424e0227d2002931f81116743296f19203254d43cc56a64f023b2e2f2f6f1f54add1ea254d9d0fc86e6d25fb2&ascene=0&uin=MTE2MTY3MzcyMA%3D%3D&devicetype=iMac+MacBookAir7%2C2+OSX+OSX+10.12.6+build(16G1212)&version=12020810&nettype=WIFI&lang=zh_CN&fontScale=100&pass_ticket=O1zRRna8AOVr2TEJ309t7MJF%2BfKrNydp8I3evZLn9IeulRm53rPaU2Hfx1UF7a8q",
+      date: "2018.4.6"
     },
     {
-      coverImg: "./img/news/news2.jpg",
-      title: "Killer application has not...",
-      content: "Compared with blockchain entrepreneurs,<br>  what UDAP Foundation LI ZHANG wants to...",
-      url:"https://mp.weixin.qq.com/s?__biz=MzU1MDczNDY1OA==&mid=2247483665&idx=1&sn=64daa77e67edcd24447f948ae2664436&chksm=fb9d5f3cccead62a7b3a6e9ca458f21f98022acddb20296ddec49d0483acabfbc458bdd30a58&scene=0&key=e0b8d9a8d980553acf95354b75c05113cd0263156b1482fa630e10737dc3387e1eba4a5e227d338110042d7d421d68013a9941771d2253502d4bb21249d36a594b6a37f21e89f87959ef436aa1b182ec&ascene=0&uin=MTE2MTY3MzcyMA%3D%3D&devicetype=iMac+MacBookAir7%2C2+OSX+OSX+10.12.6+build(16G1212)&version=12020810&nettype=WIFI&lang=zh_CN&fontScale=100&pass_ticket=bK7h56DsjmM7zbP53FVPjmNZrlYM8J%2FC7QA4auQCIDJbJ265ECFZMbUG4b8o9hUK",
-      date: "28 April 2018"
+      coverImg: "./img/news/newlf.png",
+      title: "Killer application has not yet appeared? UDAP wants to build a universal blockchain asset platform 丨TokenShow",
+      content: "Compared with blockchain entrepreneurs, what UDAP Foundation LI ZHANG wants to do is different.",
+      url: "https://www.leiphone.com/news/201804/Hid3zSqIqW6tBySy.html",
+      date: "2018.4.20"
     },
     {
-      coverImg: "./img/news/news3.png",
-      title: "UDAP：Life As Being...",
-      content: "Record an interesting token travel…",
-      url:"https://mp.weixin.qq.com/s?__biz=MzU1MDczNDY1OA==&mid=2247483668&idx=1&sn=fffb298e2e43a069e2f3e80e018ebc09&chksm=fb9d5f39ccead62fbcd383145fc3b8c3e95da2c27630eb6c9314c6d9302e8d77a0f7d1e545e9&mpshare=1&scene=1&srcid=0427nFTV1xW2olpbfyNGI5mx&key=e0b8d9a8d980553a26459a74652f869c1f438b33c7174b50ef5b7c453e599ec807239a0834643a2b25ce08761b0875db55b1e8b882db3060cceff713003b9742c8a771c964abf84e9c1d8051f77019e6&ascene=0&uin=MTE2MTY3MzcyMA%3D%3D&devicetype=iMac+MacBookAir7%2C2+OSX+OSX+10.12.6+build(16G1212)&version=12020810&nettype=WIFI&lang=zh_CN&fontScale=100&pass_ticket=bK7h56DsjmM7zbP53FVPjmNZrlYM8J%2FC7QA4auQCIDJbJ265ECFZMbUG4b8o9hUK",
-      date: "28 April 2018"
+      coverImg: "./img/news/newsLogo.png",
+      title: "UDAP：Life As Being Tokenized",
+      content: "Record an interesting token travel",
+      url: "http://m.cnncai.com/news/xinwen/34700.html",
+      date: "2018.4.26"
     },
   ];
 
@@ -26,22 +26,20 @@ $(function () {
   for (let i = 0; i < arrList.length; i++) {
     splicing =
       splicing +
+      '<a href="' + arrList[i].url + '" target="_blank">' +
       '<div class="media new__wrap">' +
-      ' <div class="media-left news__img">' +
-      ' <a href="'+arrList[i].url +'" target="_blank">' +
-      ' <img class="media-object" src="' + arrList[i].coverImg + '" alt="...">' +
-      '</a>' +
-      '</div>' +
       '<div class="media-body news__content">' +
+      '<div class="new__logo"><img class="media-object" src="' + arrList[i].coverImg + '" alt="..."></div>' +
       '<h4 class="media-heading">' +
-      arrList[i].title +
+      arrList[i].date +
       '</h4>' +
       '<p>' +
       arrList[i].content +
       '</p>' +
-      '<p>' + arrList[i].date + '</p>' +
+      '<p>' + arrList[i].title + '</p>' +
       '</div>' +
-      '</div>';
+      '</div>' +
+      '</a>';
   }
   $("#newsContent").html(splicing);
 
@@ -59,3 +57,9 @@ $(function () {
   }
   newPage();
 })
+///注释2018/05/16//老版样式
+// ' <div class="media-left news__img">' +
+// ' <a href="'+arrList[i].url +'" target="_blank">' +
+// ' <img class="media-object" src="' + arrList[i].coverImg + '" alt="...">' +
+// '</a>' +
+// '</div>' +
