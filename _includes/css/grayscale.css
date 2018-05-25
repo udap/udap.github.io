@@ -8347,6 +8347,7 @@ ul.social-buttons li a:hover {
     width: 100%;
     min-height: 100%;
     background-size: cover;
+    background-color: #252525;
 }
 
 #ecosystem li {
