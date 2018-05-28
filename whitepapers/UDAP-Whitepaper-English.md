@@ -2,15 +2,15 @@
 
 A White Paper
 
-Version 0.7.1, Draft
+Version 0.7.3, Draft
 
-**UDAP Foundation， 3/7/2018**
+**UDAP Foundation， 5/27/2018**
 
 
 
 ## Executive Summary
 
-UDAP is a blockchain-based asset protocol that provides Restful APIs and a Universal Asset Wallet for third party application developers to create powerful blockchain based applications.  These applications could efficiently and fluently manage crypto-token encoded real-world assets, without concerns of scalability, privacy and security.
+UDAP is a blockchain-based asset protocol that provides Restful APIs and a Universal Asset Wallet for third party application developers to create powerful blockchain based applications.  These applications can efficiently and fluently manage crypto-token encoded real-world assets, without concerns of scalability, privacy and security.
 
 UDAP uses a Multi-Chain architecture that supports both "Virtual Private Chains" and physical application zones, where each applications runs on its own private secure blockchain and storage, with user configured privacy level and blockchain nodes. UDAP uses both vertical sharding and horizontal sharding to achieve potentially millions of transactions per second. Massive parallelism is realized in the nodes where all the cores can process all the transactions in parallel. Multiple nodes form processing zones and zones form zone clusters to create enormous transaction processing power.
 
@@ -20,7 +20,7 @@ A Universal Asset Wallet is provided for application developers to create exciti
 
 Applications can immediately register token-based assets on chain and offer built-in marketplace to their customers. Applications can even create their own in-app currencies backed by blockchains and use them to build the in-app economy. The app-specific currencies can eventually be traded in the UDAP platform to offer substantial liquidity.
 
-UDAP is a standalone public chain cloud that serves as an advanced streamlined BAAS for the booming real world token-economy beyond crypto-currencies.
+UDAP is a middle-ware in blockchain era, which abstracts away the common public chains on the market today, such as Ethereuem, Cosmos and EOS and other advanced open ledger public chains coming in the future. The middleware layer for blockchains will act as a catalyst for blockchain-based killer applications.  
 
 ## Content
 
@@ -96,7 +96,7 @@ Our ultimate goal is to build the Internet of Assets. Its value proposition has 
  - a multi-chain architecture with inter-blockchain communication support that bridges permissioned blockchains and public blockchains.
 
  <p align="middle">
- <img src="media/image1.png" alt="archi" style="width: 600px;"/>
+ <img src="media/UDAP-Overview-en.png" alt="archi" style="width: 600px;"/>
  </p>
 
 ## 3.  Design Principles
