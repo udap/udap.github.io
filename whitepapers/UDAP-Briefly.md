@@ -47,7 +47,7 @@ This is why we have created UDAP platform, an integrated solution for all the cr
 - We create a vertical scalability solution called virtual private chains (Or VPC in abbreviation), to concurrently process all the transactions from All the applications. 
 - The above multi-zone and the multi-chain architecture will be able to handle hundreds of thousands of transactions per second. 
 - UDAP separates user accounts and asset accounts, and obfuscates the relationship between users and their assets, to achieve asset confidentiality.
--  In the meantime we use proxy re-encryption to to allow secure asset sharing at a massive scale. 
+-  In the meantime we use Proxy Re-encryption to to enable secure asset sharing at a massive scale. 
 
 
 ### To summarize

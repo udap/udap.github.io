@@ -15,9 +15,9 @@ Working Draft (Ver 0.7.2)
 
 ## Abstract
 
-区块链开发进入了“Tokenize Anything”的时代：把所有物件和信息代币化和资产化。然而区块链的应用（广义的dApp）和区块链之间存在一个巨大复杂性的鸿沟，使得杀手级应用对开发者而言很难编写，对用户而言很难使用。
+区块链开发进入了“Tokenizing Anything”的时代：把所有物件和信息代币化和资产化。然而区块链的应用（广义的dApp）和区块链之间存在一个巨大复杂性的鸿沟，使得杀手级应用对开发者而言很难编写，对用户而言很难使用。
 
-UDAP公链提供一个基于区块链的的“面向资产的”应用开发中间件和应用界面环境。 
+UDAP是一个区块链时代的“中间件”。 它提供一层稳定而抽象的面向资产管理的模块和应用开发API。 其底层可以基于Ethereum，Cosmos， EDS 等公链。 
 
 具体而言， 对于开发者UDAP提供：
 
@@ -66,7 +66,7 @@ UDAP基金会的目标是建设一个"资产互联网"（The Internet of Asset�
 
 下图体现了UDAP的总体架构： 
 
-![](media/image1.png)
+![](media/UDAP-Overview.png)
 
 
 <div class="page-break"></div>
