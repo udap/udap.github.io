@@ -9057,3 +9057,16 @@ margin:  auto;
   _position: absolute;
   _top: expression(documentElement.scrollTop + documentElement.clientHeight * 3/4 + "px");
 }
+
+#ico-token{
+    background-color: #fff;
+    border-radius: 50px;
+    color: #f7891e!important;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 600;
+}
+#ico-token:hover{
+    background: #f7891e!important;
+    color:#fff!important;
+}
