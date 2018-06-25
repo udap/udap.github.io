@@ -8083,7 +8083,7 @@ a:focus {
 
 @media(min-width:767px) {
     .content-section {
-        padding: 80px 0px;
+        padding-top: 80px;
     }
     .download-section {
         padding: 0px 0;
@@ -8428,13 +8428,13 @@ footer .social-buttons {
 }
 
 .linkedin-icon {
-    background: #000000;
-    width: 28px;
-    height: 28px;
+    background: #337ab7;
+    width: 20px;
+    height: 20px;
     border-radius: 100%;
     display: inline-block;
     text-align: center;
-    line-height: 28px;
+    line-height: 20px;
     color: #fff;
     font-size: 12px;
     -webkit-transition: all .2s ease-in-out;
@@ -8442,6 +8442,8 @@ footer .social-buttons {
     transition: all .2s ease-in-out;
     position: relative;
     top: -3px;
+    margin-top: -8px;
+    margin-bottom: 8px;
 }
 
 .linkedin-icon:hover {
@@ -9069,4 +9071,9 @@ margin:  auto;
 #ico-token:hover{
     background: #f7891e!important;
     color:#fff!important;
+}
+.bg-gray{
+ background: #626262 url(../img/team-bg.jpg) no-repeat center center;
+ background-size: cover;
+ padding-top:80px;
 }
