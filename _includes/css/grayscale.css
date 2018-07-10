@@ -8197,6 +8197,7 @@ body {
     min-height: 100%;
     background: #fff url(img/about-udap.jpg) no-repeat left top;
     background-size: cover;
+    padding-bottom: 20px;
 }
     #news {
         width: 100%;
@@ -8204,7 +8205,11 @@ body {
         background: #fff url(img/news.png) no-repeat left top;
         background-size: cover;
     }
-
+#about ul{
+    margin:0px;
+    padding: 0px;
+    list-style: none;
+}
 #about .thumbnail {
     background-color: #000;
     border: none;
@@ -8401,8 +8406,8 @@ footer .social-buttons {
     height: auto;
 }
 
-.about .pull-left img {
-    margin-left: 15px;
+.proposition .pull-left img {
+   margin-left: 15px;
 }
 
 .about .media .text-left {
@@ -9079,4 +9084,13 @@ margin:  auto;
 }
 .proposition{
     min-height: 100%;
+}
+@media screen and (max-width: 768px) {
+   #about .media-list .media-list-left a{
+       float: left!important;
+       margin-left: 20px;
+   }
+   #about .media-list .media-list-left .media-body{
+       text-align: left!important;
+   } 
 }
