@@ -25,6 +25,9 @@ social:
   - title: github
     url: https://github.com/IronSummitMedia/startbootstrap
 
+plugins:
+  - jekyll-sitemap
+
 # Build settings
 markdown: kramdown
 permalink: pretty
