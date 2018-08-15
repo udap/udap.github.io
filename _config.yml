@@ -25,6 +25,7 @@ social:
   - title: github
     url: https://github.com/IronSummitMedia/startbootstrap
 
+url: "https://www.udap.io"
 plugins:
   - jekyll-sitemap
 
