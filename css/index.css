@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    font-family: Lora, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+a,button{
+    border:0;
+    outline:none;
+}
+.udap{
+	background: url(../img/intro-bg.jpg) no-repeat center center;
+	background-size: cover;
+}
+.udap nav{
+	padding-bottom: 15px;
+    padding-left: 50px;
+	overflow: hidden;
+}
+.udap nav a{
+	color:#fff;
+	text-decoration: none;
+}
+.udap nav a:hover{
+	color:#fff;
+}
+.udap-logo img{
+	display: block;
+    width: 42px;
+    height: auto;
+    float: left;
+    margin-right: 10px;
+}
+.udap-logo span{
+	line-height: 20px;
+    float: left;
+    font-size: 14px;
+}
+.udap-title{
+    color:#fff;
+	text-align: center;
+    padding: 50px 0px 100px 0px;
+}
+.udap-title h1{
+	text-align: center;
+	font-size: 48px;
+    margin: 0 0 1.5rem;
+}
+.udap-title p{
+	font-size: 18px;
+	margin: 0;
+}
+.udap-register{
+    max-width: 120px;
+    overflow: hidden;
+}
+.udap-register button{
+    background:#f7891e;
+    color:#fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 50px;
+}
+.udap-register button:hover{
+    color:#fff;
+    opacity: 0.8;
+    filter: opacity(80);
+}
+/* udap-token */
+.udap-token{
+    margin:50px 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+.udap-token .token-title{
+    text-align: center;
+}
+.udap-token .token-intro{
+    overflow: hidden;
+}
+
+.border-right{
+    border-left:none;
+}
+.udap-token .token-subtitle{
+    margin-bottom:30px;
+    text-align: center;
+}
+.udap-token .token-pics{
+    display: block;
+    overflow: hidden;
+    text-align: center;
+}
+.udap-token .token-pic{
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+}
+.udap-token .token-list{
+
+}
+/* footer */
+footer{
+    height: 100px;
+    line-height: 100px;
+    color:#fff;
+    font-size: 14px;
+    background: #000;
+    text-align: center;
+}

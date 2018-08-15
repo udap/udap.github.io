@@ -9094,3 +9094,38 @@ margin:  auto;
        text-align: left!important;
    } 
 }
+
+.social-logo .fa-user-m:before{
+ content: "";
+ display: block;
+ height: 15px;
+ width: 17px;
+ background: url(../img/icon/bm.png) no-repeat;
+ background-size: 100%;
+}
+
+.social-logo:hover .fa-user-m:before{
+ content: "";
+ display: block;
+ height: 15px;
+ width: 17px;
+ background: url(../img/icon/bmh.png) no-repeat;
+ background-size: 100%;
+}
+.user-icon .fa-user-mm:before{
+ content: "";
+ display: block;
+ height: 13px;
+ width: 14px;
+ background: url(../img/icon/m.png) no-repeat;
+ background-size: 100%;
+}
+
+.user-icon:hover .fa-user-mm:before{
+  content: "";
+ display: block;
+ height: 13px;
+ width: 14px;
+ background: url(../img/icon/mh.png) no-repeat;
+ background-size: 100%;
+}
