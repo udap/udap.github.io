@@ -1,7 +1,7 @@
 # Site settings
 title: UÐAP
 email: contact@udap.io
-url: https://udap.github.io
+url: https://www.udap.io
 description: "A Universal Ðecentralized Asset Platform for Building an Internet of Assets"
 
 # Color settings (hex-codes without the leading hash-tag)
@@ -25,7 +25,6 @@ social:
   - title: github
     url: https://github.com/udap
 
-url: "https://www.udap.io"
 plugins:
   - jekyll-sitemap
 
