@@ -435,9 +435,9 @@ approve(...)
 transferFrom(...)
 ```
 
-6. It does not allow setting operator on individual item. It has to be all or none, therefore lacking fine control of delegated ownership. In fact adding the operator feature to the protocol has made it unnecessarily bloated. It should separate the concerns.  
-7. It has to deal with receivers of either EOA type or contract type.  Although the contract receiver may reject the ownership transfer, EOAs do not have such options. 
-8. No natural type safely for element tokens.  Since each element is just an index number, there is no type information about it directly.  A separate array list must be maintained to keep  type information.  Working with the multiple arrays are awkward. 
+7. It does not allow setting operator on individual item. It has to be all or none, therefore lacking fine control of delegated ownership. In fact adding the operator feature to the protocol has made it unnecessarily bloated. It should separate the concerns.  
+8. It has to deal with receivers of either EOA type or contract type.  Although the contract receiver may reject the ownership transfer, EOAs do not have such options. 
+9. No natural type safely for element tokens.  Since each element is just an index number, there is no type information about it directly.  A separate array list must be maintained to keep  type information.  Working with the multiple arrays are awkward. 
 
 ##### Goals of Singular
 
@@ -1201,60 +1201,115 @@ UDAP offer exceptional values to application developers and public chains alike.
 
 ## References
 \[1\]: http://www.omnilayer.org/
+
 \[2\]: https://counterparty.io/
+
 \[3\]: https://prism.exchange
+
 \[4\]: http://unchainedpodcast.co/vitalik-buterin-creator-of-ethereum-on-the-big-guy-vs-the-little-guy
+
 \[5\]: https://www.comp.nus.edu.sg/~loiluu/papers/oyente.pdf
+
 \[6\]: https://theinternetofmoney.info
+
 \[7\]: https://github.com/ethereum/wiki/wiki/Design-Rationale
+
 \[8\]: https://blog.ethereum.org/2018/01/02/ethereum-scalability-research-development-subsidy-programs
+
 \[9\]: http://docs.mediachain.io
+
 \[10\]: https://digix.global
+
 \[11\]: https://bankex.com/en/whitepaper
+
 \[12\]: https://www.cmswire.com/cms/digital-asset-management/the-building-blocks-of-digital-asset-management-interoperability-021996.php
+
 \[13\]: https://www.ibm.com/developerworks/cloud/library/cl-adopting-blockchain-for-enterprise-asset-management-eam/index.html
+
 \[14\]: https://ipld.io
+
 \[15\]: https://json-ld.org
+
 \[16\]: http://www.localbitcoins.com
+
 \[17\]: http://cosmos.network
+
 \[18\]: http://www.oraclize.it
+
 \[19\]: https://www.achain.com
+
 \[20\]: http://bytom.io
+
 \[21\]: https://0xproject.com
+
 \[22\]: https://bitshares.org
+
 [the-internet-of-money]: https://theinternetofmoney.info
+
 [design-rationale]: https://github.com/ethereum/wiki/wiki/Design-Rationale
+
 [ethereum-scalability-research-development-subsidy-programs]: https://blog.ethereum.org/2018/01/02/ethereum-scalability-research-development-subsidy-programs
+
 [json-ld]: https://json-ld.org
+
 [ipld]: https://ipld.io
+
 [llc-rights-reference]: http://www.linkedcontentcoalition.org/phocadownload/framework/The%20LCC%20Rights%20Reference%20Model%20v1.0.pdf
+
 [linked-data-signatures]: https://w3c-dvcg.github.io/ld-signatures/
+
 [json-ld-building-meaningful-data-apis]: https://blog.codeship.com/json-ld-building-meaningful-data-apis/
+
 [the-building-blocks-of-digital-asset-management-interoperability]: https://www.cmswire.com/cms/digital-asset-management/the-building-blocks-of-digital-asset-management-interoperability-021996.php
+
 [adopting-blockchain-for-enterprise-asset-management]: https://www.ibm.com/developerworks/cloud/library/cl-adopting-blockchain-for-enterprise-asset-management-eam/index.html
+
 [redefining-the-meaning-and-scope-of-digital-assets]: http://digitalassetmanagementnews.org/features/re-defining-the-meaning-and-scope-of-digital-assets-part-1/
+
 [what-are-asset-types]: https://docs.oracle.com/middleware/1221/wcs/develop/GUID-D76319B9-602D-44F0-8C05-1D4660EC4B7C.htm#WBCSD1365
+
 [asset-models]: https://snipe-it.readme.io/v3.6.2/docs/asset-models
+
 [bankex]: https://bankex.com/en/whitepaper
+
 [bytom]: http://bytom.io
+
 [digix]: https://digix.global
+
 [0x]: https://0xproject.com
+
 [achain]: https://www.achain.com
+
 [self-sell]: https://www.selfsell.com
+
 [bit-shares]: https://bitshares.org
+
 [linkeye]: https://www.linkeye.com
+
 [fusion]: https://fusion.org
+
 [oraclize]: http://www.oraclize.it
+
 [coin-spark]: http://coinspark.org
+
 [mediachain]: http://docs.mediachain.io
+
 [cosmos]: http://cosmos.network
+
 [plasma-project]: http://plasma.io
+
 [solidus]: https://eprint.iacr.org/2017/317.pdf
+
 [local-bitcoin]: http://www.localbitcoins.com
+
 [omni-layer]: http://www.omnilayer.org/
+
 [counterparty]: https://counterparty.io/
+
 [prism]: https://prism.exchange
+
 [vitalik-buterin]: http://unchainedpodcast.co/vitalik-buterin-creator-of-ethereum-on-the-big-guy-vs-the-little-guy
+
 [making-smart-contract-smarter]: https://www.comp.nus.edu.sg/~loiluu/papers/oyente.pdf
 
 
