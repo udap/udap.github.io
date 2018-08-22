@@ -16,7 +16,7 @@ Main contributors: Bing Ran(<bran@udap.io>), Li Zhang(<lzhang@udap.io>)
 
 >- 8/20: updated architecture and some implementation details. There have been some significant changes and development in the most critical areas, for UDAP to be successfully adapted at scale by projects. Some of the initial design in the white paper reflects wishful thinkings, which have turned out to be impractical for the immediate release of UDAP. We believe what we present from this version on is a lot more solid and concrete. 
 
-## Executive Summary
+## 1. Executive Summary
 
 UDAP is a blockchain-based asset protocol that sits between applications and public blockchains to provide Restful APIs and an "Asset Wallet" for application developers to create powerful blockchain based applications without writing any smart contracts. 
 
@@ -51,7 +51,7 @@ To accomplish these promises, UDAP on the backstage provides a set of smart cont
 
 <!-- ## Content [TOC] -->
 
-## 1.  Background
+## 2. Background
 
 There is this movement called "Tokenizing Everything":
 
@@ -86,7 +86,7 @@ If we can draw some analogies between web application development and blockchain
 
 Everything is rather young.
 
-## 2. The Goals
+## 3. The Goals
 
 Our ultimate goal is to build the Internet of Assets. Its value proposition has a clear boundary, and includes the following concrete deliverables:
 
