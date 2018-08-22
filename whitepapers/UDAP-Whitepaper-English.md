@@ -1,4 +1,5 @@
 Universal Decentralized Asset Protocol(UDAP) - Tokenizing Anything
+
 A White Paper
 
 Version 0.8
@@ -7,9 +8,10 @@ Version 0.8
 
 #### Revision Notes:
 
-- 8/20: updated architecture and some implementation details during the last few months of development.   There have been some significant changes and development in some of the most critical areas for UDAP to be successfully adapted *en mass* by projects that aspire to take advantage of blockchain technologies such as Ethereum and other highly visible public chains. As it has happened, some of the initial design in the white paper reflects some wishful thinking, which has turned out to be impractical for the immediate release of UDAP.  We believe what we present from this version is a lot more solid and concrete. 
+>- 8/20: updated architecture and some implementation details. There have been some significant changes and development in the most critical areas, for UDAP to be successfully adapted at scale by projects. Some of the initial design in the white paper reflects wishful thinkings, which have turned out to be impractical for the immediate release of UDAP. We believe what we present from this version on is a lot more solid and concrete. 
 
 ## Executive Summary
+
 UDAP is a blockchain-based asset protocol that sits between applications and public blockchains to provide Restful APIs and an "Asset Wallet" for application developers to create powerful blockchain based applications without writing any smart contracts. 
 
  <p align="middle">
