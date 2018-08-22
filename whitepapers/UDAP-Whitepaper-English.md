@@ -10,7 +10,7 @@ Version 0.8
 - 8/20: updated architecture and some implementation details during the last few months of development.   There have been some significant changes and development in some of the most critical areas for UDAP to be successfully adapted *en mass* by projects that aspire to take advantage of blockchain technologies such as Ethereum and other highly visible public chains. As it has happened, some of the initial design in the white paper reflects some wishful thinking, which has turned out to be impractical for the immediate release of UDAP.  We believe what we present from this version is a lot more solid and concrete. 
 
 ## Executive Summary
-UDAP is a blockchain-based asset protocol that sits between applications and public blockchains to provide Restful APIs and an "Asset Wallet" for application developers to create powerful blockchain based applications, without writing any smart contracts. 
+UDAP is a blockchain-based asset protocol that sits between applications and public blockchains to provide Restful APIs and an "Asset Wallet" for application developers to create powerful blockchain based applications without writing any smart contracts. 
 
  <p align="middle">
  <img src="media/UDAP-Overview-en.png" alt="archi" style="width: 600px;"/>
@@ -20,13 +20,13 @@ UDAP is a blockchain-based asset protocol that sits between applications and pub
 In what we call a "Asset Oriented Programming" model, app developers take advantage of the traditional Internet application architecture and use UDAP as a layer of
 
 1. asset tokenization;
-2. transaction notarization;
+2. transaction notarization; and
 3. contract adjudication in case of dispute.
 
 Technically UDAP provides multiple modules to speed up app development, such as:
 
-1. **Tokenization service**, to manage the full life-cycle of asset-backed crypto-tokens. Applications can immediately register token-based assets on chain and offer built-in marketplace to their customers.
-2. **State channels service**, to allow applications to conduct transactions mostly offline and [secured by public blockchains](https://www.jeffcoleman.ca/state-channels/), such as Ethereum. 
+1. **Token service**, to manage the full life-cycle of asset-backed crypto-tokens. Applications can immediately register token-based assets on chain and offer built-in marketplace to their customers.
+2. **[State channels](https://www.jeffcoleman.ca/state-channels/) service**, to allow applications to conduct transactions mostly offline and secured by public blockchains, such as Ethereum. 
 3. **Data obfuscation service**, to hide the ownership of assets, using *[Ring Signature](https://en.wikipedia.org/wiki/Ring_signature)* technology.
 4. **Secure content distribution** for digital content assets, using *[Proxy Re-Encryption](https://en.wikipedia.org/wiki/Proxy_re-encryption)* technology. 
 5. **Exchange service**, for decentralized asset trading, including app-currencies and asset tokens. 
@@ -39,16 +39,13 @@ UDAP implements state channel technology to solve some of the most challenging i
 3. **Privacy**: data on public blockchains is public by definition and open to any curious eyes. Some applications may choose to keep the transactions in private unless the users choose to go to public blockchains for higher level of assurance and interoperability.  Even in the case of going to blockchain, UDAP provides technology to let users control the visibility of their assets. 
 4. **Responsiveness**:  dApps as most people have experience with are slow-paced and usually are an order of magnitude slower than the commercial Internet applications that people have been used to. State channels would enable blockchain supported applications to offer best possible UX together with unique features of decentralized ledgers.  
 
-To accomplish these promised, UDAP on the backstage provides a set of smart contract (initially based on Ethereum) templates that is configured by applications before deployment and at runtime.  We believe that the automatic templating system can cover 90% of regular application use cases. 
+To accomplish these promises, UDAP on the backstage provides a set of smart contract (initially based on Ethereum) templates that is configured by applications before deployment and at runtime.  We believe that the automatic templating system can cover 90% of regular application use cases. 
 
-
-## Content
-
-[TOC]
+<!-- ## Content [TOC] -->
 
 ## 1.  Background
 
-There is this movement called "Tokenizing everything":
+There is this movement called "Tokenizing Everything":
 
 * Crypto tokens represent (or be pegged to) shares of right, access to services, voting power, real world financial assets, etc.
 * Tokens serve as accounting units in bookkeeping and payments.
