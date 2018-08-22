@@ -12,6 +12,11 @@ Version 0.8
 ## Executive Summary
 UDAP is a blockchain-based asset protocol that sits between applications and public blockchains to provide Restful APIs and an "Asset Wallet" for application developers to create powerful blockchain based applications, without writing any smart contracts. 
 
+ <p align="middle">
+ <img src="media/UDAP-Overview-en.png" alt="archi" style="width: 600px;"/>
+ </p>
+
+
 In what we call a "Asset Oriented Programming" model, app developers take advantage of the traditional Internet application architecture and use UDAP as a layer of
 
 1. asset tokenization;
@@ -54,25 +59,23 @@ Tokens have been used in crowdfunding a new wave of innovative applications base
 
 Tokens are the tickets to the next wave innovations.
 
-In the beginning, there was Bitcoin.
+In the beginning, there was Bitcoin, as touted the "digital cash" system.
 
-Initially it was touted as "digital cash", and is still is, Bitcoin has also been pushed to play pivotal roles beyond cryptocurrency.  Many projects have created protocols on top of Bitcoin to facilitate the exchange of general assets. Omni Layer(formly Mastercoin)[\[1\]][omni-layer]Counterparty[\[2\]][counterparty]Prism[\[3\]][prism]
+But adopting Bitcoin beyond crypto-currency has proved to be difficult because it is first and foremost designed to work as a fungible currency system; and lack of smart contract support has not been helpful either.
 
-But adopting Bitcoin beyond crypto-currency has proved to be clunky and limited because it was first and foremost designed to work as a fungible currency system. 
+Ethereum has emerged from the crowd initially as “programmable money”, then as a general blockchain based “world computer”.
 
-Ethereum has emerged from the crowd to reach its inventor’s destiny, initially as “programmable money”, then as a general blockchain based “world computer” usable for financial and non-financial applications. A general-purposed smart contract architecture allows a variety of on-chain applications to fulfill blockchain’s promise of being the backbone of the "Internet of Values".
+The most challenging issue posed to Ethereum is how to represent the "values" beyond currencies.  As of today, like almost all the other open ledger platforms, Ethereum is most about handling digital currency transfers, as Buterin put in one of his podcast in early 2018:
 
-The most challenging issue posed to Ethereum is how to represent the "values", however. As of today, like almost all the other open ledger platforms, Ethereum is most about handling digital currency transfers, as Buterin put in one of his podcast in early 2018:
+>"The very first vision was basically a general purpose platform for financial contracts. If X happens then send $5 to account Y, if Z happens send $5 to account B. That was basically what I thought Ethereum would be for"<sup>[\[4\]][vitalik-buterin]</sup>
 
-"The very first vision was basically a general purpose platform for financial contracts. If X happens then send $5 to account Y, if Z happens send $5 to account B. That was basically what I thought Ethereum would be for"[\[4\]][vitalik-buterin]
+Ethereum’s model of "asset" is primitive, as the account carries a balance only. In spite of the effort of standardizing non-fungible tokens, such as ERC721 and derivatives, there is still huge room for improvement that UDAP can contribute to. 
 
-Ethereum’s model of "asset" is primitive. In the basic model, for any kind of value/asset the only attribute associated with this asset is the balance of it, a number. This simplified model probably will fit financial transactions well, but it appears inadequate dealing with variety of asset types in the real world economy. In spite of the effort of standardizing non-fungibles, such as ERC721 and derivatives, we still huge room for improvement that UDAP can contribute. 
-
-The three-year-old smart contract implementation in Ethereum, though having attracted vast number of development teams to deploy applications on the platform, is far from being mature and productive to becoming the world computer:  
+The three-year-old smart contract in Ethereum, though having attracted vast number of development teams to deploy applications on the platform, is far from being mature and productive:  
 
 - Limited in language features. 
 - Slow performance. The EVM is not really a modern virtual machine like JVM or V8 JavaScript engine. It’s an interpreter that parse the smart contract opcode and run the underlying supporting libraries.  The EVM is at least an order and slower than regular system programming languages. The total throughput of the blockchain is directly impacted by the slow performance of the virtual machine. There are many reasons that faster and mature virtual machines cannot be used in the current version of Ethereum.  A lot of efforts have been made in development to enhance the performance of the virtual machine.
-- Large attack surface. The general purpose computing power in the  current version of EVM has rendered itself vulnerable to many security breaches, as documented by Making Smart Contract Smarter[\[5\]][making-smart-contract-smarter]. It's very hard for relatively inexperienced programmers to get the Smart contract right. Considering the smart contract are handling millions of dollars of assets, customers take a huge risk in moving forward with a smart contract strategy.
+- Large attack surface. The general purpose computing power in the  current version of EVM has rendered itself vulnerable to many security breaches, as documented by Making Smart Contract Smarter<sup>[\[5\]][making-smart-contract-smarter]</sup>. It's very hard for relatively inexperienced programmers to get any smart contract beyond "Hello world!" right. Considering the smart contract are handling millions of dollars of assets, customers would take a huge risk in moving forward with a strategy centered on smart contracts.
 
 If we can draw some analogies between web application development and blockchain application development, smart contract is to blockchain development what CGI is to web app development. 
 
@@ -97,9 +100,6 @@ Our ultimate goal is to build the Internet of Assets. Its value proposition has 
  - an end-to-end privacy protection mechanism that may handle highly sensitive asset information for their customers.
  - a unique security model to reduce attack surface.
 
- <p align="middle">
- <img src="media/UDAP-Overview-en.png" alt="archi" style="width: 600px;"/>
- </p>
 
 
 ## 4. Value Proposition
@@ -772,11 +772,11 @@ A typical Internet application is composed of multiple user account which contai
 
 The state channels terms, those accounts are state channels. An application's state is the sum of each user/app state channels. 
 
-![](media/udap state channels.png)
+![](media/udap-state-channels.png)
 
 UDAP provides smart contract templates that are deployed, on demand, to the blockchain once a new user is registered with an application. These processes are managed by the UDAP nodes. App developers do not be concerned with the detail. The following diagram shows the relationships:
 
-![](media/udap state channel impl.png)
+![](media/udap-state-channel-impl.png)
 
 The channel service provides services in:
 * Receipt custody
@@ -895,7 +895,7 @@ The asset in state channels can be "upgraded" to be vertified by Ethereum, at a 
 
 The following diagram shows the concept of UDAP Wallet. 
 
-![](media/udap wallet.png)
+![](media/udap-wallet.png)
 
 General Assets Wallets are more than just the storage of assets, but are also very handy for supporting common operations on assets such as asset transfers, sales, trading, auctioning, cancellation and more.
 
