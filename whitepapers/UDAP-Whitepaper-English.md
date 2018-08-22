@@ -400,7 +400,7 @@ Transactions refers to any operation on the assets on the UDAP blockchain. For e
 
 #### 5.2. The Singular Asset Account Model
 
-UDAP has the vision that *every single thing in the world should have a unique account on the blockchain*.
+UDAP has the vision that **every single thing in the world should have a unique account on the blockchain**.
 
 UDAP improves the presentation of single non-fungible assets significantly. 
  
