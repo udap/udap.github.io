@@ -5,7 +5,9 @@ A White Paper
 Version 0.8
 
 UDAP Foundation
+
 Last updated: 8/20/2018
+
 Main contributors: Bing Ran<bran@udap.io>, Li Zhang<lzhang@udap.io>
 
 
