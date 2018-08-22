@@ -1,10 +1,14 @@
-Universal Decentralized Asset Protocol(UDAP) - Tokenizing Anything
+# Universal Decentralized Asset Protocol(UDAP) - Tokenizing Anything
 
 A White Paper
 
 Version 0.8
 
-**UDAP Foundation， 8/20/2018**
+UDAP Foundation
+Last updated: 8/20/2018
+Main contributors: Bing Ran<bran@udap.io>, Li Zhang<lzhang@udap.io>
+
+
 
 #### Revision Notes:
 
