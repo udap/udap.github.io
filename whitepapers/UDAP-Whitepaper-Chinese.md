@@ -13,6 +13,8 @@ Working Draft (Ver 0.7.3)
 
 [TOC]
 
+**注意**： 中文版本的白皮书经常性落后于英文版本的白皮书。 请参与最新版的[英文白皮书](https://github.com/udap/udap.github.io/blob/master/whitepapers/UDAP-Whitepaper-English.md) 
+
 ## Abstract
 
 区块链开发进入了“Tokenizing Anything”的时代：把所有物件和信息代币化和资产化。然而区块链的应用（广义的dApp）和区块链之间存在一个巨大复杂性的鸿沟，使得杀手级应用对开发者而言很难编写，对用户而言很难使用。

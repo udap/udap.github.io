@@ -1,26 +1,41 @@
-# Universal Decentralized Asset Protocol(UDAP)
-
+Universal Decentralized Asset Protocol(UDAP) - Tokenizing Anything
 A White Paper
 
-Version 0.7.3, Draft
+Version 0.8
 
-**UDAP Foundation， 5/27/2018**
+**UDAP Foundation， 8/20/2018**
 
+#### Revision Notes:
 
+- 8/20: updated architecture and some implementation details during the last few months of development.   There have been some significant changes and development in some of the most critical areas for UDAP to be successfully adapted *en mass* by projects that aspire to take advantage of blockchain technologies such as Ethereum and other highly visible public chains. As it has happened, some of the initial design in the white paper reflects some wishful thinking, which has turned out to be impractical for the immediate release of UDAP.  We believe what we present from this version is a lot more solid and concrete. 
 
 ## Executive Summary
+UDAP is a blockchain-based asset protocol that sits between applications and public blockchains to provide Restful APIs and an "Asset Wallet" for application developers to create powerful blockchain based applications, without writing any smart contracts. 
 
-UDAP is a blockchain-based asset protocol that provides Restful APIs and a Universal Asset Wallet for third party application developers to create powerful blockchain based applications.  These applications can efficiently and fluently manage crypto-token encoded real-world assets, without concerns of scalability, privacy and security.
+In what we call a "Asset Oriented Programming" model, app developers take advantage of the traditional Internet application architecture and use UDAP as a layer of
 
-UDAP uses a Multi-Chain architecture that supports both "Virtual Private Chains" and physical application zones, where each applications runs on its own private secure blockchain and storage, with user configured privacy level and blockchain nodes. UDAP uses both vertical sharding and horizontal sharding to achieve potentially millions of transactions per second. Massive parallelism is realized in the nodes where all the cores can process all the transactions in parallel. Multiple nodes form processing zones and zones form zone clusters to create enormous transaction processing power.
+1. asset tokenization;
+2. transaction notarization;
+3. contract adjudication in case of dispute.
 
-Multiple levels of encryptions and obfuscations are used to ensure the privacy of the assets registered on the chains.
+Technically UDAP provides multiple modules to speed up app development, such as:
 
-A Universal Asset Wallet is provided for application developers to create exciting applications directly in the wallet as plug-ins.
+1. **Tokenization service**, to manage the full life-cycle of asset-backed crypto-tokens. Applications can immediately register token-based assets on chain and offer built-in marketplace to their customers.
+2. **State channels service**, to allow applications to conduct transactions mostly offline and [secured by public blockchains](https://www.jeffcoleman.ca/state-channels/), such as Ethereum. 
+3. **Data obfuscation service**, to hide the ownership of assets, using *[Ring Signature](https://en.wikipedia.org/wiki/Ring_signature)* technology.
+4. **Secure content distribution** for digital content assets, using *[Proxy Re-Encryption](https://en.wikipedia.org/wiki/Proxy_re-encryption)* technology. 
+5. **Exchange service**, for decentralized asset trading, including app-currencies and asset tokens. 
+6. **Universal wallet** for versatile mobile user interface to deal with any token-backed assets that UDAP has helped to maintain. 
 
-Applications can immediately register token-based assets on chain and offer built-in marketplace to their customers. Applications can even create their own in-app currencies backed by blockchains and use them to build the in-app economy. The app-specific currencies can eventually be traded in the UDAP platform to offer substantial liquidity.
+UDAP implements state channel technology to solve some of the most challenging issues with developing and running Blockchain-based applications:
 
-UDAP is a middle-ware in blockchain era, which abstracts away the common public chains on the market today, such as Ethereuem, Cosmos and EOS and other advanced open ledger public chains coming in the future. The middleware layer for blockchains will act as a catalyst for blockchain-based killer applications.  
+1. **Scalability**: blockchains only can do that much of scalability because it needs to balance between factors of decentralized security, data liveness and finality.  Using blockchain blindly as a data store and generic computing platform would not scale. State channel technology treat blockchains as the dispute adjudication layer, or court system that usually is not involved in the minute-by-minute operations, but only plays its role when contracts need to be enforced and critical assets need to be secured. 
+2. **Cost**: blockchain transactions are expensive, many thousands times more expensive than centralized architectures. State channel allows transactions to run locally off blockchains, thus carries a cost model comparable to traditional Internet applications.   
+3. **Privacy**: data on public blockchains is public by definition and open to any curious eyes. Some applications may choose to keep the transactions in private unless the users choose to go to public blockchains for higher level of assurance and interoperability.  Even in the case of going to blockchain, UDAP provides technology to let users control the visibility of their assets. 
+4. **Responsiveness**:  dApps as most people have experience with are slow-paced and usually are an order of magnitude slower than the commercial Internet applications that people have been used to. State channels would enable blockchain supported applications to offer best possible UX together with unique features of decentralized ledgers.  
+
+To accomplish these promised, UDAP on the backstage provides a set of smart contract (initially based on Ethereum) templates that is configured by applications before deployment and at runtime.  We believe that the automatic templating system can cover 90% of regular application use cases. 
+
 
 ## Content
 
@@ -28,60 +43,48 @@ UDAP is a middle-ware in blockchain era, which abstracts away the common public 
 
 ## 1.  Background
 
-In the beginning, there was Bitcoin.
+There is this movement called "Tokenizing everything":
 
-Although touted as "digital cash", Bitcoin has been pushed to play pivotal roles beyond cryptocurrency.  Many projects have created protocols on top of Bitcoin to facilitate the exchange of general assets. Omni Layer(formly Mastercoin)<sup>[\[1\]][omni-layer]</sup>Counterparty<sup>[\[2\]][counterparty]</sup>Prism<sup>[\[3\]][prism]</sup>
-
-But because Bitcoin was first and foremost designed to work as a fungible currency, adopting it beyond as such has proved to be clunky and limited.
-
-Ethereum (the E, for short reference) has emerged from the crowd to reach its inventor’s destiny, initially as “programmable money”, then as a general blockchain based “world computer” usable for financial and non-financial applications. A general-purposed smart contract architecture peforms well to building a variety of on-chain applications to fulfill blockchain’s promise of being the backbone of the "Internet of Values".
-
-But the most challenging issue posed to Ethereum is how to represent the "values". For the moment, like almost all the other open ledger platforms, Ethereum is exclusively handling digital currency transfers, as Buterin put in one of his podcast in early 2018:
-
-"The very first vision was basically a general purpose platform for financial contracts. If X happens then send $5 to account Y, if Z happens send $5 to account B. That was basically what I thought Ethereum would be for"<sup>[\[4\]][vitalik-buterin]</sup>
-
-Ethereuem’s model of "value" is primitive. In the basic model, for any kind of value/asset the only attribute associated with this asset is the balance of it, a number. This simplified model probably will fit financial transactions well, but it appears inadequate dealing with variety of asset types in the real world economy.
-
-The three-year-old smart contract implementation in Ethereum, though having attracted thousands of development teams to deploy applications, mostly in Solidity, on the platform, is far from being mature and productive to becoming the world computer:  It is 
-    - Limited in features and functions. For instances, Limited parameter types.
-    - Lack advanced language features that JavaScript, Python, or Java can offer.
-    - Primitive in collection processing and manipulations.
-    - Slow performance. The EVM is not really a modern virtual machine like JVM or V8 JavaScript engine. It’s an interpreter that parse the smart contract opcode and run the underlying supporting libraries.  The EVM is at least an order and slower than regular system programming languages. The total throughput of the blockchain is directly impacted by the slow performance of the virtual machine. There are many reasons that faster and mature virtual machines cannot be used in the current version of Ethereum.  A lot of efforts have been made in development to enhance the performance of the virtual machine.
-    - The general purpose computing power in the  current version of EVM, on the other hand, has rendered itself vulnerable to many security breaches, as documented by Making Smart Contract Smarter<sup>[\[5\]][making-smart-contract-smarter]</sup>. It's very hard for relatively inexperienced programmers to get the Smart contract right. Considering the smart contract are handling millions of dollars of assets, customers take a huge risk in moving forward with a smart contract strategy.
-- Smart contract makes
-
-If we can draw some analogies between web application development and blockchain application development, smart contract is to blockchain development what CGI is to web app development. It’s rather young.
-
-The limitations of the current mainstream Smart contract platforms have become a serious impediment to people's ever-growing interest in tokenization of everything.
-Tokenization has become the symbol of The new economy, short named as token economy. In this new economy enabled by block team technologies, every bit of value is represented by a crypto-graphical token. With the security feature enabled by blockchain technologies, tokens have basically transformed the asset we deal with every day into capital, characterized by its high liquidity. Tokens make the assets owners to realize the economic returns than those assets are capable of, in the meantime, tokens will make people who are in need of capital to obtain the capital in a most feasible way. Tokens are basically the gasoline of the new economy. If there is one thing that will happen in the next few year for the Internet industry, this "one thing" is to "tokenize everything".
-
-
-- Crypto tokens represent (or be pegged to) shares of right, access to services, voting power, real world financial assets, etc.
-- Tokens serve as accounting units in bookkeeping and payments.
-- Tokens eliminate the requirement of intermediaries in many trading scenarios thus simplify and expedite the trading process at very low cost. Fungible tokens are very easy to trade en mass, while none-fungible tokens can help to track the asset flow in an economy and to help people understand the dynamics of the economy.
-- In short, crypto-tokens are the private money for applications.
+* Crypto tokens represent (or be pegged to) shares of right, access to services, voting power, real world financial assets, etc.
+* Tokens serve as accounting units in bookkeeping and payments.
+* Tokens eliminate the requirement of intermediaries in many trading scenarios thus simplify and expedite the trading process at very low cost. Fungible tokens are very easy to trade *en mass*, while none-fungible tokens can help to track the asset flow in an economy and to help people understand the dynamics of the economy.
+* In short, crypto-tokens are the private money for applications.
 
 Tokens have been used in crowdfunding a new wave of innovative applications based on blockchain and related technologies. It has disrupted the startup model based on VC funding.  On one side startups can receive funding much earlier in their product development. On the other side, everyone can invest in projects they believe in and gain the potential for investment return which used to belong to the privilege of so called "accredited investors".
 
-Tokens are the tickets to the next Internet banquet.
+Tokens are the tickets to the next wave innovations.
 
-UDAP is designed to support tokenizing everything movement natively, in the low-level storage model and communications. We are shifting away from the lump sum description of values into individually identifying each items in the physical world and in virtual world alike. On top of the identifications, we are going to beauty brand-new user experience to deal with their personal properties intuitively, to sell them, to trade them, to pledge them for capital, to lead them to friends, or to give them away. In the back, UDAP is a protocol for any third parties to port their existing applications easily and quickly to open ledger technologies and a decentralized storage Technologies. From the back end to the user experience end, UDAP has been designed to as a enabling technology to fulfill the promise of the Internet of values.
+In the beginning, there was Bitcoin.
 
-Blockchain technology is nicknamed the Internet of the moment
-However, when we look closely at the carrier of value transfer currently carried by the blockchain, 99% of the applications are actually limited to the best liquidity and the most easily solved type of asset, which is cryptocurrency.
-So the current blockchain is more accurately "The Internet of Money"<sup>[\[6\]][the-internet-of-money]</sup>
+Initially it was touted as "digital cash", and is still is, Bitcoin has also been pushed to play pivotal roles beyond cryptocurrency.  Many projects have created protocols on top of Bitcoin to facilitate the exchange of general assets. Omni Layer(formly Mastercoin)[\[1\]][omni-layer]Counterparty[\[2\]][counterparty]Prism[\[3\]][prism]
 
-But our neighborhood faces massive, palpable and non-palpable assets. Are these good blockchain, or related decentralized, bookkeeping techniques, good value, discovery, value recognition, and value transfer? There is no doubt that the answer is yes. There have been quite a few blockchain-based technologies that are attempting to address real-world non-monetary assets and how to decentralize their networks in recognition of the exchange of recognition. However, we find these protocol offerings and platforms based on the existing blockchain, the second-level structure based on currency transfers. Around 2014, when Bitcoin technology was recognized by the majority, many projects proposed the notion of a colored currency, one that is grafted onto the currency of permutable value - Unique identification technology that allows us to use currency symbols to represent real-life accessible and non-accessible assets.
+But adopting Bitcoin beyond crypto-currency has proved to be clunky and limited because it was first and foremost designed to work as a fungible currency system. 
 
+Ethereum has emerged from the crowd to reach its inventor’s destiny, initially as “programmable money”, then as a general blockchain based “world computer” usable for financial and non-financial applications. A general-purposed smart contract architecture allows a variety of on-chain applications to fulfill blockchain’s promise of being the backbone of the "Internet of Values".
+
+The most challenging issue posed to Ethereum is how to represent the "values", however. As of today, like almost all the other open ledger platforms, Ethereum is most about handling digital currency transfers, as Buterin put in one of his podcast in early 2018:
+
+"The very first vision was basically a general purpose platform for financial contracts. If X happens then send $5 to account Y, if Z happens send $5 to account B. That was basically what I thought Ethereum would be for"[\[4\]][vitalik-buterin]
+
+Ethereum’s model of "asset" is primitive. In the basic model, for any kind of value/asset the only attribute associated with this asset is the balance of it, a number. This simplified model probably will fit financial transactions well, but it appears inadequate dealing with variety of asset types in the real world economy. In spite of the effort of standardizing non-fungibles, such as ERC721 and derivatives, we still huge room for improvement that UDAP can contribute. 
+
+The three-year-old smart contract implementation in Ethereum, though having attracted vast number of development teams to deploy applications on the platform, is far from being mature and productive to becoming the world computer:  
+
+- Limited in language features. 
+- Slow performance. The EVM is not really a modern virtual machine like JVM or V8 JavaScript engine. It’s an interpreter that parse the smart contract opcode and run the underlying supporting libraries.  The EVM is at least an order and slower than regular system programming languages. The total throughput of the blockchain is directly impacted by the slow performance of the virtual machine. There are many reasons that faster and mature virtual machines cannot be used in the current version of Ethereum.  A lot of efforts have been made in development to enhance the performance of the virtual machine.
+- Large attack surface. The general purpose computing power in the  current version of EVM has rendered itself vulnerable to many security breaches, as documented by Making Smart Contract Smarter[\[5\]][making-smart-contract-smarter]. It's very hard for relatively inexperienced programmers to get the Smart contract right. Considering the smart contract are handling millions of dollars of assets, customers take a huge risk in moving forward with a smart contract strategy.
+
+If we can draw some analogies between web application development and blockchain application development, smart contract is to blockchain development what CGI is to web app development. 
+
+Everything is rather young.
 
 ## 2. The Goals
 
-
 Our ultimate goal is to build the Internet of Assets. Its value proposition has a clear boundary, and includes the following concrete deliverables:
 
-1)  Develop an asset protocol through understanding the "assets" in our world from a blockchain perspective, and create abstraction of the general behaviors of assets; Define convenient APIs for traditional vertical applications to integrate with blockchains, which would not require application developers to have a deep understanding of blockchain and decentralized technologies.
+1)  Develop an asset protocol through understanding the "assets" in our world from a blockchain perspective, and create abstraction of the general behaviors of assets; Define convenient APIs for traditional vertical applications to integrate with blockchains, which would not require application developers to have a deep understanding of blockchain and decentralization technologies.
 
-2)  Provide a reference implementation of UDAP protocol, and deploy a permissionless asset blockchain so that app vendors can catch the express train of decentralized computing and decentralized storage without changing the existing application architecture. We abstract the most central part of decentralized computing, decentralized storage technology and decentralized messaging mechanism into a concise and effective API. Considering that the decentralized computing and storage technologies are still in an immature phase and are in a period of rapid growth, we believe such technology platforms will bring tremendous value to third-party application developers.
+2)  Provide a reference implementation of UDAP protocol, on top of Ethereum initially. We abstract the most central part of decentralized computing, decentralized storage technology and decentralized messaging mechanism into a concise and effective API. 
 
 3) Implement a Universal Asset Wallet(UAW) for end-users. The UAW will capture the most useful interaction patterns with assets that allows users to store, copy, transfer, sell/buy, and trade a variety of assets deposit from third party applications in one place. Such a design for third-party application development, in fact, is a very favorable news, because the third-party platforms can focus on the current core business logic without having to figure out how to build their own assets blockchain and user Interaction.
 
@@ -93,80 +96,40 @@ Our ultimate goal is to build the Internet of Assets. Its value proposition has 
  - a highly scalable architecture that allows for linear scalability and supports thousands of applications and near one-second response with finality, with a total throughput of 10k~100k TPS.
  - an end-to-end privacy protection mechanism that may handle highly sensitive asset information for their customers.
  - a unique security model to reduce attack surface.
- - a multi-chain architecture with inter-blockchain communication support that bridges permissioned blockchains and public blockchains.
 
  <p align="middle">
  <img src="media/UDAP-Overview-en.png" alt="archi" style="width: 600px;"/>
  </p>
 
-## 3.  Design Principles
-
-
-The basic idea of UDAP is to build a "thick protocol layer," supporting "Thick Protocol + Thin Application" pattern generally formed from blockchain application development practices.
-
-The main concern at the application level is the interaction with the particular vertical customer base. Many of the common asset disposal aspects are handled by the universal wallet. One of the visions of UDAP is that application developers need only have enough knowledge and understanding of their vertical industry, then based on our thick protocol layer they can quickly develop the features asked by their customers, thus they would take the shortest time to the market.
-
-In comparison to Ethereum, which is our starting point, the biggest difference between UDAP design philosophy and Ethereum’s is about "Features." Vitalik Buterin believes that one of Ethereum's design ideas is that Ethereum is a "Feature-less" computing platform.
-
-**We Have No Features**: as a corollary to generalization, we often
-refuse to build in even very common high-level use cases as intrinsic
-parts of the protocol, with the understanding that if people really want
-to do it they can always create a sub-protocol (e.g., ether-backed
-subcurrency, bitcoin/litecoin/dogecoin sidechain, etc) inside of a
-contract. <sup>[\[7\]][design-rationale]</sup>
-
-
-Ethereum clearly has the main goal of building a blockchain platform for general financial computing. Any high-level abstraction is pushed up to user-defined smart contracts. The rational and restrained approach is agreeable, but it is not the "Asset Internet" protocol we have conceived and the direction we sought to pursue. Smart contracts offer dApp developers relatively great flexibility because of their "Turing Complete" computing power, but they also bear obvious technical obstacles and real risks. Although Smart Contract "Turing Complete", but provide programming ability is still very limited, for ordinary application developers have a lot of "holes" they need to patch. In the meantime, because of all the code being exposed, user-defined smart contracts have exposed a large attack surface, as evidenced by several incidents that have caused serious economic losses in the past two years in Ethereum based dApps. Bitcoin networks have very limited smart contract capabilities. However, many loyal fans of Bitcoin networks see the limited design as a very good way to prevent bitcoin networks from being subjected to attacks. A very important indicator of the bitcoin network robustness is that bitcoin networks have endured countless attacks for the last eight yeas, yet essentially no major failure has happened in the protocol level.
-
-
-"Asset Internet" is not a universal computing platform by design, but a platform that handles general assets encoded and protected by blockchain technology. It is a "Featured Chain." From a protocol perspective, it is a thicker and more specialized protocol that natively supports the tokenization of assets and general asset behavior such as storage, transfer, trading, sales, etc. We are delivering a robust, secure, and high-performing asset management and trading platform for everyone. We will not be supporting custom smart contracts (or at least not exposing the capabilities of smart contracts to end users), for safety and performance reasons.
-
-
-
-We think this "Thick Protocol + Thin Application" model will be the core architecture model for blockchain applications and will greatly boost the new applications of blockchain and Internet in general. This model is technically innovative and value-conscious, allowing the value of the Internet to sink from the application layer to the protocol layer, turning the protocol layer into a cross-application big data repository. The result is that the protocol layer becomes more strategic and investment value.
-
-<p align="middle">
-<img src="media/image2.png" alt="Value Distribution" style="width: 600px;"/>
-</p>
-
-UDAP offers a selected set of features that simplify blockchain application development, without sacrificing performance and security. Particularly UDAP offers API in the following area:
-
-- Identity Management: multi-personal identities are supported.
-- Multiple Signatures are used across all major functions, so proper authorization can be set up to authenticate users to interact with asset in a secure way. Multi-Sig can be applied to identity management, asset registration and asset transfers.
-- UDAP offers a set of rich abstractions of asset operations, including transfers, sell/buy, and trading.
-- The Universal Asset Wallet is considered a significant part of UDAP package. It would offer generalized asset operations across applications such that the third party apps do not have to implement the common user interactions. In the meantime, it would also offer a pluggable architecture such that asset interactions can be customized and enhanced if the apps choose to do so.
-- UDAP offers asset market and exchange API and implementation in the wallet. Once registered, assets can acquire liquidity immediately without relying on other space to provide liquidity.
-- UDAP does not provide built-in people and assets identifications that are detached from applications. All logics are defined by applications. Even those that look like built-in features are actually applications that are built on the UDAP API.
-- Sovereignty for each application.
-
-
 
 ## 4. Value Proposition
 
-<!-- -->
+For app developers:
 
-1)  Unbreakable database capabilities brought by blockchain. This kind of database capability is what the traditional database system was dreaming of in the past and could be very expensive to set up and manage, as it entails very complex database synchronization, backup, disaster recovery, and other key technologies. In the past, these capabilities require the attention of senior DBAs and network engineers to get it right.
+1) Great decentralized features without investing heavily in underlying technologies.  
+2) Fast, cheap and secure integration with public blockchains, without specific lock-in. 
+3) Great user experience with the UDAP wallet. 
+4) App-economy with in-app currency and asset tokenization and trading capability.
 
-2) Easier integration solutions for business partners. The second type of value is captured when the application of the blockchain is not limited to the users within its walled domain. Blockchain technology provides a secure, open ledger system that naturally applies to the upstream and downstream integration in business partners in an industry. The integration of upstream and downstream data in a vertical supply chain is a continuing technical challenge in the traditional applications. Integration solutions in the upstream and downstream process, due to the lack of trust between each other, or a more complex commercial agreement and a third party that both trust, or a leadership, are often outdated and have a high cost. Now the blockchain technology offers the ability to act as the trusted party.
+For public chain vendors:
 
-3) Support of “Token Economy”. Formalized by smart contract mechanism, tokenization becomes possible . Tokens can be used in in-app marketing, incentives, payment, and new models of distribution of benefits. However, using Ethereum's standard means of setting up your own economic currency requires the ability to program smarter contracts or hire a consulting team to do the job. UDAP enables users to distribute tokens that can be used in their economy simply by configuring a few standardized parameters. These values represented by the tokens immediately show up in the universal asset wallet we offer. Not only that, the UAW themselves provide the ability as a Decentralized Exchange that enables the trading of custom-issued assets. The immediate liquidity offered by UDAP and the Universal Asset Wallet greatly empower the applications.
+1) Great tool to attract developers to build new applications.
+2) Easier integration with "legacy" Internet applications. 
+3) Less burden in supporting developers. 
 
-4) Buffering and performance improvements. The Ethereum network is now capable of handling millions of applications a day, but this ability is still far behind that of traditional centralized applications such as VISA and SWIFT. Performance problems will be gradually resolved in the next 2-3 years<sup>[\[8\]][ethereum-scalability-research-development-subsidy-programs]</sup>. For third-party applications that require high-throughput today, UDAP will provide this ability.
-
-5) Identity management. Blockchain technology is based on the modern cryptography and, to a large extent, provides new security standards for third-party applications. It requires that all users behave in a secure manner. Each user, after their authentication, signs their own behavior with their own keys and assumes the corresponding responsibilities. Managing digital identity is itself a relatively complex process that requires a set of programming methodologies. Our asset management agreement brings a simple but effective package of identity management tools. Third-party applications use this third-party application based on guaranteed security to fully enjoy the convenience provided by blockchain encryption. Identity management, the identity of third-party in-app users, is often only relevant in the context of their own applications in the past world. After entering the blockchain event, the asset behavior of all users must be bound to one or more accounts in the blockchain.
-
-6)  Privacy. Asset Protocol will provide encryption for all types of assets managed by third party users. Users have complete control over the storage of their assets in the network and the information they control over their assets is open to specific populations or applications only. Users can control their own asset transfer path, leaving it open, or completely private. Users and applications within each application are completely isolated from each other to ensure the privacy of users and their assets. Our universal asset wallet can import multiple third-party applications, each configured with a separated account.
-
-7) Workflow support. UDAP has built-in support of multi-sig signing flow. Key asset actions, such as the transfer of assets, the exchange of assets and the sale of assets, often require the protection of multiple signatures. Applications can be very easy to set the key action signature protection, strategy and rules. Once a protected action is discovered or invoked, the user's generic asset wallet automatically prompts the user for the signature. In my own wallet, I can sign, or refuse, the processing of assets by multiple signatures of other people in real time. This type of workflow can be done not just between individual users holding Universal Asset Wallets, but also between the third-party application's interface and the Advocate Universal Wallets. This type of multipoint communication and communication is supported by the underlying P2P-based messaging protocol on the asset network.
-
-8) Immediate liquidity. The protocol and implementation will provide the ability to trade similar assets and cross-border assets, especially to provide and mature cryptocurrency trading.
-
-<!-- -->
 
 ## 5.  Asset Protocol
 A protocol is a specification of and a normative guide to the exchange and communication of information between and within systems. UDAP's asset protocol regulates how asset are presented, stored, communicated and interacted on the blockchain, how authenticity of assets is verified, and how consensus is reached.
 
-#### 5.1.  On-Chain Asset Model
+The following diagram demonstrates how an application is integrated with Ethereum through UDAP. 
+
+![](media/udap-integration.png)
+
+In the middle of the diagram is the UDAP layer, which offers asset model implemented in prebuilt contracts. On top of that it offers token servie and state channels for managing application assets efficiently and securely at low cost.  
+
+We start with the asset account model. We present two lines of asset models, based on ERC721 and Udap Singular respectively.
+
+#### 5.1.  On-Chain Asset Model, based on ERC721
 
 Traditional ERP systems have established their asset models based on centralized storage and computation. The asset model is an abstraction of the assets created by their issuers, which governs how the systems manage the attributes, operations, and security of assets. Unlike traditional ERPs, UDAP's asset model focuses on an on-chain standardization of the description, interaction, security, privacy, and authenticity of assets.
 
@@ -436,16 +399,310 @@ Identity refers to the user's personal or social information, for example, ID ca
 
 Transactions refers to any operation on the assets on the UDAP blockchain. For example, issuance, exchange, ownership change, minting, recasting, pledge, approval and so on are all transactions. When a user initiates a transaction on the UDAP blockchain, the UDAP generates relevant events and broadcasts to relevant listeners, who are responsible for processing the transaction.
 
-#### 5.2.  Asset Services
+#### 5.2. The Singular Asset Account Model
+
+UDAP has the vision that *every single thing in the world should have a unique account on the blockchain*.
+
+UDAP improves the presentation of single non-fungible assets significantly. 
+ 
+The "tokenizing everything" movement essentially deals with so called "Non-Fungible" asset tokens. There have been some work done in Ethereum to standardize the representation of such assets. The one that has got most attention is [ERC 721](http://erc721.org/).
+
+ERC721 has gained mild success in adoption, mainly for categorized none-fungible assets such as virtual assets in gaming.  In fact some of the underlying asset manage capability of UDAP middle layer will be based on ERC721 or its derivatives. 
+
+ERC721 has a few issues and limitations:
+
+1. It’s a collection first all, with each element bearing an uint256 ID. There is no concrete object for each of the element.  It’s up to the implementation to maintain a separate data structure to materialize the otherwise a simple number. The token in ERC721 does not have a home. It's just an index into a hashmap. We’d say ERC721 is very weak in expressing an element of token.  
+2. The addressing of elements is composed of  Therefore the absolute address for a specific token is something like: `{ethereum network id}.{contract address}.{token id}.` We think it can be shorter. 
+3. The API looks complicated since most of the API functions deal with a single token, and the ID of the token has to be specified each time the API is invoked, such as:
+
+```
+balanceOf(address _owner);
+ownerOf(uint256 _tokenId);
+safeTransferFrom(address _from, address _to, uint256 _tokenId, bytes data);
+safeTransferFrom(address _from, address _to, uint256 _tokenId);
+transferFrom(address _from, address _to, uint256 _tokenId);
+approve(address _approved, uint256 _tokenId);
+setApprovalForAll(address _operator, bool _approved);
+isApprovedForAll(address _owner, address _operator);
+```
+
+4. It offers no api to find out all the tokens owned by a specific person. A separate indexing service is required for enumerating a person’s asset. 
+5. And all the variants of `transferFrom(...)`s require a handy manual to remind developers of there meanings and nuances.  
+6. It tried to be ERC20 compatible, but semantically some of the ERC20 functions do not carry the same meaning for none-fungibles, such as:
+
+```
+balanceOf(...)
+approve(...)
+transferFrom(...)
+```
+
+6. It does not allow setting operator on individual item. It has to be all or none, therefore lacking fine control of delegated ownership. In fact adding the operator feature to the protocol has made it unnecessarily bloated. It should separate the concerns.  
+7. It has to deal with receivers of either EOA type or contract type.  Although the contract receiver may reject the ownership transfer, EOAs do not have such options. 
+8. No natural type safely for element tokens.  Since each element is just an index number, there is no type information about it directly.  A separate array list must be maintained to keep  type information.  Working with the multiple arrays are awkward. 
+
+##### Goals of Singular
+
+In UDAP we are proposing a new account model specifically to represent a single unique asset in a very expressive way. We want to achieve these goals when designing the model:
+
+1. Dealing with single asset token is very intuitive. 
+2. The API must be clean, simple without ambiguity.
+3. There should be strong type safety. 
+4. Properties of the token can be made as static as possible. 
+5. Wallet API should be made very simple.
+6. It should support using an operator to control the ownership transfer on the real owner’s behalf. 
+7. It should support a time-lock mechanism that offer a guarantee of ownership to the receiver within a defined period of time. 
+8. It should support simple atomic token swap between two tokens owned by different accounts. 
+9. The token should work with state channel mechanisms, which is very important for scalable applications.
+
+##### Designs
+
+We call our basic asset contract `Singular` and the design decisions are:
+
+1. A piece of asset is uniquely associated with a smart contract account. As a result, the full token identification is the account address, such as `/eth-chain-id/0xa1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1`. The account is the **home** for the asset. People can easily scan the information about this token thru public services like [Etherscan](http://etherscan.io/).
+2. The owner of the `Singular` token must be another smart contract account, named `OwnerOfSingulars`. There is no direct way for EOAs to own `Singular` tokens. This design largely conforms to Ethereum’s [account abstraction model](https://github.com/ethereum/EIPs/issues/859) that will be deployed in a future version of Ethereum. 
+3. It should support `push` ownership transfer and `pull` ownership transfer patterns. In so called one-step transfer, the current owner can pass an offer of the token ownership to the receiver account and the receiver account can choose to accept or reject the offer *in the same transaction*. In a two-step ownership transfer, however, the current owner reserves the token for the next owner in a transaction. The address of the token is passed to the receiver out-of-band. The receiver issues a separate transaction to accept the offer, once it determines that the offer is in its interest. 
+4. Operators. The `OwnerOfSingulars` account can assign operators to help with ownership transfers. Having an operator to manage the asset token on the owner’s behalf is a pattern that has been accepted by some other proposals, such as ERC721 and ERC777.  People have found it convenient in handling token trading. The current token owner can appoint an operator for the *next* ownership change. But setting the operators on the token directly is polluting the token interface. 
+5. Timelock. When an owner make an offer of ownership to someone else by calling the `approveReceiver()` function, there is a required argument for expiry time, during which period the receiver can take the ownership at will by invoking `accept(...)`on the token, which will in turn send a notification to the previous owner for it to any state update it wants, or even chain to another action. A critical design is that the owner cannot change his mind during the offer period. This is essentially a time-lock for the transaction. In contrast, neither ERC20 nor ERC721 or any of their derivatives offers built-in time-locks for ownership trading. 
+6. A feature is under consideration to provide for fast token swap between two accounts with a hashlock:
+
+```
+// offer from Alice: 
+    AliceToken.offerToSwap(BobToken, hashLock);
+// Bob takes offer:
+    BobToken.swap(AliceToken, hashLock);
+```
+
+Here is the interface definition for Singular:
+
+```
+pragma solidity ^0.4.24;
+import "./OwnerOfSingulars.sol";
+interface Singular {
+    /**
+     * When the current owner has approved someone else as the next owner, subject
+     * to acceptance or rejection. 
+     */
+    event Approved(address from, address to, uint expiry);
+    /**
+     * the ownership has been successfully transfered from A to B.
+     */
+    event Transferred(address from, address to, uint when, bytes32 note);
+
+    /** 
+     * get the current owner
+     */
+    function currentOwner() view external returns (OwnerOfSingulars);
+    
+    /**
+     * There can only be one approved receiver at a given time. This receiver cannot
+     * be changed before the expiry time.
+     * Can only be called by the token owner (in the form of OwnerOfSingulars account or 
+     * the naked account address associated with the current owner) or an approved operator.
+     * @param to address to be approved for the given token ID
+     * @param expiry the deadline for the receiver to the take the ownership
+     * @param reason the reason for the transfer
+     */
+    function approveReceiver(OwnerOfSingulars to, uint expiry, bytes32 reason) external;
+
+    /**
+     * The approved account takes the ownership of this token. The caller must have
+     * been set as the next owner of this token previously in a call by the current 
+     * owner to the approve() function. The expiry time must be in the future
+     * as of now. This function MUST call the sent() method on the original owner. 
+     */
+    function accept() external;
+  
+    /**
+     * reject an offer. Must be called by the approved next owner(from the address 
+     * of the OwnerOfSingulars or OwnerOfSingulars.ownerAddress()). 
+     */
+    function reject() external;
+  
+    /**
+     * to send this token synchronously to an AssetOwner. It must call approveReceiver
+     * first and invoke the "offer" function on the other AssetOwner. Setting the
+     * current owner directly is not allowed.
+     */ 
+    function sendTo(OwnerOfSingulars to, bytes32 reason) external;
+  
+
+/// ownership history enumeration
+
+    /**
+     * To get the number of ownership changes of this token. 
+     * @return the number of ownership records. The first record is the token genesis
+     * record. 
+     */
+    function numOfTransfers() view external returns (uint256);
+    /**
+     * To get a specific transfer record in the format defined by implementation.
+     * @param index the index of the inquired record. It must in the range of 
+     * [0, numberOfTransfers())
+     */
+    function getTransferAt(uint256 index) view external returns(string);
+    
+    /**
+     * get all the transfer records in a serialized form that is defined by 
+     * implementation.
+     */
+    function getTransferHistory() view external returns (string);
+
+}
+
+```
+The following is the interface definition for the `OwnerOfSingulars`
+
+```
+pragma solidity ^0.4.24;
+
+import "./Singular.sol";
+
+/**
+ * A contract that binds an address (EOA/SC) to a list of Singular tokens. The 
+ * owner account may not have the ability to handle the Singular tokens directly, 
+ * thus they can take advantage of this contract to achieve the effect. 
+ * 
+ * All the tokens MUST have this account as the owner of them. It's up to the implemntation
+ * to ensure the synchronization. 
+ * 
+ * The majority of token ownership management takes place in the `Singular` token. 
+ * 
+ * 
+ */
+interface OwnerOfSingulars {
+
+    /**
+     * get the owner address. 
+     */
+    function ownerAddress() view external returns(address);
+    
+    /**
+     * to find out if an address is an authorized operator for the Singular token's 
+     * ownership.
+     */
+    function isAuthorized(address, Singular) view external returns(bool);
+    
+    /** 
+     * @dev invoked by Singular.accept() to notify the ownership change has completed.
+     * The previous owner should remove the asset for the asset list to synchronize
+     * the ownership relation with the token. 
+     * @param token the token that has been sent to a receiver, which MUST be the 
+     * current owner of this token.
+     */
+    function sent(Singular token) external returns(bool);
+
+    /**
+     * @dev to receive a token that has been assigned to the receiver as the next owner. 
+     * The receiver must decide to take it or not. If this account decides to accept 
+     * the offer, it MUST call the `accept()` on the token and return `true` If this account will not 
+     * accept the offer, it can ignore the offer by returning `false`;
+     */
+    function offer(Singular token, string note) external returns(bool);
+
+/// enueration of the owned tokens    
+    /**
+     * retrieve all the Singular tokens
+     */
+    function getAllTokens() view external returns(Singular[]);
+     
+    /**
+     * get the number of owned tokens
+     */
+    function numOfTokens() view external returns(uint256);
+
+    /**
+     * get the token at a specific index.
+     */
+    function getTokenAt(uint256 idx) view external returns(Singular);
+ 
+}
+```
+As mentioned before, we don't want to squeeze all convenient things into the token API and make it bloated.
+
+The operator management is such a case. The `OwnerOfSingulars::isAuthorized(address, Singular)` is a function that a `Singular` can invoke to find out if the current message sender is authorized to act on behalf of the token owner. The API give great flexibility to create sophisticated permission schemes. 
+
+The following diagram shows how the ownership can chain mutiple contract together to form an ownership chain:
+
+![ownership](media/singular-ownership.png)
+ 
+The owner of the `OwnerOfSingular` can be an EOA, or any smart contracts such as a multi-sig wallet. Flexibility is all there for creative delegation schemes. 
+
+Another interesting way to use the above interfaces is to combine the two interfaces to create a *composable* token, as shown below:
+
+![ownership](media/singular-composable.jpg)
+
+This pattern can be used to create a tree of objects that are organized by the ownerships. 
+
+*Inter-operability with ERC721*: With some twicking, Singular can become an element of ERC721 container. Conversely, a Singular can be used to wrap an ERC721 token. More detail to be added here.  
+
+*Wallet*: the `OwnerOfSingular` is just such as convenient place for implementing the backend of a UDAP wallet. Since all the assets are directly enumerable from this account, the API is vastly simpler than any other wallet API. 
+
+
+##### Security Analysis
+
+Some Convenient Assumptions:  
+
+- UDAP applications users do NOT control the source code of the smart contracts. 
+- All the smart contracts are created and managed by UDAP operators.
+- All the smart contract code will be fully open-sourced and audited before being used in production.   
+
+Smart  contracts in general can malfunction or can be attacked by numerous ways. 
+
+1. Most of the attacks come from inter-contract invocations, because most of the contracts do not come from a single source and may contain malicious code in the worse case or unintended side-effects.  The most problematic pattern is synchronous invocations between untrusted contracts. The untrusted contracts may not do what they are documented to do; They may not follow the exception handling logic that invokers have expected of; They sometimes can call back to the same function that they’re invoked from and cause reentrancy race-conditions. The time-order may be messed up in an indeterministic way. They may call out to other malicious code and the impact would come up to the topmost layer in the calling stack.  
+
+2. If coded carelessly, some contracts can go into the state of being dead-locked or live-locked, resulting in the fund or asset being locked up forever. 
+3. Integer overflow or underflow can happen and proper checks must be in place to prevent that. 
+4. Blind type conversions/coercions may turn disastrous. 
+5. Gas fee can be exhausted if multiple synchronous invocations are chained together. 
+6. Funds or tokens may be sent to invalid recipients and get lost forever. 
+
+It’s usually suggested that applications favor the `pull`  model against `push` model to avoid calling into untrusted code. In the `pull` model, transaction initiators set up proper conditions in the contract under his control in one transaction. The transaction counter-party would call into the same contract to retrieve or update some state in a separate transaction. They usually communicate offline to agree on the order of actions.  The downside of `pull` model is it requires two separate transactions and usually requires the attentions of application users by communicating offline.  The `pull` model is basically an asynchronous model that offer better safety but requires more complicated setup. 
+
+In the `push` model, on the contrary,  the transaction initiator call out to smart contracts not under his control and probably under the counter-party’s control to complete transactions in one-step. This is a synchronous model that offers faster transaction rate and lower transaction fees, at higher risk of attack.  
+
+Smart contracts can’t truly be trusted unless their source code is available. Just as we would inspect them line by line in real-world (meaning untrusted) business transactions, applications must meticulously inspect target smart contracts before invoking any functions on them. Unfortunately there is no standard introspections for Ethereum implementation of smart contract as of now.  We’ll need to acquire the source code (the contract documents in real world transactions) from the third parties and use the same compiler and compiler settings to generate the bytecode to compare it with the online versions. We wish that Ethereum would standardize on some mechanism for contract verification, but until that happens, we’ll have to follow some tedious steps of code verification. 
+
+Aware of most of the vulnerabilities, UDAP has intentionally separated the applications from coding any smart contracts directly.  UDAP provides a suite of standard smart contract templates that can be configured when the applications are registered with UDAP. There are limited number of ways that those templates can be customized and all of them have been carefully designed and tested. By doing this we can eliminate most of the malicious code attacks arisen from untrusted code, and in the meantime implement the most clean and efficient transaction patterns in the simplest API. 
+
+Take the synchronous `Singular::sendTo()` for an example.  The intentions of this function is to change the owner of a Singular token in one-step. When the function returns the transfer must have been completed.  A naive implementation of this function might have been changing the owner state variable directly be done with it.  In fact the [Ownable](https://github.com/OpenZeppelin/openzeppelin-solidity/blob/master/contracts/ownership/Ownable.sol) interface in the Open-zepplin library gives no other options than this.  There are two issues with this simple but crude approach:
+1. No respect to the recipient.  Sending tokens to receivers is like sending emails to other accounts. Most of the traffic of the current email system are attributable to spamming.  Tokens, like messages, can be of no value to some accounts. Sometimes owning something objectionable might be a liability. 
+2. The receiving address may be invalid, resulting in permanent token loss. 
+
+UDAP has designed the `Singular` to adapt to both *push* and *pull* token transfer patterns. The core is the asynchronous  `offer/accept` pattern, which is an interactive process:
+1. The sender makes an offer to transfer the ownership of a token to a receiver with `approveReceiver` on the `Singular` token, with a *timed lock*.  The time lock is an 
+2. The receiver, after leaning the above fact, will verify the content of the contract and the check the current state, such the current owner, the intended recipient and expiry date. More often than not, the recipient will also check the metadata associated with token before taking any further action on the offer. Once everything looks good, the recipient issues `accept()` on the `Singular`to complete the transaction. 
+
+The followin diagram shows how to transfer a token in a synchronous `push` model:
+![push model of token transfer](media/singular-sendto.png)
+
+The followin diagram shows how to transfer a token in an asynchronous two-step `pull` model:
+![push model of token transfer](media/singular-send-async.png)
+
+As secure as it can be, the *pull* model requires online/offline arrangement. The process is interactive and elongated sometimes.  In many situations the one-step `push`gives users the best experience, with some degree of safety.  The technique that UDAP employs is bridging the above `offer/accept`steps with a synchronous `send`method, in the following sequence:
+
+1. `aSingular.send(Bob)`, which internally invoke:
+    1. `approveReceiver(Bob 1min)`, 
+    2. send a synchronous message to Bob: `Bob.offer(this)`, which internally:
+        1. check with blacklist/whitelist and such.
+        2. Make a call back to the token: `aSingular.accept()`,  which set the owner to Bob thus conclude the transaction. 
+
+The reason the token calls out to Bob contract (an `OwnerOfSingulars` instance) is to make sure Bob is a valid recipient and he is willing to take the offer.  
+
+Upon careful inspection, the `push`model does not impose high risk.  As long as we make sure the ownership transfer has been properly authorized, the token is properly protected.  The best attack the recipient can mount to the token is a "grief" attack that spends excessive gas in the `offer()` function.  This can be alleviated by 1) check the source code of the Bob contract, or 2) make sure the Bob contract has been deployed by a trusted party, such as UDAP.
+
+**Contract verification** can be done manually or thru third party services such as that offered by [http://etherscan.io/]. 
+
+#### 5.3.  Tokenization Services
+
 
 On top of the asset model, UDAP has defined a service model for asset operations and management.  Common services are exposed to application developers through micro-services (REST APIs and WebSockets). Unlike the traditional centralized cloud service model, UDAP provides a decentralized service architecture. In this decentralized service architecture, the API gateway and service host are a special type of miners that provide the host container for running UDAP asset services. The gateway is the entry point for third-party applications to connect to the UDAP blockchain, and is responsible for automatic routing application requests, and provides service metering capability as a basis for service charges. At the same time, the nodes that provide the service gateway and the service container are also rewarded by the network. Hosts providing asset services need to deposit a small amount of locked-in tokens and need to broadcast their identities to the UDAP blockchain. UDAP chooses the node serving the service based on the proof of the node.
 
-<!-- 图 -->
 
-###### 5.2.1 User Registration
+
+###### 5.3.1 User Registration
 User registration establishes the mapping between the user space in the application domain and the user space of UDAP blockchain. User accounts from different applications are completely isolated. Applications are responsible for registering their user accounts with UDAP blockchain to create a mapping. See 5.4 for more description.
 
-###### 5.2.2 Application Registration
+###### 5.3.2 Application Registration
 A UDAP-based application has either an independent asset chain (deployed and owned by application vendor) or a virtual chain sitting on top of UDAP main chain. These two deployment settings support both private/consortium and public blockchain configuration. In either case, applications need to connect to UDAP main chain and register themselves with the Application Registry on the UDAP main chain. When applications are registered, each application is given a unique App Id and a unique App Name. App Name is used as the level 0 namespace id of the managed assets. In the registration process, each application also receives an App Key and an App Secret that are used to securely connect to the UDAP main chain.
 
 <!-- figure to illustrate two configurations-->
@@ -454,7 +711,7 @@ A UDAP-based application has either an independent asset chain (deployed and own
 
 When application prefers a private or consortium configuration for asset lifecycle management, it can leverage UDAP's Asset Blockchain as a Service (ABaaS) to deploy a private or consortium asset chain. This UDAP-enabled permissioned blockchain is specific to this application and is by default automatically registered with the UDAP main chain. Transactions on the app chain are stored locally in a private ledger on the ABaaS managed nodes. This configuration gives the app chain the capability of broadcasting asset information to or communicating with other UDAP-enabled chains through an Inter Blockchain Communication protocol. If an application doesn't want to have an independent network, it can choose a virtual private chain configuration, where application's ledger is stored and managed on the validator nodes of UDAP main chain.
 
-###### 5.2.3 Asset Registration
+###### 5.3.3 Asset Registration
 Assets need to be registered on the UDAP blockchain for applications to query and manage their states on the blockchain. In the meantime, applications receive asset registration information broadcast by other applications, enabling cross-application and cross-chain asset transfer and trading. Assets registration is a two-way binding process between real world assets and crypto assets. Asset metadata is identified and uploaded to off-chain P2P storage network at this stage, and a hash value of the off-chain metadata is stored and associated to the crypto assets. In this process, asset issuers need to make detailed configuration of asset attributes, for example:
 
 -   Transferability：an asset can be either transferable or non-transferable. If an asset is not transferable, the asset is usually a warrant asset. The only meaningful operation is "delivery", which means that the warrant owner delivers to the original issuer the promised product or service.
@@ -463,16 +720,16 @@ Assets need to be registered on the UDAP blockchain for applications to query an
 
 -   Multi-signature requirements: A multiple signature (or multi-sig for short) requirement represents that a transaction requires multiple approvals from different participants. Multi-signature addresses and transactions broaden this model by creating identities on the chain which are managed collectively by multiple parties. UDAP uses “m-of-n” bitcoin-style multi-signatures, in which a multi-sig address A is defined as: Given n regular addresses, at least m of the private keys corresponding to those addresses must sign a transaction to perform an action for A.
 
-###### 5.2.4 Tokenization
+###### 5.3.4 Tokenization
 
 The purpose of asset tokenization is to make asset transfer and trading easier. This is a fairly frequent operation that the asset issuer completes mapping from the real world to the crypto world after registering a real asset attached to the application context to UDAP. Token issuance allows assets to be traded in part rather than as a whole. For example, a painting can be tokenized as a certain amount of tokens through what is sometimes called "tokenization" (sometimes referred to as "minting,") so that the painting can be sold to multiple owners, where each owns a portion of the rights and interests of the painting.
 
 As seen from the UDAP asset model, tokens are fungible assets. Fungible assets are usually tokenized at the time of registration, whereas non-fungible assets are traded as a whole in most scenarios and therefore do not require the issuance of tokens. It is only necessary for issuers to mint tokens when they want to trade their assets partially.
 
-###### 5.2.5 Asset Recast
+###### 5.3.5 Asset Recast
 Recasting refers to the process of burning tokens for the rights to redeem goods or services, which creates new proof of asset for the token owner. This process is usually valid for physical assets in specific scenarios. This is because tokens themselves do not necessarily have the associated attributes of physical assets and the tokens are issued by the asset owner to enhance liquidity. When the physical asset is in the custody of a third party, the tokens issued by the asset owner may not always be accepted directly by the custodian of physical assets. Therefore, in many cases, tokens can not be used to directly redeem physical assets and new crypto assets need to be generated through the process of "recasting". For example, after Alice registers her 500-tonne apple on the blockchain to form a crypto asset (crypto warehouse receipt), Alice can issue a token per tonne. Alice then transfers 100 tokens (corresponding to 100 tonnes of apples) to Bob. After Bob receives 100 tokens, he can submit the tokens to the UDAP recast contract to generate a certificate to redeem asset (e.g., bill of lading) and destroy the corresponding tokens. Then Bob can redeem goods with this bill of lading. After redemption, the related crypto assets (warehouse receipts) are automatically destroyed on the blockchain to prevent double spending.
 
-###### 5.2.6 Multisig
+###### 5.3.6 Multisig
 Multisig is an additional security protection mechanism in the process of asset trading. It refers to the process that multiple accounts digitally sign the same transaction before it is executed. Only when required signatures are collected will the transaction be broadcast to the chain. In many scenarios multiple signatures are required to complete a specific asset operations, for example:
 
 - Registration: For expensive assets, the application may require signatures of the designated accounts be provided at the time of asset registration in order to prove the authenticity of the asset. Auditors and witnesses are possible co-signers in this process.
@@ -483,11 +740,11 @@ Multisig is an additional security protection mechanism in the process of asset 
 - Asset write-off (核销): This operation usually requires the approvals from multiple supervisors. For example, reimbursement process requires the signatures of direct managers and CFO to complete expense reimbursement.
 
 
-###### 5.2.7 Base Coin Issuance
+###### 5.3.7 Base Coin Issuance
 
 App chains may need to issue their own tokens as utility tokens for users to use their services or as base coins for pricing managed assets. For example, if a person wants to use event ticketing application to sell an event ticket, he may need to price the ticket with the base coin and pay the service fee with the base coin. UDAP supports application to issue base coins just like Ethereum supports Dapps to issue ERC20 tokens. As base coins are also assets, they can be traded against UDAP token (UP) or other application-specific tokens through an exchange.
 
-###### 5.2.8 Other Asset Services
+###### 5.3.8 Other Asset Services
 
 In addition to the basic services described above, UDAP provides the following services:
 
@@ -500,7 +757,44 @@ In addition to the basic services described above, UDAP provides the following s
 - escrow
 - redemption and destruction
 
-#### 5.3. Counterparty Risk and Proof of Asset
+#### 5.4. State Channels Service
+
+Let's use the perfect definition of [State Channels by Jeff Coleman](https://www.jeffcoleman.ca/state-channels/)
+
+>The basic components of a state channel are very simple:
+>
+>1. Part of the blockchain state is locked via multisignature or some sort of smart contract, so that a specific set of participants must completely agree with each other to update it.
+>2. Participants update the state amongst themselves by constructing and signing transactions that could be submitted to the blockchain, but instead are merely held onto for now. Each new update "trumps" previous updates.
+>3. Finally, participants submit the state back to the blockchain, which closes the state channel and unlocks the state again (usually in a different configuration than it started with).
+
+
+A typical Internet application is composed of multiple user account which contains the user assets defined in the scope of the application. 
+
+The state channels terms, those accounts are state channels. An application's state is the sum of each user/app state channels. 
+
+![](media/udap state channels.png)
+
+UDAP provides smart contract templates that are deployed, on demand, to the blockchain once a new user is registered with an application. These processes are managed by the UDAP nodes. App developers do not be concerned with the detail. The following diagram shows the relationships:
+
+![](media/udap state channel impl.png)
+
+The channel service provides services in:
+* Receipt custody
+* Contract enforcement
+* Channel updating
+* Withdraw monitoring
+
+Think of it as the legal service for corporations. On daily basis a commercial company does not involve lawyers for regular transactions. The lawyer prepares standard, enforcible business contracts to establish the business processes, but they don't get into the detail of each transactions, until a customer/business partner has problem executing the contract. In a dispute situation, lawyers would help to collect evidence and present in the court of law. In the world of blockchain, the court of law is the root blockchain, and in our case, would be the Ethereum chain. The difference between a court and a blockchain is that a court requires a judge to make arbitration and police to enforce the verdict, whileas on the blockchains, the smart contract can be made as the adjudicator and enforcer both at the same time, a tremendous value at a very reasonable cost. 
+
+To write enforcible contract is a delicate job. UDAP contract templates handle that, as shown below:
+
+![](media/contract templates.png) 
+The application is named Mediabox and contracts are code-generated from prebuilt templates and deplyed on demand. 
+
+The major contribution of UDAP to app developers is that UDAP gives them the scalable technologies wrapped in simple API, such as `registerApp()`, `registerUser()` and `registerAsset()`. 
+ 
+
+#### 5.5. Counterparty Risk and Proof of Asset
 
 All the tokens on the UDAP chain are tied to assets. Tokens and assets are the counterparties of the bonding. Since we are dealing with real world situations, anything can happen to the assets without being noticed by the token system. This is the counterparty risk.
 
@@ -540,7 +834,7 @@ An application may choose to require the users to put in a stake in the system b
 
 For those products that are very expensive, the applications may choose to deploy multiple protection layers, for example, a combination of above mechanisms, which prevents possible fraudulent activity during asset trading. UDAP provides API for third-party applications to establish a flexible mechanism to ensure the authenticity of assets and to ensure the reliability of the transfer process.
 
-#### 5.4. Identity Management
+#### 5.6. Identity Management
 
 The main purpose of UDAP is to manage real-life assets with blockchain technologies, and to use these technologies to increase their liquidity and thus enhance its permanent durability. At the same time, one important goal of UDAP is to allow these real world assets in the form of crypto-assets to be easily transferred between owners.
 
@@ -572,15 +866,36 @@ In the second phase of UDAP Identity Management:
 
 We are looking closely at the development of some third-party identity management systems and will consider the possibilities of integrating their services into UDAP network. These systems include (but not limited to) uPort, ShoCard, Civic, Mooti, ​​and others.
 
+#### 5.7. Secure Content Distribution
+
+In many application, distributing content in the format of text file, pictures and audio/video files protected by copyright is common and requires platform support. 
+
+In a blockchian based music store for exmple, each customer will get a special copy of a music file while can be opened only with the cutomer's private key. It's also called blockchain-based DRM (Digital Right Management).
+
+UDAP employes [Proxy Re-Encryption](https://en.wikipedia.org/wiki/Proxy_re-encryption) to make customized copy of media files, as shown in the following diagram:
+
+![](media/udap-PRE.png)
+
+The above diaagram is conceptual, while the real impementation is lot more involving, including mechanisms to prevent node collusion. We will have separate document for this feature.  
+   
+
 ## 6.  Universal Asset Wallet
 
-<!-- img src="media/wallet.png" alt="Asset Hierarchy" style="float:right; width: 200px;height:400px;padding-left:5px"/ -->
+As a very important part of the platform, wallet plays a key role in the interaction between applications and users. 
 
-<img align="right" width="300" src="media/wallet.png"/>
-
-As a very important part of the platform, wallet plays a key role in the entire agreement and interaction between system and user. The usual crypto-wallets are a single-function wallet that shows the amount of particular cryptocurrencies.
+The usual crypto-wallets are a single-function wallet that shows the amount of particular cryptocurrencies.
 
 As a general-purpose assets wallet, UAW's role has been significantly expanded. Think of it as a personal safe on one's cell phone. It can contain any stuff you would put in a safe, such as certificates, important documents, diamond rings, antiques, securities, IOUs, etc. In fact the asset wallet stores the unique tokens that cryptographically represent the assets. These asset-backed tokens are created by various applications running on the UDAP chain.
+
+Moreover, UDAP Wallet supports assets in different level of scopes:
+- asset on the Ethereum public chain (ERC721 and UDAP Singular style)
+- asset in application state channels. 
+
+The asset in state channels can be "upgraded" to be vertified by Ethereum, at a cost of gas comsumption. 
+
+The following diagram shows the concept of UDAP Wallet. 
+
+![](media/udap wallet.png)
 
 General Assets Wallets are more than just the storage of assets, but are also very handy for supporting common operations on assets such as asset transfers, sales, trading, auctioning, cancellation and more.
 
@@ -677,6 +992,8 @@ More API will be provided in the future, including various auction methods, escr
 
 ## 7.  Implementation
 
+We would like to discuss some of the implementation details.
+
 #### 7.1 Protocol Implementation
 
 As mentioned before, UDAP at the highest level is a conceptual model of real-world assets. The following section provides the descriptions of the ongoing implementation of the model. It may change as the development work moves along.
@@ -702,132 +1019,39 @@ When the UDAP accepts the transaction, the rule matcher verifies whether the sig
 
 The signature includes the time of signing, the signature's validity period, and the versionHash that may contain the current asset. When the app collects enough required signatures, it initiates the transaction to UDAP, which verifies that the provided list of signatures satisfies the rule by interpreting the method parameters. If so, it changes the state of the asset, generate a new versionHash and record the latest lastCommitTimestamp in all signatures as the signature is for the transaction method parameters. UDAP creates an optional versionHash and lastCommitTimestamp Time guarantee to prevent replay attack. VersionHash transaction request and digital signature are optional. It is designed to ensure that the asset data will not be phantom read, similar to what optimistic locking does. Whether you need to verify that versionHash is in the hands of the originator of the transaction.
 
+#### 7.2. State Channels
 
-#### 7.2. The Architecture of Virtual Private Chain (VPC)
+UDAP does not try to be a generic State Channels framework, like [counterfactual](https://counterfactual.com) or [Perun](http://perun.network/). Instead, UDAP is an implementaion of State Channels that are tailered to the applications that deal with non-fungible assets. 
 
-A flat network of blockchain nodes is not scalable. A flat topology requires enormous amount of traffic to reach consensus and synchronization and in effect in the throughput of the entire network is constrained by the computing power and IO performance of a single node. 
+UDAP provides a set of *enforcible* contract templates that can be deployed on demand, such as contracts that covers "buy", "swap", "split", "rent" and "pledge". We also provides templates for state channels in a hub-spoke topology, which is the majority of application model. 
 
-The transitions from POW to various POS designs and other BFT consensus variations are inevitable if the blockchains are to place the role of world computers.
+More implementation will be available in later version of this document. 
 
-In the meantime, homogeneous sharding mechanisms have being proposed and being implemented in various projects, such as [Ethereum Sharding](https://github.com/ethereum/wiki/wiki/Sharding-FAQ), [ELASTICO](https://www.comp.nus.edu.sg/%7Eloiluu/papers/elastico.pdf).
+#### 7.3. Performance
 
-Plasma and Polkadot are trying to build blockchain of blockchain to integrate heterogeneous blockchains to achieve great scale.
+Performance in UDAP comes from two layers of support:
 
-Cosmos uses interconnected zones to realize linear scalability. It's a sharding scheme both at the consensus level and state level.
+1. The core of public chain. In the case of Ethereum, layer 1 technologies such as POS and sharding will bring the throughput of the entire chain to the hundreds/thousands TPS in the next year or two. 
+2. Layer 2 technoogies such as Plasma can increase the general throughput further up to millons TPS. 
 
-UDAP architecture is largely based on Cosmos architecture and loosely based on Plasma. It will eventually phase in the Plasma hierarchy, for best security and scalability.
+State Channels is also a type of layer 2 technologies, which is the most practical answer to the scalability challenge. 
 
-At the root is the UDAP root chain, which stores the meta information of UDAP applications. Each application is assigned an application chain which is by default a private chain that's only visible to application nodes. An application can choose to deploy to the shared infrastructure of UDAP or to specific private nodes.
+We are going to explore COSMOS and Tendermint as another public chain provider in addition to Ethereum once they become stable.
+ 
 
-A number of nodes are grouped to form a "zone" under the UDAP root. The number of nodes is chosen such that the POS (Tendermint to be specific) works the best in terms of the balance of security and TPS/# of nodes.
+#### 7.4 Privacy Protection
 
-Application chains are logical chains that can span multiple "zones" to achieve near-linear scalability. Each zone becomes a shard of a VPC.
+State Channels provide a good level of privacy if the states are kept in the channel scope. Using state channel helps asset privacy in two ways:
 
-Multiple applications are supported concurrently on UDAP network, just like multiple VPN sessions run on the same TCP network.
+1. The current state is only visible in the application and the application can employ all sorts of ways to protect privacy. 
+2. The transaction history is never revealed out of the application scope, even when the users have updated the state repository on the chain, since the user will update the state repository with the latest statement only. The transaction between state updates are never revealed on chain. Hiding the transaction log makes asset tracing vis log analysis impossible. 
 
-Each node can run every application too, supporting the transactions of each application and store the transaction history, the global state trie and receipt trie. This does not exclude the possibility that some applications choose to localize to some subset of the nodes to form a pure exclusive private chain, in which case, the "virtual" part of the VPC is transformed to "real".
+On top of the channel scope is the blockchain scope. The higher the scope, the more challenge on keeping asset private. In the "worst" case of every transaction hitting the chain, we employ two approaches to protect data confidentiality:
 
-Some applications may also localized to particular zones, either because the other zone are already fully loaded and not accepting new application deployment or they choose to do so for geological proximity.
+1. Asset ownership obfuscation. In the case of `Singular` and `OwnerOfSingulars`, all the addresses associated with owner and singular tokens must be encrypted.
+2. All the ownership transfer transactions must be mixed up with other transactions to remove the transfer traces. 
 
-In each node, the application transactions are processed in parallel. This is possible because there is no dependencies between applications. All the cores of any modern server will be able to participate in processing transactions at the same time, in contrast to the serialized transaction processing which can use one core only no matter how many cores the computer has.
-
-There are support for parallel processing of single application transactions too. This is made possible by the fact that all the UDAP API exposed to the applications are deterministic in terms of what account are affected by each API call. The smart dispatcher in each node will able to group transactions in multiple queues that are not dependent on or otherwise interfere with each. Thus the queues can work in parallel to take advantage of the multiple cores available.
-
-
-#### 7.3. Performance Implementation
-
-
-There are four major factors that are accountable for the abysmal throughput typical of Bitcoin network and Ethereum:
-
-1. The same transaction must be replayed on all the nodes, no matter how expensive they might be.  A great deal of computing power is wasted in competing repetitive calculations. This has been proved to be one important way to make sure all the nodes behave by the rules and high security is maintained. However, this first-gen technique is very expensive in nature and is the primary reason that blockchains’ throughput are incredibly poor, considering how much computing power is behind each network.
-2. On each node, all the transactions are serialized in building into the blocks and there is no way to build the blocks in parallel because there is no partitioning of the transactions which is required to avoid race conditions in reading and writing account information.
-3. Smart contracts as implemented in Ethereum are slow. They’re interpreted at runtime instead of running in native speed or in highly optimized VMs, such as JVM.
-4. API does not give finality. Transaction initiators basically send transactions and wait for confirmations, which varies from a few minutes to hours.
-
-The first issue is being tackled by a few solutions such as POS based consensus and some other protocols which do not use blockchain at all.  UDAP RI specifically uses Cosmos<sup>[\[17\]][cosmos]</sup> as the general network architecture. Cosmos offers the following features that UDAP can immediately leverage:
-
-1. A POS consensus implementation (Tendermint) that provides 1000+ TPS performance.
-2. An API that provides _finality_, which is a must for UDAP to become an easy to use API.
-3. Cosmos can scale linearly with adding more "zones" to the blockchain hub.
-4. It gives 1-2 seconds response delay for API invocations.
-
-
-For the second limiting factor, the lacking parallelism in transaction processing is caused by lacking transaction demarcation, which is in turn because there is no sufficient information about account dependencies in general blockchains. One transaction may be depositing money to an account while another is taking money out of it. Working on the same account needs synchronization, which basically serialize the access to accounts.
-
-Fortunately, UDAP defines boundaries for applications natively:
-
-1. User accounts for each application are unique. In fact, a user must register for each application and receive an address. There is no chance that the same account is used in more than one application.
-2. Transactions are always executed between the same type of account.
-3. Security models and transactions are application specific. There is no shared information among applications.
-
-In comparison, Ethereum ERC20 tokens are not the naturally wall between applications.  Some transactions may involve multiple tokens. An user’s account (external account) is not bound to a single type of token. User accounts are generic accounts that are not bound to any specific dApp, therefore there is no natural demarcation boundary for transaction verification and mining to operate concurrently on multiple cores of a machine.
-
-In UDAP, each application is assigned an application ID and owns an independent chain, meaning there will be a thousand blockchains in UDAP network if there are a thousand application registered. Each chain has its own branch of state trie, storage trie and transaction receipts. State transitions in each application takes place in a separate thread.
-
-The following picture shows how the transactions received by a node are properly dispatched to separate transaction queues for each application. All the CPU cores are assigned to process the transactions in parallel and the transactions are Merkleized in an application specific blockchain.
-
-<p align="center">
-<img src="media/AppChains.png" alt="VPC" style="width:600px;"/>
-</p>
-
-One chain per application is a major design choice we have made that is very flexible in optimizing the performance and security, which are the primary two requirements for any applications that claim to deal with any assets. Each chain is an overlay chain on top of the generic UDAP transaction streams. We call the mechanism Virtual Private Chain(VPC), as analogous to VPN over TCP/IP.
-
-As described previously, the root chain is there for
-- application registration and configurations.
-- Generic user account registration, which provides custodian service for the account of the third-party applications running in UAW. Users can optionally choose to register them with UDAP to take advantage of the identity attestation service.
-- It also periodically takes snapshots of the application chains states in case that fraudulent or faulty behaviors are reported from the app chains and state enforcement is required. Eventually the root chain will probably become a Plasma chain which is the parent chain of all the applications chains.
-
-Although we have improved the parallelism at the application level, there is still chance of blocking in a single application level. Transactions for a particular application still have to be processed serially. If one application becomes so popular that it consumes most of the bandwidth in a period of time, all the transactions coming to a node might just be from it, and they will be processed one of another. The workload cannot be spread over to the multiple cores on the same machine.
-
-The above issue can be solved by a smart thread dispatcher in a UDAP node, presuming that UDAP APIs mostly affect one account at a time. The dispatcher carefully inspects the incoming transactions and separates them by affected accounts. With transaction partitioning still feasible, the transaction verifications and block constructions can still be done in parallel.
-
-With no competitive and repetitive computing among all nodes, and with the optimized parallelism in the transaction processing in the node software, UDAP would provide significant better scalability both horizontally and vertically. We expect UDAP network offers TPS in the 10K~100K range with 600 nodes. We also note that we need to make sure the disk IO in each node must be optimized to take advantage of parallel IO, by using NVMe interface, rather than simple SATA interface. 
-
-In the meantime, we’re closely monitoring the progress of the [Plasma Project](http://plasma.io/) led by Joseph Poon and Vitalik Buterin, which is a hierarchical multi-chain architecture that utilizes recursive Map/Reduce computing with faulty behavior correction mechanism to achieve unlimited scalability. The Plasma development will be one of the core effort from a team of the best talents in the industry in 2018. We plan to leverage the work in the future to solve the scalability issue for once and all. In the meantime, other on-chain scaling solution such as the [Ethereum Sharding](https://github.com/ethereum/wiki/wiki/Sharding-FAQ) proposed by Vlad Samfir is regarded by some as the ["true secure scaling solution for Ethereum", and "will provide for all of the scalability requirements of the blockchain without sacrificing on security or the trust model."](https://journal.binarydistrict.com/vlad-zamfir-sharding-is-the-only-true-blockchain-scaling-solution-/) It's our goal that any change or improve deployed underneath won't affect the users of UDAP.    
-
-#### 7.4 Privacy Enforcement
-
-Privacy on blockchains is counter-intuitive for many people, because blockchains usually promote openness and publicity, at least for public chains.
-
-Bitcoin and Ethereum are not really privacy centered blockchains. In fact, most public chains can be trusted with correctness but not confidentiality. Bitcoin, for example, is one of the most traceable currencies that offer little privacy protection. Additionally some form of KYC policies are required of many applications and exchanges, therefore users of most of the on-chain applications are heavily exposed to privacy breaches.  
-
-There are indeed multiple levels of solutions today that cover the privacy issues in part. Coin mixers (such as Mimblewimble and TumbleBit) improves privacies by mixing transactions so it's harder to trace the origin and destination of transactions. Monero provide partial transaction confidentiality. ZCash, with Zero-knowledge Succinct Non-Interactive Arguments of Knowledge provides strong confidentiality, at a much higher cost of computation power and engineering complexity.  
-  
-Data obfuscation techniques try to hide the identity of data and cut the traceability of the data flows, so that the connections between people and their assets are decoupled. Coin mixers, ring signatures are of this type. Data anonymity is achieved with an extra layer of processing either locally or as a network service. Performance takes a hit necessarily.
-
-Using cryptography to encrypt data is the other major mechanism to preserve privacy. It ranges from simple symmetric/asymmetric encryption to the sophisticated zero-knowledge scheme based mechanisms.
-
-
-In UDAP, VPC (Virtual Private Chain) is the first line of defense of privacy. UDAP respects that and by default it allows app developers to choose the private deployment model whereby only trusted nodes are allowed to process the transactions and store the state. Private deployment mode is the default mode of application chain.  Specifically, VPC features:
-
-1. Streamlined chain access only from the exposed high level API.
-2. No block browsing for participants;
-3. Auditing as requested by authenticated application operators and by authorized personal customers.
-
-Although we believe most of the third-party apps will be deployed on permissioned UDAP app chains, thus having the basic firewall to fend off privacy attacks, we also believe
-The second defense line is with data obfuscation and encryption, as shown in the following diagram.
-
-<p align="center">
-<img src="media/AssetAnonymity.png" alt="AssetAnonymity" style="width:600px;"/>
-</p>
-
-User account has an encrypted pointer pointing to one of the storage slots, which are the vaults for asset tokens. Think of the design like the custodian vaults in banks where customers use their own key to open the storage of assets.  No one knows who owns which vault. The vaults are anonymous; thus privacy is protected.
-
-The connections between the wallet and the chains are protected in three layers of encryption, slightly similar to what the TOR protocol does:
-
-1. Secure Socket.
-2. Data is encrypted with a user’s key and the data packets are signed by the user.
-3. Data stream goes through the application’s endpoint which in turn encrypts and signs the already encrypted data with the application key.
-4. The UDAP nodes must make sure all the traffic coming from an application’s client carry the proper signature of the application and and the check cannot be circumvented.
-The use of the layered encryption and signing is not so much about concealing the IP address of the function invoker, rather it’s for the purpose of letting the application to verify the validity of the API call of the user in the context of a specific application. Theoretically some functions calls made by users can be directly targeted to the UDAP node which does the chain dispatching. But we feel most applications need a mechanism to intercept function calls from their users and may decide to activate more business logic upon such invocations, such as more involving authorization. UDAP nodes which receives such transactions would definitely know that the transactions have been authorized by the corresponding applications, such that a higher level of security is ensured.
-
-In the future we are considering:
-
-1. either implementing the zkSNARKs in the protocol level to meet the rigorous privacy requirement of data sensitive rules;
-2. or other emerging technologies such as [Solidus]( https://eprint.iacr.org/2017/317.pdf) for more streamlined privacy architecture;
-3. quantum computing resistance will be placed in our road map in the next few years to keep our platform up to date and future proof.
-
-As required by many states, KYC is integrated with most blockchain exchanges and some blockchain applications. KYC means that people's identifiable information is stored somewhere central. UDAP does not store  
+We will share our design in later versions of this document. 
 
 #### 7.5 Key Rings and Identity
 
@@ -889,7 +1113,15 @@ The year of 2018 is an important year for non-fungible crypto assets. The world 
 
 **MediaChain** is a singular data fabric for open-first media applications. It is a decentralized blockchain for applications and users to publish, discover, and collaborate on media metadata. It is built on Ethereum and IPFS.
 
+**[Counterfactual](https://counterfactual.com)** is a generalized framework for native state channels integration in Ethereum-based decentralized applications. They may also provide pre-audited modules for developers to adopt. 
+
+**[Perun](https://www.perun.network)** is a framework that supports off-chain protocols for simple payments and generic smart contract off-chain execution. Perun's channels can be virtual, which means that off-chain transactions do not require interaction with intermediaries thereby further reducing trust, latency and costs. In additional Perun offers strong security guarantees backed up by scientific methods from cryptographic research
+
+**[Nucypher](https://www.nucypher.com)** helps dApp developers store, share, and manage private data on public blockchains with decentralized proxy re-encryption as a service.
+
 We have also reviewed and researched a few key blockchain projects that focus on multi-chain architecture with inter-blockchain communication. These projects include Plasma, Polkadot, Aion Network, Wanchain, and Cosmos.
+
+
 
 ## 9.  Use Cases
 
@@ -948,7 +1180,7 @@ Capital market is an engine for economic growth, both for business entities and 
 
 In the next few years, world economy will be reshaped greatly by token-based businesses. The nature of the "universal assets" that we are advocating here is to store and to realize the value of the assets.
 
-Blockchain supports permanent retention of asset information through its tamper-proof feature. In a sense, it is the permanent existence of assets.
+Blockchain supports permanent retention of asset information through its tamper-proof feature. In a sense, it is the permanent proof of assets.
 
 At the same time, the blockchain-derived token economy and the liquidity as the core of the token economy provide the key channel for the value recognition of assets.
 
@@ -958,13 +1190,15 @@ Liquidity is not a panacea. In fact, liquidity itself may also bring system inst
 
 Many industries face a big challenge that asset issuers lack control over liquidity of assets. In the past there was no good solution to this problem, but with the advent of distributed ledger technologies we are able to overcome this challenge for the first time.
 
-This white paper is about an ongoing project referred to "Internet of Assets", which we are trying to make our unique contribution in three main technology areas:
+This white paper is about an ongoing project claiming having the power of "tokenizing anything", which we are trying to make our unique contribution in three main technology areas:
 
-- Blockchain-based Asset Lifecycle Management
+- Blockchain-based Asset Lifecycle Management, with a unique "everything has an account" model of world assets, in the name of "Singular" 
+- State-channels based layer-2 scalbility solution
 - Decentralized C2C Exchange for Assets
-- Virtual Private Chain Technology that solves sore issues with respect to privacy, security, scalability.
+- UDAP Wallet, a universal asset management tool for the best possible UX. 
 
-We believe our highly targeted networks offer an unprecedented new technology platform for a large number of applications that can precipitate a wide range of assets and support businesses to transform into a token-based economy.
+UDAP offer exceptional values to application developers and public chains alike. Together we are going to create a fast-growing eco-system where everything is tokenized and innovative applications will emerge at scale to fulfill the promise of blockchains.   
+
 
 ## References
 \[1\]: http://www.omnilayer.org/
