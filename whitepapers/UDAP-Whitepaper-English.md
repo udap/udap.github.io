@@ -416,7 +416,7 @@ ERC721 has a few issues and limitations:
 2. The addressing of elements is composed of  Therefore the absolute address for a specific token is something like: `{ethereum network id}.{contract address}.{token id}.` We think it can be shorter. 
 3. The API looks complicated since most of the API functions deal with a single token, and the ID of the token has to be specified each time the API is invoked, such as:
 
-```
+```javascript
 balanceOf(address _owner);
 ownerOf(uint256 _tokenId);
 safeTransferFrom(address _from, address _to, uint256 _tokenId, bytes data);
@@ -463,7 +463,7 @@ In UDAP we are proposing a new account model specifically to represent a single 
 We call our basic asset contract `Singular` and the design decisions are:
 
 1. A piece of asset is uniquely associated with a smart contract account. As a result, the full token identification is the account address, such as `/eth-chain-id/0xa1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1`. The account is the **home** for the asset. People can easily scan the information about this token thru public services like [Etherscan](http://etherscan.io/).
-2. The owner of the `Singular` token must be another smart contract account, named `OwnerOfSingulars`. There is no direct way for EOAs to own `Singular` tokens. This design largely conforms to Ethereum’s [account abstraction model](https://github.com/ethereum/EIPs/issues/859) that will be deployed in a future version of Ethereum. 
+2. The owner of the `Singular` token must be another smart contract account, named `OwnerOfSingulars`. There is no direct way for EOAs to own `Singular` tokens. This design is largely in the same direction of Ethereum’s [account abstraction model](https://github.com/ethereum/EIPs/issues/859) ([discussion](https://ethresear.ch/t/tradeoffs-in-account-abstraction-proposals/263))that might be deployed in a future version of Ethereum. 
 3. It should support `push` ownership transfer and `pull` ownership transfer patterns. In so called one-step transfer, the current owner can pass an offer of the token ownership to the receiver account and the receiver account can choose to accept or reject the offer *in the same transaction*. In a two-step ownership transfer, however, the current owner reserves the token for the next owner in a transaction. The address of the token is passed to the receiver out-of-band. The receiver issues a separate transaction to accept the offer, once it determines that the offer is in its interest. 
 4. Operators. The `OwnerOfSingulars` account can assign operators to help with ownership transfers. Having an operator to manage the asset token on the owner’s behalf is a pattern that has been accepted by some other proposals, such as ERC721 and ERC777.  People have found it convenient in handling token trading. The current token owner can appoint an operator for the *next* ownership change. But setting the operators on the token directly is polluting the token interface. 
 5. Timelock. When an owner make an offer of ownership to someone else by calling the `approveReceiver()` function, there is a required argument for expiry time, during which period the receiver can take the ownership at will by invoking `accept(...)`on the token, which will in turn send a notification to the previous owner for it to any state update it wants, or even chain to another action. A critical design is that the owner cannot change his mind during the offer period. This is essentially a time-lock for the transaction. In contrast, neither ERC20 nor ERC721 or any of their derivatives offers built-in time-locks for ownership trading. 
@@ -478,7 +478,7 @@ We call our basic asset contract `Singular` and the design decisions are:
 
 Here is the interface definition for Singular:
 
-```
+```javascript
 pragma solidity ^0.4.24;
 import "./OwnerOfSingulars.sol";
 interface Singular {
@@ -556,7 +556,7 @@ interface Singular {
 ```
 The following is the interface definition for the `OwnerOfSingulars`
 
-```
+```javascript
 pragma solidity ^0.4.24;
 import "./Singular.sol";
 
@@ -691,9 +691,9 @@ As secure as it can be, the *pull* model requires online/offline arrangement. Th
 
 The reason the token calls out to Bob contract (an `OwnerOfSingulars` instance) is to make sure Bob is a valid recipient and he is willing to take the offer.  
 
-Upon careful inspection, the `push`model does not impose high risk.  As long as we make sure the ownership transfer has been properly authorized, the token is properly protected.  The best attack the recipient can mount to the token is a "grief" attack that spends excessive gas in the `offer()` function.  This can be alleviated by 1) check the source code of the Bob contract, or 2) make sure the Bob contract has been deployed by a trusted party, such as UDAP.
+Upon careful inspection, the `push`model does not impose high risk.  As long as we make sure the ownership transfer has been properly authorized, the token is properly protected.  The best attack the recipient can mount to the token is a "griefing" attack that spends excessive gas in the `offer()` function.  This can be alleviated by 1) check the source code of the Bob contract, or 2) make sure the Bob contract has been deployed by a trusted party, such as UDAP.
 
-**Contract verification** can be done manually or thru third party services such as that offered by [http://etherscan.io/]. 
+**Contract verification** can be done manually (perhaps with the help of [ConsenSys Bytecode Verifier](https://github.com/ConsenSys/bytecode-verifier)) or thru third party services such as that offered by [http://etherscan.io/]. 
 
 #### 5.3.  Tokenization Services
 
