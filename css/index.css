@@ -112,3 +112,125 @@ footer{
     background: #000;
     text-align: center;
 }
+
+.case{
+    overflow: hidden;
+    width: 100%;
+    min-height: 100%;
+    background: #000 url(../img/bg/work.png) no-repeat right center;
+    background-size: 100% 100%;
+}
+.case h2{
+    font-family:PingFangSC-Semibold;
+    font-size:48px;
+    color:#b98c35;
+    letter-spacing:0.2px;
+    line-height:56px;
+    text-align:left;
+}
+.case h2 p{
+    font-size: 20px;
+    color:#fff;
+    line-height: 24px;
+    letter-spacing: 0.1;
+}
+.case ul{
+    list-style: none;
+    padding: 0;
+}
+.case li{
+    margin-top: 24px;
+}
+.case li h3{
+    font-family:PingFangSC-Semibold;
+    font-size:24px;
+    color:#ffffff;
+    letter-spacing:0.15px;
+    text-align:left;
+}
+.case li h3 img{
+    margin-right: 13px;
+}
+.case li p{
+    font-family:PingFangSC-Regular;
+    font-size:16px;
+    color:#888888;
+    letter-spacing:0;
+    line-height:26px;
+    text-align:left;
+    margin-bottom: 0;
+}
+.case li .list p{
+    font-family:PingFangSC-Regular;
+    font-size:16px;
+    color:#888888;
+    letter-spacing:0;
+    line-height:26px;
+    text-align:left;
+    padding-left: 40px;
+    background:url(../img/circle.png) no-repeat 20px 10px;
+}
+.case li h4{
+    font-family:PingFangSC-Regular;
+    font-size:16px;
+    color:#ffffff;
+    letter-spacing:0.1px;
+    line-height:30px;
+    text-align:left;
+}
+.case header{
+    padding: 0 5%;
+    margin-bottom: 38px;
+    margin-top: 38px;
+}
+.social-right{
+    float: left;
+}
+.social-right li{
+    list-style: none;
+    display: inline-block;
+}
+.social-right li.Nmr{
+    margin-right: 37px;
+}
+.social-right a{
+    font-family:PingFangSC-Regular;
+    font-size:16px;
+    color:#b98c35;
+    text-align:left;
+}
+.social-right a:hover{
+  text-decoration: none;
+}
+.social-right a img{
+    margin-right: 13px;
+}
+.case .cont{
+    min-height: 100%;
+    margin-bottom: 128px;
+}
+/*stress*/
+.stress{
+    position: relative;
+}
+.ico-new{
+    position: absolute;
+    left: 109px;
+    top: -17px;
+    font-size: 12px;
+    background: #b98c35;
+    color:#fff;
+    border-radius: 5px;
+    font-weight: normal;
+    width: 40px;
+    text-align: center;
+    line-height: 20px;
+}
+@media (min-width: 768px){ 
+   .case header{
+       margin-bottom: 134px;
+   }
+   .social-right{
+       float: right;
+   } 
+}
