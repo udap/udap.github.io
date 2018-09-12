@@ -8131,7 +8131,7 @@ body {
 .press {
     width: 100%;
     min-height: 100%;
-    background: #fff url(img/bg/press.png) no-repeat left top;
+    background: url(img/bg/press.png) no-repeat left top;
     background-size: cover;
 }
 #about ul{
