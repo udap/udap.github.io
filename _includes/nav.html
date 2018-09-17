@@ -1,6 +1,5 @@
- <!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container-fluid">
+        <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     <i class="fa fa-bars"></i>
@@ -12,19 +11,34 @@
             
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-main-collapse">
-                <ul class="nav navbar-nav nav-midCont">
+                <ul class="nav navbar-nav nav-midCont" id="navPc">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="active">
-                        <a class="page-scroll" href="#">Home</a>
+                        <a class="page-scroll" id="navhome" href="#">Home</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="page-scroll" id="navAbout" href="#about">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#team">Team</a>
+                        <a class="page-scroll" id="navTeam" href="#team">Team</a>
                     </li>
                     <li class="midMr">
-                        <a class="page-scroll" href="#">Contact us</a>
+                        <a class="page-scroll" id="navContact" href="#contact">Contact us</a>
+                    </li>                    
+                </ul>
+                <ul class="nav navbar-nav nav-midCont" id="navMobile">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="active">
+                        <a class="" href="#">Home</a>
+                    </li>
+                    <li>
+                        <a class=""  href="#about" id="mabout">About</a>
+                    </li>
+                    <li>
+                        <a class="" href="#team" id="mteam">Team</a>
+                    </li>
+                    <li class="midMr">
+                        <a class="" href="#contact" id="mcontact">Contact us</a>
                     </li>                    
                 </ul>
                 <ul class="nav navbar-nav nav-rightCont navbar-right">

@@ -3,15 +3,41 @@
     {% include head.html %}
     <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
     {% include nav.html %}
-    {% include header.html %}
-    {% include about.html %}
-    {% include work.html %}
-    {% include team.html %}
-    {% include roadmap.html %}
-    {% include investors.html %}
-    {% include partners.html %}
-    {% include press.html %}
-    {% include footer.html %}
+    <!-- 移动端 -->
+    <div class="mobileMain">
+        {% include header.html %}
+        {% include about.html %}
+        {% include matters.html %}
+        {% include solution.html %}
+        {% include workmobile.html %}
+        {% include team.html %}
+        {% include advisor.html %}
+        {% include roadmap.html %}
+        {% include investors.html %}
+        {% include partners.html %}
+        {% include press.html %}
+        {% include footer.html %}
+    </div>
+    <!-- PC -->
+    <div class="pcMain">
+     <div class="swiper-container" id="mainSwiper">
+       <div class="swiper-wrapper">
+         <div class="swiper-slide">{% include header.html %}</div>
+         <div class="swiper-slide">{% include about.html %}</div>
+         <div class="swiper-slide">{% include matters.html %}</div>
+         <div class="swiper-slide">{% include solution.html %}</div>
+         <div class="swiper-slide">{% include work.html %}</div>
+         <div class="swiper-slide">{% include team.html %}</div>
+         <div class="swiper-slide">{% include advisor.html %}</div>
+         <div class="swiper-slide">{% include roadmap.html %}</div>
+         <div class="swiper-slide">{% include investors.html %}</div>
+         <div class="swiper-slide">{% include partners.html %}</div>
+         <div class="swiper-slide">{% include press.html %}</div>
+         <div class="swiper-slide">{% include footer.html %}</div>
+       </div>
+       <div class="swiper-pagination mainPagination"></div>
+     </div>   
+    </div>
     {% include js.html %}
     </body>
 </html>

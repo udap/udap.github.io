@@ -12,6 +12,7 @@ a,button{
     outline:none;
 }
 .udap{
+    margin-top: 70px;
 	background: url(../img/intro-bg.jpg) no-repeat center center;
 	background-size: cover;
 }
@@ -119,14 +120,15 @@ footer{
     min-height: 100%;
     background: #000 url(../img/bg/work.png) no-repeat right center;
     background-size: 100% 100%;
+    margin-top: 70px;
 }
 .case h2{
-    font-family:PingFangSC-Semibold;
     font-size:48px;
     color:#b98c35;
     letter-spacing:0.2px;
     line-height:56px;
     text-align:left;
+    margin:0;
 }
 .case h2 p{
     font-size: 20px;
@@ -137,77 +139,102 @@ footer{
 .case ul{
     list-style: none;
     padding: 0;
+    margin:0;
 }
 .case li{
-    margin-top: 24px;
+    margin-top: 12px;
 }
 .case li h3{
-    font-family:PingFangSC-Semibold;
     font-size:24px;
     color:#ffffff;
     letter-spacing:0.15px;
     text-align:left;
+    margin:0;
 }
 .case li h3 img{
     margin-right: 13px;
 }
 .case li p{
-    font-family:PingFangSC-Regular;
-    font-size:16px;
+    font-size:14px;
     color:#888888;
     letter-spacing:0;
-    line-height:26px;
+    line-height:18px;
     text-align:left;
     margin-bottom: 0;
 }
 .case li .list p{
-    font-family:PingFangSC-Regular;
     font-size:16px;
     color:#888888;
     letter-spacing:0;
-    line-height:26px;
+    line-height:22px;
     text-align:left;
     padding-left: 40px;
     background:url(../img/circle.png) no-repeat 20px 10px;
 }
 .case li h4{
-    font-family:PingFangSC-Regular;
     font-size:16px;
     color:#ffffff;
     letter-spacing:0.1px;
-    line-height:30px;
+    line-height:20px;
     text-align:left;
+    margin:0;
+    margin-bottom: 15px;
 }
-.case header{
-    padding: 0 5%;
-    margin-bottom: 38px;
-    margin-top: 38px;
+/* nav */
+.navbar-nav>li>a{
+    line-height: 50px;
+    font-size: 16px;
+    padding: 0;
 }
-.social-right{
+.navbar-brand img{
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+}
+.navbar-right{
+    padding-left: 20px;
+}
+.navbar-right li a{
+    color: #D7B87A!important;
+    text-transform: uppercase;
+}
+.navbar-right li.Nmr{
+    margin-right: 33px;
+}
+.navbar-nav li{
+    padding: 0 15px;
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover
+.case header .logoImg{
+    display: inline-block;
+    background: none;
+}
+.navbar-toggle{
+    margin-top: 16px;
+}
+.navbar-header{
+    min-height: 70px;
+}
+/* .social-right{
     float: left;
 }
 .social-right li{
+    margin-top: 0;
     list-style: none;
     display: inline-block;
 }
-.social-right li.Nmr{
-    margin-right: 37px;
-}
+
 .social-right a{
-    font-family:PingFangSC-Regular;
     font-size:16px;
     color:#b98c35;
     text-align:left;
 }
 .social-right a:hover{
   text-decoration: none;
-}
-.social-right a img{
-    margin-right: 13px;
-}
+} */
 .case .cont{
     min-height: 100%;
-    margin-bottom: 128px;
+    padding: 15px 0;
 }
 /*stress*/
 .stress{
@@ -215,8 +242,8 @@ footer{
 }
 .ico-new{
     position: absolute;
-    left: 109px;
-    top: -17px;
+    left: 133px;
+    top: 2px;
     font-size: 12px;
     background: #b98c35;
     color:#fff;
@@ -225,12 +252,96 @@ footer{
     width: 40px;
     text-align: center;
     line-height: 20px;
+    display: none;
+}
+.mobile{
+    display: block;
+    width: 268px;
+    height: 536px;
+    margin:0 auto;
+    position: relative;
+}
+.mobile .mtop{
+     position: absolute;
+     left: 0;
+     top:0;
+     width: 100%;
+    z-index: 4; 
+}
+.topbg{
+    padding: 0 0.9%;  
+    display: inline-block;
+    width: 100%;
+
+}
+.mobile .mcenter{
+    position: absolute;
+    top:8px;
+    bottom: 56px;
+    width: 100%;
+    padding: 0 6%;
+    z-index: 3;
+}
+.mobile .tcbg{
+     position: absolute;
+     left: 0;
+     top:26px;
+     width: 100%;
+    z-index: -1; 
+}
+.mobile .mbottom{
+    position: absolute;
+    width: 100%;
+    height: 56px;
+    left: 0;
+    bottom: 0px;
+    z-index: 1;
+}
+.mobile .mbottom img{
+    display: inline-block;
+    width: 100%;
+}
+.mobile .mbottom .bbg{
+    position: absolute;
+    left: 0;
+    bottom:0; 
+    z-index: 2; 
+    padding: 0 0.9%;  
+}
+.mobile .mbottom .bcont{
+    position: absolute;
+    left: 0;
+    top:0;
+    z-index: 1;  
+    margin:0 6%;
+    width: 88%; 
+}
+.mobile .swiper-container .swiper-slide{
+    text-align: center;
+}
+.mobile .swiper-container .swiper-slide img{
+    display: inline-block;
+    width: 98%;
+    height: 100%;
+}
+.mobile .swiper-container{
+    width: 100%;
+    height: 100%;
 }
 @media (min-width: 768px){ 
-   .case header{
-       margin-bottom: 134px;
+    .navbar-nav>li>a{
+        height: 70px;
+        line-height: 70px;
+        font-size: 16px;
+        padding: 0;
+    }
+   .navbar-right{
+        padding-left: 0px;
+    }
+   .case li h4{
+    margin-bottom: 0;
    }
-   .social-right{
-       float: right;
-   } 
+   .ico-new{
+    display: block;
+   }
 }

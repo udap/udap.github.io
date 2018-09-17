@@ -13,19 +13,71 @@
     <!-- Custom Theme JavaScript -->
     <script src="{{ "js/grayscale.js" | prepend: site.baseurl }}"></script>
     <script src="{{ "js/main.js" | prepend: site.baseurl }}"></script>
-<!--     <script src="{{ "js/swiper.min.js" | prepend: site.baseurl }}"></script>
-     -->    <script>
-        /*window.onload = function() {
-            var mySwiper = new Swiper ('.swiper-container', {
-               direction: 'vertical',
-               loop: true,
-               autoplay : 5000,
-               autoplayDisableOnInteraction : false,
-               // 如果需要分页器
-               pagination : '.swiper-pagination',
-               paginationClickable :true,
-               keyboardControl : true,
-               mousewheelControl : true,
-             })   
-        }*/
+    <script src="{{ "js/swiper.min.js" | prepend: site.baseurl }}"></script>
+    <script>
+      var swiper = new Swiper('#workMobile', {
+            autoplay:false,
+            pagination: {
+              el: '.swiper-pagination',
+              dynamicBullets: true,
+            },
+          });
+
+      var swiper2 = new Swiper('#mainSwiper', {
+        direction: 'vertical',
+        spaceBetween: 30,
+        centeredSlides: true,
+        pagination: {
+          el: '.mainPagination',
+          clickable: true,
+        },
+        loop : true,
+        on:{
+         slideChange: function () {
+           if(this.activeIndex==5){
+             this.mousewheel.disable();
+             swiper1.slideTo(0);
+             swiper1.autoplay.start();
+             swiper1.mousewheel.enable();;
+           }
+         },
+        },
+        mousewheel: true,
+      });
+      $('#navhome').click(function(){
+         swiper2.slideTo(1);
+      })
+      $('#navAbout').click(function(){
+         swiper2.slideTo(2);
+      })
+      $('#navTeam').click(function(){
+         swiper2.slideTo(6);
+      })
+      $('#navContact').click(function(){
+         swiper2.slideTo(12);
+      })
+      $('#pcnextDown').click(function(){
+        console.log("1")
+         swiper2.slideTo(2);
+      })
+
+      var swiper1 = new Swiper('#workSwiper', {
+        spaceBetween: 30,
+        centeredSlides: true,
+        pagination: {
+          el: '.workPagination',
+          clickable: true,
+        },
+        mousewheel: true,
+        dynamicBullets: true,
+        loop:false,
+        on:{
+          slideNextTransitionEnd: function () {
+            if(this.activeIndex==3){
+              swiper2.mousewheel.enable();
+              swiper1.slideTo(4);
+            }
+          }
+         },
+      });
     </script>
