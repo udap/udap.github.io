@@ -1,6 +1,10 @@
-body {
+@font-face {
+  font-family: 'Helvetica';   /*字体名称*/
+  src: url('../font/Helvetica.ttf');       /*字体源文件*/
+}
+html,body {
     margin: 0;
-    font-family: Lora, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     font-size: 14px;
     line-height: 1.5;
     color: #212529;
@@ -11,14 +15,17 @@ a,button{
     border:0;
     outline:none;
 }
+.navbar-nav li a{
+    color:#fff;
+}
+.navbar-nav li a:hover{
+    background: none;
+}
 .udap{
-    margin-top: 70px;
-	background: url(../img/intro-bg.jpg) no-repeat center center;
+	background: url(../img/bg/tokensale.png) no-repeat center center;
 	background-size: cover;
 }
 .udap nav{
-	padding-bottom: 15px;
-    padding-left: 50px;
 	overflow: hidden;
 }
 .udap nav a{
@@ -43,52 +50,97 @@ a,button{
 .udap-title{
     color:#fff;
 	text-align: center;
-    padding: 50px 0px 100px 0px;
 }
 .udap-title h1{
 	text-align: center;
-	font-size: 48px;
-    margin: 0 0 1.5rem;
+	font-size:36px;
+    color:#d7b87a;
+    margin:0;
+    margin-top: 131px;
+    margin-bottom: 25px;
 }
 .udap-title p{
-	font-size: 18px;
-	margin: 0;
+	font-size:14px;
+    color:#ffffff;
+    text-align:center;
+    line-height:28px;
+	margin: 0 auto;
+    max-width: 812px;
+    margin-bottom: 60px;
 }
 .udap-register{
-    max-width: 120px;
     overflow: hidden;
 }
 .udap-register button{
-    background:#f7891e;
-    color:#fff;
-    font-size: 18px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin-top: 50px;
+    background:none;
+    font-size:18px;
+    color:#ffffff;
+    display: inline-block;
+    border:1px solid rgba(255,255,255,0.50);
+    width:298px;
+    height:41px;
+    text-align: center;
 }
 .udap-register button:hover{
-    color:#fff;
-    opacity: 0.8;
-    filter: opacity(80);
+    color:#ffffff;
 }
 /* udap-token */
 .udap-token{
-    margin:50px 0px;
+    margin:0;
+    margin-top:143px;
     padding: 0px;
     overflow: hidden;
 }
 .udap-token .token-title{
     text-align: center;
+    margin:0;
+    font-size:36px;
+    color:#d7b87a;
+    margin-bottom: 25px;
 }
 .udap-token .token-intro{
     overflow: hidden;
 }
-
+.udap-token .token-intro p{
+    font-size:14px;
+    color:#ffffff;
+    text-align:center;
+    line-height:28px;
+}
+.udap-token .token-intro ul{
+    padding: 0;
+    margin-bottom: 20px;
+}
+.udap-token .token-intro li{
+    list-style: none;
+    font-size:14px;
+    color:#888888;
+    text-align:center;
+    line-height:24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.udap-token .token-intro li i{
+    display: inline-block;
+    background: #888888;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.udap-token .token-intro p.bigTitle{
+    font-size: 18px;
+    margin-bottom: 70px;
+}
 .border-right{
     border-left:none;
 }
 .udap-token .token-subtitle{
-    margin-bottom:30px;
+    margin-top:34px;
+    margin-bottom: 0;
+    font-size:20px;
+    color:#ffffff;
     text-align: center;
 }
 .udap-token .token-pics{
@@ -104,37 +156,44 @@ a,button{
 .udap-token .token-list{
 
 }
+.container-fluid{
+    padding:0; 
+}
 /* footer */
 footer{
-    height: 100px;
-    line-height: 100px;
-    color:#fff;
-    font-size: 14px;
-    background: #000;
+    height: 50px;
+    line-height: 50px;
+    font-size:14px;
+    color:#ffffff;
+    letter-spacing:0.09px;
+    background:#181818;
     text-align: center;
+    margin-top: 82px;
 }
 
 .case{
+    padding-top: 70px;
     overflow: hidden;
     width: 100%;
-    min-height: 100%;
+    height: 100%;
     background: #000 url(../img/bg/work.png) no-repeat right center;
     background-size: 100% 100%;
-    margin-top: 70px;
 }
 .case h2{
-    font-size:48px;
-    color:#b98c35;
+    font-size:36px;
+    color:#d7b87a;
     letter-spacing:0.2px;
-    line-height:56px;
+    line-height:34px;
     text-align:left;
     margin:0;
+    margin-bottom: 20px;
 }
 .case h2 p{
-    font-size: 20px;
+    font-size: 18px;
     color:#fff;
     line-height: 24px;
     letter-spacing: 0.1;
+    margin:0;
 }
 .case ul{
     list-style: none;
@@ -145,42 +204,52 @@ footer{
     margin-top: 12px;
 }
 .case li h3{
-    font-size:24px;
+    font-size:18px;
     color:#ffffff;
-    letter-spacing:0.15px;
+    letter-spacing:0.11px;
     text-align:left;
     margin:0;
+    margin-bottom: 9px;
 }
 .case li h3 img{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
     margin-right: 13px;
 }
 .case li p{
     font-size:14px;
     color:#888888;
     letter-spacing:0;
-    line-height:18px;
+    line-height:20px;
     text-align:left;
-    margin-bottom: 0;
+    margin-bottom: 21px;
 }
 .case li .list p{
-    font-size:16px;
+    font-size:14px;
     color:#888888;
     letter-spacing:0;
-    line-height:22px;
+    line-height:20px;
     text-align:left;
     padding-left: 40px;
+    margin-bottom: 0;
     background:url(../img/circle.png) no-repeat 20px 10px;
 }
 .case li h4{
-    font-size:16px;
+    font-size:14px;
     color:#ffffff;
-    letter-spacing:0.1px;
-    line-height:20px;
+    letter-spacing:0.09px;
+    line-height:22px;
     text-align:left;
     margin:0;
+    margin-top:24px;
     margin-bottom: 15px;
 }
 /* nav */
+.navbar{
+    background: #242424;
+    margin-bottom: 0;
+}
 .navbar-nav>li>a{
     line-height: 50px;
     font-size: 16px;
@@ -196,13 +265,15 @@ footer{
 }
 .navbar-right li a{
     color: #D7B87A!important;
-    text-transform: uppercase;
 }
 .navbar-right li.Nmr{
     margin-right: 33px;
 }
 .navbar-nav li{
     padding: 0 15px;
+}
+.navbar-nav li a:hover{
+    background: none;
 }
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover
 .case header .logoImg{
@@ -211,30 +282,17 @@ footer{
 }
 .navbar-toggle{
     margin-top: 16px;
+    border:solid 1px #fff;
+}
+.navbar-toggle .icon-bar{
+    background: #fff;
 }
 .navbar-header{
     min-height: 70px;
 }
-/* .social-right{
-    float: left;
-}
-.social-right li{
-    margin-top: 0;
-    list-style: none;
-    display: inline-block;
-}
-
-.social-right a{
-    font-size:16px;
-    color:#b98c35;
-    text-align:left;
-}
-.social-right a:hover{
-  text-decoration: none;
-} */
 .case .cont{
-    min-height: 100%;
-    padding: 15px 0;
+    overflow: hidden;
+    padding-top: 70px;
 }
 /*stress*/
 .stress{
@@ -242,8 +300,8 @@ footer{
 }
 .ico-new{
     position: absolute;
-    left: 133px;
-    top: 2px;
+    left: 70px;
+    top: 10px;
     font-size: 12px;
     background: #b98c35;
     color:#fff;
@@ -256,79 +314,51 @@ footer{
 }
 .mobile{
     display: block;
-    width: 268px;
-    height: 536px;
+    width: 250px;
+    height: 500px;
     margin:0 auto;
     position: relative;
 }
-.mobile .mtop{
-     position: absolute;
-     left: 0;
-     top:0;
-     width: 100%;
-    z-index: 4; 
-}
-.topbg{
-    padding: 0 0.9%;  
-    display: inline-block;
-    width: 100%;
-
-}
-.mobile .mcenter{
-    position: absolute;
-    top:8px;
-    bottom: 56px;
-    width: 100%;
-    padding: 0 6%;
-    z-index: 3;
-}
-.mobile .tcbg{
-     position: absolute;
-     left: 0;
-     top:26px;
-     width: 100%;
-    z-index: -1; 
-}
-.mobile .mbottom{
-    position: absolute;
-    width: 100%;
-    height: 56px;
-    left: 0;
-    bottom: 0px;
-    z-index: 1;
-}
-.mobile .mbottom img{
-    display: inline-block;
-    width: 100%;
-}
-.mobile .mbottom .bbg{
-    position: absolute;
-    left: 0;
-    bottom:0; 
-    z-index: 2; 
-    padding: 0 0.9%;  
-}
-.mobile .mbottom .bcont{
+.mobile .mobilebg{
     position: absolute;
     left: 0;
     top:0;
-    z-index: 1;  
-    margin:0 6%;
-    width: 88%; 
-}
-.mobile .swiper-container .swiper-slide{
-    text-align: center;
-}
-.mobile .swiper-container .swiper-slide img{
-    display: inline-block;
-    width: 98%;
-    height: 100%;
-}
-.mobile .swiper-container{
+    z-index: 300;
     width: 100%;
-    height: 100%;
+    height:100%;
+}
+.mobile .mcenter{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    z-index: 200;
+    width: 218px;
+    height:472px;
+    margin-left: -109px;
+    margin-top: -236px;
+}
+
+.midnav li a:hover{
+    background: none;
+    border-bottom: solid 2px #fff;
 }
 @media (min-width: 768px){ 
+    #midPcNav {
+        margin-left: 183px;
+    }
+    #midPcNav li{
+        padding: 0;
+        margin-right: 50px;
+    }
+    .navbar{
+        background: none;
+        margin-bottom: 0;
+    }
+    .udap-token .token-pic{
+        display: inline-block;
+        width: 400px;
+        height: 400px;
+    }
     .navbar-nav>li>a{
         height: 70px;
         line-height: 70px;
@@ -345,3 +375,4 @@ footer{
     display: block;
    }
 }
+

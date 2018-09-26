@@ -1,4 +1,4 @@
-$(function () {
+/* $(function () {
   let arrList = [{
       coverImg: "./img/news/newcsdn.png",
       title: "BTA | LI ZHANG: Why do we need a universal blockchain asset platform?",
@@ -43,7 +43,6 @@ $(function () {
   }
   $("#newsContent").html(splicing);
 
-
   function newPage() {
     let page_html = "";
     for (let i = 0; i < parseInt(arrList.length / 10); i++) {
@@ -56,8 +55,8 @@ $(function () {
     $("#Page").html(page_html);
   }
   newPage();
-})
-///注释2018/05/16//老版样式
+}) */
+/// 注释2018/05/16//老版样式
 // ' <div class="media-left news__img">' +
 // ' <a href="'+arrList[i].url +'" target="_blank">' +
 // ' <img class="media-object" src="' + arrList[i].coverImg + '" alt="...">' +

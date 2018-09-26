@@ -20,22 +20,23 @@
     </div>
     <!-- PC -->
     <div class="pcMain">
-     <div class="swiper-container" id="mainSwiper">
+     <div class="swiper-container mainSwiper" id="mainSwiper">
        <div class="swiper-wrapper">
-         <div class="swiper-slide">{% include header.html %}</div>
-         <div class="swiper-slide">{% include about.html %}</div>
-         <div class="swiper-slide">{% include matters.html %}</div>
-         <div class="swiper-slide">{% include solution.html %}</div>
-         <div class="swiper-slide">{% include work.html %}</div>
-         <div class="swiper-slide">{% include team.html %}</div>
-         <div class="swiper-slide">{% include advisor.html %}</div>
-         <div class="swiper-slide">{% include roadmap.html %}</div>
-         <div class="swiper-slide">{% include investors.html %}</div>
-         <div class="swiper-slide">{% include partners.html %}</div>
-         <div class="swiper-slide">{% include press.html %}</div>
-         <div class="swiper-slide">{% include footer.html %}</div>
+         <div class="swiper-slide swiper-no-swiping">{% include header.html %}</div>
+         <div class="swiper-slide swiper-no-swiping">{% include about.html %}</div>
+         <div class="swiper-slide swiper-no-swiping">{% include matters.html %}</div>
+         <div class="swiper-slide swiper-no-swiping">{% include solution.html %}</div>
+         <div class="swiper-slide swiper-no-swiping">{% include work.html %}</div>
+         <div class="swiper-slide swiper-no-swiping">{% include team.html %}</div>
+         <div class="swiper-slide swiper-no-swiping">{% include advisor.html %}</div>
+         <div class="swiper-slide swiper-no-swiping">{% include roadmap.html %}</div>
+         <div class="swiper-slide swiper-no-swiping">{% include investors.html %}</div>
+         <div class="swiper-slide swiper-no-swiping">{% include partners.html %}</div>
+         <div class="swiper-slide swiper-no-swiping">{% include press.html %}</div>
+         <div class="swiper-slide swiper-no-swiping">{% include footer.html %}</div>
        </div>
-       <div class="swiper-pagination mainPagination"></div>
+       <div class="swiper-pagination mainPagination" id="mainPagination"></div>
+       <div class="swiper-scrollbar"></div>
      </div>   
     </div>
     {% include js.html %}
