@@ -362,6 +362,16 @@ li.test3 h3{
 }
 li.test3 p{
     padding-bottom: 20px;
+    margin-bottom: 0;
+}
+li.test4{
+    font-size:14px;
+    color:#888888;
+    letter-spacing:0.09px;
+    text-align:left;
+    margin-bottom: 36px;
+    max-width: 435px;
+    height: 60px;
 }
 .test button{
     font-size:20px;
@@ -509,6 +519,9 @@ li.test3 p{
     margin-top:0; 
     margin-bottom: 5px;
 }
+.downloadCont .down .title h3 span{
+    color:#fff;
+}
 .downloadCont .down .title p{
     font-size:18px;
     color:#ffffff;
@@ -536,7 +549,14 @@ li.test3 p{
     text-align:center;
     line-height: 25px;
     margin-top: 21px;
-    margin-bottom: 21px;
+    margin-bottom: 10px;
+}
+.downloadCont .down ul li .btn-down{
+    display: inline-block;
+    width: 93px;
+    height: 23px;
+    background: url(../img/download/btn-down.png) no-repeat left top;
+    margin-bottom: 20px;
 }
 .downloadCont footer{
     margin-top: 0;
@@ -572,9 +592,10 @@ li.test3 p{
     .demo footer{
         margin-top: 0;
     }
-    .downloadCont .down ul p{
-        margin-bottom: 105px;
+    .downloadCont .down ul li .btn-down{
+        margin-bottom: 80px;
     }
+
 }
 
 @media (min-width:992px) {
