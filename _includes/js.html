@@ -16,45 +16,6 @@
     <script src="{{ "js/swiper.min.js" | prepend: site.baseurl }}"></script>
      <script> 
 $(document).ready(function () {
-/*var swiperH = new Swiper('.mainSwiper', {//fu
-    pagination: '.swiper-pagination-h',
-    paginationClickable: true,
-    mousewheelControl: true,
-    direction: 'vertical',
-    noSwiping : true,
-    onSlideChangeStart:function(swiper){
-        swiper.enableMousewheelControl();
-    },
-});
-var swiperV = new Swiper('.workSwiper', {
-    pagination: '.work-swiper-pagination',
-    paginationClickable: true,
-    mousewheelControl: true,
-    nested: true,
-    direction: 'vertical',
-    onSlideChangeStart: function (swiper) {
-        if (swiper.activeIndex > 0 && swiper.activeIndex < swiper.bullets.length - 1) {
-            swiperH.disableMousewheelControl();
-        }
-    },
-    onSlideChangeEnd: function (swiper) {
-        if (!(swiper.activeIndex > 0 && swiper.activeIndex < swiper.bullets.length - 1)) {
-            swiperH.enableMousewheelControl();
-        }
-    },
-    onSlidePrevEnd: function(swiper){
-       if(swiper.isBeginning){
-          console.log('是');
-          //swiper.slideTo(0,0,false)
-        }
-     },
-     onSlideNextEnd: function (swiper) {
-       if(swiper.isEnd){
-        console.log('是');
-        //swiper.slideTo(4,0,false)
-      }
-     }
-});*/
 var swiper2 = new Swiper('.workSwiper', {//嵌套的
     pagination: '.work-swiper-pagination',
     paginationClickable: true,
@@ -72,7 +33,6 @@ var swiper2 = new Swiper('.workSwiper', {//嵌套的
       }
     },
     onSlideNextEnd: function (swiper) {
-      console.log("3nactiveIndex",swiper.activeIndex,swiper.realIndex)
       if(swiper.activeIndex==3){
         swiper1.params.allowSwipeToNext = true;
       }else{
@@ -89,18 +49,18 @@ var swiper1 = new Swiper('.mainSwiper', {//父的
     observeParents:true,
     noSwiping : true,
     pagination: '.mainPagination',
-   /* onSlidePrevStart:function(swiper) {
-      if(swiper2.isBeginning&&swiper.activeIndex==4){
-        console.log('p是');
-        //swiper.slideTo(0,0,false)
+    onTransitionEnd: function(swiper){
+      $("#navPc li").removeClass('active')
+      if(swiper.activeIndex == 0){
+        $("#navPc li").eq(0).addClass('active')
+      }else if(swiper.activeIndex == 1){
+        $("#navPc li").eq(1).addClass('active')
+      }else if(swiper.activeIndex == 5){
+        $("#navPc li").eq(2).addClass('active')
+      }else if(swiper.activeIndex == 11){
+        $("#navPc li").eq(3).addClass('active')
       }
     },
-    onSlideNextStart:function(swiper) {
-      if(swiper2.isBeginning&&swiper.activeIndex==4){
-        console.log('n是');
-        //swiper.slideTo(0,0,false)
-      }
-    },*/
     onSlidePrevEnd: function(swiper){
       if(swiper.activeIndex==4){
         swiper.params.allowSwipeToPrev = false;

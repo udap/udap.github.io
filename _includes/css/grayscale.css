@@ -1978,7 +1978,14 @@ pre code {
         width: 1100px
     }
     .navbar .container {
-        width: 1200px
+        width: 1100px;
+        padding: 0;
+    }
+    .navbar-custom .navbar-brand {
+        padding: 15px 0;
+        margin-left: 0!important;
+        height: auto;
+        overflow: hidden;
     }
 }
 
@@ -5245,7 +5252,6 @@ textarea.input-group-sm>.input-group-btn>.btn {
     }
     .navbar-right {
         float: right !important;
-        margin-right: -15px
     }
     .navbar-right~.navbar-right {
         margin-right: 0
@@ -7893,9 +7899,10 @@ a:focus {
     background-color: #000000;
 }
 
+
 .navbar-custom .navbar-brand {
-    height: 50px;
-    line-height: 50px;
+    /* height: 50px; 
+    line-height: 50px; */
     margin-left: 15px;
 }
 
@@ -7940,7 +7947,7 @@ a:focus {
     .navbar {
         padding: 20px 0;
         border-bottom: 0;
-        letter-spacing: 1px;
+        /* letter-spacing: 1px; */
         background: 0 0;
         -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
@@ -8461,28 +8468,145 @@ ul.social-buttons li a:hover {
     display: inline-block;
 }
 
-#inverstor img, 
-#news img{
-    max-height: 50px;
+#inverstor img{
     margin:0 auto;
-}
-#inverstor #inverstorimg3{
     display: inline-block;
+} 
+
+#inverstor .invertor_img1{
+    width: 60px;
+    height: 63px;
+}
+#inverstor .invertor_img2{
+    width: 174px;
+    height: 24px;
+}
+#inverstor .invertor_img3{
     width: 158px;
     height: 54px;
-    max-height: 100%!important;
 }
-#inverstor #inverstorimg12{
-    display: inline-block;
-    width: 142px;
-    height: 48px;
-    max-height: 100%!important;
+#inverstor .invertor_img4{
+    width: 72px;
+    height: 44px;
+}
+#inverstor .invertor_img5{
+    width: 199px;
+    height: 55px;
+}
+#inverstor .invertor_img6{
+    width: 174px;
+    height: 46px;
+}
+#inverstor .invertor_img7{
+    width: 185px;
+    height: 44px;
+}
+#inverstor .invertor_img8{
+    width: 143px;
+    height: 43px;
+}
+#inverstor .invertor_img10{
+    width: 116px;
+    height: 58px;
+}
+#inverstor .invertor_img11{
+    width: 126px;
+    height: 44px;
+}
+#inverstor .invertor_img12{
+    width: 131px;
+    height: 45px;
 }
 .inverstor .title,
 .press .title{
      text-align: center;
 }
 
+/*press*/
+#news img{
+    margin:0 auto;
+    display: inline-block;
+}
+#news .press_img1{
+    width: 218px;
+    height: 27px;
+}
+#news .press_img2{
+    width: 160px;
+    height: 39px;
+}
+#news .press_img3{
+    width: 171px;
+    height:42px;
+}
+#news .press_img4{
+    width: 171px;
+    height: 31px;
+}
+#news .press_img5{
+    width: 162px;
+    height: 47px;
+}
+#news .press_img6{
+    width: 130px;
+    height: 49px;
+}
+#news .press_img7{
+    width: 152px;
+    height: 47px;
+}
+#news .press_img8{
+    width: 180px;
+    height: 33px;
+}
+#news .press_img9{
+    width: 75px;
+    height: 39px;
+}
+#news .press_img10{
+    width: 148px;
+    height: 35px;
+}
+#news .press_img11{
+    width: 102px;
+    height: 49px;
+}
+#news .press_img12{
+    width: 152px;
+    height: 47px;
+}
+#news .press_img13{
+    width: 144px;
+    height: 35px;
+}
+#news .press_img14{
+    width: 130px;
+    height: 26px;
+}
+#news .press_img15{
+    width: 78px;
+    height: 45px;
+}
+#news .press_img16{
+    width: 143px;
+    height: 36px;
+}
+#news .press_img17{
+    width: 117px;
+    height: 37px;
+}
+#news .press_img18{
+    width: 117px;
+    height: 37px;
+}
+#news .press_img19{
+    width: 122px;
+    height: 35px;
+}
+#news .press_img20{
+    width: 126px;
+    height: 45px;
+}
 @media (min-width: 768px){ 
     #inverstor {
         height: 100%;
@@ -9141,8 +9265,8 @@ footer .social-buttons {
         margin-right: 0;
     }
     .navbar-custom .nav-midCont li a{
-        height: 50px;
-        line-height: 50px;
+        height: 70px;
+        line-height: 70px;
         padding: 0;
         font-size:12px;
         color:#ffffff;
@@ -9183,8 +9307,8 @@ footer .social-buttons {
     }
 
     .nav-rightCont li a{
-        height: 50px;
-        line-height: 50px;
+        height: 70px;
+        line-height: 70px;
         padding: 0;
         font-size:14px;
         color:#fff;
@@ -9198,13 +9322,18 @@ footer .social-buttons {
     @media (min-width: 768px){ 
 
         .navbar{
-            padding-top: 15px;
+            padding-top: 0;
             padding-bottom: 0px;
             overflow: hidden;
+            height: 70px;
+            line-height: 70px;
+            display: flex;
+            justify-content: center;
         }
         .navbar-header .page-scroll img {
             display: inline-block;
-            width: 195px;
+            /* width: 195px; */
+            width: 100%;
             height: 50px;
         }
         .navbar-custom .nav-midCont{
@@ -9227,7 +9356,8 @@ footer .social-buttons {
             color:#fff;
             background: none;
             border-bottom: solid 2px #fff;
-            height: 48px;
+            height: 70px;
+            line-height: 70px;
         }
         .nav-rightCont{
             padding: 0;
@@ -9953,8 +10083,8 @@ footer p{
 }
 .ico-new{
     position: absolute;
-    left:143px;
-    top:2px;
+    left: 70px;
+    top: 10px;
     font-size: 12px;
     background: #D7B87A;
     color:#fff;
@@ -10074,12 +10204,12 @@ footer .social-logo li{
 }
 .work2r{
     position: absolute;
-    right: 90px;
-    top: 100px;
+    right: 0px;
+    top: 90px;
 } 
 .work2r img{
     display: inline-block;
-    max-width: 500px;
+    /* max-width: 500px; */
 }
 .swiperitem .work2cont{
     width: 518px;
@@ -10202,6 +10332,7 @@ footer .social-logo li{
 }
 #workSwiper .swiper-pagination .swiper-pagination-bullet{
     margin:21px 5px;
+    display: block;
 }
 
 #workSwiper .swiper-pagination-customs-active {
@@ -10216,12 +10347,19 @@ footer .social-logo li{
     height: 100vh;
 }
 #workSwiper .swiper-pagination{
-    right:0;
+    /* width: 1100px;
+    margin:0 auto;
+    display: flex;
+    align-items: flex-end; */
+    right: 5%;
 }
-.work1 .container-fluid,.work1 .workitem,
-.work2 .container-fluid,.work2 .workitem,
-.work3 .container-fluid,.work3 .workitem,
-.work4 .container-fluid,.work4 .workitem{
+.work1 .container,.work1 .workitem,
+.work2 .container,.work2 .workitem,
+.work3 .container,.work3 .workitem,
+.work4 .container,.work4 .workitem,
+#work .swiper-wrapper,
+#work .swiper-slide,
+#work .container-fluid{
     height: 100%; 
 }
 .work1 .container,
@@ -10270,6 +10408,9 @@ footer .social-logo li{
 }
 .work2item,.workr{
     text-align: center;
+}
+.work1 .workr{
+    text-align: right;
 }
 .work2 .work2-r{
     text-align: left;
@@ -10607,4 +10748,11 @@ display: none;
 }
 #workMobile .heading-h1{
     font-size: 23px;
+}
+
+
+@media (max-width: 768px) {
+    .navbar-custom .navbar-brand{
+        padding: 15px 0;
+    }
 }
