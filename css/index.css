@@ -485,6 +485,74 @@ li.test3 p{
     margin-right: auto;
     margin-left: auto;
 }
+
+/* downloadCont */
+.downloadCont .down{
+    background: #000;
+    padding-top: 80px;
+}
+.downloadCont .down h2{
+    font-size:42px;
+    color:#d7b87a;
+    text-align:left;
+    line-height: 59px;
+    background: url(../img/download/download.png) no-repeat 13px center;
+    padding-left: 100px;
+    margin-top: 38px;
+    margin-bottom: 48px;
+}
+.downloadCont .down .title h3{
+    font-size:24px;
+    color:#d7b87a;
+    text-align:left;
+    line-height: 33px;
+    margin-top:0; 
+    margin-bottom: 5px;
+}
+.downloadCont .down .title p{
+    font-size:18px;
+    color:#ffffff;
+    letter-spacing:0;
+    text-align:left;
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+.downloadCont .down .title1{
+    background: url(../img/download/wallet.png) no-repeat left center;
+    padding-left: 104px;
+}
+.downloadCont .down ul{
+    padding-left: 104px;
+
+}
+.downloadCont .down ul li{
+    display: inline-block;
+    margin-right: 116px;
+}
+.downloadCont .down ul p{
+    font-size:18px;
+    color:#ffffff;
+    letter-spacing:0;
+    text-align:center;
+    line-height: 25px;
+    margin-top: 21px;
+    margin-bottom: 21px;
+}
+.downloadCont footer{
+    margin-top: 0;
+}
+/*100%height*/
+/* html,body,.downloadCont{
+    height: 100%;
+}
+.downloadCont .down{
+    height: 100%;
+}
+.downloadCont footer{
+    position: fixed;
+    bottom:0;
+    width: 100%;
+} */
 @media (min-width:768px) {
     .container {
         width: 750px
@@ -503,6 +571,9 @@ li.test3 p{
     }
     .demo footer{
         margin-top: 0;
+    }
+    .downloadCont .down ul p{
+        margin-bottom: 105px;
     }
 }
 
