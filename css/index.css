@@ -311,19 +311,37 @@ footer{
 .demoCont .test h3{
     font-size:24px;
     color:#ffffff;
-    line-height:30px;
+    line-height:32px;
     text-align:left;
     font-weight: normal;
+}
+.demoCont .test h4{
+    font-size:20px;
+    color:#ffffff;
+    line-height:32px;
+    text-align:left;
+    margin:0;
 }
 .demoCont .test p{
     font-size:14px;
     color:#ffffff;
     letter-spacing:0;
     text-align:left;
-    line-height: 22px;
-    max-width: 707px;
+    line-height: 20px;
+    max-width: 704px;
 }
-.demoCont .test p a{
+.demoCont .test ul{
+    font-size:14px;
+    color:#ffffff;
+    letter-spacing:0;
+    line-height:20px;
+    max-width: 704px;
+    margin-bottom: 16px;
+}
+.demoCont .test2 ul{
+    max-width: 650px;
+}
+.demoCont .test ul a{
     font-size:18px;
     color:#059FF5;
     padding: 15px 16px 0 0;
@@ -336,33 +354,116 @@ footer{
     background: url(../img/demo/2.png) no-repeat right 15px;
 }
 .icon3{
-    font-size: 14px!important;
     background: url(../img/demo/3.png) no-repeat right 15px;
 }
-.demoCont ul{
+/* .demoCont ul{
     overflow: hidden;
+} */
+.demoCont ol{
+    padding: 0;
+    font-size:14px;
+    color:#ffffff;
+    letter-spacing:0;
+    line-height: 20px;
+    margin-bottom: 10px;
 }
+.demoCont .circle li{
+    list-style: none;
+    padding-left:5px;
+    /* background: url(../img/demo/circle.png) no-repeat left center; */
+}
+
 .demoCont .test p a:hover{
     text-decoration: none;
 }
+.demoCont h3.line{
+    text-decoration: underline;
+    line-height: 29px;
+}
+.wordtext .thumb{
+    margin-top: 29px;
+   height: 49px;
+   margin-bottom: 10px; 
+}
+.wordtext .arrow{
+    position: relative;
+}
+.wordtext .arrowimg{
+    position: absolute;
+    left: 75%;
+    top:50%;
+    margin-top: -6px;
+    display: none;
+}
+.demoCont .caption h3{
+    font-size:16px;
+    color:#ffffff;
+    letter-spacing:0;
+    text-align:center;
+    line-height:16px;
+    height: 32px;
+    margin:0 auto;
+    margin-bottom: 14px;
+}
+
+.demoCont .caption p{
+    font-size:13px;
+    color:#888888;
+    letter-spacing:0;
+    text-align:center;
+    line-height:16px;
+    margin:0 auto;
+    overflow: hidden;
+    word-break:keep-all;
+}
+.demoCont .col-md-3{
+    padding: 0;
+}
+.word .wordtext:nth-child(1) .caption h3{
+    max-width: 73px;
+}
+.word .wordtext:nth-child(1) .caption p{
+    max-width: 139px;
+}
+.word .wordtext:nth-child(2) .caption h3{
+    max-width: 83px;
+}
+.word .wordtext:nth-child(2) .caption p{
+    max-width: 134px;
+}
+.word .wordtext:nth-child(3) .caption h3{
+    max-width: 100px;
+}
+.word .wordtext:nth-child(3) .caption p{
+    max-width: 160px;
+}
+.word .wordtext:nth-child(4) .caption h3{
+    max-width: 100px;
+}
+.word .wordtext:nth-child(4) .caption p{
+    max-width: 170px;
+}
 li.test1 h3{
-    margin-bottom: 19px;
-}
-li.test1 p{
-    margin-bottom: 32px;
-}
-li.test2 h3{
     margin-bottom: 15px;
 }
-li.test2 p{
-    margin-bottom: 36px;
+li.test1 p{
+    margin-bottom: 30px;
 }
-li.test3 h3{
-    margin-bottom: 19px;
+.test li.test2 h4{
+    margin-bottom: 2px;
+}
+li.test2 p{
+    margin-bottom: 5px;
+}
+.test li.test3 h4{
+    margin-bottom: 3px;
 }
 li.test3 p{
-    padding-bottom: 20px;
+    padding-bottom: 5px;
     margin-bottom: 0;
+}
+li.test3 .caption p{
+    padding-bottom: 15px;
 }
 li.test4{
     font-size:14px;
@@ -370,7 +471,7 @@ li.test4{
     letter-spacing:0.09px;
     text-align:left;
     margin-bottom: 36px;
-    max-width: 435px;
+    max-width: 704px;
     height: 60px;
 }
 .test button{
@@ -595,7 +696,9 @@ li.test4{
     .downloadCont .down ul li .btn-down{
         margin-bottom: 80px;
     }
-
+    .wordtext .arrowimg{
+        display: block;
+    }
 }
 
 @media (min-width:992px) {
