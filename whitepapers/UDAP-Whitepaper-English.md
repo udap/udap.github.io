@@ -406,7 +406,7 @@ Transactions refers to any operation on the assets on the UDAP blockchain. For e
 
 #### 5.2. The Singular Asset Account Model
 
-The "tokenizing everything" movement essentially deals with so called "Non-Fungible" asset tokens. There have been some work done in Ethereum to standardize the representation of such assets. The one that has got most attention is [ERC 721](http://erc721.org/).
+The "Tokenizing Everything" movement essentially deals with so called "Non-Fungible" asset tokens. There have been some work done in Ethereum to standardize the representation of such assets. The one that has got most attention is [ERC 721](http://erc721.org/).
 
 ERC721 has gained mild success in adoption, mainly for categorized none-fungible assets such as virtual assets in gaming.  In fact some of the underlying asset manage capability of UDAP middle layer will be based on ERC721 or its derivatives. 
 
@@ -427,9 +427,9 @@ setApprovalForAll(address _operator, bool _approved);
 isApprovedForAll(address _owner, address _operator);
 ```
 
-4. It offers no api to find out all the tokens owned by a specific person. A separate indexing service is required for enumerating a person’s asset. 
-5. And all the variants of `transferFrom(...)`s require a handy manual to remind developers of there meanings and nuances.  
-6. It tried to be ERC20 compatible, but semantically some of the ERC20 functions do not carry the same meaning for none-fungibles, such as:
+4. It offers no API to find out all the tokens owned by a specific person. A separate indexing service is required for enumerating a person’s asset. 
+5. And all the variants of `transfer...(...)`s require a handy manual to remind developers of there meanings and nuances. The `_from` address parameter of the transfers does not make any sense since it can be derived from the token id parameter deterministically. It only serves to match the `transferFrom` method of ERC20. We believe this design is an anti-pattern.
+6. In general, it trys to be ERC20 compatible, but semantically some of the ERC20 functions do not carry the same meaning for none-fungibles, such as:
 
 ```
 balanceOf(...)
@@ -439,7 +439,8 @@ transferFrom(...)
 
 7. It does not allow setting operator on individual item. It has to be all or none, therefore lacking fine control of delegated ownership. In fact adding the operator feature to the protocol has made it unnecessarily bloated. It should separate the concerns.  
 8. It has to deal with receivers of either EOA type or contract type.  Although the contract receiver may reject the ownership transfer, EOAs do not have such options. 
-9. No natural type safely for element tokens.  Since each element is just an index number, there is no type information about it directly.  A separate array list must be maintained to keep  type information.  Working with the multiple arrays are awkward. 
+9. No natural type safely for element tokens.  Since each element is just an index number, there is no type information about it directly.  A separate array list must be maintained to keep  type information.  Working with the multiple arrays are awkward.
+ 
 
 ##### 5.2.1 Goals of Singular
 
@@ -626,7 +627,7 @@ The operator management is such a case. The `OwnerOfSingulars::isAuthorized(addr
 
 The following diagram shows how the ownership can chain mutiple contract together to form an ownership chain:
 
-![ownership](media/singular-ownership.png)
+![ownership](media/singular-wallet.png)
  
 The owner of the `OwnerOfSingulars` can be an EOA, or any smart contracts such as a multi-sig wallet. Flexibility is all there for creative delegation schemes. 
 

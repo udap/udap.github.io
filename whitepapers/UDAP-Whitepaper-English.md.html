@@ -646,7 +646,7 @@ interface OwnerOfSingulars {
 <p>As mentioned before, we don't want to squeeze all convenient things into the token API and make it bloated.</p>
 <p>The operator management is such a case. The <code>OwnerOfSingulars::isAuthorized(address, Singular)</code> is a function that a <code>Singular</code> can invoke to find out if the current message sender is authorized to act on behalf of the token owner. The API give great flexibility to create sophisticated permission schemes.</p>
 <p>The following diagram shows how the ownership can chain mutiple contract together to form an ownership chain:</p>
-<p><a href="media/singular-ownership.png" target="_blank" rel="noopener noreferrer"><img src="media/singular-ownership.png" alt="ownership" style="max-width:100%;"></a></p>
+<p><a href="media/singular-wallet.png" target="_blank" rel="noopener noreferrer"><img src="media/singular-wallet.png" alt="ownership" style="max-width:100%;"></a></p>
 <p>The owner of the <code>OwnerOfSingulars</code> can be an EOA, or any smart contracts such as a multi-sig wallet. Flexibility is all there for creative delegation schemes.</p>
 <p>Another interesting way to use the above interfaces is to combine the two interfaces to create a <em>composable</em> token, as shown below:</p>
 <p><a href="media/singular-composable.jpg" target="_blank" rel="noopener noreferrer"><img src="media/singular-composable.jpg" alt="ownership" style="max-width:100%;"></a></p>
