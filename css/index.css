@@ -1,6 +1,10 @@
-body {
+/* @font-face {
+  font-family: 'Helvetica';   字体名称
+  src: url('../font/Helvetica.ttf');       字体源文件
+} */
+html,body {
     margin: 0;
-    font-family: Lora, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     font-size: 14px;
     line-height: 1.5;
     color: #212529;
@@ -11,18 +15,24 @@ a,button{
     border:0;
     outline:none;
 }
+.navbar-nav li a{
+    color:#fff;
+}
+.navbar-nav li a:hover{
+    background: none;
+}
 .udap{
-	background: url(../img/intro-bg.jpg) no-repeat center center;
+	background: url(../img/bg/tokensale.png) no-repeat center center;
 	background-size: cover;
 }
 .udap nav{
-	padding-bottom: 15px;
-    padding-left: 50px;
 	overflow: hidden;
 }
 .udap nav a{
 	color:#fff;
 	text-decoration: none;
+    overflow: hidden;
+    height: auto;
 }
 .udap nav a:hover{
 	color:#fff;
@@ -42,52 +52,97 @@ a,button{
 .udap-title{
     color:#fff;
 	text-align: center;
-    padding: 50px 0px 100px 0px;
 }
 .udap-title h1{
 	text-align: center;
-	font-size: 48px;
-    margin: 0 0 1.5rem;
+	font-size:36px;
+    color:#d7b87a;
+    margin:0;
+    margin-top: 131px;
+    margin-bottom: 25px;
 }
 .udap-title p{
-	font-size: 18px;
-	margin: 0;
+	font-size:14px;
+    color:#ffffff;
+    text-align:center;
+    line-height:28px;
+	margin: 0 auto;
+    max-width: 812px;
+    margin-bottom: 60px;
 }
 .udap-register{
-    max-width: 120px;
     overflow: hidden;
 }
 .udap-register button{
-    background:#f7891e;
-    color:#fff;
-    font-size: 18px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin-top: 50px;
+    background:none;
+    font-size:18px;
+    color:#ffffff;
+    display: inline-block;
+    border:1px solid rgba(255,255,255,0.50);
+    width:298px;
+    height:41px;
+    text-align: center;
 }
 .udap-register button:hover{
-    color:#fff;
-    opacity: 0.8;
-    filter: opacity(80);
+    color:#ffffff;
 }
 /* udap-token */
 .udap-token{
-    margin:50px 0px;
+    margin:0;
+    margin-top:143px;
     padding: 0px;
     overflow: hidden;
 }
 .udap-token .token-title{
     text-align: center;
+    margin:0;
+    font-size:36px;
+    color:#d7b87a;
+    margin-bottom: 25px;
 }
 .udap-token .token-intro{
     overflow: hidden;
 }
-
+.udap-token .token-intro p{
+    font-size:14px;
+    color:#ffffff;
+    text-align:center;
+    line-height:28px;
+}
+.udap-token .token-intro ul{
+    padding: 0;
+    margin-bottom: 20px;
+}
+.udap-token .token-intro li{
+    list-style: none;
+    font-size:14px;
+    color:#888888;
+    text-align:center;
+    line-height:24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.udap-token .token-intro li i{
+    display: inline-block;
+    background: #888888;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.udap-token .token-intro p.bigTitle{
+    font-size: 18px;
+    margin-bottom: 70px;
+}
 .border-right{
     border-left:none;
 }
 .udap-token .token-subtitle{
-    margin-bottom:30px;
+    margin-top:34px;
+    margin-bottom: 0;
+    font-size:20px;
+    color:#ffffff;
     text-align: center;
 }
 .udap-token .token-pics{
@@ -103,12 +158,595 @@ a,button{
 .udap-token .token-list{
 
 }
+.container-fluid{
+    padding:0; 
+}
 /* footer */
 footer{
-    height: 100px;
-    line-height: 100px;
-    color:#fff;
-    font-size: 14px;
+    height: 50px;
+    line-height: 50px;
+    font-size:14px;
+    color:#ffffff;
+    letter-spacing:0.09px;
+    background:#181818;
+    text-align: center;
+    margin-top: 82px;
+}
+.case footer{
+    margin-top: 0;
+}
+
+.case{
+    padding-top: 70px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
     background: #000;
+    /* background: #000 url(../img/bg/work.png) no-repeat right center;
+    background-size: 100% 100%; */
+}
+.case .demoCont h2{
+    font-size:36px;
+    color:#d7b87a;
+    letter-spacing:0.2px;
+    line-height:34px;
+    text-align:left;
+    margin:0;
+    margin-bottom: 20px;
+    margin-top: 86px;
+}
+.case h2 p{
+    font-size: 18px;
+    color:#fff;
+    line-height: 24px;
+    letter-spacing: 0.1;
+    margin:0;
+    margin-top: 20px;
+}
+.case ul{
+    list-style: none;
+    padding: 0;
+    margin:0;
+}
+.case .demoContul li{
+    margin-top: 12px;
+}
+.case li h3{
+    font-size:18px;
+    color:#ffffff;
+    letter-spacing:0.11px;
+    text-align:left;
+    margin:0;
+    margin-bottom: 9px;
+}
+.case li h3 img{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 13px;
+}
+.case li p{
+    font-size:14px;
+    color:#888888;
+    letter-spacing:0;
+    line-height:20px;
+    text-align:left;
+    margin-bottom: 21px;
+}
+.case li .list p{
+    font-size:14px;
+    color:#888888;
+    letter-spacing:0;
+    line-height:20px;
+    text-align:left;
+    padding-left: 18px;
+    margin-bottom: 0;
+    background:url(../img/circle.png) no-repeat 0px 8px;
+}
+.case li h4{
+    font-size:14px;
+    color:#ffffff;
+    letter-spacing:0.09px;
+    line-height:22px;
+    text-align:left;
+    margin:0;
+    margin-top:24px;
+    margin-bottom: 15px;
+}
+.case .demoCont .download{
+    border:1px solid rgba(255,255,255,0.50);
+    width:229px;
+    height:58px;
+    background: url(../img/demo/download.png) no-repeat 20px center;
+    font-size:20px;
+    color:#ffffff;
+    letter-spacing:-0.53px;
+    text-align:left;
+    padding-left: 81px;
+    margin-top: 20px;
+    outline: none;
+}
+
+.case .demoImg {
+    overflow: hidden;
+    margin-top: 34px;
     text-align: center;
 }
+.case .demoImg img{
+    display: inline-block;
+}
+.case .demoImg h2{
+    font-size:32px;
+    color:#d7b87a;
+    text-align:center;
+    line-height: 45px;
+    margin-top: 31px;
+    margin-bottom: 22px;
+}
+.case .demoImg h2.media{
+    width: 124px;
+    margin:0 auto;
+    text-align: left;
+    margin-top: 31px;
+    margin-bottom: 22px;
+}
+.case .demoImg p{
+    max-width: 348px;
+    margin:0 auto;
+    font-size:18px;
+    color:#ffffff;
+    letter-spacing:0.1px;
+    text-align:center;
+    margin-bottom: 74px;
+}
+.case .demoCont{
+    background: #000 url(../img/demo/demo.png) no-repeat right center;
+    background-size: 100% 100%;
+}
+
+
+.demoCont .test h2{
+    font-weight: normal;
+}
+.demoCont .test h3{
+    font-size:24px;
+    color:#ffffff;
+    line-height:32px;
+    text-align:left;
+    font-weight: normal;
+}
+.demoCont .test h4{
+    font-size:20px;
+    color:#ffffff;
+    line-height:32px;
+    text-align:left;
+    margin:0;
+}
+.demoCont .test p{
+    font-size:14px;
+    color:#ffffff;
+    letter-spacing:0;
+    text-align:left;
+    line-height: 20px;
+    max-width: 704px;
+}
+.demoCont .test ul{
+    font-size:14px;
+    color:#ffffff;
+    letter-spacing:0;
+    line-height:20px;
+    max-width: 704px;
+    margin-bottom: 16px;
+}
+.demoCont .test2 ul{
+    max-width: 650px;
+}
+.demoCont .test ul a{
+    font-size:18px;
+    color:#059FF5;
+    padding: 15px 16px 0 0;
+    text-decoration: none;
+}
+.icon1{
+    background: url(../img/demo/1.png) no-repeat right 15px;
+}
+.icon2{
+    background: url(../img/demo/2.png) no-repeat right 15px;
+}
+.icon3{
+    background: url(../img/demo/3.png) no-repeat right 15px;
+}
+/* .demoCont ul{
+    overflow: hidden;
+} */
+.demoCont ol{
+    padding: 0;
+    font-size:14px;
+    color:#ffffff;
+    letter-spacing:0;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+.demoCont .circle li{
+    list-style: none;
+    padding-left:5px;
+    /* background: url(../img/demo/circle.png) no-repeat left center; */
+}
+
+.demoCont .test p a:hover{
+    text-decoration: none;
+}
+.demoCont h3.line{
+    text-decoration: underline;
+    line-height: 29px;
+}
+.wordtext .thumb{
+    margin-top: 29px;
+   height: 49px;
+   margin-bottom: 10px; 
+}
+.wordtext .arrow{
+    position: relative;
+}
+.wordtext .arrowimg{
+    position: absolute;
+    left: 75%;
+    top:50%;
+    margin-top: -6px;
+    display: none;
+}
+.demoCont .caption h3{
+    font-size:16px;
+    color:#ffffff;
+    letter-spacing:0;
+    text-align:center;
+    line-height:16px;
+    height: 32px;
+    margin:0 auto;
+    margin-bottom: 14px;
+}
+
+.demoCont .caption p{
+    font-size:13px;
+    color:#888888;
+    letter-spacing:0;
+    text-align:center;
+    line-height:16px;
+    margin:0 auto;
+    overflow: hidden;
+    word-break:keep-all;
+}
+.demoCont .col-md-3{
+    padding: 0;
+}
+.word .wordtext:nth-child(1) .caption h3{
+    max-width: 73px;
+}
+.word .wordtext:nth-child(1) .caption p{
+    max-width: 139px;
+}
+.word .wordtext:nth-child(2) .caption h3{
+    max-width: 83px;
+}
+.word .wordtext:nth-child(2) .caption p{
+    max-width: 134px;
+}
+.word .wordtext:nth-child(3) .caption h3{
+    max-width: 100px;
+}
+.word .wordtext:nth-child(3) .caption p{
+    max-width: 160px;
+}
+.word .wordtext:nth-child(4) .caption h3{
+    max-width: 100px;
+}
+.word .wordtext:nth-child(4) .caption p{
+    max-width: 170px;
+}
+li.test1 h3{
+    margin-bottom: 15px;
+}
+li.test1 p{
+    margin-bottom: 30px;
+}
+.test li.test2 h4{
+    margin-bottom: 2px;
+}
+li.test2 p{
+    margin-bottom: 5px;
+}
+.test li.test3 h4{
+    margin-bottom: 3px;
+}
+li.test3 p{
+    padding-bottom: 5px;
+    margin-bottom: 0;
+}
+li.test3 .caption p{
+    padding-bottom: 15px;
+}
+li.test4{
+    font-size:14px;
+    color:#888888;
+    letter-spacing:0.09px;
+    text-align:left;
+    margin-bottom: 36px;
+    max-width: 704px;
+    height: 60px;
+}
+.test button{
+    font-size:20px;
+    color:#ffffff;
+    letter-spacing:-0.53px;
+    text-align:center;
+    background-image:linear-gradient(0deg, #af7d00 0%, #dfc15f 100%);
+    border-radius:8px;
+    width:203px;
+    height:54px;
+    position: relative;
+    margin-bottom: 66px;
+}
+.test button img{
+    position: absolute;
+    top:-22px;
+    right:0;
+}
+/* nav */
+.navbar{
+    background: #242424;
+    margin-bottom: 0;
+}
+.navbar-nav>li>a{
+    line-height: 50px;
+    font-size: 16px;
+    padding: 0;
+}
+.navbar-brand img{
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+}
+.navbar-right{
+    padding-left: 20px;
+}
+.navbar-right li a{
+    color: #D7B87A!important;
+}
+.navbar-right li.Nmr{
+    margin-right: 33px;
+}
+.navbar-nav li{
+    padding: 0 15px;
+}
+.navbar-nav li a:hover{
+    background: none;
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover
+.case header .logoImg{
+    display: inline-block;
+    background: none;
+}
+.navbar-toggle{
+    margin-top: 16px;
+    border:solid 1px #fff;
+}
+.navbar-toggle .icon-bar{
+    background: #fff;
+}
+.navbar-header{
+    min-height: 70px;
+}
+.case .cont{
+    overflow: hidden;
+}
+/*stress*/
+.stress{
+    position: relative;
+}
+.ico-new{
+    position: absolute;
+    left: 70px;
+    top: 10px;
+    font-size: 12px;
+    background: #D7B87A;
+    color:#fff;
+    border-radius: 5px;
+    font-weight: normal;
+    width: 40px;
+    text-align: center;
+    line-height: 20px;
+    display: none;
+}
+.mobilepositon{
+    text-align: center;
+}
+.demoCont .mobile{
+    display: inline-block;
+    width: 250px;
+    height: 500px;
+    position: relative;
+    margin-top: 128px;
+}
+.mobile .mobilebg{
+    position: absolute;
+    left: 0;
+    top:0;
+    z-index: 300;
+    width: 100%;
+    height:100%;
+}
+.mobile .mcenter{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    z-index: 200;
+    width: 218px;
+    height:472px;
+    margin-left: -109px;
+    margin-top: -236px;
+}
+
+.midnav li a:hover{
+    background: none;
+    border-bottom: solid 2px #fff;
+}
+.container{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* downloadCont */
+.downloadCont .down{
+    background: #000;
+    padding-top: 80px;
+}
+.downloadCont .down h2{
+    font-size:42px;
+    color:#d7b87a;
+    text-align:left;
+    line-height: 59px;
+    background: url(../img/download/download.png) no-repeat 13px center;
+    padding-left: 100px;
+    margin-top: 38px;
+    margin-bottom: 48px;
+}
+.downloadCont .down .title h3{
+    font-size:24px;
+    color:#d7b87a;
+    text-align:left;
+    line-height: 33px;
+    margin-top:0; 
+    margin-bottom: 5px;
+}
+.downloadCont .down .title h3 span{
+    color:#fff;
+}
+.downloadCont .down .title p{
+    font-size:18px;
+    color:#ffffff;
+    letter-spacing:0;
+    text-align:left;
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+.downloadCont .down .title1{
+    background: url(../img/download/wallet.png) no-repeat left center;
+    padding-left: 104px;
+}
+.downloadCont .down ul{
+    padding-left: 104px;
+
+}
+.downloadCont .down ul li{
+    display: inline-block;
+    margin-right: 116px;
+}
+.downloadCont .down ul p{
+    font-size:18px;
+    color:#ffffff;
+    letter-spacing:0;
+    text-align:center;
+    line-height: 25px;
+    margin-top: 21px;
+    margin-bottom: 10px;
+}
+.downloadCont .down ul li .btn-down{
+    display: inline-block;
+    width: 93px;
+    height: 23px;
+    background: url(../img/download/btn-down.png) no-repeat left top;
+    margin-bottom: 20px;
+}
+.downloadCont footer{
+    margin-top: 0;
+}
+/*100%height*/
+/* html,body,.downloadCont{
+    height: 100%;
+}
+.downloadCont .down{
+    height: 100%;
+}
+.downloadCont footer{
+    position: fixed;
+    bottom:0;
+    width: 100%;
+} */
+@media (min-width:768px) {
+    .container {
+        width: 750px
+    }
+    .case .cont{
+        padding-top: 70px;
+    }
+    .mobilepositon{
+        text-align: right;
+    }
+    .test{
+        background: url(../img/demo/wallet.png) no-repeat right center;
+    }
+    .test button{
+        margin-left: 445px;
+    }
+    .demo footer{
+        margin-top: 0;
+    }
+    .downloadCont .down ul li .btn-down{
+        margin-bottom: 80px;
+    }
+    .wordtext .arrowimg{
+        display: block;
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+        width: 970px
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        width: 1100px
+    }
+}
+@media (min-width: 768px){ 
+    #midPcNav {
+        margin-left: 183px;
+    }
+    #midPcNav li{
+        padding: 0;
+        margin-right: 50px;
+    }
+    .navbar{
+        background: #181818;
+        margin-bottom: 0;
+        height: 80px;
+    }
+    .demo .navbar{
+        background: #000;
+    }
+    .udap-token .token-pic{
+        display: inline-block;
+        width: 400px;
+        height: 400px;
+    }
+    .navbar-nav>li>a{
+        height: 70px;
+        line-height: 70px;
+        font-size: 16px;
+        padding: 0;
+    }
+   .navbar-right{
+        padding-left: 0px;
+    }
+   .case li h4{
+    margin-bottom: 0;
+   }
+   .ico-new{
+    display: block;
+   }
+}
+
