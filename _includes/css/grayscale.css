@@ -5039,7 +5039,7 @@ textarea.input-group-sm>.input-group-btn>.btn {
 .navbar-toggle {
     position: relative;
     float: right;
-    margin:23px 10px;
+    margin:13px 10px;
     background-color: transparent;
     background-image: none;
     border: 1px solid transparent;
@@ -9542,8 +9542,9 @@ footer .social-buttons {
         overflow: hidden;
     }
     .intro .intro-body .brand-heading{
-        font-size: 88px;
+        font-size: 82px;
         margin-bottom: 15px;
+        margin-top: 15px;
    }
     .intro .intro-body hr{
         background:#ffffff;
@@ -9553,7 +9554,7 @@ footer .social-buttons {
     }
     
     .intro .intro-body .intro-text{
-        font-size:20px;
+        font-size:18px;
         line-height:32px;
         margin: 19px 0 7px 0;
     }
@@ -9663,6 +9664,7 @@ footer .social-buttons {
     .intro .intro-body .brand-heading{
         font-size: 88px;
         margin-bottom: 23px;
+        margin-top: 0;
    }
    .intro .intro-cont{
     text-align: left;
@@ -10778,7 +10780,7 @@ html{
 }
 .mobileMain{
     display: block;
-    padding-top: 70px;
+    /* padding-top: 90px; */
     overflow: hidden;
 }
 #mainPagination{
@@ -10840,7 +10842,7 @@ html{
     display: none;
 }
 #mDown{
-    display: block;
+    display: none;
     text-align: center;
 }
 #pcDown{
@@ -10946,6 +10948,6 @@ display: none;
 
 @media (max-width: 768px) {
     .navbar-custom .navbar-brand{
-        padding: 15px 0;
+        padding: 5px 0;
     }
 }

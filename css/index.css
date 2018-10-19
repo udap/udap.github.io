@@ -503,6 +503,7 @@ li.test4{
 }
 .navbar-brand{
     height: auto;
+    padding: 5px 15px;
 }
 .navbar-brand img{
     display: inline-block;
@@ -530,15 +531,15 @@ li.test4{
     background: none;
 }
 .navbar-toggle{
-    margin-top: 23px;
+    margin-top: 13px;
     border:none;
 }
 .navbar-toggle .icon-bar{
     background: #fff;
 }
-.navbar-header{
+/* .navbar-header{
     min-height: 70px;
-}
+} */
 .case .cont{
     overflow: hidden;
 }
