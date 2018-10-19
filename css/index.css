@@ -501,6 +501,9 @@ li.test4{
     font-size: 16px;
     padding: 0;
 }
+.navbar-brand{
+    height: auto;
+}
 .navbar-brand img{
     display: inline-block;
     width: 100%;
@@ -527,8 +530,8 @@ li.test4{
     background: none;
 }
 .navbar-toggle{
-    margin-top: 16px;
-    border:solid 1px #fff;
+    margin-top: 23px;
+    border:none;
 }
 .navbar-toggle .icon-bar{
     background: #fff;
