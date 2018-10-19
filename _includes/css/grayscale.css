@@ -10780,7 +10780,7 @@ html{
 }
 .mobileMain{
     display: block;
-    /* padding-top: 90px; */
+    padding-top: 90px;
     overflow: hidden;
 }
 #mainPagination{
