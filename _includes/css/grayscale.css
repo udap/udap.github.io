@@ -5018,18 +5018,54 @@ textarea.input-group-sm>.input-group-btn>.btn {
     padding: 15px 15px;
     font-size: 18px;
     line-height: 20px
+    margin-right:28px;
 }
-
 .navbar-brand:focus,
 .navbar-brand:hover {
     text-decoration: none
 }
 
 .navbar-brand>img {
-    display: block
+    display: block;
+}
+.navbarmobile{
+    display: inline-block;
+    padding-top: 20px;
+}
+.navbarmobile li{
+    display: inline-block;
+}
+.navbarmobile li.Nmr{
+    margin-right: 29px;
+    position: relative;
+}
+
+.navbarmobile li img{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+}
+.navbarmobile li a{
+    display: inline-block;
+    font-size:12px;
+    color:#b98c35;
+    text-align:left;
+    padding: 0;
+}
+.navbarmobile .ico-new{
+    position: absolute;
+    left: 95%;
+    top: -8px;
+    font-size: 10px;
+    width: 27px;
+    line-height: 14px;
 }
 
 @media (min-width:768px) {
+    .navbarmobile{
+        display: none;
+    }
     .navbar>.container .navbar-brand,
     .navbar>.container-fluid .navbar-brand {
         margin-left: -15px
@@ -5039,11 +5075,12 @@ textarea.input-group-sm>.input-group-btn>.btn {
 .navbar-toggle {
     position: relative;
     float: right;
-    margin:13px 10px;
+    margin:19px 10px;
     background-color: transparent;
     background-image: none;
     border: 1px solid transparent;
-    border-radius: 4px
+    border-radius: 4px;
+    padding: 0;
 }
 .navbar-toggle .icon-bar {
     background: #fff;
@@ -5058,9 +5095,9 @@ textarea.input-group-sm>.input-group-btn>.btn {
 
 .navbar-toggle .icon-bar {
     display: block;
-    width: 22px;
-    height: 2px;
-    border-radius: 1px
+    width: 26px;
+    height: 4px;
+    border-radius: initial;
 }
 
 .navbar-toggle .icon-bar+.icon-bar {
@@ -7905,7 +7942,7 @@ a:focus {
 .navbar-custom .navbar-brand {
     /* height: 50px; 
     line-height: 50px; */
-    margin-left: 15px;
+    margin-left: 10px;
 }
 
 .navbar-custom .navbar-brand:focus {
@@ -8202,6 +8239,13 @@ body {
 #team .team-bx{
     height: 210px;
 }
+#team .shortteam{
+    height: auto;
+    margin-bottom: 32px;
+}
+#team .shortteam p{
+    max-width: 243px;
+}
 #advisors .team-bx{
     height: 190px;
 }
@@ -8432,12 +8476,18 @@ ul.social-buttons li a:hover {
         height: 52px;
         margin-top: 0px;
     }
-    .speroadmap{
+    .speroadmap,
+    .speroadmapleft{
         position: relative;
     }
     .speroadmap p{
         position: absolute;
         left: 0;
+        top:0;
+    }
+    .speroadmapleft p{
+        position: absolute;
+        right: 0;
         top:0;
     }
     .timeline-road {
@@ -9327,7 +9377,9 @@ footer .social-buttons {
     }
     .navbar-header .page-scroll img {
         display: inline-block;
-        width: 100%;
+        width: 114px;
+        height: 29px;
+        margin-top: 15px;
     }
     .navbar-custom .nav-midCont li{
         padding: 0 5%;
@@ -9353,6 +9405,7 @@ footer .social-buttons {
     }
     .nav-rightCont{
         padding: 0 5%;
+        display: none;
     }
     
     .nav-rightCont li.Nmr{
@@ -9402,6 +9455,9 @@ footer .social-buttons {
             color:#ffffff;
             background: none;
         }
+        .nav-rightCont{
+            display: inline-block;
+        }
         .nav-rightCont li a{
             height: 70px;
             line-height: 70px;
@@ -9423,6 +9479,7 @@ footer .social-buttons {
             /* width: 195px; */
             width: 100%;
             height: 50px;
+            margin-top: 0;
         }
         .navbar-custom .nav-midCont{
             margin-top:50px;
@@ -9554,9 +9611,10 @@ footer .social-buttons {
     }
     
     .intro .intro-body .intro-text{
-        font-size:18px;
+        font-size:16px;
         line-height:32px;
         margin: 19px 0 7px 0;
+        word-break: break-all;
     }
     .intro-cont{
         text-align: center;
@@ -9632,11 +9690,11 @@ footer .social-buttons {
    }
    .intro{
         width: 100%;
-       height: 100vh;
+      /*  height: 100vh; */
    }
    #intro{
      width: 100%;
-     padding-top:90px; 
+     padding-top:60px; 
    }
 @media (min-width: 768px){ 
     .intro .container{
@@ -9751,10 +9809,10 @@ footer .social-buttons {
         border-top: none;
      }
      .heading-h1{
-        font-size:28px;
+        font-size:24px;
         color:#ffffff;
         letter-spacing:0.3px;
-        text-align:center;
+        text-align:left;
         margin-top:33px;
         margin-bottom: 20px;
         font-weight: normal;
@@ -9766,7 +9824,7 @@ footer .social-buttons {
         font-size:14px;
         color:#ffffff;
         line-height:21px;
-        text-align:center;
+        text-align:left;
         word-wrap : break-word;
         overflow:hidden;
      }
@@ -9827,7 +9885,7 @@ footer .social-buttons {
         font-size:20px;
         color:#ffffff;
         letter-spacing:0;
-        text-align:center;
+        text-align:left;
         margin-top: 3px;
         margin-bottom: 8px;
         text-transform: none;
@@ -9841,7 +9899,7 @@ footer .social-buttons {
         line-height: 21px;
         color:#ffffff;
         letter-spacing:0;
-        text-align:center;
+        text-align:left;
         margin:0 5px;
      }
      .aboutSolution p{
@@ -10364,10 +10422,14 @@ footer .social-logo li{
     background: url(img/bg/workn.png) no-repeat center center;
     background-size: cover;
 } 
+#teamweb, 
+#teamSwiper,
+.teamItem,
 #workSwiper {    
     width: 100%;
     height: 100%;
 }
+.team-swiper-pagination,
 .work-swiper-pagination{
     right: 0;
 }
@@ -10496,7 +10558,7 @@ footer .social-logo li{
     max-width: 600px;
    }
 }
-
+#teamSwiper .swiper-pagination-customs,
 #workSwiper .swiper-pagination-customs {
    width: 10px;
    height: 10px;
@@ -10506,7 +10568,7 @@ footer .social-logo li{
    opacity: .3;
    margin: 0 5px;
 }
-
+#teamSwiper .swiper-pagination .swiper-pagination-bullet,
 #workSwiper .swiper-pagination .swiper-pagination-bullet{
     border:1px solid #fff;
     width:10px;
@@ -10515,28 +10577,34 @@ footer .social-logo li{
     border-radius:100%;
 }
 
+#teamSwiper .swiper-pagination .swiper-pagination-bullet-active,
 #workSwiper .swiper-pagination .swiper-pagination-bullet-active{
     background:#fff;
     width:10px;
     height:10px;
     border-radius:100%;
 }
+#teamSwiper .swiper-pagination .swiper-pagination-bullet,
 #workSwiper .swiper-pagination .swiper-pagination-bullet{
     margin:21px 5px;
     display: block;
 }
 
+#teamSwiper .swiper-pagination-customs-active,
 #workSwiper .swiper-pagination-customs-active {
    opacity: 1;
    background-color: #F78E00;
 }
+#teamSwiper  .swiper-slide,
 #workSwiper  .swiper-slide{
     overflow: hidden;
 }
+#teamSwiper .workitem,
 #workSwiper .workitem{
     width: 100%;
     height: 100vh;
 }
+#teamSwiper .swiper-pagination,
 #workSwiper .swiper-pagination{
     /* width: 1100px;
     margin:0 auto;
@@ -10653,7 +10721,7 @@ footer .social-logo li{
     margin-top: 35px;
     font-size:24px;
     color:#ffffff;
-    text-align:left;
+    text-align:center;
     text-transform: none;
     font-weight: normal;
 }
@@ -10948,6 +11016,6 @@ display: none;
 
 @media (max-width: 768px) {
     .navbar-custom .navbar-brand{
-        padding: 5px 0;
+        margin-right: 15px;
     }
 }

@@ -1,5 +1,6 @@
  <!-- jQuery Version 1.11.0 -->
     <script src="{{ "js/jquery.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "js/html5media.js" | prepend: site.baseurl }}"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="{{ "js/bootstrap.min.js" | prepend: site.baseurl }}"></script>
@@ -42,6 +43,34 @@ var swiper2 = new Swiper('.workSwiper', {//嵌套的
     }
 });
 
+var swiper3 = new Swiper('.teamSwiper', {//嵌套的
+    pagination: '.team-swiper-pagination',
+    paginationClickable: true,
+    nested: true,
+    direction: 'vertical',
+    observer:true,
+    observeParents:true,
+    mousewheelControl: true,
+   onSlidePrevEnd: function(swiper){
+      console.log("swiperPrev",swiper.activeIndex)
+      if(swiper.activeIndex==0){
+        swiper1.params.allowSwipeToPrev = true;
+      }else{
+        swiper1.params.allowSwipeToPrev = false;
+        swiper1.params.allowSwipeToNext = false;
+      }
+    },
+    onSlideNextEnd: function (swiper) {
+      console.log("swiper",swiper.activeIndex)
+      if(swiper.activeIndex==1){
+        swiper1.params.allowSwipeToNext = true;
+      }else{
+        swiper1.params.allowSwipeToPrev = false;
+        swiper1.params.allowSwipeToNext = false;
+      }
+    }
+});
+
 var swiper1 = new Swiper('.mainSwiper', {//父的
     hashnav:true,
     mousewheelControl: true,
@@ -65,7 +94,11 @@ var swiper1 = new Swiper('.mainSwiper', {//父的
     onSlidePrevEnd: function(swiper){
       if(swiper.activeIndex==4){
         swiper.params.allowSwipeToPrev = false;
+        //swiper.params.allowSwipeToNext = true;
         swiper2.slideTo(4,0,false);
+      }else if(swiper.activeIndex==5){
+        swiper.params.allowSwipeToPrev = false;
+        swiper3.slideTo(2,0,false);
       }else{
         swiper.params.allowSwipeToNext = true;
         swiper.params.allowSwipeToPrev = true;
@@ -75,6 +108,10 @@ var swiper1 = new Swiper('.mainSwiper', {//父的
       if(swiper.activeIndex==4){
         swiper.params.allowSwipeToNext = false;
         swiper2.slideTo(0,0,false);
+      }else if(swiper.activeIndex==5){
+        swiper.params.allowSwipeToNext = false;
+        //swiper.params.allowSwipeToPrev = true;
+        swiper3.slideTo(0,0,false);
       }else{
         swiper.params.allowSwipeToPrev = true;
         swiper.params.allowSwipeToNext = true;
