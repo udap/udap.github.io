@@ -497,12 +497,12 @@ li.test4{
 }
 .navbar-brand{
     height: auto;
-    padding: 0px 10px;
+    padding: 0px 5px;
 }
 .navbar-brand img{
     display: inline-block;
-    width: 114px;
-    height: 29px;
+    max-width: 114px;
+    max-height: 29px;
     margin-top: 15px;
 }
 .navbar-right{
@@ -527,12 +527,14 @@ li.test4{
     background: none;
 }
 .navbar-toggle{
-    margin-top: 13px;
+    margin: 19px 0;
     border:none;
+    padding: 0px;
+    margin-right: 5px;
 }
 .navbar-toggle .icon-bar{
     background: #fff;
-    width: 26px;
+    width: 23px;
     height: 4px;
     border-radius: initial;
 }
@@ -684,7 +686,7 @@ li.test4{
     display: inline-block;
 }
 .navbarmobile li.Nmr{
-    margin-right: 29px;
+    margin-right: 22px;
     position: relative;
 }
 
@@ -717,11 +719,10 @@ li.test4{
     max-width: 100%;
 }
 .umedia h1{
-    font-size:72px;
+    font-size:36px;
     color:#d7b87a;
     letter-spacing:1px;
     text-align:left;
-    line-height: 100px;
     margin:0;
     margin-bottom: 36px;
 }
@@ -760,8 +761,9 @@ li.test4{
 .umedia1 .mobile{
     background: url(../img/demo/mobileimg.png) no-repeat 17px 15px;
     margin-top: 65px;
-    margin-left: 72px;
     padding-bottom: 51px;
+    width: 250px;
+    margin:0 auto;
 }
 .umedia1 .uleft{
     margin-top: 30px;
@@ -816,6 +818,16 @@ li.test4{
     .container {
         width: 750px
     }
+    .navbar-toggle{
+        padding: 9px 10px;
+        margin-right: 15px;
+    }
+    .navbar-brand{
+        padding: 0px 10px;
+    }
+    .navbar-right li.Nmr{
+        margin-right: 33px;
+    }
     .case .cont{
         padding-top: 70px;
     }
@@ -853,6 +865,16 @@ li.test4{
 
     .umedia .uleft{
         float: left;
+    }
+    .umedia h1{
+        font-size:72px;
+        line-height: 100px;
+    }
+    .umedia1 .mobile{
+        background: url(../img/demo/mobileimg.png) no-repeat 17px 15px;
+        margin-top: 65px;
+        margin-left: 72px;
+        padding-bottom: 51px;
     }
     .umedia1 .uright{
         margin-left: 392px;
