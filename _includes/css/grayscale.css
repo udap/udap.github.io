@@ -9679,7 +9679,8 @@ footer .social-buttons {
     align-items: center;
  }
  .btnlinear span{
-    font-size:14px;
+    font-size:12px;
+    padding-right: 50px;
     color:#000000;
  }
  .intro-right li{
@@ -9771,9 +9772,6 @@ footer .social-buttons {
      padding-top:60px; 
    }
 @media (min-width: 768px){ 
-    .btnlinear span{
-       font-size:16px;
-    }
     .iconlink{
         margin-right: 6px;
     }
@@ -9858,6 +9856,7 @@ footer .social-buttons {
     }
     .intro-right li span{
        width: 250px;
+       font-size: 14px;
     }
 }
 /*about*/
@@ -10951,7 +10950,13 @@ html{
 #pcDown{
     display: none;
 }
+.mbtncenter{
+    text-align: center;
+}
 @media (min-width: 768px){ 
+.mbtncenter{
+    text-align: left;
+}
 #pcDown{
     display: block;
 }
@@ -11017,7 +11022,7 @@ display: none;
        left: 0;
        top:50%;
        /*margin-top: -276.5px;/* 196.5+80 */
-       margin-top: -196.5px;/* 196.5+80 */
+       margin-top: -270px;/* 196.5+80 */ 
   }
   /*  matters */
     .matters{
@@ -11124,23 +11129,24 @@ display: none;
     margin-bottom: 32px;
 }
 .nleft .word{
-    font-size:12px;
+    font-size:14px;
     color:#FDFDFD;
     text-align:left;
     line-height: 22px;
     margin-bottom: 31px;
 }
 .nleft p{
-    font-size:12px;
+    font-size:14px;
     color:#DABE93;
     text-align:left;
     margin-bottom: 8px;
-    line-height: 14px;
+    line-height: 22px;
+    word-break: break-all;
 }
 .nleft p i{
     display: inline-block;
     width: 15px;
-    height: 15px;
+    line-height: 15px;
     border-radius: 50%;
     background: #dabe93;
     font-size:8.49px;
@@ -11177,11 +11183,10 @@ display: none;
     font-weight: normal;
 }
 .coreserviceItem p{
-    line-height: 14px;
-    font-size:12px;
+    line-height: 26px;
+    font-size:14px;
     color:#FDFDFD;;
     text-align:left;
-    margin-bottom:12px;
 }
 .coreserviceItem img{
     margin-top: 21px;
@@ -11198,7 +11203,41 @@ display: none;
 #coreservice{
   height: 100%;
 }
+#two .nleft p{
+    margin-bottom: 30px;
+}
 @media (min-width: 768px){ 
+    .nleft .word{
+        max-width: 394px;
+    }
+    
+    .nleft p{
+        max-width: 343px;
+    }
+    #two .nleft .word{
+        max-width: 457px;
+    }
+    #two .nleft p{
+        max-width: 400px;
+    }
+    #three .nleft .word{
+        max-width: 447px;
+    }
+    #three .nleft p{
+        max-width: 400px;
+    }
+    #four .nleft .word{
+        max-width: 480px;
+    }
+    #four .nleft p{
+        max-width: 411px;
+    }
+    .coreservice p{
+        max-width: 426px;
+    }
+    .coreserviceItem img.tokenservice{
+        max-width: 435px;
+    }
     .numberItem{
         padding-top: 0;
     }
@@ -11210,22 +11249,22 @@ display: none;
         left: 110px;
         top:11px;
         display: inline-block;
-        width: 223px;
+        width: 225px;
         height: 166px;
     }
     .aboutright span.imgtwo{
         left: 110px;
         top:183px;
         display: inline-block;
-        width: 223px;
+        width: 225px;
         height: 125px;
     }
     .aboutright span.imgthree{
         left: 110px;
         top:314px;
         display: inline-block;
-        width: 223px;
-        height: 96px;
+        width: 225px;
+        height: 97px;
     }
     .aboutright span.imgfour{
         left: 422px;
@@ -11269,7 +11308,7 @@ display: none;
 
 
     .nleft a{
-        margin-top: 63px;
+        margin-top: 35px;
     }
     .nright{
         display: none;
