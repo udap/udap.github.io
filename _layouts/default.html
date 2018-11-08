@@ -7,7 +7,11 @@
     <div class="mobileMain">
         {% include header.html %}
         {% include about.html %}
-        {% include workmobile.html %}
+        {% include one.html %}
+        {% include two.html %}
+        {% include coreservice.html %}
+        {% include three.html %}
+        {% include four.html %}
         {% include teammobile.html %}
         {% include advisor.html %}
         {% include roadmap.html %}
@@ -22,8 +26,13 @@
        <div class="swiper-wrapper">
          <div class="swiper-slide swiper-no-swiping">{% include header.html %}</div>
          <div class="swiper-slide swiper-no-swiping" data-hash="about">{% include about.html %}</div>
-         <div class="swiper-slide swiper-no-swiping">{% include work.html %}</div>
-         <div class="swiper-slide swiper-no-swiping" data-hash="team">{% include team.html %}</div>
+         <div class="swiper-slide swiper-no-swiping" data-hash="one">{% include one.html %}</div>
+         <div class="swiper-slide swiper-no-swiping" data-hash="two">{% include two.html %}</div>
+         <div class="swiper-slide swiper-no-swiping">{% include coreservice.html %}</div>         
+         <div class="swiper-slide swiper-no-swiping" data-hash="three">{% include three.html %}</div>
+         <div class="swiper-slide swiper-no-swiping" data-hash="four">{% include four.html %}</div>
+         <div class="swiper-slide swiper-no-swiping" data-hash="team">{% include teamOne.html %}</div>
+         <div class="swiper-slide swiper-no-swiping">{% include teamTwo.html %}</div>
          <div class="swiper-slide swiper-no-swiping">{% include advisor.html %}</div>
          <div class="swiper-slide swiper-no-swiping">{% include roadmap.html %}</div>
          <div class="swiper-slide swiper-no-swiping"  data-hash="inverstor">{% include investors.html %}</div>
