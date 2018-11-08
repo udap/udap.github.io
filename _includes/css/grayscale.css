@@ -9669,7 +9669,6 @@ footer .social-buttons {
  .intro-right ul{
     padding: 0;
     max-width: 465px;
-    float: right;
  }
  .btnlinear{
     background-image:linear-gradient(to right, #F0E0A5, #C9A568, #FFF2B6, #C39D60);
@@ -9691,8 +9690,6 @@ footer .social-buttons {
     align-items: center;
     justify-content: flex-start;
     margin-bottom: 14px;
-    float:right;
-    /* width: 100%; */
     padding: 0;
  }
  .intro-right li a{
@@ -9856,10 +9853,11 @@ footer .social-buttons {
          cursor: pointer;
     }
      .intro-right ul{
+        float: right;
         padding-right: 50px;
     }
     .intro-right li span{
-       width: 290px;
+       width: 250px;
     }
 }
 /*about*/
