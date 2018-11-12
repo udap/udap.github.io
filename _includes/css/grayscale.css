@@ -9677,6 +9677,7 @@ footer .social-buttons {
     border:none;
     display: flex;
     align-items: center;
+    outline: none;
  }
  .btnlinear span{
     font-size:12px;
