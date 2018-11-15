@@ -27,14 +27,16 @@ var swiper1 = new Swiper('.mainSwiper', {//父的
     pagination: '.mainPagination',
     onTransitionEnd: function(swiper){
       $("#navPc li").removeClass('active')
-      if(swiper.activeIndex == 1||swiper.activeIndex == 2||swiper.activeIndex == 3||swiper.activeIndex == 4||swiper.activeIndex == 5||swiper.activeIndex == 6){
+      if(swiper.activeIndex == 0||swiper.activeIndex == 1||swiper.activeIndex == 2||swiper.activeIndex == 3||swiper.activeIndex == 4||swiper.activeIndex == 5||swiper.activeIndex == 6){
         $("#navPc li").eq(0).addClass('active')
-      }else if(swiper.activeIndex == 7||swiper.activeIndex == 8){
+      }else if(swiper.activeIndex == 7||swiper.activeIndex == 8||swiper.activeIndex == 9){
         $("#navPc li").eq(1).addClass('active')
-      }else if(swiper.activeIndex == 11){
+      }else if(swiper.activeIndex == 10){
         $("#navPc li").eq(2).addClass('active')
-      }else if(swiper.activeIndex == 14){
+      }else if(swiper.activeIndex == 11){
         $("#navPc li").eq(3).addClass('active')
+      }else if(swiper.activeIndex == 14){
+        $("#navPc li").eq(4).addClass('active')
       }
     },
 });
@@ -42,10 +44,13 @@ var swiper1 = new Swiper('.mainSwiper', {//父的
 
 /*导航点击事件*/
  $('#navAbout').on('click',function(){
-    swiper1.slideTo(1);
+    swiper1.slideTo(0);
  })
  $('#navTeam').on('click',function(){
     swiper1.slideTo(7);
+ })
+ $('#navRoadmap').on('click',function(){
+    swiper1.slideTo(10);
  })
  $('#navInverstor').on('click',function(){
      swiper1.slideTo(11);
@@ -68,6 +73,20 @@ var swiper1 = new Swiper('.mainSwiper', {//父的
     swiper1.slideTo(5);
  })
    $('#number4 a').on('click',function(){
+    swiper1.slideTo(6);
+ })
+
+
+ $('#aboutskip1 a').on('click',function(){
+    swiper1.slideTo(2);
+ })
+ $('#aboutskip2 a').on('click',function(){
+    swiper1.slideTo(3);
+ })
+  $('#aboutskip3 a').on('click',function(){
+    swiper1.slideTo(5);
+ })
+   $('#aboutskip4 a').on('click',function(){
     swiper1.slideTo(6);
  })
 

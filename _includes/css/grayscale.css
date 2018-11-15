@@ -10980,7 +10980,7 @@ display: none;
 }
 #navPc{
     display: block;
-    margin-left: 183px;
+    margin-left: 90px;
 }
 #navMobile{
     display: none;
@@ -11024,6 +11024,8 @@ display: none;
        top:50%;
        /*margin-top: -276.5px;/* 196.5+80 */
        margin-top: -270px;/* 196.5+80 */ 
+       width: 100%;
+       background: url(../img/home/linkicon.png) repeat-x left 95%;
   }
   /*  matters */
     .matters{
@@ -11070,11 +11072,10 @@ display: none;
     border-bottom: solid 1px #e5e5e5;
 }
 .aboutleft h1{
-    font-size:33.66px;
+    font-size:22px;
     color:#CDAB6E;
     text-align:left;
     line-height: 41px;
-    margin-top: 25px;
     margin-bottom: 31px;
     font-weight: normal;
 }
@@ -11089,6 +11090,7 @@ display: none;
 .aboutleft a{
     display: inline-block;
     margin-bottom: 30px;
+    color:#DABE93;
 }
 .aboutleft button{
 }
@@ -11105,10 +11107,11 @@ display: none;
 .aboutright{
     padding: 0;
     position: relative;
+    text-align: center;
 }
 .aboutright img{
     display: inline-block;
-    max-width: 100%;
+    max-width: 95%;
 }
 .aboutright span{
     position:absolute;
@@ -11118,13 +11121,13 @@ display: none;
 
 /* numberItem */
 .numberItem{
-    padding-top: 60px;
+    padding-top: 30px;
 }
 .nleft{
     padding:0;
 }
 .nleft h1{
-    font-size:30.86px;
+    font-size:22px;
     color:#CDAB6E;
     text-align:left;
     margin-bottom: 32px;
@@ -11162,16 +11165,17 @@ display: none;
 }
 .nright{
     display: block;
-    padding: 30px 0;
+    padding: 0px 0;
 }
 .nright img{
     display: inline-block;
     max-width: 100%;
+    padding: 30px 0;
 }
 /* coreserviceItem */
 .coreserviceItem h1{
     line-height: 31px;
-    font-size:25px;
+    font-size:22px;
     color:#CDAB6E;;
     text-align:left;
     margin-bottom: 24px;
@@ -11191,6 +11195,7 @@ display: none;
     text-align:left;
 }
 .coreserviceItem img{
+    margin-bottom: 21px;
     margin-top: 21px;
     display: inline-block;
     max-width: 100%;
@@ -11209,6 +11214,27 @@ display: none;
     margin-bottom: 30px;
 }
 @media (min-width: 768px){ 
+    .aboutright img{
+        display: inline-block;
+        max-width: 560px;
+        float: right;
+    }
+    .coreserviceItem h1{
+        font-size:25px;
+    }
+    .nleft h1{
+        font-size:30.86px;
+    }
+    .aboutleft h1{
+        font-size:33.66px;
+        margin-top: 25px;
+    }
+    .aboutTitle p{
+        font-size: 14px;
+    }
+    .aboutTitle p a{
+        color:#DABE93;
+    }
     .nleft .word{
         max-width: 394px;
     }
@@ -11237,6 +11263,9 @@ display: none;
     .coreservice p{
         max-width: 426px;
     }
+    .coreserviceItem img{
+        margin-bottom: 0px;
+    }
     .coreserviceItem img.tokenservice{
         max-width: 435px;
     }
@@ -11247,33 +11276,66 @@ display: none;
         display: block;
         transition: all 0.6s;
     }
+     .aboutright .hoverCont{
+        text-align: center;
+        display: none;
+        height:100%;
+        width: 100%;
+        background: rgba(0,0,0,0.8);
+     }
+    .aboutright .hoverCont h2{
+        font-size:14px;
+        color:#FFFFFF;
+        padding: 10px 0;
+        margin: 0px;
+        margin-bottom: 10px;
+        border-bottom: dotted 1px #fff;
+    }
+    .aboutright .hoverCont p{
+        font-size:12px;
+        color:#FFFFFF;
+        line-height:20px;
+        padding: 0 10px;
+        word-break: keep-all;
+    }
+    .imgthree .hoverCont h2{
+        font-size:14px;
+        padding: 5px 0;
+        margin: 0px;
+        margin-bottom: 5px;
+    }
+    .imgthree .hoverCont p{
+        font-size:12px;
+        line-height:20px;
+        padding: 0 5px;
+    }
     .aboutright span.imgone{
-        left: 110px;
-        top:11px;
+        left: 64px;
+        top:0px;
         display: inline-block;
-        width: 225px;
-        height: 166px;
+        width: 256px;
+        height: 189px;
     }
     .aboutright span.imgtwo{
-        left: 110px;
-        top:183px;
+        left: 64px;
+        top:196px;
         display: inline-block;
-        width: 225px;
-        height: 125px;
+        width: 256px;
+        height: 143px;
     }
     .aboutright span.imgthree{
-        left: 110px;
-        top:314px;
+        left: 64px;
+        top:345px;
         display: inline-block;
-        width: 225px;
-        height: 97px;
+        width: 256px;
+        height: 111px;
     }
     .aboutright span.imgfour{
-        left: 422px;
-        top:11px;
+        right: 0px;
+        top:0px;
         display: inline-block;
-        width: 177px;
-        height: 355px;
+        width: 203px;
+        height: 405px;
     }
     @-webkit-keyframes fadeIn {
         0% {
@@ -11291,21 +11353,8 @@ display: none;
         animation:fadeIn 0.5s;
         -webkit-animation:fadeIn 0.5s; /* Safari 和 Chrome */
     }
-    .aboutright span.imgone:hover{
-        background: url(../img/home/01.png) no-repeat left top;
-        background-size: cover; 
-    }
-    .aboutright span.imgtwo:hover{
-        background: url(../img/home/02.png) no-repeat left top;
-        background-size: cover; 
-    }
-    .aboutright span.imgthree:hover{
-        background: url(../img/home/03.png) no-repeat left top;
-        background-size: cover; 
-    }
-    .aboutright span.imgfour:hover{
-        background: url(../img/home/04.png) no-repeat left top;
-        background-size: cover; 
+    .aboutright span:hover .hoverCont{
+        display: block;
     }
 
 
@@ -11336,11 +11385,11 @@ display: none;
    }
    #one .container{
        background: url(../img/home/one.png) no-repeat right center;
-       background-size: 703px 639px;
+       background-size: 703px 541px;
    }
    #two .container{
        background: url(../img/home/two.png) no-repeat right center;
-       background-size: 603px 580px;
+       background-size: 603px 457px;
    }
    #three .container{
        background: url(../img/home/three.png) no-repeat right center;
