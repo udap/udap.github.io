@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>UDAP Singular</title>
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<div class="demo container-fluid">
+			<nav class="navbar navbar-fixed-top">
+			  <div class="container">
+			    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			   	  <a class="navbar-brand" href="https://www.udap.io/"><img class="logo" src="img/udapnew.png" alt=""></a>
+			   	  <ul class="nav navbarmobile">
+			   	      <li class="Nmr">
+			   	          <a class="stress" href='/demo.html'><!-- <strong class="sprites social1"></strong> --><img src="img/nav/useCases.png" alt="">Demo <span class="ico-new">new</span></a>
+			   	      </li>
+			   	      <li>
+			   	          <a class="" href='/tokensale.html'><!-- <strong class="sprites social2"></strong> --><img src="img/nav/tokenSale.png" alt="">Tokensale</a>
+			   	      </li>
+			   	  </ul>
+			    </div>
+
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav midnav" id="midPcNav">
+				    <li>
+				        <a class="page-scroll" id="navAbout" href="https://www.udap.io/#home">Home</a>
+				    </li>
+				    <li>
+				        <a class="page-scroll" id="navTeam" href="https://www.udap.io/#team">Team</a>
+				    </li>
+				    <li>
+				        <a class="page-scroll" id="navRoadmap" href="https://www.udap.io/#roadmap">Roadmap</a>
+				    </li>
+				    <li>
+				        <a class="page-scroll" id="navInverstor" href="https://www.udap.io/#inverstor">Investors</a>
+				    </li>
+				    <li class="midMr">
+				        <a class="page-scroll" id="navContact" href="https://www.udap.io/#contact">Contact us</a>
+				    </li>    
+			        
+			      </ul>
+			      <ul class="nav navbar-nav navbar-right">
+		            <li class="Nmr">
+		                <a class="page-scroll stress" href="/singular.html"><img src="img/nav/useCases.png" alt="">Demo<span class="ico-new">new</span></a>
+		            </li>
+		            <li>
+		                <a class="page-scroll" href="/tokensale.html"><img src="img/nav/tokenSale.png" alt="">Tokensale</a>
+		            </li>
+			      </ul>
+			    </div><!-- /.navbar-collapse -->
+			  </div><!-- /.container-fluid -->
+			</nav>
+		</div>
+	<div class="container-fluid case">
+		<div class="cont">
+			<div class="container">
+				<div class="row demoImg">
+					<div class="col-md-3 demoImg1 active1">
+						<a href="/singular.html">
+							<div class="bigicon"></div>
+							<h2>Singular</h2>
+							<p>A new asset tokenization framework</p>
+							<i></i>
+						</a>
+					</div>
+					<div class="col-md-3 demoImg2">
+						<a href="middleware.html">
+						<div class="bigicon"></div>
+						<h2>UDAP Middleware</h2>
+						<p class="bigpra2">A “layer two” solution to non-fungible asset lifecycle management, search and trade</p>
+						<i></i>
+						</a>
+					</div>
+					<div class="col-md-3 demoImg3">
+						<a href="wallet.html">
+						<div class="bigicon"></div>
+						<h2>Harvest Wallet</h2>
+						<p>An ERC721 and UDAP Singular style asset wallet</p>
+						<i></i>
+						</a>
+					</div>
+					<div class="col-md-3 demoImg4">
+						<a href="umedia.html">
+						<div class="bigicon"></div>
+						<h2 class="media">UMedia</h2>
+						<p class="bigpra4">A music marketplace and a music player on your mobile phone</p>
+						<i></i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!--demoCont-->
+			<div class="container-fluid">
+				<div class="container sigular">
+					<div class="sigularCont">
+						<h2>Singular</h2>
+						<p>An EVM smart contract framework that provides a standard model of tokenizing non-fungible assets. It contains a definition of contracts for singular item, a wallet for these items, interfaces to other token standards such as ERC20 and ERC721, and primitives for decentralized trading of singular assets.</p>
+						<h3>Our basic asset contract <i>singular</i> and the design</h3>
+						<div class="sigularimg">
+							<figure>
+							  <img src="img/demo/sigular/sigular1.png" />
+							  <p>1.	A piece of asset is uniquely associated with a smart contract account. The account is the home for the asset. People can easily scan the information about this token through public services like Etherscan.</p>
+							</figure>
+						
+							<figure>
+							  <img src="img/demo/sigular/sigular2.png" />
+							  <p>2.	The owner of the Singular token must be another smart contract account, named ISingularWallet. There is no direct way for EOAs to own Singular tokens. This design is largely in the same direction of Ethereum’s account abstraction model (discussion)that might be deployed in a future version of Ethereum.</p>
+							</figure>
+						
+							<figure>
+							  <img src="img/demo/sigular/sigular3.png" />
+							  <p>3.	It should support push ownership transfer and pull ownership transfer patterns. In so called one-step transfer, the current owner can pass an offer of the token ownership to the receiver account and the receiver account can choose to accept or reject the offer in the same transaction. In a two-step ownership transfer, however, the current owner reserves the token for the next owner in a transaction. The address of the token is passed to the receiver out-of-band. The receiver issues a separate transaction to accept the offer, once it determines that the offer is in its interest.</p>
+							</figure>
+						
+							<figure>
+							  <img src="img/demo/sigular/sigular4.png" />
+							  <p>4.	Operators. The ISingularWallet account can assign operators to help with ownership transfers. Having an operator to manage the asset token on the owner’s behalf is a pattern that has been accepted by some other proposals, such as ERC721 and ERC777. People have found it convenient in handling token trading. The current token owner can appoint an operator for the next ownership change. But setting the operators on the token directly is polluting the token interface.</p>
+							</figure>
+						
+							<figure>
+							  <img src="img/demo/sigular/sigular5.png" />
+							  <p>5.	Timelock. When an owner make an offer of ownership to someone else by calling the approveReceiver() function, there is a required argument for expiry time, during which period the receiver can take the ownership at will by invoking accept(...)on the token, which will in turn send a notification to the previous owner for it to any state update it wants, or even chain to another action. A critical design is that the owner cannot change his mind during the offer period. This is essentially a time-lock for the transaction. In contrast, neither ERC20 nor ERC721 or any of their derivatives offers built-in time-locks for ownership trading.</p>
+							</figure>
+						
+							<figure>
+							  <img src="img/demo/sigular/sigular6.png" />
+							  <p>6.	Token swapping and token sale is implemented with an intermediate TradeExecutor, which is a stateless contract that deployed at a well-known address and be trusted by Singulars for ownership management.</p>
+							</figure>
+						
+							<figure>
+							  <img src="img/demo/sigular/sigular7.png" />
+							  <p>7.	Adapters have been built to wrap tokens in ERC20 and ERC721 as tradable Singulars. This enables building decentralized asset exchange in a very straightforward way.</p>
+							</figure>
+						</div>
+					</div>
+
+				</div>
+			</div> 
+			
+
+		</div>
+
+		<footer>© 2018 UÐAP FOUNDATION All Rights Reserved</footer>
+	</div>
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
+	
