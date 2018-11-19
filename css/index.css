@@ -681,6 +681,7 @@ li.test4{
 .navbarmobile{
     display: inline-block;
     padding-top: 20px;
+    margin-left: 2%;
 }
 .navbarmobile li{
     display: inline-block;
@@ -920,7 +921,7 @@ li.test4{
 }
 @media (min-width: 768px){ 
     #midPcNav {
-        margin-left: 183px;
+        margin-left: 70px;
     }
     #midPcNav li{
         padding: 0;
