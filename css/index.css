@@ -26,7 +26,7 @@ a,button{
 	background-size: cover;
 }
 .udap nav{
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 .udap nav a{
 	color:#fff;
@@ -897,8 +897,7 @@ li.test4{
     height: 501px;
 }
 .umedia1 .uright{
-    padding-top: 119px;
-    min-height: 617px;
+    padding-top: 19px;
 }
 .umedia2{
     padding-top: 20px;
@@ -914,8 +913,8 @@ li.test4{
     margin-top: 83px;
 }
 .umedia4 .uright{
-    margin-top: 62px;
-    margin-bottom: 137px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 .umedia4 .ucenter img{
     margin-bottom: 54px;
@@ -935,6 +934,14 @@ li.test4{
     display: block;
 }
 @media (min-width:768px) {
+    .umedia1 .uright{
+        padding-top: 119px;
+        min-height: 617px;
+    }
+    .umedia4 .uright{
+        margin-top: 62px;
+        margin-bottom: 137px;
+    }
     .case .demoImg h2{
         font-size:24px;
         line-height: 27px;
@@ -1279,7 +1286,24 @@ li.test4{
     width: 95%;
     height: auto;
 }
-
+#product{
+    position: relative;
+}
+.dropdown-product{
+    position: absolute;
+    left:0;
+    top:50px;
+    padding-left:27px;
+    display: none;
+    line-height: 30px;
+    min-width: 150px;
+    list-style:circle;
+}
+.dropdown-product li a{
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
 @media (min-width: 768px){ 
     .sigular figure{
         padding: 0;

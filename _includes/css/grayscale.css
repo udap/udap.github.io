@@ -9372,9 +9372,6 @@ footer .social-buttons {
 /* @media (min-width: 767px){
  */
  /*nav*/
-    .navbar{
-        overflow: hidden;
-    }
     .navbar-brand{
         padding: 0;
     }
@@ -9471,7 +9468,6 @@ footer .social-buttons {
         .navbar{
             padding-top: 0;
             padding-bottom: 0px;
-            overflow: hidden;
             height: 70px;
             line-height: 70px;
             display: flex;
@@ -11410,11 +11406,29 @@ display: none;
 
 
 }
+#productNav{
+    position: relative;
+}
+.dropdown-product{
+    position: absolute;
+    left:0;
+    top:50px;
+    padding-left:27px;
+    display: none;
+    line-height: 30px;
+    min-width: 150px;
+    list-style:none;
+}
+.dropdown-product li a{
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+.dropdown-product li a:hover{
+    text-decoration: underline;
+}
+}
 @media (max-width: 768px) {
-    /* .navbar-custom .navbar-brand{
-        margin-right: 15px;
-    } */
-    
     .break{
         display: block;
     }
