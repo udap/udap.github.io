@@ -883,7 +883,7 @@ li.test4{
 .umedia1 .mobile{
     background: url(../img/demo/mobileimg.png) no-repeat 17px 15px;
     margin-top: 65px;
-    padding-bottom: 51px;
+    padding-bottom: 10px;
     width: 250px;
     margin:0 auto;
 }
@@ -904,13 +904,13 @@ li.test4{
     padding-bottom: 20px;
 }
 .umedia2 .uleft{
-    margin-top: 60px;
+    margin-top: 0px;
 }
 .ucenter{
     text-align: center;
 }
 .umedia4 .uleft{
-    margin-top: 83px;
+    margin-top: 33px;
 }
 .umedia4 .uright{
     margin-top: 30px;
@@ -934,6 +934,12 @@ li.test4{
     display: block;
 }
 @media (min-width:768px) {
+    .umedia4 .uleft{
+        margin-top: 83px;
+    }
+    .umedia2 .uleft{
+        margin-top: 60px;
+    }
     .umedia1 .uright{
         padding-top: 119px;
         min-height: 617px;
@@ -1304,7 +1310,19 @@ li.test4{
     line-height: 30px;
     font-size: 14px;
 }
+.umedia1pc{
+    display: none;
+}
+.umedia1mobile{
+    display: block;
+}
 @media (min-width: 768px){ 
+    .umedia1pc{
+        display: block;
+    }
+    .umedia1mobile{
+        display: none;
+    }
     .sigular figure{
         padding: 0;
     }
