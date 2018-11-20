@@ -227,7 +227,7 @@ footer{
 }
 .case li p{
     font-size:14px;
-    color:#888888;
+    color:#fff;
     letter-spacing:0;
     line-height:20px;
     text-align:left;
@@ -235,7 +235,7 @@ footer{
 }
 .case li .list p{
     font-size:14px;
-    color:#888888;
+    color:#fff;
     letter-spacing:0;
     line-height:20px;
     text-align:left;
@@ -522,7 +522,7 @@ footer{
 
 .demoCont .caption p{
     font-size:13px;
-    color:#888888;
+    color:#fff;
     letter-spacing:0;
     text-align:center;
     line-height:16px;
@@ -581,7 +581,7 @@ li.test3 .caption p{
 }
 li.test4{
     font-size:14px;
-    color:#888888;
+    color:#fff;
     letter-spacing:0.09px;
     text-align:left;
     margin-bottom: 36px;
@@ -840,7 +840,7 @@ li.test4{
     max-width: 100%;
 }
 .umedia h1{
-    font-size:36px;
+    font-size:34px;
     color:#d7b87a;
     letter-spacing:1px;
     text-align:left;
@@ -889,8 +889,6 @@ li.test4{
 .umedia1 .uleft{
     margin-top: 30px;
     overflow: hidden;
-    background: url(../img/demo/umediabg.png) no-repeat left top;
-    background-size: 223px 617px;
 }
 .umedia1 .uleft img{
     display: inline-block;
@@ -955,9 +953,9 @@ li.test4{
     .navbar-right li.Nmr{
         margin-right: 33px;
     }
-    .case .cont{
-        padding-top: 70px;
-    }
+   /*  .case .cont{
+       padding-top: 70px;
+   } */
     .mobilepositon{
         text-align: right;
     }
@@ -994,8 +992,8 @@ li.test4{
         float: left;
     }
     .umedia h1{
-        font-size:72px;
-        line-height: 100px;
+        font-size:34px;
+        /* line-height: 100px; */
     }
     .umedia1 .mobile{
         background: url(../img/demo/mobileimg.png) no-repeat 17px 15px;
@@ -1090,11 +1088,11 @@ li.test4{
     margin-bottom: 22px;
 }
 .sigular p{
-    font-size:22px;
+    font-size:14px;
     color:#fefcf8;
-    line-height:40px;
+    /* line-height:40px; */
     text-align:left;
-    margin-bottom: 95px;
+    margin-bottom: 34px;
 }
 .sigular h3{
     font-size:28px;
@@ -1249,14 +1247,6 @@ li.test4{
     right: 8px;
     top:5px;
 }
-.middlewareLayer hr{
-    width: 100%;
-    height: 0px;
-    border-top: solid 1px #d7b87a;
-    margin:0;
-    margin-bottom: 20px;
-
-}
 .middlewareImg{
     margin-bottom: 70px;
 }
@@ -1292,9 +1282,5 @@ li.test4{
     }
     .middlewareLayer .layerImg{
         width: 20%;
-    }
-    .middlewareLayer hr{
-        margin-bottom: 58px;
-
     }
 }
