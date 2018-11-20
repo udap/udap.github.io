@@ -635,11 +635,14 @@ li.test4{
 .navbar-right li.Nmr{
     margin-right: 33px;
 }
-.navbar-nav li{
+/* .navbar-nav li{
     padding: 0 15px;
-}
+} */
 .navbar-nav li a:hover{
     background: none;
+}
+.navbar-nav li a img{
+    margin-right: 2px;
 }
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover
 .case header .logoImg{
@@ -670,7 +673,7 @@ li.test4{
 }
 .ico-new{
     position: absolute;
-    left: 70px;
+    left: 98%;
     top: 10px;
     font-size: 12px;
     background: #D7B87A;
