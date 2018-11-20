@@ -8425,8 +8425,7 @@ ul.social-buttons li a:hover {
     }
     .title{
         margin-top: 0;
-        margin-bottom: 19px;
-        line-height: 56px;
+        margin-bottom: 10px;
         font-size:40px;
     }
     .press {
@@ -8468,7 +8467,7 @@ ul.social-buttons li a:hover {
         position: absolute;
         left: 0;
         top: 50%;
-        margin-top: -285px;
+        margin-top: -264.5px;
 
     }
     .speroadmapli{
@@ -10115,12 +10114,12 @@ footer .social-buttons {
 
 #roadmap .timeline{
     margin:0;
-    margin-top: 20px; 
+    margin-top: 5px; 
 }
 @media (min-width: 768px){ 
     .timeline-icon{
-        width:50px;
-        height:50px;
+        width:40px;
+        height:40px;
         float: left;
     }
     .timeline-roadbottom{
@@ -10142,7 +10141,7 @@ footer .social-buttons {
      float: right;
  }  
  .timeline-circle{
-     line-height: 50px;
+     line-height: 40px;
     float: right;
  } 
  .timeline-cont{
@@ -10153,8 +10152,11 @@ footer .social-buttons {
     margin-left: 177px;
  }
  .timeline-date{
-    line-height: 50px;
+    line-height: 40px;
     float: right;
+ }
+ .speLine{
+    line-height: 40px!important;
  }
  .timeline-icon{
     float: right;
@@ -10199,7 +10201,7 @@ footer .social-buttons {
 }
 #partner .partners li{
     list-style: none;
-    margin-top: 12px;
+    margin-top: 10px;
     overflow: hidden;
     width: 266px;
     margin:0 auto; 
@@ -10246,7 +10248,7 @@ footer .social-buttons {
 @media (min-width: 768px){
     #partner .partners li{
         width: auto;
-        margin-top: 12px;
+        margin-top: 10px;
     }
     #partner .partners li a{
         line-height: auto;
@@ -10284,7 +10286,7 @@ footer .social-buttons {
      position: absolute;
      left: 0;
      top: 50%;
-     margin-top: -267px;   
+     margin-top: -257px;   
     }
     #partner .partners .title {
     }
@@ -11022,8 +11024,7 @@ display: none;
        position: absolute;
        left: 0;
        top:50%;
-       /*margin-top: -276.5px;/* 196.5+80 */
-       margin-top: -270px;/* 196.5+80 */ 
+       margin-top: -228px; 
        width: 100%;
        background: url(../img/home/linkicon.png) repeat-x left 95%;
   }
@@ -11196,9 +11197,9 @@ display: none;
 }
 .coreserviceItem img{
     margin-bottom: 21px;
-    margin-top: 21px;
+    margin-top: 0px;
     display: inline-block;
-    max-width: 95%;
+    max-width: 84%;
 }
 .newcont{
     text-align: center;
@@ -11217,6 +11218,9 @@ display: none;
     margin-bottom: 30px;
 }
 @media (min-width: 768px){ 
+    .newcont{
+        text-align: left;
+    }
     .aboutright img{
         display: inline-block;
         max-width: 560px;
@@ -11270,7 +11274,7 @@ display: none;
         margin-bottom: 0px;
     }
     .coreserviceItem img.tokenservice{
-        max-width: 435px;
+        max-width: 370px;
     }
     .numberItem{
         padding-top: 0;
@@ -11384,7 +11388,7 @@ display: none;
         position: absolute;
         left: 0;
         top:50%;
-        margin-top: -241px;
+        margin-top: -229px;
    }
    #one .container{
        background: url(../img/home/one.png) no-repeat right center;
