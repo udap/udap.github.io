@@ -8179,7 +8179,7 @@ body {
 }
 .bghr{
     height: 2px;
-    margin-bottom: 40px;
+    margin-bottom: 12px;
 }
 .title-left{
     text-align: left;
@@ -8452,14 +8452,14 @@ ul.social-buttons li a:hover {
         position: absolute;
         left: 0;
         top: 50%;
-        margin-top: -263px;
+        margin-top: -244.5px;
     }
     #advisors .contSection {
         width: 100%;
         position: absolute;
         left: 0;
         top: 50%;
-        margin-top: -243px;
+        margin-top: -224.5px;
     }
 
     .roadmap{
@@ -8467,7 +8467,7 @@ ul.social-buttons li a:hover {
         position: absolute;
         left: 0;
         top: 50%;
-        margin-top: -264.5px;
+        margin-top: -244px;
 
     }
     .speroadmapli{
@@ -8476,7 +8476,7 @@ ul.social-buttons li a:hover {
     .timeline-done{
         position: relative;
         overflow: hidden;
-        height: 52px;
+        height: 48px;
         margin-top: 0px;
     }
     .speroadmap,
@@ -8741,7 +8741,7 @@ ul.social-buttons li a:hover {
         position: absolute;
         left: 0;
         top: 50%;
-        margin-top: -191.5px;
+        margin-top: -187px;
     }
 
     #news  .eco-system{
@@ -8749,7 +8749,7 @@ ul.social-buttons li a:hover {
         position: absolute;
         left: 0;
         top: 50%;
-        margin-top: -231px;
+        margin-top: -220.5px;
     }
 
 }
@@ -10034,7 +10034,7 @@ footer .social-buttons {
 /* timeline-heading */
 
 .timeline-heading h4{
-    line-height: 20px;
+    line-height: 16px;
     font-size:14px;
     color:#D7B87A;
     letter-spacing:0.009px;
@@ -10047,7 +10047,7 @@ footer .social-buttons {
     color:#ffffff;
     letter-spacing:-0.01px;
     text-align:left;
-    line-height:16px;
+    line-height:14px;
     margin-bottom: 0;
 }
 .timeline-cont{
@@ -10114,12 +10114,11 @@ footer .social-buttons {
 
 #roadmap .timeline{
     margin:0;
-    margin-top: 5px; 
 }
 @media (min-width: 768px){ 
     .timeline-icon{
-        width:40px;
-        height:40px;
+        width:35px;
+        height:35px;
         float: left;
     }
     .timeline-roadbottom{
@@ -10141,7 +10140,7 @@ footer .social-buttons {
      float: right;
  }  
  .timeline-circle{
-     line-height: 40px;
+     line-height: 35px;
     float: right;
  } 
  .timeline-cont{
@@ -10152,11 +10151,11 @@ footer .social-buttons {
     margin-left: 177px;
  }
  .timeline-date{
-    line-height: 40px;
+    line-height: 35px;
     float: right;
  }
  .speLine{
-    line-height: 40px!important;
+    line-height: 35px!important;
  }
  .timeline-icon{
     float: right;
@@ -10410,7 +10409,7 @@ footer .social-logo li{
         position: absolute;
         left: 0;
         top:50%;
-        margin-top:-192px;
+        margin-top:-183.5px;
     }
     #news footer{
         padding: 5px 0;
@@ -11024,7 +11023,7 @@ display: none;
        position: absolute;
        left: 0;
        top:50%;
-       margin-top: -228px; 
+       margin-top: -200px; 
        width: 100%;
        background: url(../img/home/linkicon.png) repeat-x left 95%;
   }

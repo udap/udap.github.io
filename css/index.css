@@ -284,30 +284,28 @@ footer{
 }
 .case .demoImg .bigicon{
     display: inline-block;
-    /* width: 180px;
-    height: 170px; */
-    width: 207px;
-    height: 197px;
+    width: 120px;
+    height: 120px;
     text-align: center;
 }
 .case .demoImg1 .bigicon{
     background: url(../img/demo/sigular/bigicon1.png) no-repeat center center;
-    background-size:74px 74px; 
+    background-size:cover; 
 }
 .case .demoImg2 .bigicon{
     background: url(../img/demo/sigular/bigicon2.png) no-repeat center center;
-    background-size:74px 74px; 
+    background-size:cover; 
 }
 .case .demoImg3 .bigicon{
     background: url(../img/demo/sigular/bigicon3.png) no-repeat center center;
-    background-size:74px 74px; 
+    background-size:cover; 
 }
 .case .demoImg4 .bigicon{
     background: url(../img/demo/sigular/bigicon4.png) no-repeat center center;
-    background-size:74px 74px; 
+    background-size:cover; 
 }
 .case .demoImg h2{
-    font-size:24px;
+    font-size:18px;
     color:#fff;
     text-align:center;
     line-height: 27px;
@@ -317,7 +315,7 @@ footer{
 .case .demoImg p{
     max-width: 200px;
     margin:0 auto;
-    font-size:14px;
+    font-size:12px;
     color:#fff;
     text-align:center;
     letter-spacing:0.1px;
@@ -331,7 +329,7 @@ footer{
 }
 .case .demoImg i{
     display: inline-block;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
     width: 22px;
     height: 18px;
 }
@@ -937,6 +935,17 @@ li.test4{
     display: block;
 }
 @media (min-width:768px) {
+    .case .demoImg h2{
+        font-size:24px;
+        line-height: 27px;
+        margin-top: 0;
+        margin-bottom: 13px;
+    }
+    .case .demoImg p{
+        max-width: 200px;
+        font-size:14px;
+        margin-bottom: 20px;
+    }
     .container {
         width: 750px
     }
@@ -1111,7 +1120,7 @@ li.test4{
     justify-content: flex-start;
 }
 .sigular figure{
-    padding: 0 5%;
+    padding: 0;
     display: inline-block;
     width: 100%;
 }
@@ -1139,11 +1148,6 @@ li.test4{
         padding: 0;
         display: inline-block;
         width: 50%;
-    }
-    .sigular figure img{
-        display: inline-block;
-        width: 513px;
-        height: 259px;
     }
     .sigular figure p{
         max-width: 513px;
@@ -1196,7 +1200,8 @@ li.test4{
 .subTitle span{
     display: inline-block;
     height: 30px;
-    width: 339px;
+    width: 90%;
+    font-size: 22px;
     background: #000;
 }
 .middlewareLayer .layerImgCont{
@@ -1209,19 +1214,20 @@ li.test4{
     display: inline-block;
     text-align: center;
     margin-bottom: 34px;
-    width: 100%;
+    /* width: 100%; */
+    padding: 0 1%;
 }
 
 .middlewareLayer .layerImg p{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 170px;
+    width: 95%;
     height: 80px;
     margin:0 auto;
     vertical-align: middle;
     background-image: linear-gradient(to right, #F0E0A5, #C9A568, #FFF2B6, #C39D60);
-    font-size:19.8px;
+    font-size:12px;
     color:#0b0807;
     text-align:center;
     font-weight: bold;
@@ -1235,17 +1241,17 @@ li.test4{
 }
 .middlewareLayer .layerImg small{
     position: absolute;
-    top:39px;
-    font-size: 14px;
-    line-height: 18px;
-    width: 90%;
+    top:28px;
+    font-size: 12px;
+    line-height: 14px;
+    width: 95%;
     height: 40px;
     word-wrap:break-word ;
 }
 .middlewareLayer .layerImg img{
     display: inline-block;
-    width: 29px;
-    height: 18px;
+    width: 20px;
+    height: 12px;
     position: absolute;
     right: 8px;
     top:5px;
@@ -1268,13 +1274,43 @@ li.test4{
     margin-bottom: 20px;
 }
 .middlewareImg .imgItem img{
-    margin-top: 36px;
+    margin-top: 0px;
     display: inline-block;
-    width: 369px;
-    height: 154px;
+    width: 95%;
+    height: auto;
 }
 
 @media (min-width: 768px){ 
+    .sigular figure{
+        padding: 0;
+    }
+    .sigular figure img{
+       width: 80%;
+       height: auto;
+    }
+    .subTitle span{
+        height: 30px;
+        width: 339px;
+    }
+    .middlewareLayer .layerImg{
+        width: 100%; 
+        padding: 0;
+    }
+    .middlewareLayer .layerImg p{
+        width: 170px;
+        font-size:19.8px;
+    }
+    .middlewareLayer .layerImg small{
+        top:39px;
+        font-size: 14px;
+        line-height: 18px;
+        width: 90%;
+        height: 40px;
+    }
+    .middlewareLayer .layerImg img{
+        width: 29px;
+        height: 18px;
+    }
     .middleware{
         padding: 0;
     }
@@ -1283,7 +1319,13 @@ li.test4{
         width: 420px;
         height: 283px;
     }
+
     .middlewareLayer .layerImg{
         width: 20%;
+    }
+    .middlewareImg .imgItem img{
+        margin-top: 36px;
+        width: 369px;
+        height: 154px;
     }
 }
