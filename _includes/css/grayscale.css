@@ -11412,17 +11412,31 @@ display: none;
 .dropdown-product{
     position: absolute;
     left:0;
-    top:50px;
+    top:70px;
     padding-left:27px;
     display: none;
     line-height: 30px;
-    min-width: 150px;
+    min-width: 155px;
     list-style:none;
+    padding:10px; 
+    border:solid 1px #D7B87A;
+    border-radius: 5px;
+    background: #000;
+}
+.dropdown-product .arrow{
+    position: absolute;
+    left: 40px;
+    top:-20px;
+    display:inline-block;
+    width: 33px;
+    height: 20px;
+    background: url(../img/arrow.png) no-repeat left top;
+    background-size: cover;
 }
 .dropdown-product li a{
     height: 30px;
     line-height: 30px;
-    font-size: 14px;
+    font-size: 16px;
 }
 .dropdown-product li a:hover{
     text-decoration: underline;
