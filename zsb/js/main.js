@@ -19,3 +19,15 @@
      $(".dropdown-product").hide();
    }, 500);
  });
+
+ /** 二维码事件 */
+
+$(".click_code").click(function(e) {
+  e.stopPropagation();
+  $(".zsbanz-code").show();
+});
+
+$("#close").click(function(e) {
+  e.stopPropagation();
+  $(".zsbanz-code").hide();
+});

@@ -162,10 +162,11 @@ a {
 }
 .zsb-bg {
   margin-top: 109px;
-  background: url("../img/lbj.png");
+  background: url("../img/b-bg.png");
   height: 525px;
   width: 100%;
-  background-size: contain;
+  background-size: 100% 100%;
+  background-position: center top;
 }
 .zsb-bg .title {
   font-size: 48px;
@@ -174,7 +175,8 @@ a {
 }
 .zsb-bg ul {
   display: flex;
-  margin-top: 92px;
+  width: 1015px;
+  margin: 92px auto;
 }
 .zsb-bg ul li img {
   height: 68px;
@@ -194,6 +196,7 @@ a {
 .zsb-bg .zsb-title {
   font-size: 48px;
   text-align: center;
+  font-weight: bold;
   padding-top: 128px;
 }
 .navbar {
