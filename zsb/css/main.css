@@ -7,6 +7,7 @@ body {
   height: 3500px;
   font-weight: 300;
   background: #000;
+  min-width: 1280px;
 }
 a {
   color: white;
@@ -38,6 +39,7 @@ a {
 }
 .zsb__ce .l .judap p:nth-child(1) {
   font-size: 42px;
+  font-weight: bold;
 }
 .zsb__ce .l .judap p:nth-child(2) {
   font-weight: 300;
