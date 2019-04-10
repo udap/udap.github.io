@@ -181,12 +181,12 @@ a {
   margin: 92px auto;
 }
 .zsb-bg ul li img {
-  height: 68px;
+  height: 60px;
   width: auto;
 }
 .zsb-bg ul li {
   list-style: none;
-  margin-right: 13px;
+  margin-right: 31px;
 }
 .zsb-foot {
   font-size: 48px;
@@ -204,6 +204,16 @@ a {
 .navbar {
   background: black;
 }
+/* 长度 */
+.zsb-banner1-width{
+  width: 584px;
+}
+.zsb-banner2-width{
+  width: 594px;
+}
+.zsb-banner3-width{
+  width: 584px;
+}
 
 /* 英文 zsben */
 
@@ -218,6 +228,7 @@ a {
 }
 .banner-content-en .r p{
   font-size: 16px;
+  line-height: 38px;
 }
 .banner-content-en-line .r p{
   line-height: 37px;
@@ -225,7 +236,7 @@ a {
 .en-body{
   height: 3631px;
 }
-
+.banner3-en p{margin-top: 25px !important;line-height: 34px !important;}
 /* 二维码 */
 
 .zsbanz-code{
