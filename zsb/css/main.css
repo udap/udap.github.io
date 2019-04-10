@@ -207,6 +207,7 @@ a {
 /* 长度 */
 .zsb-banner1-width{
   width: 584px;
+  padding-top: 24px !important;
 }
 .zsb-banner2-width{
   width: 594px;
