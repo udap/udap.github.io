@@ -4,7 +4,7 @@ p {
   padding: 0;
 }
 body {
-  height: 3500px;
+  height: auto;
   font-weight: 300;
   background: #000;
   min-width: 1280px;
@@ -21,9 +21,8 @@ a {
   width: 1280px;
   margin: 0 auto;
   padding-top: 224px;
-  
 }
-.zsb-wrap-content{
+.zsb-wrap-content {
   padding-left: 88px;
   padding-right: 88px;
 }
@@ -114,8 +113,7 @@ a {
   margin-top: 100px;
   cursor: pointer;
 }
-.zsb-content {
-}
+
 .zsb-content .top {
   display: flex;
   /* padding-top: 100px; */
@@ -204,15 +202,17 @@ a {
 .navbar {
   background: black;
 }
+
 /* 长度 */
-.zsb-banner1-width{
+
+.zsb-banner1-width {
   width: 584px;
   padding-top: 24px !important;
 }
-.zsb-banner2-width{
+.zsb-banner2-width {
   width: 594px;
 }
-.zsb-banner3-width{
+.zsb-banner3-width {
   width: 584px;
 }
 
@@ -224,39 +224,135 @@ a {
 .zsben-explain .l p {
   font-size: 16px;
 }
-.zsben-padding{
+.zsben-padding {
   padding-bottom: 10px;
 }
-.banner-content-en .r p{
+.banner-content-en .r p {
   font-size: 16px;
   line-height: 38px;
 }
-.banner-content-en-line .r p{
+.banner-content-en-line .r p {
   line-height: 37px;
 }
-.en-body{
-  height: 3631px;
+.en-body {
+  height: auto;
 }
-.banner3-en p{margin-top: 25px !important;line-height: 34px !important;}
+.banner3-en p {
+  margin-top: 25px !important;
+  line-height: 34px !important;
+}
+
 /* 二维码 */
 
-.zsbanz-code{
+.zsbanz-code {
   width: 390px;
   height: 475px;
-  position: absolute;
-  left: 325px;
-  top: -375px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
   border-radius: 10px;
-  display: none
+  display: none;
+  margin-left: -159.5px;
+  margin-top: -237.5px;
 }
-.zsbanz-code img{
+.zsbanz-code img {
   width: 100% !important;
   height: 100% !important;
 }
-#close{
+#close {
   position: absolute;
   width: 50px;
   height: 50px;
   right: 23px;
   top: 20px;
+}
+
+/* 手机端自适应 */
+@media screen and (max-width: 768px) {
+  .zsb-wrap-content {
+    padding: 0;
+  }
+  .judap p {
+    font-size: 22px !important;
+  }
+  .zsb__ce {
+    display: inline-grid;
+  }
+  body {
+    min-width: 100%;
+  }
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .zsb__wrap {
+    width: 90%;
+  }
+  .zsb-explain .l {
+    width: auto;
+    height: auto;
+  }
+  .zsb-explain .r {
+    position: unset;
+  }
+  .zsb-explain .r img {
+    width: 100%;
+    height: auto;
+  }
+  .zsb-a-ios {
+    margin-top: 0;
+  }
+  .zsb-a-ios .r {
+    margin: 15px 0;
+  }
+  .banner-content {
+    display: inline-grid;
+  }
+  .zsb-banner2-width {
+    width: 100%;
+  }
+  .zsb-banner1-width {
+    width: 100%;
+  }
+  .banner-content .r {
+    padding-left: 0 !important;
+  }
+  .banner-content .l {
+    width: 100% !important;
+    height: auto !important;
+    position: unset !important;
+  }
+  .zsb-banner3-width {
+    width: 100%;
+  }
+  .zsb-bg {
+    background: black;
+    height: auto;
+  }
+  .zsb-bg ul {
+    display: inline-grid;
+    width: 100%;
+    padding: 0;
+  }
+
+  .zsb-bg ul li {
+    margin-right: 0;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .zsb-bg ul li img {
+    max-width: 100%;
+  }
+  .container-fluid {
+    overflow: hidden;
+  }
+  .zsb-content .top {
+    display: none;
+  }
+  .navbar-header {
+    padding: 0 15px;
+  }
+  .zsbanz-code{
+    margin-left: -205.5px;
+  }
 }
