@@ -68,7 +68,8 @@ a {
 }
 .zsb-explain .l p {
   font-size: 18px;
-  line-height: 41px;
+  line-height: 34px;
+  margin-bottom: 24px;
 }
 .zsb-explain {
   position: relative;
@@ -144,7 +145,8 @@ a {
 }
 .banner-content .r p {
   font-size: 18px;
-  line-height: 44px;
+  line-height: 34px;
+  margin-bottom: 24px;
   /* letter-spacing: 2px; */
 }
 .banner-content .r {
@@ -223,23 +225,25 @@ a {
 }
 .zsben-explain .l p {
   font-size: 16px;
+  margin-bottom: 24px;
+  line-height: 30px;
 }
 .zsben-padding {
   padding-bottom: 10px;
 }
 .banner-content-en .r p {
   font-size: 16px;
-  line-height: 38px;
+  line-height: 30px;
 }
 .banner-content-en-line .r p {
-  line-height: 37px;
+  line-height: 30px;
 }
 .en-body {
   height: auto;
 }
 .banner3-en p {
   margin-top: 25px !important;
-  line-height: 34px !important;
+  line-height: 30px !important;
 }
 
 /* 二维码 */
@@ -352,7 +356,7 @@ a {
   .navbar-header {
     padding: 0 15px;
   }
-  .zsbanz-code{
+  .zsbanz-code {
     margin-left: -205.5px;
   }
 }
