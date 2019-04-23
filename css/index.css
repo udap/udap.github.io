@@ -304,6 +304,10 @@ footer{
     background: url(../img/demo/sigular/bigicon4.png) no-repeat center center;
     background-size:cover; 
 }
+.case .demoImg5 .bigicon{
+    background: url(../img/demo/sigular/bigicon5.png) no-repeat center center;
+    background-size:cover; 
+}
 .case .demoImg h2{
     font-size:18px;
     color:#fff;
@@ -356,6 +360,11 @@ footer{
     background: url(../img/demo/sigular/hbigicon4.png) no-repeat center center;
     background-size:cover; 
 }
+.case .active5 .bigicon,
+.case .demoImg5:hover .bigicon{
+    background: url(../img/demo/sigular/hbigicon5.png) no-repeat center center;
+    background-size:cover; 
+}
 .case .demoImg1 i{
     background: url(../img/demo/sigular/iconwhite.png)no-repeat left top;
     background-size:cover;     
@@ -395,6 +404,12 @@ footer{
 .case .demoImg4:hover h2,
 .case .demoImg4:hover p{
     color:#e15555;
+}
+.case .active5 h2,
+.case .active5 p,
+.case .demoImg5:hover h2,
+.case .demoImg5:hover p{
+    color:#4473cd;
 }
 .case .active1 i,
 .case .demoImg1:hover i{
