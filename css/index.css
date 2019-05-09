@@ -1401,3 +1401,9 @@ li.test4{
         height: 154px;
     }
 }
+@media (min-width: 1200px) {
+    .col-zdlg-2-5 {
+      float: left;
+      width: 20%;
+    }
+  }
