@@ -366,19 +366,23 @@ footer{
     background-size:cover; 
 }
 .case .demoImg1 i{
-    background: url(../img/demo/sigular/iconwhite.png)no-repeat left top;
+    background: url(../img/demo/sigular/iconwhite.png) no-repeat left top;
     background-size:cover;     
 }
 .case .demoImg2 i{
-    background: url(../img/demo/sigular/iconwhite.png)no-repeat left top;
+    background: url(../img/demo/sigular/iconwhite.png) no-repeat left top;
     background-size:cover;     
 }
 .case .demoImg3 i{
-    background: url(../img/demo/sigular/iconwhite.png)no-repeat left top;
+    background: url(../img/demo/sigular/iconwhite.png) no-repeat left top;
     background-size:cover;     
 }
 .case .demoImg4 i{
-    background: url(../img/demo/sigular/iconwhite.png)no-repeat left top;
+    background: url(../img/demo/sigular/iconwhite.png) no-repeat left top;
+    background-size:cover;     
+}
+.case .demoImg5 i{
+    background: url(../img/demo/sigular/iconwhite.png) no-repeat left top;
     background-size:cover;     
 }
 .case .active1 h2,
@@ -429,6 +433,11 @@ footer{
 .case .active4 i,
 .case .demoImg4:hover i{
     background: url(../img/demo/sigular/icon4.png)no-repeat left top;
+    background-size:cover;     
+}
+.case .active5 i,
+.case .demoImg5:hover i{
+    background: url(../img/demo/sigular/icon5.png)no-repeat left top;
     background-size:cover;     
 }
 .case .demoCont{
@@ -1405,5 +1414,6 @@ li.test4{
     .col-zdlg-2-5 {
       float: left;
       width: 20%;
+      margin-bottom: 30px;
     }
   }
