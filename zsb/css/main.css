@@ -374,6 +374,9 @@ a {
   /* background: #fff; */
 }
 
+.zsb__apps .container{
+  padding: 0!important;
+}
 
 
 .apps .col-md-3 {
@@ -559,6 +562,7 @@ a {
     line-height: 27px;
     margin-top: 0;
     margin-bottom: 13px;
+    font-weight: 500;
   }
   .apps .demoImg p {
     max-width: 200px;
