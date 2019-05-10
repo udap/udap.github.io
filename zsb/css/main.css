@@ -20,7 +20,7 @@ a {
 .zsb__wrap {
   width: 1280px;
   margin: 0 auto;
-  padding-top: 224px;
+  padding-top: 144px;
 }
 .zsb-wrap-content {
   padding-left: 88px;
@@ -160,8 +160,8 @@ a {
   font-size: 100px;
   color: rgba(255, 255, 255, 0.06);
   top: -22px;
-    right: -94px;
-    font-weight: 600;
+  right: -94px;
+  font-weight: 600;
 }
 .zsb-bg {
   margin-top: 109px;
@@ -271,10 +271,10 @@ a {
   right: 23px;
   top: 20px;
 }
-.zsb-banner1-width-en{
+.zsb-banner1-width-en {
   padding-top: 41px !important;
 }
-.certificate-en{
+.certificate-en {
   top: -59px !important;
 }
 /* 手机端自适应 */
@@ -364,5 +364,205 @@ a {
   }
   .zsbanz-code {
     margin-left: -205.5px;
+  }
+}
+
+.zsb__apps {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 50px;
+  /* background: #fff; */
+}
+
+
+
+.apps .col-md-3 {
+  padding: 0;
+}
+.apps .demoImg {
+  overflow: hidden;
+  margin-top: 34px;
+  text-align: center;
+}
+.apps .demoImg a {
+  text-decoration: none;
+}
+.apps .demoImg img {
+  display: inline-block;
+}
+.apps .demoImg .bigicon {
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  text-align: center;
+}
+.apps .demoImg1 .bigicon {
+  background: url(../../img/demo/sigular/bigicon1.png) no-repeat center center;
+  background-size: cover;
+}
+.apps .demoImg2 .bigicon {
+  background: url(../../img/demo/sigular/bigicon2.png) no-repeat center center;
+  background-size: cover;
+}
+.apps .demoImg3 .bigicon {
+  background: url(../../img/demo/sigular/bigicon3.png) no-repeat center center;
+  background-size: cover;
+}
+.apps .demoImg4 .bigicon {
+  background: url(../../img/demo/sigular/bigicon4.png) no-repeat center center;
+  background-size: cover;
+}
+.apps .demoImg5 .bigicon {
+  background: url(../../img/demo/sigular/bigicon5.png) no-repeat center center;
+  background-size: cover;
+}
+.apps .demoImg h2 {
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  line-height: 27px;
+  margin-top: 0;
+  margin-bottom: 13px;
+}
+.apps .demoImg p {
+  max-width: 200px;
+  margin: 0 auto;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.1px;
+  margin-bottom: 20px;
+}
+.apps .demoImg .bigpra2 {
+  max-width: 288px;
+}
+.apps .demoImg .bigpra4 {
+  max-width: 217px;
+}
+.apps .demoImg i {
+  display: inline-block;
+  margin-bottom: 0px;
+  width: 22px;
+  height: 18px;
+}
+.apps .demoImg:hover {
+  cursor: pointer;
+}
+.apps .active1 .bigicon,
+.apps .demoImg1:hover .bigicon {
+  background: url(../../../img/demo/sigular/hbigicon1.png) no-repeat center center;
+  background-size: cover;
+}
+.apps .active2 .bigicon,
+.apps .demoImg2:hover .bigicon {
+  background: url(../../../img/demo/sigular/hbigicon2.png) no-repeat center center;
+  background-size: cover;
+}
+.apps .active3 .bigicon,
+.apps .demoImg3:hover .bigicon {
+  background: url(../../img/demo/sigular/hbigicon3.png) no-repeat center center;
+  background-size: cover;
+}
+.apps .active4 .bigicon,
+.apps .demoImg4:hover .bigicon {
+  background: url(../../img/demo/sigular/hbigicon4.png) no-repeat center center;
+  background-size: cover;
+}
+.apps .active5 .bigicon,
+.apps .demoImg5:hover .bigicon {
+  background: url(../../img/demo/sigular/hbigicon5.png) no-repeat center center;
+  background-size: cover;
+}
+.apps .demoImg1 i {
+  background: url(../../img/demo/sigular/iconwhite.png) no-repeat left top;
+  background-size: cover;
+}
+.apps .demoImg2 i {
+  background: url(../../img/demo/sigular/iconwhite.png) no-repeat left top;
+  background-size: cover;
+}
+.apps .demoImg3 i {
+  background: url(../../img/demo/sigular/iconwhite.png) no-repeat left top;
+  background-size: cover;
+}
+.apps .demoImg4 i {
+  background: url(../../img/demo/sigular/iconwhite.png) no-repeat left top;
+  background-size: cover;
+}
+.apps .demoImg5 i {
+  background: url(../../img/demo/sigular/iconwhite.png) no-repeat left top;
+  background-size: cover;
+}
+.apps .active1 h2,
+.apps .active1 p,
+.apps .demoImg1:hover h2,
+.apps .demoImg1:hover p {
+  color: #59b6b0;
+}
+.apps .active2 h2,
+.apps .active2 p,
+.apps .demoImg2:hover h2,
+.apps .demoImg2:hover p {
+  color: #ad6cd4;
+}
+.apps .active3 h2,
+.apps .active3 p,
+.apps .demoImg3:hover h2,
+.apps .demoImg3:hover p {
+  color: #4473cd;
+}
+.apps .active4 h2,
+.apps .active4 p,
+.apps .demoImg4:hover h2,
+.apps .demoImg4:hover p {
+  color: #e15555;
+}
+.apps .active5 h2,
+.apps .active5 p,
+.apps .demoImg5:hover h2,
+.apps .demoImg5:hover p {
+  color: #4473cd;
+}
+.apps .active1 i,
+.apps .demoImg1:hover i {
+  background: url(../../img/demo/sigular/icon1.png) no-repeat left top;
+  background-size: cover;
+}
+.apps .active2 i,
+.apps .demoImg2:hover i {
+  background: url(../../img/demo/sigular/icon2.png) no-repeat left top;
+  background-size: cover;
+}
+.apps .active3 i,
+.apps .demoImg3:hover i {
+  background: url(../../img/demo/sigular/icon3.png) no-repeat left top;
+  background-size: cover;
+}
+.apps .active4 i,
+.apps .demoImg4:hover i {
+  background: url(../../img/demo/sigular/icon4.png) no-repeat left top;
+  background-size: cover;
+}
+.apps .active5 i,
+.apps .demoImg5:hover i {
+  background: url(../../img/demo/sigular/icon5.png) no-repeat left top;
+  background-size: cover;
+}
+.apps .demoCont {
+  background: #000 url(../../img/demo/demo.png) no-repeat right center;
+  background-size: 100% 100%;
+}
+
+@media (min-width: 768px) {
+  .apps .demoImg h2 {
+    font-size: 24px;
+    line-height: 27px;
+    margin-top: 0;
+    margin-bottom: 13px;
+  }
+  .apps .demoImg p {
+    max-width: 200px;
+    font-size: 14px;
+    margin-bottom: 20px;
   }
 }
