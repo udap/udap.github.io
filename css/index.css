@@ -308,6 +308,10 @@ footer {
   background: url(../img/demo/sigular/bigicon5.png) no-repeat center center;
   background-size: cover;
 }
+.case .demoImg6 .bigicon {
+  background: url(../img/demo/sigular/bigicon6.png) no-repeat center center;
+  background-size: cover;
+}
 .case .demoImg h2 {
   font-size: 18px;
   color: #fff;
@@ -365,6 +369,11 @@ footer {
   background: url(../img/demo/sigular/hbigicon5.png) no-repeat center center;
   background-size: cover;
 }
+.case .active6 .bigicon,
+.case .demoImg6:hover .bigicon {
+  background: url(../img/demo/sigular/hbigicon6.png) no-repeat center center;
+  background-size: cover;
+}
 .case .demoImg1 i {
   background: url(../img/demo/sigular/iconwhite.png) no-repeat left top;
   background-size: cover;
@@ -382,6 +391,10 @@ footer {
   background-size: cover;
 }
 .case .demoImg5 i {
+  background: url(../img/demo/sigular/iconwhite.png) no-repeat left top;
+  background-size: cover;
+}
+.case .demoImg6 i {
   background: url(../img/demo/sigular/iconwhite.png) no-repeat left top;
   background-size: cover;
 }
@@ -415,6 +428,12 @@ footer {
 .case .demoImg5:hover p {
   color: #4473cd;
 }
+.case .active6 h2,
+.case .active6 p,
+.case .demoImg6:hover h2,
+.case .demoImg6:hover p {
+  color: #0090de;
+}
 .case .active1 i,
 .case .demoImg1:hover i {
   background: url(../img/demo/sigular/icon1.png) no-repeat left top;
@@ -438,6 +457,11 @@ footer {
 .case .active5 i,
 .case .demoImg5:hover i {
   background: url(../img/demo/sigular/icon5.png) no-repeat left top;
+  background-size: cover;
+}
+.case .active6 i,
+.case .demoImg6:hover i {
+  background: url(../img/demo/sigular/icon6.png) no-repeat left top;
   background-size: cover;
 }
 .case .demoCont {

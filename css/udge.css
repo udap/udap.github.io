@@ -1,0 +1,179 @@
+.udge {
+  width: 100%;
+  background: #00022a;
+  position: relative;
+}
+.clear:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+}
+
+.clear {
+  zoom: 1;
+}
+.udge .navbar {
+  background: rgba(0, 15, 82, 0.4) !important;
+}
+.udge .case {
+  background: none !important;
+  position: relative;
+  z-index: 2;
+}
+.udge .case footer {
+  background: #0c0e3a;
+}
+.udge-top {
+  margin: 0 auto;
+}
+.udge-mask {
+  position: absolute;
+  width: 100%;
+  height: 913px;
+  top: 0;
+  left: 0;
+  background: url(../img/demo/udgebg.png) no-repeat;
+  background-size: 100% 100%;
+  z-index: 1;
+}
+
+.udge-title {
+  width: 100%;
+  margin-bottom: 100px;
+}
+.udge-list {
+  margin-bottom: 100px;
+  display: block;
+}
+.udge-list img{
+  width: 100%;
+}
+.udge-list h1{
+  font-size:36px;
+  color:#00aef2;
+  margin-bottom: 30px;
+}
+.udge-list .text p {
+  color:#b3b6d5;
+}
+.udge-list .text .big-txt{
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.udge-list .text .small-txt{
+  font-size: 14px
+}
+.udge-title h1 {
+  width: 100%;
+  text-align: center;
+  display: block;
+  margin-top: 100px;
+  font-size: 100px;
+  color: #00aef2;
+  text-align: center;
+}
+.udge-title h2 {
+  width: 100%;
+  text-align: center;
+  display: block;
+  font-size: 48px;
+  color: #fff;
+  text-align: center;
+  opacity: 0.25;
+
+}
+.udge-state h1 {
+  width: 100%;
+  margin: 100px auto 50px auto;
+  text-align: center;
+  display: block;
+  font-size: 36px;
+  color: #00aef2;
+}
+.udge-state .state-list {
+  height: auto;
+  min-height: 210px;
+  background: rgba(0, 123, 256, 0.16);
+  border-radius: 10px;
+  padding: 8px 20px 20px 20px;
+}
+.udge-state .state-list h2 {
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.udge-state .state-list p {
+  font-size: 14px;
+  color: #b3b5d8;
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 5px;
+}
+.udge-state .state-list p:before {
+  position: absolute;
+  top: 8px;
+  left: 5px;
+  content: "";
+  background: #b3b5d8;
+  width: 3px;
+  height: 3px;
+  display: block;
+  border-radius: 100%;
+}
+
+.udge-state .col-xs-12 {
+  margin-bottom: 30px;
+}
+.udge-contact {
+  width: 100%;
+  height: auto;
+  margin-top: 200px;
+  background: url(../img/demo/udge/contact.png) no-repeat;
+  background-size: 100% 100%;
+  padding: 100px 0 50px 0;
+}
+
+.udge-contact h1 {
+  width: 100%;
+  margin: 0 auto 50px auto;
+  text-align: center;
+  display: block;
+  font-size: 36px;
+  color: #00aef2;
+}
+.udge-contact p {
+  font-size: 18px;
+  color: #b3b6d5;
+  width: 83%;
+  display: block;
+  margin: 0 auto;
+}
+.udge-contact a {
+  width: 252px;
+  height: 48px;
+  background: linear-gradient(#0283fa, #0256d7);
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 4px;
+  display: block;
+  line-height: 48px;
+  margin: 50px auto 0 auto;
+}
+@media (min-width: 768px) {
+  .udge-top {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .udge-top {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .udge-top {
+    width: 1280px;
+  }
+}
