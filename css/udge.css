@@ -53,6 +53,7 @@
   font-size:36px;
   color:#00aef2;
   margin-bottom: 30px;
+  line-height: 50px
 }
 .udge-list .text p {
   color:#b3b6d5;
@@ -62,7 +63,20 @@
   margin-bottom: 20px;
 }
 .udge-list .text .small-txt{
-  font-size: 14px
+  font-size: 14px;
+  padding-left:10px;
+  position: relative;
+}
+.udge-list .text .small-txt:before{
+  position: absolute;
+  top: 8px;
+  left: 0;
+  content: "";
+  background: #b3b5d8;
+  width: 3px;
+  height: 3px;
+  display: block;
+  border-radius: 100%;
 }
 .udge-title h1 {
   width: 100%;
@@ -109,7 +123,8 @@
   color: #b3b5d8;
   position: relative;
   padding-left: 15px;
-  margin-bottom: 5px;
+  width: 85%;
+  margin: 0 auto 5px auto;
 }
 .udge-state .state-list p:before {
   position: absolute;
