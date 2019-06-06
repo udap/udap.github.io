@@ -44,7 +44,8 @@
 }
 .udge-list {
   margin-bottom: 100px;
-  display: block;
+  display: flex;
+  align-items: center;
 }
 .udge-list img{
   width: 100%;
@@ -59,11 +60,11 @@
   color:#b3b6d5;
 }
 .udge-list .text .big-txt{
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 20px;
 }
 .udge-list .text .small-txt{
-  font-size: 16px;
+  font-size: 18px;
   padding-left:10px;
   position: relative;
 }
@@ -102,8 +103,8 @@
   margin: 100px auto 50px auto;
   text-align: center;
   display: block;
-  font-size: 36px;
-  color: #00aef2;
+  font-size: 22px;
+  color: #fff;
 }
 .udge-state .state-list {
   height: 100%;
@@ -118,7 +119,7 @@
   margin-bottom: 20px;
 }
 .udge-state .state-list p {
-  font-size: 16px;
+  font-size: 18px;
   color: #b3b5d8;
   position: relative;
   padding-left: 15px;
@@ -199,6 +200,9 @@
 @media (max-width: 768px) {
   .state-main{
     display: flex;
+    flex-direction: column;
+  }
+  .udge-list{
     flex-direction: column;
   }
 }
