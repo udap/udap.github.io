@@ -997,7 +997,7 @@ li.test4 {
     margin-bottom: 137px;
   }
   .case .demoImg h2 {
-    font-size: 24px;
+    /* font-size: 24px; */
     line-height: 27px;
     margin-top: 0;
     margin-bottom: 13px;

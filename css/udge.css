@@ -14,7 +14,7 @@
   zoom: 1;
 }
 .udge .navbar {
-  background: rgba(0, 15, 82, 0.4) !important;
+  background: rgb(1, 13, 68) !important;
 }
 .udge .case {
   background: none !important;
@@ -63,7 +63,7 @@
   margin-bottom: 20px;
 }
 .udge-list .text .small-txt{
-  font-size: 14px;
+  font-size: 16px;
   padding-left:10px;
   position: relative;
 }
@@ -83,7 +83,7 @@
   text-align: center;
   display: block;
   margin-top: 100px;
-  font-size: 100px;
+  font-size: 70px;
   color: #00aef2;
   text-align: center;
 }
@@ -91,7 +91,7 @@
   width: 100%;
   text-align: center;
   display: block;
-  font-size: 48px;
+  font-size: 35px;
   color: #fff;
   text-align: center;
   opacity: 0.25;
@@ -106,8 +106,7 @@
   color: #00aef2;
 }
 .udge-state .state-list {
-  height: auto;
-  min-height: 210px;
+  height: 100%;
   background: rgba(0, 123, 256, 0.16);
   border-radius: 10px;
   padding: 8px 20px 20px 20px;
@@ -119,12 +118,15 @@
   margin-bottom: 20px;
 }
 .udge-state .state-list p {
-  font-size: 14px;
+  font-size: 16px;
   color: #b3b5d8;
   position: relative;
   padding-left: 15px;
   width: 85%;
   margin: 0 auto 5px auto;
+}
+.state-main{
+  display: flex;
 }
 .udge-state .state-list p:before {
   position: absolute;
@@ -181,6 +183,7 @@
   .udge-top {
     width: 750px;
   }
+
 }
 @media (min-width: 992px) {
   .udge-top {
@@ -191,4 +194,12 @@
   .udge-top {
     width: 1280px;
   }
+
 }
+@media (max-width: 768px) {
+  .state-main{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
