@@ -418,6 +418,10 @@ a {
   background: url(../../img/demo/sigular/bigicon5.png) no-repeat center center;
   background-size: cover;
 }
+.apps .demoImg6 .bigicon {
+  background: url(../../img/demo/sigular/bigicon6.png) no-repeat center center;
+  background-size: cover;
+}
 .apps .demoImg h2 {
   font-size: 18px;
   color: #fff;
@@ -457,7 +461,7 @@ a {
 }
 .apps .active2 .bigicon,
 .apps .demoImg2:hover .bigicon {
-  background: url(../../../img/demo/sigular/hbigicon2.png) no-repeat center center;
+  background: url(../../img/demo/sigular/hbigicon2.png) no-repeat center center;
   background-size: cover;
 }
 .apps .active3 .bigicon,
@@ -473,6 +477,11 @@ a {
 .apps .active5 .bigicon,
 .apps .demoImg5:hover .bigicon {
   background: url(../../img/demo/sigular/hbigicon5.png) no-repeat center center;
+  background-size: cover;
+}
+.apps .active6 .bigicon,
+.apps .demoImg6:hover .bigicon {
+  background: url(../../img/demo/sigular/hbigicon6.png) no-repeat center center;
   background-size: cover;
 }
 .apps .demoImg1 i {
@@ -492,6 +501,10 @@ a {
   background-size: cover;
 }
 .apps .demoImg5 i {
+  background: url(../../img/demo/sigular/iconwhite.png) no-repeat left top;
+  background-size: cover;
+}
+.apps .demoImg6 i {
   background: url(../../img/demo/sigular/iconwhite.png) no-repeat left top;
   background-size: cover;
 }
@@ -525,6 +538,12 @@ a {
 .apps .demoImg5:hover p {
   color: #4473cd;
 }
+.apps .active6 h2,
+.apps .active6 p,
+.apps .demoImg6:hover h2,
+.apps .demoImg6:hover p {
+  color: #0090de;
+}
 .apps .active1 i,
 .apps .demoImg1:hover i {
   background: url(../../img/demo/sigular/icon1.png) no-repeat left top;
@@ -550,6 +569,11 @@ a {
   background: url(../../img/demo/sigular/icon5.png) no-repeat left top;
   background-size: cover;
 }
+.apps .active6 i,
+.apps .demoImg6:hover i {
+  background: url(../../img/demo/sigular/icon6.png) no-repeat left top;
+  background-size: cover;
+}
 .apps .demoCont {
   background: #000 url(../../img/demo/demo.png) no-repeat right center;
   background-size: 100% 100%;
@@ -557,7 +581,7 @@ a {
 
 @media (min-width: 768px) {
   .apps .demoImg h2 {
-    font-size: 24px;
+    /* font-size: 24px; */
     line-height: 27px;
     margin-top: 0;
     margin-bottom: 13px;
