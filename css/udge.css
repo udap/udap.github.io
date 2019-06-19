@@ -14,7 +14,7 @@
   zoom: 1;
 }
 .udge .navbar {
-  background: rgba(0, 15, 82, 0.4) !important;
+  background: rgb(1, 13, 68) !important;
 }
 .udge .case {
   background: none !important;
@@ -44,7 +44,8 @@
 }
 .udge-list {
   margin-bottom: 100px;
-  display: block;
+  display: flex;
+  align-items: center;
 }
 .udge-list img{
   width: 100%;
@@ -53,23 +54,37 @@
   font-size:36px;
   color:#00aef2;
   margin-bottom: 30px;
+  line-height: 50px
 }
 .udge-list .text p {
   color:#b3b6d5;
 }
 .udge-list .text .big-txt{
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 20px;
 }
 .udge-list .text .small-txt{
-  font-size: 14px
+  font-size: 18px;
+  padding-left:10px;
+  position: relative;
+}
+.udge-list .text .small-txt:before{
+  position: absolute;
+  top: 8px;
+  left: 0;
+  content: "";
+  background: #b3b5d8;
+  width: 3px;
+  height: 3px;
+  display: block;
+  border-radius: 100%;
 }
 .udge-title h1 {
   width: 100%;
   text-align: center;
   display: block;
   margin-top: 100px;
-  font-size: 100px;
+  font-size: 70px;
   color: #00aef2;
   text-align: center;
 }
@@ -77,7 +92,7 @@
   width: 100%;
   text-align: center;
   display: block;
-  font-size: 48px;
+  font-size: 35px;
   color: #fff;
   text-align: center;
   opacity: 0.25;
@@ -88,12 +103,11 @@
   margin: 100px auto 50px auto;
   text-align: center;
   display: block;
-  font-size: 36px;
-  color: #00aef2;
+  font-size: 22px;
+  color: #fff;
 }
 .udge-state .state-list {
-  height: auto;
-  min-height: 210px;
+  height: 100%;
   background: rgba(0, 123, 256, 0.16);
   border-radius: 10px;
   padding: 8px 20px 20px 20px;
@@ -105,11 +119,15 @@
   margin-bottom: 20px;
 }
 .udge-state .state-list p {
-  font-size: 14px;
+  font-size: 18px;
   color: #b3b5d8;
   position: relative;
   padding-left: 15px;
-  margin-bottom: 5px;
+  width: 85%;
+  margin: 0 auto 5px auto;
+}
+.state-main{
+  display: flex;
 }
 .udge-state .state-list p:before {
   position: absolute;
@@ -166,6 +184,7 @@
   .udge-top {
     width: 750px;
   }
+
 }
 @media (min-width: 992px) {
   .udge-top {
@@ -176,4 +195,15 @@
   .udge-top {
     width: 1280px;
   }
+
 }
+@media (max-width: 768px) {
+  .state-main{
+    display: flex;
+    flex-direction: column;
+  }
+  .udge-list{
+    flex-direction: column;
+  }
+}
+
