@@ -1,0 +1,2711 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>UÐAP</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="A Universal Ðecentralized Asset Platform for Building an Internet of Assets">
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="canonical" href="http://localhost:4000/">
+
+  <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+  <link rel="stylesheet" href="../style.css">
+
+  <!-- Custom Fonts -->
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/../css/font-awesome.min.css">
+  <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.../js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+  <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#navbarSupportedContent">
+          <!-- <i class="fa fa-bars"></i> -->
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand page-scroll" href="#page-top">
+          <img src="../img/udapnew.png" alt="">
+        </a>
+        <ul class="nav navbarmobile">
+          <li class="Nmr">
+            <a class="stress" href='/demo.html'>
+              <!-- <strong class="sprites social1"></strong> --><img src="../img/nav/useCases.png" alt="">产品展示 <span
+                class="ico-new">new</span></a>
+          </li>
+          <!-- <li>
+                        <a class="" href='/tokensale.html'><strong class="sprites social2"></strong><img src="../img/nav/tokenSale.png" alt="">Tokensale</a>
+                    </li> -->
+        </ul>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-main-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav nav-midCont" id="navPc">
+          <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+          <li class="active">
+            <a id="navAbout" href="#about">首 页</a>
+          </li>
+          <li>
+            <a id="navTeam" href="#team">团队介绍</a>
+          </li>
+          <li>
+            <a id="navRoadmap" href="#roadmap">项目路线图</a>
+          </li>
+          <li>
+            <a id="navInverstor" href="#inverstor">投资机构</a>
+          </li>
+          <li class="midMr">
+            <a id="navContact" href="#contact">联系我们</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav nav-midCont" id="navMobile">
+          <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+          <li>
+            <a class="page-scroll" href="#about" id="mabout">首 页</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#team" id="mteam">团队介绍</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#roadmap" id="mroadmap">项目路线图</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#inverstor" id="minverstor">投资机构</a>
+          </li>
+          <li class="midMr">
+            <a class="page-scroll" href="#contact" id="mcontact">联系我们</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav nav-rightCont navbar-right">
+          <li class="Nmr">
+            <a id="productNav" class="page-scroll stress" href='/demo.html'>
+              <!-- <strong class="sprites social1"></strong> --><img src="../img/nav/useCases.png" alt="">Product <span
+                class="ico-new">new</span>
+              <ul class="dropdown-product">
+                <li><a href="javascript:;"><small class="arrow"></small></a></li>
+                <li><a href="/cn/demo.html">Singular</a></li>
+                <li><a href="/cn/middleware.html">UDAP Middleware</a></li>
+                <li><a href="/cn/wallet.html">Harvest Wallet</a></li>
+                <li><a href="/cn/umedia.html">UMedia</a></li>
+                <li><a href="/zsb-cn.html">CERT-Wallet</a></li>
+              </ul>
+            </a>
+          </li>
+          <!-- <li>
+                        <a class="page-scroll" href='/tokensale.html'><strong class="sprites social2"></strong><img src="../img/nav/tokenSale.png" alt="">Tokensale</a>
+                    </li> -->
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+  </nav>
+
+  <!-- 移动端 -->
+  <div class="mobileMain">
+    <!-- Intro Header -->
+    <div class="intro">
+      <div class="container">
+        <div class="intro-body row" id="intro">
+          <div class="intro-cont intro-left col-md-6 col-xs-12">
+            <h1 class="brand-heading">UÐAP</h1>
+            <hr>
+            <p class="intro-text">通用的去中心化资产平台<br>
+              - a Blockchain Middleware <span class="break"></span> for Tokenizing Everything</p>
+            <div class="intro-btns">
+              <a target="_blank" href="whitepapers/UDAP-Whitepaper-English-v08.pdf"><img
+                  src="../img/intro/intro-download.png" alt="download">白皮书 (EN)</a>
+              <a target="_blank" href="whitepapers/UDAP-Whitepaper-Chinese-v08.pdf"><img
+                  src="../img/intro/intro-download.png" alt="download">白皮书 (CN)</a>
+              <a target="_blank" href="whitepapers/UDAP Executive Summary.pdf"><img
+                  src="../img/intro/intro-download.png" alt="download">项目概述</a>
+            </div>
+            <div class="social-logo">
+              <ul>
+                <li><a href="https://medium.com/udap" target="_blank"><img src="../img/intro/social-logo-m.png"
+                      alt="social"></a></li>
+                <li><a href="https://twitter.com/udapfoundation" target="_blank"><img
+                      src="../img/intro/social-logo-twitter.png" alt="social"></a></li>
+                <li><a href="https://fb.me/udapfoundation" target="_blank"><img
+                      src="../img/intro/social-logo-facebook.png" alt="social"></a></li>
+                <li><a href="https://github.com/udap" target="_blank"><img src="../img/intro/social-logo-github.png"
+                      alt="social"></a></li>
+                <li class="newline"><br></li>
+                <li><a href="https://t.me/udapcommunity" target="_blank"><img
+                      src="../img/intro/social-logo-telegram.png" alt="social"></a></li>
+                <li><a href="https://www.linkedin.com/company/udap/" target="_blank"><img
+                      src="../img/intro/social-logo-linkedin.png" alt="social"></a></li>
+                <li><a href="https://www.youtube.com/channel/UCDl000RbiE5ywU7x2igWWQg?view_as=sub" target="_blank"><img
+                      src="../img/intro/social-logo-youtube.png" alt="social"></a></li>
+                <li><a href="https://www.reddit.com/user/UDAP_Foundation" target="_blank"><img
+                      src="../img/intro/social-logo-reddit.png" alt="social"></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="intro-right  col-md-6 col-xs-12">
+            <ul>
+              <li id="number1" class="btnlinear">
+                <a href="#one"><i class="iconlink"></i><span>协议层 - Singular</span><!-- <i class="iconskip"></i> -->
+                  <a href="https://github.com/udap/EIP/tree/master/" target="_blank"><i class="icongithub"></i></a></a>
+              </li>
+              <li id="number2" class="btnlinear">
+                <a href="#two"><i class="iconlink"></i><span>中间件 - UDAP 中间件</span><!-- <i class="iconskip"></i> -->
+                  <a href="https://github.com/udap" target="_blank"><i class="icongithub"></i></a></a>
+              </li>
+              <li id="number3" class="btnlinear">
+                <a href="#three"><i class="iconlink"></i><span>资产钱包 - Harvest</span>
+                  <a href="demo.html" target="_blank"><i class="iconskip"></i></a><!-- <i class="icondown"></i> --></a>
+              </li>
+              <li id="number4" class="btnlinear">
+                <a href="#four"><i class="iconlink"></i><span>应用层 -UMedia/CERT-Wallet/UDGE</span>
+                  <a href="demo.html" target="_blank"><i class="iconskip"></i></a><!-- <i class="icondown"></i> --></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="intro-circle" id="mDown">
+          <a href="#about" class="btn btn-circle"></a>
+        </div>
+        <div class="intro-circle" id="pcDown">
+          <span id="nextDown" class="btn btn-circle"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="container">
+        <div class="contContainer">
+          <div class="row about aboutWhat aboutudap">
+            <div class="row">
+              <div class="aboutleft col-lg-5 col-xs-12">
+                <div class="vcont">
+                  <!-- <div class="nav-heading">ABOUT</div> -->
+                  <h1>UDAP是什么？</h1>
+                  <div class="word text-left">
+                    UDAP致力于构建一个通用的、去中心化的区块链资产生命周期管理中间层。使开发者可以在不了解区块链底层技术、智能合约等细节的情况下，快速完成从互联网业务模式向通证经济模式的转型。
+                  </div>
+                  <div class="mbtncenter">
+                    <a target="_blank" href="https://tokensale.udap.io/video/tokenSale.mp4"><button class="btnlinear"><i
+                          class="icon-watch"></i> <span>视频介绍</span></button></a>
+                  </div>
+                  <div class="aboutTitle">
+                    <!-- <p>It includes the followings:</p> -->
+                    <p>
+                      <span id="aboutskip1"><a href="#one">协议层</a></span>
+                      <span id="aboutskip2"><a href="#two">中间件</a></span>
+                      <span id="aboutskip3"><a href="#three">资产钱包</a></span>
+                      <span id="aboutskip4"><a href="#four">应用层</a></span>
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+              <div class="aboutright col-lg-7 col-xs-12">
+                <span class="imgone">
+                  <div class="hoverCont">
+                    <h2>应用层</h2>
+                    <p>
+                      目前已完成开发的应用包括：区块链数字媒体作品确权/发布/交易平台UMedia；基于端对端模式的区块链人力资源软件系统——“证书宝”以及运用状态通道技术解决区块链游戏“迟缓、昂贵、适配难”问题的UDAP游戏引擎——UDGE
+                    </p>
+                  </div>
+                </span>
+                <span class="imgtwo">
+                  <div class="hoverCont">
+                    <h2>中间件</h2>
+                    <p>提供了链上基础功能Restful API和WebSocket服务，减少应用对底层区块链的技术依赖，加速区块链应用的开发。</p>
+                  </div>
+                </span>
+                <span class="imgthree">
+                  <div class="hoverCont">
+                    <h2>协议层</h2>
+                    <p>Singular协议是一个可以将各种物权通证化的协议框架。它定义了如何将某一事物以通证的形式展现，并以一种分散的方式处理它的所有权甚至进行交易。</p>
+                  </div>
+                </span>
+                <span class="imgfour">
+                  <div class="hoverCont">
+                    <h2>资产钱包</h2>
+                    <p>Harvest Wallet 除了具备基础的ERC20代币交易功能外，还为个人用户提供了方便的铸币、管理和发布自己的ERC721资产的功能。</p>
+                  </div>
+                </span>
+                <img src="../img/home/about1r.png" alt="about1r">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- one Section -->
+    <section id="one">
+      <div class="container">
+        <div class="contContainer">
+          <div class="row oneItem numberItem">
+            <div class="row">
+              <div class="oneleft nleft col-xs-12">
+                <div class="newcont">
+                  <h1>NO.1 协议层——Singular</h1>
+                  <div class="word text-left">
+                    一些早期区块链建设者曾设想过区块链与智能合约的未来，Singular便本着这一区块链初心精神应运而生。
+                  </div>
+                  <p>
+                    Singular是一个新的资产通证化模型，它定义了如何将某一事物以通证的形式进行链上展现，并以一种分散的方式处理它的所有权甚至进行交易。Singular资产模型的主要理念是让万物都可拥有其专属的智能合约。
+                  </p>
+                  <div class="mbtncenter"><a target="_blank" href="/demo.html"><button class="btnlinear"><i
+                          class="iconlink"></i> <span>了解详情</span></button></a></div>
+                </div>
+              </div>
+              <div class="oneright nright col-xs-12">
+                <img src="../img/home/one.png" alt="one">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- two Section -->
+    <section id="two">
+      <div class="container">
+        <div class="contContainer">
+          <div class="row twoItem numberItem">
+            <div class="row">
+              <div class="nleft col-xs-12">
+                <div class="newcont">
+                  <h1>NO.2 中间件——UDAP中间件</h1>
+                  <p>构建资产互联网的基本理念是“厚协议层+薄应用层”，而中间件的意义就在于此。</p>
+                  <div class="word text-left">
+                    UDAP中间件封装了区块链、去中心化存储及去中心化消息，
+                    提供了面向不可置换资产的Restful API和WebSocket服务，减少应用对底层区块链的技术依赖。
+                    使第三方应用开发者可在完全不了解区块链底层技术细节的情况下，快速接入到以太坊等底层链。
+                  </div>
+                  <div class="mbtncenter"><a target="_blank" href="/middleware.html"><button class="btnlinear"><i
+                          class="iconlink"></i> <span>了解详情</span></button></a></div>
+                </div>
+              </div>
+              <div class="nright col-xs-12">
+                <img src="../img/home/two.png" alt="two">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- coreservice Section -->
+    <section id="coreservice">
+      <div class="container">
+        <div class="contContainer">
+          <div class="row coreserviceItem">
+            <h1>UDAP中间件核心服务</h1>
+            <div class="row coreservice">
+              <div class="col-lg-6 col-xs-12">
+                <div class="newcont">
+                  <h2>资产通证化服务</h2>
+                  <p>该服务帮助应用程序快速标记应用内的资产，如门票、IP权利、证书或游戏资产等。它还可以帮助应用程序创建应用内的代币。</p>
+                  <img class="tokenservice" src="../img/home/tokenservice.png" alt="tokenservice">
+                </div>
+              </div>
+              <div class="col-lg-6 col-xs-12">
+                <div class="newcont">
+                  <h2>状态通道服务</h2>
+                  <p>对于一个DAPP来说，降低成本和提供优质的用户体验是至关重要的。该服务能应用状态通道技术帮助应用程序恰当的配置其链上链下的交互逻辑，以同时实现链外的高效性与链上的安全持久性。</p>
+                  <img src="../img/home/channelservice.png" alt="channelservice">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- three Section -->
+    <section id="three">
+      <div class="container">
+        <div class="contContainer">
+          <div class="row twoItem numberItem">
+            <div class="row">
+              <div class="nleft col-xs-12">
+                <div class="newcont">
+                  <h1>NO.3 资产钱包——Harvest</h1>
+                  <div class="word text-left">
+                    Harvest Wallet是一个支持ERC20、ERC721和Singular的资产钱包。
+                    它为个人用户提供了极大的便利，并提供了统一的接口来标记、管理和发布他们自己的令牌、
+                    各种可替换和不可替换资产，第三方应用程序也可以嵌入钱包插件。
+                    主要特点：
+                  </div>
+                  <p><i>1</i> 简单操作即可创建/管理/发布代币</p>
+                  <p><i>2</i> 可广泛支持第三方应用程序生成的各类资产</p>
+                  <p><i>3</i> 为第三方应用程序提供了可编程的UI，以及全流程完整的开发流程</p>
+                  <div class="mbtncenter"><a target="_blank" href="/wallet.html"><button class="btnlinear"><i
+                          class="iconlink"></i> <span>了解详情</span></button></a></div>
+                </div>
+              </div>
+              <div class="nright col-xs-12">
+                <img src="../img/home/three.png" alt="three">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- four Section -->
+    <section id="four">
+      <div class="container">
+        <div class="contContainer">
+          <div class="row twoItem numberItem">
+            <div class="row">
+              <div class="nleft col-xs-12">
+                <div class="newcont">
+                  <h1>NO.4 应用层</h1>
+                  <div class="word text-left">
+                    目前，已运用UDAP中间层完成开发的应用有：
+                    “UMedia”——区块链数字媒体作品确权/发布/交易平台；
+                    “证书宝”——基于端对端模式的区块链人力资源软件系统，
+                    “UDGE”——运用状态通道技术解决区块链游戏“迟缓、昂贵、适配难”问题的UDAP游戏引擎。
+                  </div>
+                  <p>今后更多合作方将逐步上线由UDAP中间层支持的应用，例如：票务、社交、教育、游戏、健康、供应链金融、数据中心、技术社区、旅游、电子商务、图书馆等。</p>
+                  <div class="mbtncenter"><a target="_blank" href="/umedia.html"><button class="btnlinear"><i
+                          class="iconlink"></i> <span>了解详情</span></button></a></div>
+                </div>
+              </div>
+              <div class="nright col-xs-12">
+                <img src="../img/home/four.png" alt="four">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="team" class="text-center">
+      <div class="team row">
+        <div class="container">
+          <div class="contContainer">
+            <div class="contSection">
+              <h2 class="title text-center">团 队</h2>
+              <hr class="title-hr bghr">
+              <div class="col-sm-3">
+                <div class="team-bx">
+                  <img class="img-circle" src="../img/team/bingran.png" alt="people" />
+                  <div class="caption">
+                    <h4><span>冉兵</span>
+                      <a href="https://www.linkedin.com/in/bing-ran-%E5%86%89%E5%85%B5-6651001/" class="linkedin-icon"
+                        target="_blank"><img src="../img/intro/in.png" alt=""></a>
+                      <a href="https://github.com/branaway" class="github-icon" target="_blank"><img
+                          src="../img/intro/social-logo-githubw.png" alt=""></a>
+                    </h4>
+                    <p class="jobtitle">联合创始人</p>
+                    <p>数字加密货币程序员，Java 虚拟机汇编语言专家，Groovy 项目荣誉开发者，独立开发世界上最快的模版语言Japid，Spring，ASM等开源项目贡献者， IBM
+                      Canada架构师，优秀工程师</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="team-bx">
+                  <img class="img-circle" src="../img/team/Derrick.png" alt="Douglas Wang" />
+                  <div class="caption">
+                    <h4><span>Derrick Warren</span>
+                      <a href="https://www.linkedin.com/in/dvwarren" class="linkedin-icon" target="_blank"><img
+                          src="../img/intro/in.png" alt=""></a>
+                    </h4>
+                    <p class="jobtitle">基金会主席</p>
+                    <p>前IBM全球副总裁，前IBM电子商务服务交付中心总监，IT销售和交付、战略转型、解决方案咨询和客户管理方面的思想领袖和专家</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="team-bx">
+                  <img class="img-circle" src="../img/team/lizhang.png" alt="Li Zhang" />
+                  <div class="caption">
+                    <h4><span>张犁</span>
+                      <a href="https://www.linkedin.com/in/li-zhangc" class="linkedin-icon" target="_blank"><img
+                          src="../img/intro/in.png" alt=""></a>
+                      <a href="https://github.com/cybertriton" class="github-icon" target="_blank"><img
+                          src="../img/intro/social-logo-githubw.png" alt=""></a>
+                    </h4>
+                    <p class="jobtitle">联合创始人</p>
+                    <p>曾任浪潮集团规划咨询总经理，IBM GBS高级管理顾问，IBM认证架构师，中国科学院计算机科学博士</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="team-bx">
+                  <img class="img-circle" src="../img/team/frankying.png" alt="Frank Ying" />
+                  <div class="caption">
+                    <h4><span>应晓峰</span>
+                      <a href="https://www.linkedin.com/in/frank-ying-431a8/" class="linkedin-icon" target="_blank"><img
+                          src="../img/intro/in.png" alt=""></a>
+                    </h4>
+                    <p class="jobtitle">联合创始人</p>
+                    <p>游戏、投资和IP资深专家，前悦工场商务副总，前True Corp中国区总裁，前九城商务总监，前In-Fusio亚太区发行和产品总监，美国California State University,
+                      Long Beach计算机硕士毕业.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="team-bx">
+                  <img class="img-circle" src="../img/team/xfhe.png" alt="Xiaofeng He" />
+                  <div class="caption">
+                    <h4><span>Xiaofeng He</span>
+                      <a href="http://www.linkedin.com/in/xiaofeng-he-6b5a452/" class="linkedin-icon"
+                        target="_blank"><img src="../img/intro/in.png" alt=""></a>
+                    </h4>
+                    <p class="jobtitle">首席科学家</p>
+                    <p>华东师范大学机器学习与大数据分析教授，雅虎，微软，劳伦斯伯克利国家实验室研究科学家，宾夕法尼亚州立大学博士</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="team-bx">
+                  <img class="img-circle" src="../img/team/DouglasWang.png" alt="Douglas Wang" />
+                  <div class="caption">
+                    <h4><span>王斗</span>
+                      <a href="http://www.linkedin.com/in/wangdou" class="linkedin-icon" target="_blank"><img
+                          src="../img/intro/in.png" alt=""></a>
+                    </h4>
+                    <p class="jobtitle">JIC资本创始人</p>
+                    <p>区块链和加密货币投资者、社区运营专家、区块链机器人发明人、JIC Capital创始人、惠普中国区前销售总监</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="team-bx">
+                  <img class="img-circle" src="../img/team/nadimuddin.png" alt="nadimuddin" />
+                  <div class="caption">
+                    <h4><span>NADIM UDDIN</span>
+                      <a href="http://linkedin.com/in/nadim-uddin-390431158" class="linkedin-icon" target="_blank"><img
+                          src="../img/intro/in.png" alt=""></a>
+                    </h4>
+                    <p class="jobtitle">增长策略师</p>
+                    <p>PChain成长策略师、Vidy营销经理、区块链和加密投资者、区块链营销专家、企业家、技术发明人、区块链生态系统、数字营销、商业分析师经验。</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="team-bx">
+                  <img class="img-circle" src="../img/team/murrydiao.png" alt="murrydiao" />
+                  <div class="caption">
+                    <h4><span>刁寒虎</span>
+                      <a href="https://github.com/BigMurry" class="github-icon" target="_blank"><img
+                          src="../img/intro/social-logo-githubw.png" alt=""></a>
+                    </h4>
+                    <p class="jobtitle">高级区块链开发工程师</p>
+                    <p>全栈开发者和区块链技术发烧友、CryptoKitty中文社区核心成员、LocalKitty创始人</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="team-bx shortteam">
+                  <img class="img-circle" src="../img/team/lycrustang.png" alt="lycrustang" />
+                  <div class="caption">
+                    <h4><span>唐谷祥</span>
+                      <a href="https://github.com/LycrusHamster" class="github-icon" target="_blank"><img
+                          src="../img/intro/social-logo-githubw.png" alt=""></a>
+                    </h4>
+                    <p class="jobtitle">高级区块链开发工程师</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="team-bx shortteam">
+                  <img class="img-circle" src="../img/team/joelong.png" alt="joelong" />
+                  <div class="caption">
+                    <h4><span>龙成蛟</span>
+                      <a href="https://github.com/loselovegirl" class="github-icon" target="_blank"><img
+                          src="../img/intro/social-logo-githubw.png" alt=""></a>
+                    </h4>
+                    <p class="jobtitle">高级区块链开发工程师</p>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="team-bx shortteam">
+                  <img class="img-circle" src="../img/team/ruiliguo.png" alt="ruiliguo" />
+                  <div class="caption">
+                    <h4><span>郭睿立</span>
+                      <a href="https://www.linkedin.com/in/%E7%9D%BF%E7%AB%8B-%E9%83%AD-94197bbb/" class="linkedin-icon"
+                        target="_blank"><img src="../img/intro/in.png" alt=""></a>
+                      <a href="https://github.com/cookedsteak" class="github-icon" target="_blank"><img
+                          src="../img/intro/social-logo-githubw.png" alt=""></a>
+                    </h4>
+                    <p class="jobtitle">高级区块链开发工程师</p>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="team-bx shortteam">
+                  <img class="img-circle" src="../img/team/wenliwu.png" alt="wenliwu" />
+                  <div class="caption">
+                    <h4><span>吴文立</span>
+                      <a href="https://www.linkedin.com/in/wenli-wu-a671a492/" class="linkedin-icon"
+                        target="_blank"><img src="../img/intro/in.png" alt=""></a>
+                      <a href="https://github.com/wwlleo0730" class="github-icon" target="_blank"><img
+                          src="../img/intro/social-logo-githubw.png" alt=""></a>
+                    </h4>
+                    <p class="jobtitle">高级区块链应用工程师</p>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="team-bx shortteam">
+                  <img class="img-circle" src="../img/team/liangpeihuang.png" alt="liangpeihuang" />
+                  <div class="caption">
+                    <h4><span>黄良培</span>
+                      <a href="https://github.com/liangpeihuang" class="github-icon" target="_blank"><img
+                          src="../img/intro/social-logo-githubw.png" alt=""></a>
+                    </h4>
+                    <p class="jobtitle">高级前端&Nodejs开发工程师</p>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="team-bx shortteam">
+                  <img class="img-circle" src="../img/team/caizhengdong.png" alt="caizhengdong" />
+                  <div class="caption">
+                    <h4><span>董才正</span>
+                      <a href="https://www.linkedin.com/in/才正-董-11b676165/" class="linkedin-icon" target="_blank"><img
+                          src="../img/intro/in.png" alt=""></a>
+                      <a href="https://github.com/ronalmessi" class="github-icon" target="_blank"><img
+                          src="../img/intro/social-logo-githubw.png" alt=""></a>
+                    </h4>
+                    <p class="jobtitle">高级安卓开发工程师</p>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="team-bx shortteam">
+                  <img class="img-circle" src="../img/team/cicichen.png" alt="cicichen" />
+                  <div class="caption">
+                    <h4><span>陈岑</span>
+                      <a href="https://www.linkedin.com/in/%E5%B2%91-%E9%99%88-57774b166/" class="linkedin-icon"
+                        target="_blank"><img src="../img/intro/in.png" alt=""></a>
+                      <a href="https://github.com/lgh81010" class="github-icon" target="_blank"><img
+                          src="../img/intro/social-logo-githubw.png" alt=""></a>
+                    </h4>
+                    <p class="jobtitle">高级测试工程师</p>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="team-bx shortteam">
+                  <img class="img-circle" src="../img/team/bohu.png" alt="bohu" />
+                  <div class="caption">
+                    <h4><span>胡波</span>
+                      <a href="https://github.com/linkio" class="github-icon" target="_blank"><img
+                          src="../img/intro/social-logo-githubw.png" alt=""></a>
+                    </h4>
+                    <p class="jobtitle">高级IOS开发工程师</p>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="team-bx shortteam">
+                  <img class="img-circle" src="../img/team/luchen.png" alt="luchen" />
+                  <div class="caption">
+                    <h4><span>陈璐</span>
+                      <a href="https://www.linkedin.com/in/lu-chen-616750166" class="linkedin-icon" target="_blank"><img
+                          src="../img/intro/in.png" alt=""></a>
+                    </h4>
+                    <p class="jobtitle">高级UI/UX设计师</p>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="team-bx shortteam">
+                  <img class="img-circle" src="../img/team/lvywang.png" alt="lvywang" />
+                  <div class="caption">
+                    <h4><span>王蔚</span>
+                      <a href="https://www.linkedin.com/in/%E8%94%9A-%E7%8E%8B-24172b159/" class="linkedin-icon"
+                        target="_blank"><img src="../img/intro/in.png" alt=""></a>
+                    </h4>
+                    <p class="jobtitle">运营经理</p>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- advisors Section -->
+    <section id="advisors">
+      <div class="advisors container-fulid text-center">
+        <div class="container">
+          <div class="contContainer">
+            <div class="contSection">
+              <div class="row">
+                <h2 class="title text-center">顾 问</h2>
+                <hr class="title-hr bghr">
+                <div class="adviItem col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                  <div class="team-bx">
+                    <img class="img-circle" src="../img/team/advisors/andrew.jpg" alt="people" />
+                    <div class="caption long-h4">
+                      <h4>Andrew Sotiropoulos
+                        <a href="https://www.linkedin.com/in/andrew-sotiropoulos-aa62185/" class="linkedin-icon"
+                          target="_blank"><img src="../img/intro/in.png" alt=""></a>
+                      </h4>
+                      <p class="jobtitle">高级执行官</p>
+                      <p class="aIntro">云计算专家、前IBM GTS亚太区总经理、前IBM PureSystems总经理</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="adviItem col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                  <div class="team-bx">
+                    <img class="img-circle" src="../img/team/advisors/sandra.jpg" alt="people" />
+                    <div class="caption long-h4">
+                      <h4>Dr. Sandra Johnson
+                        <a href="https://www.linkedin.com/in/drsandrakj/" class="linkedin-icon" target="_blank"><img
+                            src="../img/intro/in.png" alt=""></a>
+                      </h4>
+                      <p class="jobtitle">SKJ视觉工程首席执行官</p>
+                      <p class="aIntro">区块链大使、全球技术领导者、创新者、主要发明人（拥有40多个已发布和正在申请的专利）、前IBM非洲首席技术官</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="adviItem col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                  <div class="team-bx">
+                    <img class="img-circle" src="../img/team/advisors/lars.jpg" alt="people" />
+                    <div class="caption long-h4">
+                      <h4>Dr. Lars Mathiassen
+                        <a href="http://larsmathiassen.org" class="linkedin-icon" target="_blank"><img
+                            src="../img/intro/in.png" alt=""></a>
+                      </h4>
+                      <p class="jobtitle">乔治亚州立大学教授</p>
+                      <p class="aIntro">罗宾逊商学院过程创新中心联合创始人、斯堪的纳维亚信息系统杂志联合创始人、MIS季刊高级编辑</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="adviItem col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                  <div class="team-bx">
+                    <img class="img-circle" src="../img/team/advisors/yuan.jpg" alt="people" />
+                    <div class="caption long-h4">
+                      <h4>Yuan Dao (Sheng Chen)
+                        <a href="https://www.linkedin.com/in/josh-sheng-chen-11229/" class="linkedin-icon"
+                          target="_blank"><img src="../img/intro/in.png" alt=""></a>
+                      </h4>
+                      <p class="jobtitle">21Vianet Group Inc.创始人</p>
+                      <p class="aIntro">投资者、思想领袖和代币经济传道者，21 Vianet Group Inc.董事会主席。</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="adviItem col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                  <div class="team-bx">
+                    <img class="img-circle" src="../img/team/advisors/johnma.png" alt="people" />
+                    <div class="caption">
+                      <h4>John Ma
+                        <a href="https://www.linkedin.com/in/john-ma-cfa-7266b411/" class="linkedin-icon"
+                          target="_blank"><img src="../img/intro/in.png" alt=""></a>
+                      </h4>
+                      <p class="jobtitle">CVCapital首席运营官</p>
+                      <p class="aIntro">CFA，Roth Capital Partners的前亚洲ECM主管，Innovus Financial Solutions的前投资组合经理</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="adviItem col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                  <div class="team-bx">
+                    <img class="img-circle" src="../img/team/advisors/harrison.jpg" alt="people" />
+                    <div class="caption">
+                      <h4>Harrison Ding
+                        <a href="https://www.linkedin.com/in/husheng-harrison-ding-5727aa7/" class="linkedin-icon"
+                          target="_blank"><img src="../img/intro/in.png" alt=""></a>
+                      </h4>
+                      <p class="jobtitle">企业家</p>
+                      <p class="aIntro">多重上市网络首席执行官、全球商队技术公司前总裁、IBM分包服务前全球理事会主席</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="adviItem col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                  <div class="team-bx">
+                    <img class="img-circle" src="../img/team/advisors/james.jpg" alt="people" />
+                    <div class="caption">
+                      <h4>James Chou
+                        <a href="https://www.linkedin.com/in/james-chou-27a8ba/" class="linkedin-icon"
+                          target="_blank"><img src="../img/intro/in.png" alt=""></a>
+                      </h4>
+                      <p class="jobtitle">微软上海加速器首席执行官</p>
+                      <p class="aIntro">金太阳软件公司前首席执行官、99cloud公司前联合创始人、亚洲信息控股公司前高级董事</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="adviItem col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                  <div class="team-bx">
+                    <img class="img-circle" src="../img/team/advisors/susieyin.png" alt="people" />
+                    <div class="caption">
+                      <h4>Susie Yin
+                        <a href="https://www.linkedin.com/in/susie-yin-79191819/" class="linkedin-icon"
+                          target="_blank"><img src="../img/intro/in.png" alt=""></a>
+                      </h4>
+                      <p class="jobtitle">点融网副总裁</p>
+                      <p class="aIntro">前斗山营销总监，前哈勃电力系统亚洲营销副总裁，前西门子华北地区IBT总经理</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section id="roadmap" class="text-center">
+      <div class="container">
+        <div class="contContainer">
+          <div class="row roadmap">
+            <h2 class="title">项目路线图</h2>
+            <hr class="title-hr">
+            <ul class="timeline">
+              <li class="timeline-done timeline-interved">
+                <div class="timeline-road timeline-moved timeline-roadtop"></div>
+                <div class="timeline-panel">
+                  <div class="timeline-circle"><span></span></div>
+                  <div class="timeline-date">
+                    2017 Q2
+                  </div>
+                  <div class="timeline-icon">
+                    <img src="../img/roadmap/icon1.png" alt="icon">
+                  </div>
+                  <div class="timeline-cont">
+                    <div class="timeline-heading">
+                      <h4 class="speLine">立项</h4>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-done">
+                <div class="timeline-road timeline-moved"></div>
+                <div class="timeline-panel">
+                  <div class="timeline-circle"><span></span></div>
+                  <div class="timeline-date">
+                    2017 Q4
+                  </div>
+                  <div class="timeline-icon">
+                    <img src="../img/roadmap/icon2.png" alt="icon">
+                  </div>
+                  <div class="timeline-cont">
+                    <div class="timeline-heading">
+                      <h4>完成前期调研工作</h4>
+                    </div>
+                    <div class="timeline-body">
+                      <p>开始研发准备 <br>核心团队成立</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-done timeline-interved">
+                <div class="timeline-road timeline-moved"></div>
+                <div class="timeline-panel">
+                  <div class="timeline-circle"><span></span></div>
+                  <div class="timeline-date">
+                    2018 Q1
+                  </div>
+                  <div class="timeline-icon">
+                    <img src="../img/roadmap/icon3.png" alt="icon">
+                  </div>
+                  <div class="timeline-cont">
+                    <div class="timeline-heading">
+                      <h4>UDAP基金会成立</h4>
+                    </div>
+                    <div class="timeline-body">
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-done speroadmapli">
+                <div class="timeline-road timeline-moved"></div>
+                <div class="timeline-panel">
+                  <div class="timeline-circle"><span></span></div>
+                  <div class="timeline-date">
+                    2018 Q2
+                  </div>
+                  <div class="timeline-icon">
+                    <img src="../img/roadmap/icon4.png" alt="icon">
+                  </div>
+                  <div class="timeline-cont">
+                    <div class="timeline-heading">
+                      <h4>UDAP理念确立</h4>
+                    </div>
+                    <div class="timeline-body speroadmapleft">
+                      <p>扩大生态系统和社区<br>发布白皮书 <br> 开始编写概念验证原型和演示程序</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-done timeline-interved speroadmapli">
+                <div class="timeline-road timeline-moved"></div>
+                <div class="timeline-panel">
+                  <div class="timeline-circle"><span></span></div>
+                  <div class="timeline-date">
+                    2018 Q3
+                  </div>
+                  <div class="timeline-icon">
+                    <img src="../img/roadmap/icon5.png" alt="icon">
+                  </div>
+                  <div class="timeline-cont">
+                    <div class="timeline-heading">
+                      <h4>部署并发布了UDAP MPV版（最小可行产品）</h4>
+                    </div>
+                    <div class="timeline-body speroadmap">
+                      <p>Singular智能合约框架发布 <br>
+                        状态通道模块发布 <br>
+                        Harvest资产钱包MVP版发布 <br>
+                        首个应用——UMedia MVP版发布</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-done speroadmapli">
+                <div class="timeline-road timeline-moved"></div>
+                <div class="timeline-panel">
+                  <div class="timeline-circle"><span></span></div>
+                  <div class="timeline-date">
+                    2018 Q4
+                  </div>
+                  <div class="timeline-icon">
+                    <img src="../img/roadmap/icon6.png" alt="icon">
+                  </div>
+                  <div class="timeline-cont">
+                    <div class="timeline-heading">
+                      <h4>UDAP中间件 V0.4 发布</h4>
+                    </div>
+                    <div class="timeline-body speroadmapleft">
+                      <p>Singular 0.5发布<br>
+                        Harvest资产钱包测试版发布 <br>
+                        UMedia正式版发布 <br>
+                        社区活动逐步上线</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-done timeline-interved" style="height: 58px">
+                <div class="timeline-road timeline-moved"></div>
+                <div class="timeline-panel">
+                  <div class="timeline-circle"><span></span></div>
+                  <div class="timeline-date">
+                    2019 Q2
+                  </div>
+                  <div class="timeline-icon">
+                    <img src="../img/roadmap/icon7.png" alt="icon">
+                  </div>
+                  <div class="timeline-cont">
+                    <div class="timeline-heading">
+                      <h4>UDAP主网基础设施 V0.5发布</h4>
+                    </div>
+                    <div class="timeline-body" style="height: 80px;position: absolute;">
+                      <p>更多商务伙伴的应用发布 <br>
+                        基于以太坊状态通道的游戏引擎发布 <br>
+                        证书宝发布 <br>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-done">
+                <div class="timeline-road timeline-moved"></div>
+                <div class="timeline-panel">
+                  <div class="timeline-circle"><span></span></div>
+                  <div class="timeline-date">
+                    2019 Q4
+                  </div>
+                  <div class="timeline-icon">
+                    <img src="../img/roadmap/icon8.png" alt="icon">
+                  </div>
+                  <div class="timeline-cont">
+                    <div class="timeline-heading">
+                      <h4>UDAP主网基础设施 V0.5发布</h4>
+                    </div>
+                    <div class="timeline-body">
+                      <p>C2C资产市场发布 <br> 展开更多社区活动</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-done timeline-interved">
+                <div class="timeline-road timeline-moved timeline-roadbottom"></div>
+                <div class="timeline-panel">
+                  <div class="timeline-circle"><span></span></div>
+                  <div class="timeline-date">
+                    2020 Q1
+                  </div>
+                  <div class="timeline-icon">
+                    <img src="../img/roadmap/icon9.png" alt="icon">
+                  </div>
+                  <div class="timeline-cont">
+                    <div class="timeline-heading">
+                      <h4>UDAP中间件V0.1发布</h4>
+                    </div>
+                    <div class="timeline-body">
+                      <p>C2C资产市场开始运营</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ecosystem Section -->
+    <section id="inverstor" class="inverstor text-center">
+      <div class="container">
+        <div class="row eco-system">
+          <h2 class="title">投资机构</h2>
+          <hr class="title-hr">
+          <ul class="row list-inline">
+            <li data-index="1" class="col-sm-3 inli1">
+              <a target="_blank" href="http://jic.capital/"><img class="invertor_img1" src="../img/investors/jic.png"
+                  alt="logo" class="img-responsive"></a>
+            </li>
+            <li data-index="2" class="col-sm-3 inli1">
+              <a target="_blank" href="https://univalues.org"><img class="invertor_img2"
+                  src="../img/investors/univalues.png" alt="logo" class="img-responsive"></a>
+            </li>
+            <li data-index="3" class="col-sm-3 inli1">
+              <a href="#"><img class="invertor_img3" id="inverstorimg3" src="../img/investors/direction.png" alt="logo"
+                  class="img-responsive"></a>
+            </li>
+            <li data-index="4" class="col-sm-3 inli1">
+              <a target="_blank" href="http://www.randomblock.io/"><img class="invertor_img4"
+                  src="../img/investors/rbc.png" alt="logo" class="img-responsive"></a>
+            </li>
+            <li data-index="5" class="col-sm-3">
+              <a target="_blank" href="http://www.ki-year.com"><img class="invertor_img5"
+                  src="../img/investors/kycnew.png" alt="logo" class="img-responsive"></a>
+            </li>
+            <li data-index="6" class="col-sm-3">
+              <a target="_blank" href="https://www.quarkchain.io"><img class="invertor_img6"
+                  src="../img/investors/quarkchainnew.png" alt="logo" class="img-responsive"></a>
+            </li>
+            <li data-index="7" class="col-sm-3">
+              <a target="_blank" href="http://www.mls.com"><img class="invertor_img7" src="../img/investors/mls.png"
+                  alt="logo" class="img-responsive"></a>
+            </li>
+            <li data-index="8" class="col-sm-3">
+              <a target="_blank" href="http://www.xishiqu.com"><img class="invertor_img8"
+                  src="../img/investors/xishiqunew.png" alt="logo" class="img-responsive"></a>
+            </li>
+            <li data-index="9" class="col-sm-3">
+              <a target="_blank" href="https://pchain.org"><img class="invertor_img9" src="../img/investors/pchain.png"
+                  alt="logo" class="img-responsive"></a>
+            </li>
+            <li data-index="10" class="col-sm-3">
+              <a target="_blank" href="http://www.renhe.cn"><img class="invertor_img10" src="../img/investors/renhe.png"
+                  alt="logo" class="img-responsive"></a>
+            </li>
+            <li data-index="11" class="col-sm-3">
+              <a target="_blank" href="https://www.csdn.net"><img class="invertor_img11" src="../img/investors/csdn.png"
+                  alt="logo" class="img-responsive"></a>
+            </li>
+            <li data-index="12" class="col-sm-3">
+              <a target="_blank" href="http://www.iclass.cn"><img class="invertor_img12" id="inverstorimg12"
+                  src="../img/investors/class.png" alt="logo" class="img-responsive"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ecosystem Section -->
+    <section id="partner" class="partner text-center">
+      <div class="container">
+        <div class="row eco-system partners">
+          <h2 class="title">合作伙伴</h2>
+          <hr class="title-hr">
+          <ul>
+            <li><span>房地产</span>
+              <a target="_blank" href="http://www.mls.com"><img src="../img/investors/mls.png" alt="mls"></a>
+            </li>
+            <li>
+              <span>公链</span>
+              <a target="_blank" href="https://www.quarkchain.io"><img src="../img/investors/quarkchainnew.png"
+                  alt="quarkchain"></a><small></small>
+              <a target="_blank" href="https://pchain.org"><img src="../img/investors/pchain.png"
+                  alt="pchain"></a><small></small>
+              <a target="_blank" href="http://www.coinxp.io/"><img src="../img/investors/coinxp.png"
+                  alt="coinxp"></a><small></small>
+              <a target="_blank" href="https://jura.network"><img src="../img/investors/jura.png"
+                  alt="jura"></a><small></small>
+              <a target="_blank" href="https://www.nebulas.io"><img src="../img/investors/nebulas.png"
+                  alt="nebulas"></a><small></small>
+              <a target="_blank" href="https://www.hpb.io"><img src="../img/investors/hpb.png" alt="hpb"></a>
+            </li>
+            <li>
+              <span>票务</span>
+              <a target="_blank" href="http://www.xishiqu.com"><img src="../img/investors/xishiqunew.png"
+                  alt="xishiqu"></a>
+            </li>
+            <li class="pmr">
+              <span>社交</span>
+              <a target="_blank" href="http://www.renhe.cn"><img src="../img/investors/renhe.png" alt="renhe"></a>
+              <a target="_blank" href="https://www.hecaifu.com/pc/index.html"><img src="../img/investors/hecaifu.png"
+                  alt="hecaifu"></a>
+              <a target="_blank" href="http://www.iknow.tm"><img src="../img/investors/iknow.png" alt="iknow"></a>
+              <a target="_blank" href="http://www.zanfuwu.com"><img src="../img/investors/zanfuwu.png"
+                  alt="zanfuwu"></a>
+              <a target="_blank" href="http://www.renhe.cn"><img src="../img/investors/renhesmall.png" alt="renhe"></a>
+            </li>
+            <li>
+              <span>教育</span>
+              <a target="_blank" href="http://www.hielites.com"><img src="../img/investors/hielites.png"
+                  alt="hielites"></a><small></small>
+              <a target="_blank" href="http://www.iclass.cn"><img src="../img/investors/class.png"
+                  alt="iclass"></a><small></small>
+              <a target="_blank" href="http://www.jobstart.cn"><img src="../img/investors/jobstart.png"
+                  alt="jobstart"></a>
+            </li>
+            <li>
+              <span>游戏</span>
+              <a target="_blank" href="https://www.quicksdk.com"><img src="../img/investors/quicksdk.png"
+                  alt="quicksdk"></a><small></small>
+              <a target="_blank" href="http://www.tipcat.com/cn/index.html"><img src="../img/investors/tipcat.png"
+                  alt="tipcat"></a><small></small>
+              <a target="_blank" href="http://www.heitao.com"><img src="../img/investors/spade.png"
+                  alt="spade"></a><small></small>
+              <a target="_blank" href="https://www.blazefire.com"><img src="../img/investors/blazefire.png"
+                  alt="blazefire"></a>
+            </li>
+            <li>
+              <span>健康</span>
+              <a target="_blank" href="http://www.chgenomics.com"><img src="../img/investors/cloudhealth.png"
+                  alt="cloudhealth"></a>
+            </li>
+            <li>
+              <span>供应链金融</span>
+              <a target="_blank" href="http://www.xinongtech.com"><img src="../img/investors/xinong.png"
+                  alt="xinong"><small></small></a>
+              <a target="_blank" href="http://www.upstair.cn "><img src="../img/investors/loushang.png"
+                  alt="loushang"></a>
+            </li>
+            <li>
+              <span>数据中心</span>
+              <a target="_blank" href="http://www.ch.21vianet.com"><img src="../img/investors/sjhl.png" alt="sjhl"></a>
+            </li>
+            <li>
+              <span>技术社区</span>
+              <a target="_blank" href="https://www.csdn.net"><img src="../img/investors/csdn.png" alt="csdn"></a>
+            </li>
+            <li>
+              <span>旅行</span>
+              <a target="_blank" href="http://www.yomovo.com"><img src="../img/investors/youmuhu.png" alt="youmuhu"></a>
+            </li>
+            <li class="pmr">
+              <span>电子商务</span>
+              <a target="_blank" href="http://mall.duc.cn"><img src="../img/investors/china.png" alt="china"></a>
+            </li>
+            <li>
+              <span>图书馆</span>
+              <a target="_blank" href="http://www.chaoxing.com"><img src="../img/investors/eco.png" alt="eco"></a>
+            </li>
+
+
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="news" class="container-fluid press">
+      <div class="container">
+        <div class="row eco-system">
+          <h2 class="title">合作媒体</h2>
+          <hr class="title-hr">
+          <ul class="row list-inline">
+            <li data-index="1" class="col-sm-3">
+              <a target="_blank" href="http://www.digitaljournal.com/pr/3911816" class="btn"><img class="press_img1"
+                  src="../img/press/digital.png" alt="logo" class="img-responsive"></a>
+            </li>
+            <li data-index="2" class="col-sm-3">
+              <a target="_blank"
+                href="https://www.ccn.com/udap-a-new-blockchain-middleware-startup-is-changing-the-interface-of-blockchain/"
+                class="btn"><img class="press_img2" src="../img/press/ccn.png" alt="logo" class="img-responsive"></a>
+            </li>
+            <li data-index="3" class="col-sm-3">
+              <a target="_blank"
+                href="https://cointelegraph.com/news/chinese-city-of-nanjing-launches-1-5-billion-fund-for-local-blockchain-projects"
+                class="btn"><img class="press_img3" src="../img/press/money.png" alt="logo" class="img-responsive"></a>
+            </li>
+            <li data-index="4" class="col-sm-3">
+              <a target="_blank" href="https://www.jinse.com/bitcoin/232078.html" class="btn"><img class="press_img4"
+                  src="../img/press/jinse.png" alt="logo" class="img-responsive"></a>
+            </li>
+
+            <li data-index="5" class="col-sm-3">
+              <a target="_blank" href="http://www.digitaljournal.com/pr/3898061" class="btn"><img class="press_img5"
+                  src="../img/press/rfdtv.png" alt="logo" class="img-responsive"></a>
+            </li>
+            <li data-index="6" class="col-sm-3">
+              <a target="_blank"
+                href="https://bitcoinmagazine.nl/2018/07/chinees-blockchainfonds-ter-waarde-van-15-miljard-dollar-opgezet/"
+                class="btn"><img class="press_img6" src="../img/press/bitcoinmagazine.png" alt="logo"
+                  class="img-responsive"></a>
+            </li>
+            <li data-index="7" class="col-sm-3">
+              <a target="_blank" href="https://medium.com/udap" class="btn"><img class="press_img7"
+                  src="../img/press/medium.png" alt="logo" class="img-responsive"></a>
+            </li>
+            <li data-index="8" class="col-sm-3">
+              <a target="_blank"
+                href="https://mp.weixin.qq.com/s?__biz=MzU2MTE1NDk2Mg==&mid=2247485134&idx=3&sn=056a25361e0f09dbaeec6b25fb8c667e&chksm=fc7c5833cb0bd125fa27064a6dff51b850484fbd74d96c16a4b40c6fef1643fa16e959b0cb9c&mpshare=1&scene=1&srcid=0516QmeXgH01OIcOKehqZi16&key=7282001dbf9a9df1d799cdd876534113aedd6778d6032ed8924aadb1a70a0f428a40031424e0227d2002931f81116743296f19203254d43cc56a64f023b2e2f2f6f1f54add1ea254d9d0fc86e6d25fb2&ascene=0&uin=MTE2MTY3MzcyMA%3D%3D&devicetype=iMac+MacBookAir7%2C2+OSX+OSX+10.12.6+build(16G1212)&version=12020810&nettype=WIFI&lang=zh_CN&fontScale=100&pass_ticket=O1zRRna8AOVr2TEJ309t7MJF%2BfKrNydp8I3evZLn9IeulRm53rPaU2Hfx1UF7a8q"
+                class="btn"><img class="press_img8" src="../img/press/newcsdn.png" alt="logo"
+                  class="img-responsive"></a>
+            </li>
+
+            <li data-index="9" class="col-sm-3">
+              <a target="_blank" href="https://36kr.com/p/5151144.html" class="btn"><img class="press_img9"
+                  src="../img/press/36kr.png" alt="logo" class="img-responsive"></a>
+            </li>
+            <li data-index="10" class="col-sm-3">
+              <a target="_blank" href="http://m.ifeng.com/vampire/vPFdSiT8/shareNews?&fromType=vampire&aid=63987703"
+                class="btn"><img class="press_img10" src="../img/press/ifeng.png" alt="logo" class="img-responsive"></a>
+            </li>
+            <li data-index="11" class="col-sm-3">
+              <a target="_blank" href="http://www.sohu.com/a/228849851_114877" class="btn"><img class="press_img11"
+                  src="../img/press/newsohu.png" alt="logo" class="img-responsive"></a>
+            </li>
+            <li data-index="12" class="col-sm-3">
+              <a target="_blank"
+                href="https://c.m.163.com/news/a/DQ84SL130511OPON.html?spssid=4921d6ed059ccaae0024de2cdad46a2b&spss=newsapp&spsw=2"
+                class="btn"><img class="press_img12" src="../img/press/new163.png" alt="logo"
+                  class="img-responsive"></a>
+            </li>
+
+
+            <li data-index="13" class="col-sm-3">
+              <a target="_blank" href="https://www.yidianzixun.com/article/0JF7dy6S?share_count=2" class="btn"><img
+                  class="press_img13" src="../img/press/yidianzixun.png" alt="logo" class="img-responsive"></a>
+            </li>
+            <li data-index="14" class="col-sm-3">
+              <a target="_blank"
+                href="https://v.youku.com/v_show/id_XMzY1MTg0OTQyNA==.html?sharekey=cd444d5f8293234e784db77496e5dea35"
+                class="btn"><img class="press_img14" src="../img/press/youku.png" alt="logo" class="img-responsive"></a>
+            </li>
+            <li data-index="15" class="col-sm-3">
+              <a target="_blank" href="https://m.thepaper.cn/newsDetail_forward_2182082" class="btn"><img
+                  class="press_img15" src="../img/press/pengpai.png" alt="logo" class="img-responsive"></a>
+            </li>
+            <li data-index="16" class="col-sm-3">
+              <a target="_blank"
+                href="https://www.toutiao.com/i6593195707878867463/?wxshare_count=2&pbid=6593221604178691598"
+                class="btn"><img class="press_img16" src="../img/press/toutiao.png" alt="logo"
+                  class="img-responsive"></a>
+            </li>
+
+
+            <li data-index="17" class="col-sm-3">
+              <a target="_blank"
+                href="https://t.cj.sina.com.cn/articles/view/3180104125/bd8c89bd001007qhv?from=tech&subch=internet"
+                class="btn"><img class="press_img17" src="../img/press/article_pic01.png" alt="logo"
+                  class="img-responsive"></a>
+            </li>
+            <li data-index="18" class="col-sm-3">
+              <a target="_blank" href="https://xueqiu.com/6446875207/108564821" class="btn"><img class="press_img18"
+                  src="../img/press/xueqiu.png" alt="logo" class="img-responsive"></a>
+            </li>
+            <li data-index="19" class="col-sm-3">
+              <a target="_blank" href="http://www.sh.chinanews.com/chanjing/2018-06-08/40272.shtml" class="btn"><img
+                  class="press_img19" src="../img/press/chinanews.png" alt="logo" class="img-responsive"></a>
+            </li>
+            <li data-index="20" class="col-sm-3">
+              <a target="_blank" href="https://v.qq.com/x/page/e0683o1rcni.html" class="btn"><img class="press_img29"
+                  src="../img/press/130515eT9.png" alt="logo" class="img-responsive"></a>
+            </li>
+          </ul>
+        </div>
+
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+      <div class="container">
+        <div class="row footCont">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="footerSocial">
+              <h2 class="title">联系我们</h2>
+              <hr class="title-hr">
+              <div class="footerL">
+                <div class="footerR">
+                  <p><a href="mailto:info@udap.io">info@udap.io</a></p>
+                </div>
+              </div>
+              <ul>
+                <li class="col-md-3 col-sm-6 col-xs-6"><a target="_blank" href="https://t.me/udapcommunity">
+                    <img src="../img/intro/social-logo-telegramw.png" alt="social">
+                    <span>Telegram</span>
+                  </a>
+                </li>
+                <li class="col-md-3 col-sm-6 col-xs-6"><a target="_blank" href="https://medium.com/udap">
+                    <img src="../img/intro/social-logo-mw.png" alt="social">
+                    <span>Medium</span>
+                  </a>
+                </li>
+                <li class="col-md-3 col-sm-6 col-xs-6"><a target="_blank" href="https://twitter.com/udapfoundation">
+                    <img src="../img/intro/social-logo-twitterw.png" alt="social">
+                    <span>Twitter</span>
+                  </a>
+                </li>
+                <li class="col-md-3 col-sm-6 col-xs-6"><a target="_blank"
+                    href="https://www.facebook.com/udapfoundation">
+                    <img src="../img/intro/social-logo-facebookw.png" alt="social">
+                    <span>Facebook</span>
+                  </a>
+                </li>
+                <li class="col-md-3 col-sm-6 col-xs-6"><a target="_blank" href="https://github.com/udap">
+                    <img src="../img/intro/social-logo-githubw.png" alt="social">
+                    <span>Github</span>
+                  </a>
+                </li>
+                <li class="col-md-3 col-sm-6 col-xs-6"><a target="_blank" href="https://www.linkedin.com/company/udap">
+                    <img src="../img/intro/social-logo-linkedinw.png" alt="social">
+                    <span>Linkedin</span>
+                  </a>
+                </li>
+                <li class="col-md-3 col-sm-6 col-xs-6"><a target="_blank"
+                    href="https://www.youtube.com/channel/UCDl000RbiE5ywU7x2igWWQg?view_as=sub">
+                    <img src="../img/intro/youtube.png" alt="social">
+                    <span>Youtube</span>
+                  </a>
+                </li>
+                <li class="col-md-3 col-sm-6 col-xs-6"><a target="_blank"
+                    href="https://www.reddit.com/user/UDAP_Foundation">
+                    <img src="../img/intro/reddit.png" alt="social">
+                    <span>Reddit</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+        <p class="copyright">© 2018 UÐAP FOUNDATION All Rights Reserved</p>
+      </div>
+    </footer>
+
+  </div>
+  <!-- PC -->
+  <div class="pcMain">
+    <div class="swiper-container mainSwiper" id="mainSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide swiper-no-swiping" data-hash="home">
+          <!-- Intro Header -->
+          <div class="intro">
+            <div class="container">
+              <div class="intro-body row" id="intro">
+                <div class="intro-cont intro-left col-md-6 col-xs-12">
+                  <h1 class="brand-heading">UÐAP</h1>
+                  <hr>
+                  <p class="intro-text">通用的去中心化资产平台<br>
+                    - a Blockchain Middleware <span class="break"></span> for Tokenizing Everything</p>
+                  <div class="intro-btns">
+                    <a target="_blank" href="whitepapers/UDAP-Whitepaper-English-v08.pdf"><img
+                        src="../img/intro/intro-download.png" alt="download">白皮书 (EN)</a>
+                    <a target="_blank" href="whitepapers/UDAP-Whitepaper-Chinese-v08.pdf"><img
+                        src="../img/intro/intro-download.png" alt="download">白皮书 (CN)</a>
+                    <a target="_blank" href="whitepapers/UDAP Executive Summary.pdf"><img
+                        src="../img/intro/intro-download.png" alt="download">项目概述</a>
+                  </div>
+                  <div class="social-logo">
+                    <ul>
+                      <li><a href="https://medium.com/udap" target="_blank"><img src="../img/intro/social-logo-m.png"
+                            alt="social"></a></li>
+                      <li><a href="https://twitter.com/udapfoundation" target="_blank"><img
+                            src="../img/intro/social-logo-twitter.png" alt="social"></a></li>
+                      <li><a href="https://fb.me/udapfoundation" target="_blank"><img
+                            src="../img/intro/social-logo-facebook.png" alt="social"></a></li>
+                      <li><a href="https://github.com/udap" target="_blank"><img
+                            src="../img/intro/social-logo-github.png" alt="social"></a></li>
+                      <li class="newline"><br></li>
+                      <li><a href="https://t.me/udapcommunity" target="_blank"><img
+                            src="../img/intro/social-logo-telegram.png" alt="social"></a></li>
+                      <li><a href="https://www.linkedin.com/company/udap/" target="_blank"><img
+                            src="../img/intro/social-logo-linkedin.png" alt="social"></a></li>
+                      <li><a href="https://www.youtube.com/channel/UCDl000RbiE5ywU7x2igWWQg?view_as=sub"
+                          target="_blank"><img src="../img/intro/social-logo-youtube.png" alt="social"></a></li>
+                      <li><a href="https://www.reddit.com/user/UDAP_Foundation" target="_blank"><img
+                            src="../img/intro/social-logo-reddit.png" alt="social"></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="intro-right  col-md-6 col-xs-12">
+                  <ul>
+                    <li id="number1" class="btnlinear">
+                      <a href="#one"><i class="iconlink"></i><span>协议层 - Singular</span>
+                        <!-- <i class="iconskip"></i> -->
+                        <a href="https://github.com/udap/EIP/tree/master/" target="_blank"><i
+                            class="icongithub"></i></a></a>
+                    </li>
+                    <li id="number2" class="btnlinear">
+                      <a href="#two"><i class="iconlink"></i><span>中间件 - UDAP 中间件</span>
+                        <!-- <i class="iconskip"></i> -->
+                        <a href="https://github.com/udap" target="_blank"><i class="icongithub"></i></a></a>
+                    </li>
+                    <li id="number3" class="btnlinear">
+                      <a href="#three"><i class="iconlink"></i><span>资产钱包 - Harvest</span>
+                        <a href="demo.html" target="_blank"><i class="iconskip"></i></a>
+                        <!-- <i class="icondown"></i> --></a>
+                    </li>
+                    <li id="number4" class="btnlinear">
+                      <a href="#four"><i class="iconlink"></i><span>应用层 - UMedia/CERT-Wallet</span>
+                        <a href="demo.html" target="_blank"><i class="iconskip"></i></a>
+                        <!-- <i class="icondown"></i> --></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="intro-circle" id="mDown">
+                <a href="#about" class="btn btn-circle"></a>
+              </div>
+              <div class="intro-circle" id="pcDown">
+                <span id="nextDown" class="btn btn-circle"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide swiper-no-swiping" data-hash="about">
+          <!-- About Section -->
+          <section id="about">
+            <div class="container">
+              <div class="contContainer">
+                <div class="row about aboutWhat aboutudap">
+                  <div class="row">
+                    <div class="aboutleft col-lg-5 col-xs-12">
+                      <div class="vcont">
+                        <!-- <div class="nav-heading">ABOUT</div> -->
+                        <h1>UDAP是什么？</h1>
+                        <div class="word text-left">
+
+                          UDAP致力于构建一个通用的、去中心化的区块链资产生命周期管理中间层。使开发者可以在不了解区块链底层技术、智能合约等细节的情况下，快速完成从互联网业务模式向通证经济模式的转型。
+                        </div>
+                        <div class="mbtncenter">
+                          <a target="_blank" href="https://tokensale.udap.io/video/tokenSale.mp4"><button
+                              class="btnlinear"><i class="icon-watch"></i> <span>视频介绍</span></button></a>
+                        </div>
+                        <div class="aboutTitle">
+                          <!-- <p>It includes the followings:</p> -->
+                          <p>
+                            <span id="aboutskip1"><a href="#one">协议层</a></span>
+                            <span id="aboutskip2"><a href="#two">中间件</a></span>
+                            <span id="aboutskip3"><a href="#three">资产钱包</a></span>
+                            <span id="aboutskip4"><a href="#four">应用层</a></span>
+                          </p>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="aboutright col-lg-7 col-xs-12">
+                      <span class="imgone">
+                        <div class="hoverCont">
+                          <h2>应用层</h2>
+                          <p>
+                            目前已完成开发的应用包括：区块链数字媒体作品交易平台UMedia；区块链人力资源软件系统“证书宝”</br>以及运用状态通道技术解决区块链游戏“迟缓、昂贵、适配难”问题的UDAP游戏引擎UDGE
+                          </p>
+                        </div>
+                      </span>
+                      <span class="imgtwo">
+                        <div class="hoverCont">
+                          <h2>中间件</h2>
+                          <p>提供了链上基础功能Restful API和WebSocket服务，减少应用对底层区块链的技术依赖，加速区块链应用的开发。</p>
+                        </div>
+                      </span>
+                      <span class="imgthree">
+                        <div class="hoverCont">
+                          <h2>协议层</h2>
+                          <p>Singular协议是将各种物权通证化的协议框架。它定义了如何将某一事物以通证的形式展现，并以分散的方式处理它的所有权甚至进行交易。</p>
+                        </div>
+                      </span>
+                      <span class="imgfour">
+                        <div class="hoverCont">
+                          <h2>资产钱包</h2>
+                          <p>Harvest Wallet 除了基础的ERC20代币交易功能外，还为个人用户提供了方便的铸币、管理和发布ERC721资产的功能。</p>
+                        </div>
+                      </span>
+                      <img src="../img/home/about1r.png" alt="about1r">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+        <div class="swiper-slide swiper-no-swiping" data-hash="one">
+          <!-- one Section -->
+          <section id="one">
+            <div class="container">
+              <div class="contContainer">
+                <div class="row oneItem numberItem">
+                  <div class="row">
+                    <div class="oneleft nleft col-xs-12">
+                      <div class="newcont">
+                        <h1>NO.1 协议层——Singular</h1>
+                        <div class="word text-left">
+                          一些早期区块链建设者曾设想过区块链与智能合约的未来，Singular便本着这一区块链初心精神应运而生。
+                        </div>
+                        <p>
+                          Singular是一个新的资产通证化模型，它定义了如何将某一事物以通证的形式进行链上展现，并以一种分散的方式处理它的所有权甚至进行交易。Singular资产模型的主要理念是让万物都可拥有其专属的智能合约。
+                        </p>
+                        <div class="mbtncenter"><a target="_blank" href="/demo.html"><button class="btnlinear"><i
+                                class="iconlink"></i> <span>了解详情</span></button></a></div>
+                      </div>
+                    </div>
+                    <div class="oneright nright col-xs-12">
+                      <img src="../img/home/one.png" alt="one">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+        <div class="swiper-slide swiper-no-swiping" data-hash="two">
+          <!-- two Section -->
+          <section id="two">
+            <div class="container">
+              <div class="contContainer">
+                <div class="row twoItem numberItem">
+                  <div class="row">
+                    <div class="nleft col-xs-12">
+                      <div class="newcont">
+                        <h1>NO.2 中间件——UDAP中间件</h1>
+                        <p>构建资产互联网的基本理念是“厚协议层+薄应用层”，而中间件的意义就在于此。</p>
+                        <div class="word text-left">
+                          UDAP中间件封装了区块链、去中心化存储及去中心化消息，
+                          提供了面向不可置换资产的Restful API和WebSocket服务，减少应用对底层区块链的技术依赖。
+                          使第三方应用开发者可在完全不了解区块链底层技术细节的情况下，快速接入到以太坊等底层链。
+                        </div>
+                        <div class="mbtncenter"><a target="_blank" href="/middleware.html"><button class="btnlinear"><i
+                                class="iconlink"></i> <span>了解详情</span></button></a></div>
+                      </div>
+                    </div>
+                    <div class="nright col-xs-12">
+                      <img src="../img/home/two.png" alt="two">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="swiper-slide swiper-no-swiping">
+          <!-- coreservice Section -->
+          <section id="coreservice">
+            <div class="container">
+              <div class="contContainer">
+                <div class="row coreserviceItem">
+                  <h1>UDAP中间件核心服务</h1>
+                  <div class="row coreservice">
+                    <div class="col-lg-6 col-xs-12">
+                      <div class="newcont">
+                        <h2>资产通证化服务</h2>
+                        <p>该服务帮助应用程序快速标记应用内的资产，如门票、IP权利、证书或游戏资产等。它还可以帮助应用程序创建应用内的代币。</p>
+                        <img class="tokenservice" src="../img/home/tokenservice.png" alt="tokenservice">
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-xs-12">
+                      <div class="newcont">
+                        <h2>状态通道服务</h2>
+                        <p>对于一个DAPP来说，降低成本和提供优质的用户体验是至关重要的。该服务能应用状态通道技术帮助应用程序恰当的配置其链上链下的交互逻辑，以同时实现链外的高效性与链上的安全持久性。</p>
+                        <img src="../img/home/channelservice.png" alt="channelservice">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="swiper-slide swiper-no-swiping" data-hash="three">
+          <!-- three Section -->
+          <section id="three">
+            <div class="container">
+              <div class="contContainer">
+                <div class="row twoItem numberItem">
+                  <div class="row">
+                    <div class="nleft col-xs-12">
+                      <div class="newcont">
+                        <h1>NO.3 资产钱包——Harvest</h1>
+                        <div class="word text-left">
+                          Harvest Wallet是一个支持ERC20、ERC721和Singular的资产钱包。
+                          它为个人用户提供了极大的便利，并提供了统一的接口来标记、管理和发布他们自己的令牌、
+                          各种可替换和不可替换资产，第三方应用程序也可以嵌入钱包插件。
+                          主要特点：
+                        </div>
+                        <p><i>1</i> 简单操作即可创建/管理/发布代币</p>
+                        <p><i>2</i> 可广泛支持第三方应用程序生成的各类资产</p>
+                        <p><i>3</i> 为第三方应用程序提供了可编程的UI，以及全流程完整的开发流程</p>
+                        <div class="mbtncenter"><a target="_blank" href="/wallet.html"><button class="btnlinear"><i
+                                class="iconlink"></i> <span>了解详情</span></button></a></div>
+                      </div>
+                    </div>
+                    <div class="nright col-xs-12">
+                      <img src="../img/home/three.png" alt="three">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="swiper-slide swiper-no-swiping" data-hash="four">
+          <!-- four Section -->
+          <section id="four">
+            <div class="container">
+              <div class="contContainer">
+                <div class="row twoItem numberItem">
+                  <div class="row">
+                    <div class="nleft col-xs-12">
+                      <div class="newcont">
+                        <h1>NO.4 应用层</h1>
+                        <div class="word text-left">
+                          目前，已运用UDAP中间层完成开发的应用有：
+                          “UMedia”——区块链数字媒体作品确权/发布/交易平台；
+                          “证书宝”——基于端对端模式的区块链人力资源软件系统，
+                          “UDGE”——运用状态通道技术解决区块链游戏“迟缓、昂贵、适配难”问题的UDAP游戏引擎。
+                        </div>
+                        <p>今后更多合作方将逐步上线由UDAP中间层支持的应用，例如：票务、社交、教育、游戏、健康、供应链金融、数据中心、技术社区、旅游、电子商务、图书馆等。</p>
+                        <div class="mbtncenter"><a target="_blank" href="/umedia.html"><button class="btnlinear"><i
+                                class="iconlink"></i> <span>了解详情</span></button></a></div>
+                      </div>
+                    </div>
+                    <div class="nright col-xs-12">
+                      <img src="../img/home/four.png" alt="four">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="swiper-slide swiper-no-swiping" data-hash="team">
+          <div id="team">
+            <div class="container-fluid" id="teamweb">
+              <section class="text-center teamItem">
+                <div class="team row">
+                  <div class="container">
+                    <div class="contContainer">
+                      <div class="contSection">
+                        <h2 class="title text-center">团 队</h2>
+                        <hr class="title-hr bghr">
+                        <div class="col-sm-3">
+                          <div class="team-bx">
+                            <img class="img-circle" src="../img/team/bingran.png" alt="people" />
+                            <div class="caption">
+                              <h4><span>冉兵</span>
+                                <a href="https://www.linkedin.com/in/bing-ran-%E5%86%89%E5%85%B5-6651001/"
+                                  class="linkedin-icon" target="_blank"><img src="../img/intro/in.png" alt=""></a>
+                                <a href="https://github.com/branaway" class="github-icon" target="_blank"><img
+                                    src="../img/intro/social-logo-githubw.png" alt=""></a>
+                              </h4>
+                              <p class="jobtitle">联合创始人</p>
+                              <p>数字加密货币程序员，Java 虚拟机汇编语言专家，Groovy 项目荣誉开发者，独立开发世界上最快的模版语言Japid，Spring，ASM等开源项目贡献者， IBM
+                                Canada架构师，优秀工程师</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="team-bx">
+                            <img class="img-circle" src="../img/team/Derrick.png" alt="Douglas Wang" />
+                            <div class="caption">
+                              <h4><span>Derrick Warren</span>
+                                <a href="https://www.linkedin.com/in/dvwarren" class="linkedin-icon"
+                                  target="_blank"><img src="../img/intro/in.png" alt=""></a>
+                              </h4>
+                              <p class="jobtitle">基金会主席</p>
+                              <p>前IBM全球副总裁，前IBM电子商务服务交付中心总监，IT销售和交付、战略转型、解决方案咨询和客户管理方面的思想领袖和专家</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="team-bx">
+                            <img class="img-circle" src="../img/team/lizhang.png" alt="Li Zhang" />
+                            <div class="caption">
+                              <h4><span>张犁</span>
+                                <a href="https://www.linkedin.com/in/li-zhangc" class="linkedin-icon"
+                                  target="_blank"><img src="../img/intro/in.png" alt=""></a>
+                                <a href="https://github.com/cybertriton" class="github-icon" target="_blank"><img
+                                    src="../img/intro/social-logo-githubw.png" alt=""></a>
+                              </h4>
+                              <p class="jobtitle">联合创始人</p>
+                              <p>曾任浪潮集团规划咨询总经理，IBM GBS高级管理顾问，IBM认证架构师，中国科学院计算机科学博士</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="team-bx">
+                            <img class="img-circle" src="../img/team/frankying.png" alt="Frank Ying" />
+                            <div class="caption">
+                              <h4><span>应晓峰</span>
+                                <a href="https://www.linkedin.com/in/frank-ying-431a8/" class="linkedin-icon"
+                                  target="_blank"><img src="../img/intro/in.png" alt=""></a>
+                              </h4>
+                              <p class="jobtitle">联合创始人</p>
+                              <p>游戏、投资和IP资深专家，前悦工场商务副总，前True Corp中国区总裁，前九城商务总监，前In-Fusio亚太区发行和产品总监，美国California State
+                                University, Long Beach计算机硕士毕业.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="team-bx">
+                            <img class="img-circle" src="../img/team/xfhe.png" alt="Xiaofeng He" />
+                            <div class="caption">
+                              <h4><span>Xiaofeng He</span>
+                                <a href="http://www.linkedin.com/in/xiaofeng-he-6b5a452/" class="linkedin-icon"
+                                  target="_blank"><img src="../img/intro/in.png" alt=""></a>
+                              </h4>
+                              <p class="jobtitle">首席科学家</p>
+                              <p>华东师范大学机器学习与大数据分析教授，雅虎，微软，劳伦斯伯克利国家实验室研究科学家，宾夕法尼亚州立大学博士</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="team-bx">
+                            <img class="img-circle" src="../img/team/DouglasWang.png" alt="Douglas Wang" />
+                            <div class="caption">
+                              <h4><span>王斗</span>
+                                <a href="http://www.linkedin.com/in/wangdou" class="linkedin-icon" target="_blank"><img
+                                    src="../img/intro/in.png" alt=""></a>
+                              </h4>
+                              <p class="jobtitle">JIC资本创始人</p>
+                              <p>区块链和加密货币投资者、社区运营专家、区块链机器人发明人、JIC Capital创始人、惠普中国区前销售总监</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="team-bx">
+                            <img class="img-circle" src="../img/team/nadimuddin.png" alt="nadimuddin" />
+                            <div class="caption">
+                              <h4><span>NADIM UDDIN</span>
+                                <a href="http://linkedin.com/in/nadim-uddin-390431158" class="linkedin-icon"
+                                  target="_blank"><img src="../img/intro/in.png" alt=""></a>
+                              </h4>
+                              <p class="jobtitle">增长策略师</p>
+                              <p>PChain成长策略师、Vidy营销经理、区块链和加密投资者、区块链营销专家、企业家、技术发明人、区块链生态系统、数字营销、商业分析师经验。</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="team-bx">
+                            <img class="img-circle" src="../img/team/murrydiao.png" alt="murrydiao" />
+                            <div class="caption">
+                              <h4><span>刁寒虎</span>
+                                <a href="https://github.com/BigMurry" class="github-icon" target="_blank"><img
+                                    src="../img/intro/social-logo-githubw.png" alt=""></a>
+                              </h4>
+                              <p class="jobtitle">高级区块链开发工程师</p>
+                              <p>全栈开发者和区块链技术发烧友、CryptoKitty中文社区核心成员、LocalKitty创始人</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide swiper-no-swiping">
+          <div id="team">
+            <div class="container-fluid" id="teamweb">
+              <section class="text-center teamItem">
+                <div class="team row">
+                  <div class="container">
+                    <div class="contContainer">
+                      <div class="contSection">
+                        <h2 class="title text-center">团 队</h2>
+                        <hr class="title-hr bghr">
+                        <div class="col-sm-3">
+                          <div class="team-bx shortteam">
+                            <img class="img-circle" src="../img/team/lycrustang.png" alt="lycrustang" />
+                            <div class="caption">
+                              <h4><span>唐谷祥</span>
+                                <a href="https://github.com/LycrusHamster" class="github-icon" target="_blank"><img
+                                    src="../img/intro/social-logo-githubw.png" alt=""></a>
+                              </h4>
+                              <p class="jobtitle">高级区块链开发工程师</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="team-bx shortteam">
+                            <img class="img-circle" src="../img/team/joelong.png" alt="joelong" />
+                            <div class="caption">
+                              <h4><span>龙成蛟</span>
+                                <a href="https://github.com/loselovegirl" class="github-icon" target="_blank"><img
+                                    src="../img/intro/social-logo-githubw.png" alt=""></a>
+                              </h4>
+                              <p class="jobtitle">高级区块链开发工程师</p>
+                              <p></p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="team-bx shortteam">
+                            <img class="img-circle" src="../img/team/ruiliguo.png" alt="ruiliguo" />
+                            <div class="caption">
+                              <h4><span>郭睿立</span>
+                                <a href="https://www.linkedin.com/in/%E7%9D%BF%E7%AB%8B-%E9%83%AD-94197bbb/"
+                                  class="linkedin-icon" target="_blank"><img src="../img/intro/in.png" alt=""></a>
+                                <a href="https://github.com/cookedsteak" class="github-icon" target="_blank"><img
+                                    src="../img/intro/social-logo-githubw.png" alt=""></a>
+                              </h4>
+                              <p class="jobtitle">高级区块链开发工程师</p>
+                              <p></p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="team-bx shortteam">
+                            <img class="img-circle" src="../img/team/wenliwu.png" alt="wenliwu" />
+                            <div class="caption">
+                              <h4><span>吴文立</span>
+                                <a href="https://www.linkedin.com/in/wenli-wu-a671a492/" class="linkedin-icon"
+                                  target="_blank"><img src="../img/intro/in.png" alt=""></a>
+                                <a href="https://github.com/wwlleo0730" class="github-icon" target="_blank"><img
+                                    src="../img/intro/social-logo-githubw.png" alt=""></a>
+                              </h4>
+                              <p class="jobtitle">高级区块链应用工程师</p>
+                              <p></p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="team-bx shortteam">
+                            <img class="img-circle" src="../img/team/liangpeihuang.png" alt="liangpeihuang" />
+                            <div class="caption">
+                              <h4><span>黄良培</span>
+                                <a href="https://github.com/liangpeihuang" class="github-icon" target="_blank"><img
+                                    src="../img/intro/social-logo-githubw.png" alt=""></a>
+                              </h4>
+                              <p class="jobtitle">高级前端&Nodejs开发工程师</p>
+                              <p></p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="team-bx shortteam">
+                            <img class="img-circle" src="../img/team/caizhengdong.png" alt="caizhengdong" />
+                            <div class="caption">
+                              <h4><span>董才正</span>
+                                <a href="https://www.linkedin.com/in/才正-董-11b676165/" class="linkedin-icon"
+                                  target="_blank"><img src="../img/intro/in.png" alt=""></a>
+                                <a href="https://github.com/ronalmessi" class="github-icon" target="_blank"><img
+                                    src="../img/intro/social-logo-githubw.png" alt=""></a>
+                              </h4>
+                              <p class="jobtitle">高级安卓开发工程师</p>
+                              <p></p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="team-bx shortteam">
+                            <img class="img-circle" src="../img/team/cicichen.png" alt="cicichen" />
+                            <div class="caption">
+                              <h4><span>陈岑</span>
+                                <a href="https://www.linkedin.com/in/%E5%B2%91-%E9%99%88-57774b166/"
+                                  class="linkedin-icon" target="_blank"><img src="../img/intro/in.png" alt=""></a>
+                                <a href="https://github.com/lgh81010" class="github-icon" target="_blank"><img
+                                    src="../img/intro/social-logo-githubw.png" alt=""></a>
+                              </h4>
+                              <p class="jobtitle">高级测试工程师</p>
+                              <p></p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="team-bx shortteam">
+                            <img class="img-circle" src="../img/team/bohu.png" alt="bohu" />
+                            <div class="caption">
+                              <h4><span>胡波</span>
+                                <a href="https://github.com/linkio" class="github-icon" target="_blank"><img
+                                    src="../img/intro/social-logo-githubw.png" alt=""></a>
+                              </h4>
+                              <p class="jobtitle">高级IOS开发工程师</p>
+                              <p></p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="team-bx shortteam">
+                            <img class="img-circle" src="../img/team/luchen.png" alt="luchen" />
+                            <div class="caption">
+                              <h4><span>陈璐</span>
+                                <a href="https://www.linkedin.com/in/lu-chen-616750166" class="linkedin-icon"
+                                  target="_blank"><img src="../img/intro/in.png" alt=""></a>
+                              </h4>
+                              <p class="jobtitle">高级UI/UX设计师</p>
+                              <p></p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="team-bx shortteam">
+                            <img class="img-circle" src="../img/team/amy.png" alt="yimei-huang" />
+                            <div class="caption">
+                              <h4><span>黄依湄</span>
+                                <a href="https://www.linkedin.com/in/yimei-huang/" class="linkedin-icon"
+                                  target="_blank"><img src="../img/intro/in.png" alt=""></a>
+                              </h4>
+                              <p class="jobtitle">高级UI/UX设计师</p>
+                              <p></p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="team-bx shortteam">
+                            <img class="img-circle" src="../img/team/lvywang.png" alt="lvywang" />
+                            <div class="caption">
+                              <h4><span>王蔚</span>
+                                <a href="https://www.linkedin.com/in/%E8%94%9A-%E7%8E%8B-24172b159/"
+                                  class="linkedin-icon" target="_blank"><img src="../img/intro/in.png" alt=""></a>
+                              </h4>
+                              <p class="jobtitle">运营经理</p>
+                              <p></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide swiper-no-swiping">
+          <!-- advisors Section -->
+          <section id="advisors">
+            <div class="advisors container-fulid text-center">
+              <div class="container">
+                <div class="contContainer">
+                  <div class="contSection">
+                    <div class="row">
+                      <h2 class="title text-center">顾 问</h2>
+                      <hr class="title-hr bghr">
+                      <div class="adviItem col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                        <div class="team-bx">
+                          <img class="img-circle" src="../img/team/advisors/andrew.jpg" alt="people" />
+                          <div class="caption long-h4">
+                            <h4>Andrew Sotiropoulos
+                              <a href="https://www.linkedin.com/in/andrew-sotiropoulos-aa62185/" class="linkedin-icon"
+                                target="_blank"><img src="../img/intro/in.png" alt=""></a>
+                            </h4>
+                            <p class="jobtitle">高级执行官</p>
+                            <p class="aIntro">云计算专家、前IBM GTS亚太区总经理、前IBM PureSystems总经理</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="adviItem col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                        <div class="team-bx">
+                          <img class="img-circle" src="../img/team/advisors/sandra.jpg" alt="people" />
+                          <div class="caption long-h4">
+                            <h4>Dr. Sandra Johnson
+                              <a href="https://www.linkedin.com/in/drsandrakj/" class="linkedin-icon"
+                                target="_blank"><img src="../img/intro/in.png" alt=""></a>
+                            </h4>
+                            <p class="jobtitle">SKJ视觉工程首席执行官</p>
+                            <p class="aIntro">区块链大使、全球技术领导者、创新者、主要发明人（拥有40多个已发布和正在申请的专利）、前IBM非洲首席技术官</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="adviItem col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                        <div class="team-bx">
+                          <img class="img-circle" src="../img/team/advisors/lars.jpg" alt="people" />
+                          <div class="caption long-h4">
+                            <h4>Dr. Lars Mathiassen
+                              <a href="http://larsmathiassen.org" class="linkedin-icon" target="_blank"><img
+                                  src="../img/intro/in.png" alt=""></a>
+                            </h4>
+                            <p class="jobtitle">乔治亚州立大学教授</p>
+                            <p class="aIntro">罗宾逊商学院过程创新中心联合创始人、斯堪的纳维亚信息系统杂志联合创始人、MIS季刊高级编辑</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="adviItem col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                        <div class="team-bx">
+                          <img class="img-circle" src="../img/team/advisors/yuan.jpg" alt="people" />
+                          <div class="caption long-h4">
+                            <h4>Yuan Dao (Sheng Chen)
+                              <a href="https://www.linkedin.com/in/josh-sheng-chen-11229/" class="linkedin-icon"
+                                target="_blank"><img src="../img/intro/in.png" alt=""></a>
+                            </h4>
+                            <p class="jobtitle">21Vianet Group Inc.创始人</p>
+                            <p class="aIntro">投资者、思想领袖和代币经济传道者，21 Vianet Group Inc.董事会主席。</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="adviItem col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                        <div class="team-bx">
+                          <img class="img-circle" src="../img/team/advisors/johnma.png" alt="people" />
+                          <div class="caption">
+                            <h4>John Ma
+                              <a href="https://www.linkedin.com/in/john-ma-cfa-7266b411/" class="linkedin-icon"
+                                target="_blank"><img src="../img/intro/in.png" alt=""></a>
+                            </h4>
+                            <p class="jobtitle">CVCapital首席运营官</p>
+                            <p class="aIntro">CFA，Roth Capital Partners的前亚洲ECM主管，Innovus Financial Solutions的前投资组合经理</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="adviItem col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                        <div class="team-bx">
+                          <img class="img-circle" src="../img/team/advisors/harrison.jpg" alt="people" />
+                          <div class="caption">
+                            <h4>Harrison Ding
+                              <a href="https://www.linkedin.com/in/husheng-harrison-ding-5727aa7/" class="linkedin-icon"
+                                target="_blank"><img src="../img/intro/in.png" alt=""></a>
+                            </h4>
+                            <p class="jobtitle">企业家</p>
+                            <p class="aIntro">多重上市网络首席执行官、全球商队技术公司前总裁、IBM分包服务前全球理事会主席</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="adviItem col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                        <div class="team-bx">
+                          <img class="img-circle" src="../img/team/advisors/james.jpg" alt="people" />
+                          <div class="caption">
+                            <h4>James Chou
+                              <a href="https://www.linkedin.com/in/james-chou-27a8ba/" class="linkedin-icon"
+                                target="_blank"><img src="../img/intro/in.png" alt=""></a>
+                            </h4>
+                            <p class="jobtitle">微软上海加速器首席执行官</p>
+                            <p class="aIntro">金太阳软件公司前首席执行官、99cloud公司前联合创始人、亚洲信息控股公司前高级董事</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="adviItem col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                        <div class="team-bx">
+                          <img class="img-circle" src="../img/team/advisors/susieyin.png" alt="people" />
+                          <div class="caption">
+                            <h4>Susie Yin
+                              <a href="https://www.linkedin.com/in/susie-yin-79191819/" class="linkedin-icon"
+                                target="_blank"><img src="../img/intro/in.png" alt=""></a>
+                            </h4>
+                            <p class="jobtitle">点融网副总裁</p>
+                            <p class="aIntro">前斗山营销总监，前哈勃电力系统亚洲营销副总裁，前西门子华北地区IBT总经理</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="swiper-slide swiper-no-swiping" data-hash="roadmap">
+          <!-- Roadmap Section -->
+          <section id="roadmap" class="text-center">
+            <div class="container">
+              <div class="contContainer">
+                <div class="row roadmap">
+                  <h2 class="title">项目路线图</h2>
+                  <hr class="title-hr">
+                  <ul class="timeline">
+                    <li class="timeline-done timeline-interved">
+                      <div class="timeline-road timeline-moved timeline-roadtop"></div>
+                      <div class="timeline-panel">
+                        <div class="timeline-circle"><span></span></div>
+                        <div class="timeline-date">
+                          2017 Q2
+                        </div>
+                        <div class="timeline-icon">
+                          <img src="../img/roadmap/icon1.png" alt="icon">
+                        </div>
+                        <div class="timeline-cont">
+                          <div class="timeline-heading">
+                            <h4 class="speLine">立项</h4>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="timeline-done">
+                      <div class="timeline-road timeline-moved"></div>
+                      <div class="timeline-panel">
+                        <div class="timeline-circle"><span></span></div>
+                        <div class="timeline-date">
+                          2017 Q4
+                        </div>
+                        <div class="timeline-icon">
+                          <img src="../img/roadmap/icon2.png" alt="icon">
+                        </div>
+                        <div class="timeline-cont">
+                          <div class="timeline-heading">
+                            <h4>完成前期调研工作</h4>
+                          </div>
+                          <div class="timeline-body">
+                            <p>开始研发准备 <br>核心团队成立</p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="timeline-done timeline-interved">
+                      <div class="timeline-road timeline-moved"></div>
+                      <div class="timeline-panel">
+                        <div class="timeline-circle"><span></span></div>
+                        <div class="timeline-date">
+                          2018 Q1
+                        </div>
+                        <div class="timeline-icon">
+                          <img src="../img/roadmap/icon3.png" alt="icon">
+                        </div>
+                        <div class="timeline-cont">
+                          <div class="timeline-heading">
+                            <h4>UDAP基金会成立</h4>
+                          </div>
+                          <div class="timeline-body">
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="timeline-done speroadmapli">
+                      <div class="timeline-road timeline-moved"></div>
+                      <div class="timeline-panel">
+                        <div class="timeline-circle"><span></span></div>
+                        <div class="timeline-date">
+                          2018 Q2
+                        </div>
+                        <div class="timeline-icon">
+                          <img src="../img/roadmap/icon4.png" alt="icon">
+                        </div>
+                        <div class="timeline-cont">
+                          <div class="timeline-heading">
+                            <h4>UDAP理念确立</h4>
+                          </div>
+                          <div class="timeline-body speroadmapleft">
+                            <p>扩大生态系统和社区<br>发布白皮书 <br> 开始编写概念验证原型和演示程序</p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="timeline-done timeline-interved speroadmapli">
+                      <div class="timeline-road timeline-moved"></div>
+                      <div class="timeline-panel">
+                        <div class="timeline-circle"><span></span></div>
+                        <div class="timeline-date">
+                          2018 Q3
+                        </div>
+                        <div class="timeline-icon">
+                          <img src="../img/roadmap/icon5.png" alt="icon">
+                        </div>
+                        <div class="timeline-cont">
+                          <div class="timeline-heading">
+                            <h4>部署并发布了UDAP MPV版（最小可行产品）</h4>
+                          </div>
+                          <div class="timeline-body speroadmap">
+                            <p>Singular智能合约框架发布 <br>
+                              状态通道模块发布 <br>
+                              Harvest资产钱包MVP版发布 <br>
+                              首个应用——UMedia MVP版发布</p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="timeline-done speroadmapli">
+                      <div class="timeline-road timeline-moved"></div>
+                      <div class="timeline-panel">
+                        <div class="timeline-circle"><span></span></div>
+                        <div class="timeline-date">
+                          2018 Q4
+                        </div>
+                        <div class="timeline-icon">
+                          <img src="../img/roadmap/icon6.png" alt="icon">
+                        </div>
+                        <div class="timeline-cont">
+                          <div class="timeline-heading">
+                            <h4>UDAP中间件 V0.4 发布</h4>
+                          </div>
+                          <div class="timeline-body speroadmapleft">
+                            <p>Singular 0.5发布<br>
+                              Harvest资产钱包测试版发布 <br>
+                              UMedia正式版发布 <br>
+                              社区活动逐步上线</p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="timeline-done timeline-interved" style="height: 58px">
+                      <div class="timeline-road timeline-moved"></div>
+                      <div class="timeline-panel">
+                        <div class="timeline-circle"><span></span></div>
+                        <div class="timeline-date">
+                          2019 Q2
+                        </div>
+                        <div class="timeline-icon">
+                          <img src="../img/roadmap/icon7.png" alt="icon">
+                        </div>
+                        <div class="timeline-cont">
+                          <div class="timeline-heading">
+                            <h4>UDAP主网基础设施 V0.5发布</h4>
+                          </div>
+                          <div class="timeline-body" style="height: 80px;position: absolute;">
+                            <p>更多商务伙伴的应用发布 <br>
+                              基于以太坊状态通道的游戏引擎发布 <br>
+                              证书宝发布 <br>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="timeline-done">
+                      <div class="timeline-road timeline-moved"></div>
+                      <div class="timeline-panel">
+                        <div class="timeline-circle"><span></span></div>
+                        <div class="timeline-date">
+                          2019 Q4
+                        </div>
+                        <div class="timeline-icon">
+                          <img src="../img/roadmap/icon8.png" alt="icon">
+                        </div>
+                        <div class="timeline-cont">
+                          <div class="timeline-heading">
+                            <h4>UDAP主网基础设施 V0.5发布</h4>
+                          </div>
+                          <div class="timeline-body">
+                            <p>C2C资产市场发布 <br> 展开更多社区活动</p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="timeline-done timeline-interved">
+                      <div class="timeline-road timeline-moved timeline-roadbottom"></div>
+                      <div class="timeline-panel">
+                        <div class="timeline-circle"><span></span></div>
+                        <div class="timeline-date">
+                          2020 Q1
+                        </div>
+                        <div class="timeline-icon">
+                          <img src="../img/roadmap/icon9.png" alt="icon">
+                        </div>
+                        <div class="timeline-cont">
+                          <div class="timeline-heading">
+                            <h4>UDAP中间件V0.1发布</h4>
+                          </div>
+                          <div class="timeline-body">
+                            <p>C2C资产市场开始运营</p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="swiper-slide swiper-no-swiping" data-hash="inverstor">
+          <!-- Ecosystem Section -->
+          <section id="inverstor" class="inverstor text-center">
+            <div class="container">
+              <div class="row eco-system">
+                <h2 class="title">投资机构</h2>
+                <hr class="title-hr">
+                <ul class="row list-inline">
+                  <li data-index="1" class="col-sm-3 inli1">
+                    <a target="_blank" href="http://jic.capital/"><img class="invertor_img1"
+                        src="../img/investors/jic.png" alt="logo" class="img-responsive"></a>
+                  </li>
+                  <li data-index="2" class="col-sm-3 inli1">
+                    <a target="_blank" href="https://univalues.org"><img class="invertor_img2"
+                        src="../img/investors/univalues.png" alt="logo" class="img-responsive"></a>
+                  </li>
+                  <li data-index="3" class="col-sm-3 inli1">
+                    <a href="#"><img class="invertor_img3" id="inverstorimg3" src="../img/investors/direction.png"
+                        alt="logo" class="img-responsive"></a>
+                  </li>
+                  <li data-index="4" class="col-sm-3 inli1">
+                    <a target="_blank" href="http://www.randomblock.io/"><img class="invertor_img4"
+                        src="../img/investors/rbc.png" alt="logo" class="img-responsive"></a>
+                  </li>
+                  <li data-index="5" class="col-sm-3">
+                    <a target="_blank" href="http://www.ki-year.com"><img class="invertor_img5"
+                        src="../img/investors/kycnew.png" alt="logo" class="img-responsive"></a>
+                  </li>
+                  <li data-index="6" class="col-sm-3">
+                    <a target="_blank" href="https://www.quarkchain.io"><img class="invertor_img6"
+                        src="../img/investors/quarkchainnew.png" alt="logo" class="img-responsive"></a>
+                  </li>
+                  <li data-index="7" class="col-sm-3">
+                    <a target="_blank" href="http://www.mls.com"><img class="invertor_img7"
+                        src="../img/investors/mls.png" alt="logo" class="img-responsive"></a>
+                  </li>
+                  <li data-index="8" class="col-sm-3">
+                    <a target="_blank" href="http://www.xishiqu.com"><img class="invertor_img8"
+                        src="../img/investors/xishiqunew.png" alt="logo" class="img-responsive"></a>
+                  </li>
+                  <li data-index="9" class="col-sm-3">
+                    <a target="_blank" href="https://pchain.org"><img class="invertor_img9"
+                        src="../img/investors/pchain.png" alt="logo" class="img-responsive"></a>
+                  </li>
+                  <li data-index="10" class="col-sm-3">
+                    <a target="_blank" href="http://www.renhe.cn"><img class="invertor_img10"
+                        src="../img/investors/renhe.png" alt="logo" class="img-responsive"></a>
+                  </li>
+                  <li data-index="11" class="col-sm-3">
+                    <a target="_blank" href="https://www.csdn.net"><img class="invertor_img11"
+                        src="../img/investors/csdn.png" alt="logo" class="img-responsive"></a>
+                  </li>
+                  <li data-index="12" class="col-sm-3">
+                    <a target="_blank" href="http://www.iclass.cn"><img class="invertor_img12" id="inverstorimg12"
+                        src="../img/investors/class.png" alt="logo" class="img-responsive"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="swiper-slide swiper-no-swiping">
+          <!-- Ecosystem Section -->
+          <section id="partner" class="partner text-center">
+            <div class="container">
+              <div class="row eco-system partners">
+                <h2 class="title">合作伙伴</h2>
+                <hr class="title-hr">
+                <ul>
+                  <li><span>房地产</span>
+                    <a target="_blank" href="http://www.mls.com"><img src="../img/investors/mls.png" alt="mls"></a>
+                  </li>
+                  <li>
+                    <span>公链</span>
+                    <a target="_blank" href="https://www.quarkchain.io"><img src="../img/investors/quarkchainnew.png"
+                        alt="quarkchain"></a><small></small>
+                    <a target="_blank" href="https://pchain.org"><img src="../img/investors/pchain.png"
+                        alt="pchain"></a><small></small>
+                    <a target="_blank" href="http://www.coinxp.io/"><img src="../img/investors/coinxp.png"
+                        alt="coinxp"></a><small></small>
+                    <a target="_blank" href="https://jura.network"><img src="../img/investors/jura.png"
+                        alt="jura"></a><small></small>
+                    <a target="_blank" href="https://www.nebulas.io"><img src="../img/investors/nebulas.png"
+                        alt="nebulas"></a><small></small>
+                    <a target="_blank" href="https://www.hpb.io"><img src="../img/investors/hpb.png" alt="hpb"></a>
+                  </li>
+                  <li>
+                    <span>票务</span>
+                    <a target="_blank" href="http://www.xishiqu.com"><img src="../img/investors/xishiqunew.png"
+                        alt="xishiqu"></a>
+                  </li>
+                  <li class="pmr">
+                    <span>社交</span>
+                    <a target="_blank" href="http://www.renhe.cn"><img src="../img/investors/renhe.png" alt="renhe"></a>
+                    <a target="_blank" href="https://www.hecaifu.com/pc/index.html"><img
+                        src="../img/investors/hecaifu.png" alt="hecaifu"></a>
+                    <a target="_blank" href="http://www.iknow.tm"><img src="../img/investors/iknow.png" alt="iknow"></a>
+                    <a target="_blank" href="http://www.zanfuwu.com"><img src="../img/investors/zanfuwu.png"
+                        alt="zanfuwu"></a>
+                    <a target="_blank" href="http://www.renhe.cn"><img src="../img/investors/renhesmall.png"
+                        alt="renhe"></a>
+                  </li>
+                  <li>
+                    <span>教育</span>
+                    <a target="_blank" href="http://www.hielites.com"><img src="../img/investors/hielites.png"
+                        alt="hielites"></a><small></small>
+                    <a target="_blank" href="http://www.iclass.cn"><img src="../img/investors/class.png"
+                        alt="iclass"></a><small></small>
+                    <a target="_blank" href="http://www.jobstart.cn"><img src="../img/investors/jobstart.png"
+                        alt="jobstart"></a>
+                  </li>
+                  <li>
+                    <span>游戏</span>
+                    <a target="_blank" href="https://www.quicksdk.com"><img src="../img/investors/quicksdk.png"
+                        alt="quicksdk"></a><small></small>
+                    <a target="_blank" href="http://www.tipcat.com/cn/index.html"><img src="../img/investors/tipcat.png"
+                        alt="tipcat"></a><small></small>
+                    <a target="_blank" href="http://www.heitao.com"><img src="../img/investors/spade.png"
+                        alt="spade"></a><small></small>
+                    <a target="_blank" href="https://www.blazefire.com"><img src="../img/investors/blazefire.png"
+                        alt="blazefire"></a>
+                  </li>
+                  <li>
+                    <span>健康</span>
+                    <a target="_blank" href="http://www.chgenomics.com"><img src="../img/investors/cloudhealth.png"
+                        alt="cloudhealth"></a>
+                  </li>
+                  <li>
+                    <span>供应链金融</span>
+                    <a target="_blank" href="http://www.xinongtech.com"><img src="../img/investors/xinong.png"
+                        alt="xinong"><small></small></a>
+                    <a target="_blank" href="http://www.upstair.cn "><img src="../img/investors/loushang.png"
+                        alt="loushang"></a>
+                  </li>
+                  <li>
+                    <span>数据中心</span>
+                    <a target="_blank" href="http://www.ch.21vianet.com"><img src="../img/investors/sjhl.png"
+                        alt="sjhl"></a>
+                  </li>
+                  <li>
+                    <span>技术社区</span>
+                    <a target="_blank" href="https://www.csdn.net"><img src="../img/investors/csdn.png" alt="csdn"></a>
+                  </li>
+                  <li>
+                    <span>旅行</span>
+                    <a target="_blank" href="http://www.yomovo.com"><img src="../img/investors/youmuhu.png"
+                        alt="youmuhu"></a>
+                  </li>
+                  <li class="pmr">
+                    <span>电子商务</span>
+                    <a target="_blank" href="http://mall.duc.cn"><img src="../img/investors/china.png" alt="china"></a>
+                  </li>
+                  <li>
+                    <span>图书馆</span>
+                    <a target="_blank" href="http://www.chaoxing.com"><img src="../img/investors/eco.png" alt="eco"></a>
+                  </li>
+
+
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="swiper-slide swiper-no-swiping">
+          <section id="news" class="container-fluid press">
+            <div class="container">
+              <div class="row eco-system">
+                <h2 class="title">合作媒体</h2>
+                <hr class="title-hr">
+                <ul class="row list-inline">
+                  <li data-index="1" class="col-sm-3">
+                    <a target="_blank" href="http://www.digitaljournal.com/pr/3911816" class="btn"><img
+                        class="press_img1" src="../img/press/digital.png" alt="logo" class="img-responsive"></a>
+                  </li>
+                  <li data-index="2" class="col-sm-3">
+                    <a target="_blank"
+                      href="https://www.ccn.com/udap-a-new-blockchain-middleware-startup-is-changing-the-interface-of-blockchain/"
+                      class="btn"><img class="press_img2" src="../img/press/ccn.png" alt="logo"
+                        class="img-responsive"></a>
+                  </li>
+                  <li data-index="3" class="col-sm-3">
+                    <a target="_blank"
+                      href="https://cointelegraph.com/news/chinese-city-of-nanjing-launches-1-5-billion-fund-for-local-blockchain-projects"
+                      class="btn"><img class="press_img3" src="../img/press/money.png" alt="logo"
+                        class="img-responsive"></a>
+                  </li>
+                  <li data-index="4" class="col-sm-3">
+                    <a target="_blank" href="https://www.jinse.com/bitcoin/232078.html" class="btn"><img
+                        class="press_img4" src="../img/press/jinse.png" alt="logo" class="img-responsive"></a>
+                  </li>
+
+                  <li data-index="5" class="col-sm-3">
+                    <a target="_blank" href="http://www.digitaljournal.com/pr/3898061" class="btn"><img
+                        class="press_img5" src="../img/press/rfdtv.png" alt="logo" class="img-responsive"></a>
+                  </li>
+                  <li data-index="6" class="col-sm-3">
+                    <a target="_blank"
+                      href="https://bitcoinmagazine.nl/2018/07/chinees-blockchainfonds-ter-waarde-van-15-miljard-dollar-opgezet/"
+                      class="btn"><img class="press_img6" src="../img/press/bitcoinmagazine.png" alt="logo"
+                        class="img-responsive"></a>
+                  </li>
+                  <li data-index="7" class="col-sm-3">
+                    <a target="_blank" href="https://medium.com/udap" class="btn"><img class="press_img7"
+                        src="../img/press/medium.png" alt="logo" class="img-responsive"></a>
+                  </li>
+                  <li data-index="8" class="col-sm-3">
+                    <a target="_blank"
+                      href="https://mp.weixin.qq.com/s?__biz=MzU2MTE1NDk2Mg==&mid=2247485134&idx=3&sn=056a25361e0f09dbaeec6b25fb8c667e&chksm=fc7c5833cb0bd125fa27064a6dff51b850484fbd74d96c16a4b40c6fef1643fa16e959b0cb9c&mpshare=1&scene=1&srcid=0516QmeXgH01OIcOKehqZi16&key=7282001dbf9a9df1d799cdd876534113aedd6778d6032ed8924aadb1a70a0f428a40031424e0227d2002931f81116743296f19203254d43cc56a64f023b2e2f2f6f1f54add1ea254d9d0fc86e6d25fb2&ascene=0&uin=MTE2MTY3MzcyMA%3D%3D&devicetype=iMac+MacBookAir7%2C2+OSX+OSX+10.12.6+build(16G1212)&version=12020810&nettype=WIFI&lang=zh_CN&fontScale=100&pass_ticket=O1zRRna8AOVr2TEJ309t7MJF%2BfKrNydp8I3evZLn9IeulRm53rPaU2Hfx1UF7a8q"
+                      class="btn"><img class="press_img8" src="../img/press/newcsdn.png" alt="logo"
+                        class="img-responsive"></a>
+                  </li>
+
+                  <li data-index="9" class="col-sm-3">
+                    <a target="_blank" href="https://36kr.com/p/5151144.html" class="btn"><img class="press_img9"
+                        src="../img/press/36kr.png" alt="logo" class="img-responsive"></a>
+                  </li>
+                  <li data-index="10" class="col-sm-3">
+                    <a target="_blank"
+                      href="http://m.ifeng.com/vampire/vPFdSiT8/shareNews?&fromType=vampire&aid=63987703"
+                      class="btn"><img class="press_img10" src="../img/press/ifeng.png" alt="logo"
+                        class="img-responsive"></a>
+                  </li>
+                  <li data-index="11" class="col-sm-3">
+                    <a target="_blank" href="http://www.sohu.com/a/228849851_114877" class="btn"><img
+                        class="press_img11" src="../img/press/newsohu.png" alt="logo" class="img-responsive"></a>
+                  </li>
+                  <li data-index="12" class="col-sm-3">
+                    <a target="_blank"
+                      href="https://c.m.163.com/news/a/DQ84SL130511OPON.html?spssid=4921d6ed059ccaae0024de2cdad46a2b&spss=newsapp&spsw=2"
+                      class="btn"><img class="press_img12" src="../img/press/new163.png" alt="logo"
+                        class="img-responsive"></a>
+                  </li>
+
+
+                  <li data-index="13" class="col-sm-3">
+                    <a target="_blank" href="https://www.yidianzixun.com/article/0JF7dy6S?share_count=2"
+                      class="btn"><img class="press_img13" src="../img/press/yidianzixun.png" alt="logo"
+                        class="img-responsive"></a>
+                  </li>
+                  <li data-index="14" class="col-sm-3">
+                    <a target="_blank"
+                      href="https://v.youku.com/v_show/id_XMzY1MTg0OTQyNA==.html?sharekey=cd444d5f8293234e784db77496e5dea35"
+                      class="btn"><img class="press_img14" src="../img/press/youku.png" alt="logo"
+                        class="img-responsive"></a>
+                  </li>
+                  <li data-index="15" class="col-sm-3">
+                    <a target="_blank" href="https://m.thepaper.cn/newsDetail_forward_2182082" class="btn"><img
+                        class="press_img15" src="../img/press/pengpai.png" alt="logo" class="img-responsive"></a>
+                  </li>
+                  <li data-index="16" class="col-sm-3">
+                    <a target="_blank"
+                      href="https://www.toutiao.com/i6593195707878867463/?wxshare_count=2&pbid=6593221604178691598"
+                      class="btn"><img class="press_img16" src="../img/press/toutiao.png" alt="logo"
+                        class="img-responsive"></a>
+                  </li>
+
+
+                  <li data-index="17" class="col-sm-3">
+                    <a target="_blank"
+                      href="https://t.cj.sina.com.cn/articles/view/3180104125/bd8c89bd001007qhv?from=tech&subch=internet"
+                      class="btn"><img class="press_img17" src="../img/press/article_pic01.png" alt="logo"
+                        class="img-responsive"></a>
+                  </li>
+                  <li data-index="18" class="col-sm-3">
+                    <a target="_blank" href="https://xueqiu.com/6446875207/108564821" class="btn"><img
+                        class="press_img18" src="../img/press/xueqiu.png" alt="logo" class="img-responsive"></a>
+                  </li>
+                  <li data-index="19" class="col-sm-3">
+                    <a target="_blank" href="http://www.sh.chinanews.com/chanjing/2018-06-08/40272.shtml"
+                      class="btn"><img class="press_img19" src="../img/press/chinanews.png" alt="logo"
+                        class="img-responsive"></a>
+                  </li>
+                  <li data-index="20" class="col-sm-3">
+                    <a target="_blank" href="https://v.qq.com/x/page/e0683o1rcni.html" class="btn"><img
+                        class="press_img29" src="../img/press/130515eT9.png" alt="logo" class="img-responsive"></a>
+                  </li>
+                </ul>
+              </div>
+
+
+            </div>
+          </section>
+        </div>
+        <div class="swiper-slide swiper-no-swiping" data-hash="contact">
+          <!-- Footer -->
+          <footer id="contact">
+            <div class="container">
+              <div class="row footCont">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                  <div class="footerSocial">
+                    <h2 class="title">联系我们</h2>
+                    <hr class="title-hr">
+                    <div class="footerL">
+                      <div class="footerR">
+                        <p><a href="mailto:info@udap.io">info@udap.io</a></p>
+                      </div>
+                    </div>
+                    <ul>
+                      <li class="col-md-3 col-sm-6 col-xs-6"><a target="_blank" href="https://t.me/udapcommunity">
+                          <img src="../img/intro/social-logo-telegramw.png" alt="social">
+                          <span>Telegram</span>
+                        </a>
+                      </li>
+                      <li class="col-md-3 col-sm-6 col-xs-6"><a target="_blank" href="https://medium.com/udap">
+                          <img src="../img/intro/social-logo-mw.png" alt="social">
+                          <span>Medium</span>
+                        </a>
+                      </li>
+                      <li class="col-md-3 col-sm-6 col-xs-6"><a target="_blank"
+                          href="https://twitter.com/udapfoundation">
+                          <img src="../img/intro/social-logo-twitterw.png" alt="social">
+                          <span>Twitter</span>
+                        </a>
+                      </li>
+                      <li class="col-md-3 col-sm-6 col-xs-6"><a target="_blank"
+                          href="https://www.facebook.com/udapfoundation">
+                          <img src="../img/intro/social-logo-facebookw.png" alt="social">
+                          <span>Facebook</span>
+                        </a>
+                      </li>
+                      <li class="col-md-3 col-sm-6 col-xs-6"><a target="_blank" href="https://github.com/udap">
+                          <img src="../img/intro/social-logo-githubw.png" alt="social">
+                          <span>Github</span>
+                        </a>
+                      </li>
+                      <li class="col-md-3 col-sm-6 col-xs-6"><a target="_blank"
+                          href="https://www.linkedin.com/company/udap">
+                          <img src="../img/intro/social-logo-linkedinw.png" alt="social">
+                          <span>Linkedin</span>
+                        </a>
+                      </li>
+                      <li class="col-md-3 col-sm-6 col-xs-6"><a target="_blank"
+                          href="https://www.youtube.com/channel/UCDl000RbiE5ywU7x2igWWQg?view_as=sub">
+                          <img src="../img/intro/youtube.png" alt="social">
+                          <span>Youtube</span>
+                        </a>
+                      </li>
+                      <li class="col-md-3 col-sm-6 col-xs-6"><a target="_blank"
+                          href="https://www.reddit.com/user/UDAP_Foundation">
+                          <img src="../img/intro/reddit.png" alt="social">
+                          <span>Reddit</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+              <p class="copyright">© 2018 UÐAP FOUNDATION All Rights Reserved</p>
+            </div>
+          </footer>
+        </div>
+      </div>
+      <div class="swiper-pagination mainPagination" id="mainPagination"></div>
+      <div class="swiper-scrollbar"></div>
+    </div>
+  </div>
+  <!-- jQuery Version 1.11.0 -->
+  <script src="../js/jquery.js"></script>
+  <script src="../js/html5media.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script src="../js/bootstrap.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="../js/jquery.easing.min.js"></script>
+
+  <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+  <!--script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script-->
+
+  <!-- Custom Theme JavaScript -->
+  <script src="../js/grayscale.js"></script>
+  <!-- <script src="../js/main.js"></script> -->
+  <script src="../js/swiper.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      var swiper1 = new Swiper('.mainSwiper', {//父的
+        hashnav: true,
+        mousewheelControl: true,
+        direction: 'vertical',
+        observer: true,
+        observeParents: true,
+        noSwiping: true,
+        pagination: '.mainPagination',
+        onTransitionEnd: function (swiper) {
+          $("#navPc li").removeClass('active')
+          if (swiper.activeIndex == 0 || swiper.activeIndex == 1 || swiper.activeIndex == 2 || swiper.activeIndex == 3 || swiper.activeIndex == 4 || swiper.activeIndex == 5 || swiper.activeIndex == 6) {
+            $("#navPc li").eq(0).addClass('active')
+          } else if (swiper.activeIndex == 7 || swiper.activeIndex == 8 || swiper.activeIndex == 9) {
+            $("#navPc li").eq(1).addClass('active')
+          } else if (swiper.activeIndex == 10) {
+            $("#navPc li").eq(2).addClass('active')
+          } else if (swiper.activeIndex == 11) {
+            $("#navPc li").eq(3).addClass('active')
+          } else if (swiper.activeIndex == 14) {
+            $("#navPc li").eq(4).addClass('active')
+          }
+        },
+      });
+
+
+      /*导航点击事件*/
+      $('#navAbout').on('click', function () {
+        swiper1.slideTo(0);
+      })
+      $('#navTeam').on('click', function () {
+        swiper1.slideTo(7);
+      })
+      $('#navRoadmap').on('click', function () {
+        swiper1.slideTo(10);
+      })
+      $('#navInverstor').on('click', function () {
+        swiper1.slideTo(11);
+      })
+      $('#navContact').on('click', function () {
+        swiper1.slideTo(14);
+      })
+
+      $('.btn-circle').on('click', function () {
+        swiper1.slideTo(1);
+      })
+
+      $('#number1 a').on('click', function () {
+        swiper1.slideTo(2);
+      })
+      $('#number2 a').on('click', function () {
+        swiper1.slideTo(3);
+      })
+      $('#number3 a').on('click', function () {
+        swiper1.slideTo(5);
+      })
+      $('#number4 a').on('click', function () {
+        swiper1.slideTo(6);
+      })
+
+
+      $('#aboutskip1 a').on('click', function () {
+        swiper1.slideTo(2);
+      })
+      $('#aboutskip2 a').on('click', function () {
+        swiper1.slideTo(3);
+      })
+      $('#aboutskip3 a').on('click', function () {
+        swiper1.slideTo(5);
+      })
+      $('#aboutskip4 a').on('click', function () {
+        swiper1.slideTo(6);
+      })
+
+      $("#navPc li").click(function () {
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+      });
+    }) //ready end
+
+    /*nav mouseover*/
+    var time = null
+    $('.dropdown-product').hide()
+    $('#productNav').mouseover(function () {
+      clearTimeout(time)
+      $('.dropdown-product').show()
+    })
+    $('#productNav').mouseout(function () {
+      time = setTimeout(function () {
+        $('.dropdown-product').hide()
+      }, 500)
+    })
+    $('.dropdown-product').mouseover(function () {
+      clearTimeout(time)
+      $('.dropdown-product').show()
+    })
+    $('.dropdown-product').mouseout(function () {
+      time = setTimeout(function () {
+        $('.dropdown-product').hide()
+      }, 500)
+    })
+
+
+
+  </script>
+</body>
+
+</html>
