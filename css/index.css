@@ -17,10 +17,10 @@ button {
   border: 0;
   outline: none;
 }
-.navbar-collapse{
+.navbar-collapse {
   position: relative;
 }
-.to-en{
+.to-en {
   position: absolute;
   right: -125px;
   top: 25px;
@@ -286,6 +286,9 @@ footer {
   overflow: hidden;
   margin-top: 34px;
   text-align: center;
+}
+.case .demoImg p {
+  min-height: 50px;
 }
 .case .demoImg a {
   text-decoration: none;

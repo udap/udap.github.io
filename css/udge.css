@@ -68,7 +68,7 @@
   padding-left:10px;
   position: relative;
 }
-.udge-list .text .small-txt:before{
+/* .udge-list .text .small-txt:before{
   position: absolute;
   top: 8px;
   left: 0;
@@ -78,7 +78,7 @@
   height: 3px;
   display: block;
   border-radius: 100%;
-}
+} */
 .udge-title h1 {
   width: 100%;
   text-align: center;
