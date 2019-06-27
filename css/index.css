@@ -1011,6 +1011,9 @@ li.test4 {
   display: block;
 }
 @media (min-width: 768px) {
+  .navbar-header .to-en{
+    display: none;
+  }
   .umedia4 .uleft {
     margin-top: 83px;
   }
