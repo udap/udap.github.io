@@ -118,6 +118,15 @@ $('.dropdown-product').mouseout(function () {
   }, 500)
 })
 
+$('.wechat-qrcode').mouseover(function () {
+  clearTimeout(time)
+  $('.index--qr').show()
+})
+$('.wechat-qrcode').mouseout(function () {
+  time = setTimeout(function () {
+    $('.index--qr').hide()
+  }, 500)
+})
 
 
   </script>
