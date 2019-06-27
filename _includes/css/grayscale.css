@@ -11468,9 +11468,6 @@ display: none;
     top: 18px;
   }
   .index--qr{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     display: none;
   }
   .index--qr img{
@@ -11478,4 +11475,5 @@ display: none;
     height: 150px;
     display: block;
     max-width: 150px;
+    margin:0 auto;
   }
