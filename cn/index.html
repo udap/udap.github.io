@@ -1298,10 +1298,10 @@
                     <span>Youtube</span>
                   </a>
                 </li>
-                <li class="col-md-3 col-sm-6 col-xs-6"><a target="_blank"
+                <li class="col-md-3 col-sm-6 col-xs-6 wechat-qrcode"><a target="_blank"
                     href="https://www.reddit.com/user/UDAP_Foundation">
                     <img src="../img/intro/reddit.png" alt="social">
-                    <span>Reddit</span>
+                    <span>Wechat</span>
                   </a>
                 </li>
               </ul>
@@ -2575,6 +2575,9 @@
                         </a>
                       </li>
                     </ul>
+                    <div class="index--qr">
+                      <img src="../img/index-qr.png" alt="">
+                    </div>
                   </div>
 
                 </div>
@@ -2705,6 +2708,16 @@
     $('.dropdown-product').mouseout(function () {
       time = setTimeout(function () {
         $('.dropdown-product').hide()
+      }, 500)
+    })
+
+    $('.wechat-qrcode').mouseover(function () {
+      clearTimeout(time)
+      $('.index--qr').show()
+    })
+    $('.wechat-qrcode').mouseout(function () {
+      time = setTimeout(function () {
+        $('.index--qr').hide()
       }, 500)
     })
 

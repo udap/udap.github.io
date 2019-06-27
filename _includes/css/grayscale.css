@@ -11467,3 +11467,14 @@ display: none;
     right: 35px;
     top: 18px;
   }
+  .index--qr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .index--qr img{
+    width: 150px !important;
+    height: 150px;
+    display: block;
+    max-width: 150px;
+  }
