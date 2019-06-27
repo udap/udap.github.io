@@ -20,7 +20,7 @@ a {
 .zsb__wrap {
   width: 1280px;
   margin: 0 auto;
-  padding-top: 74px;
+  padding-top: 174px;
 }
 .zsb-wrap-content {
   padding-left: 88px;
@@ -361,6 +361,10 @@ a {
   }
   .navbar-header {
     padding: 0 15px;
+  }
+  .navbar-header .to-en{
+    right: 35px;
+    top: 18px;
   }
   .zsbanz-code {
     margin-left: -205.5px;

@@ -20,6 +20,17 @@ button {
 .navbar-collapse {
   position: relative;
 }
+.index--qr{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.index--qr img{
+  width: 150px;
+  height: 150px;
+  display: block;
+  max-width: 150px !important;
+}
 .to-en {
   position: absolute;
   right: -125px;
@@ -865,6 +876,10 @@ li.test4 {
   display: inline-block;
   padding-top: 20px;
   margin-left: 2%;
+}
+.navbar-header .to-en{
+  right: 35px;
+  top: 18px;
 }
 .navbarmobile li {
   display: inline-block;
