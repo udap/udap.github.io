@@ -11471,6 +11471,7 @@ display: none;
     display: flex;
     justify-content: center;
     align-items: center;
+    display: none;
   }
   .index--qr img{
     width: 150px !important;
