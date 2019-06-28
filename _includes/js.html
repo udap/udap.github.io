@@ -118,15 +118,14 @@ $('.dropdown-product').mouseout(function () {
   }, 500)
 })
 
-$('.wechat-qrcode').mouseover(function () {
-  clearTimeout(time)
-  $('.index--qr').show()
+$('.wechat-qrcode').on('click', function () {
+  $(".index--qr").css("display","flex");
 })
-$('.wechat-qrcode').mouseout(function () {
-  time = setTimeout(function () {
-    $('.index--qr').hide()
-  }, 500)
+$('.mask').on('click', function () {
+  $('.index--qr').css("display","none");
 })
+
+
 
 
   </script>
