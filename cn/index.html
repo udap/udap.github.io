@@ -2713,11 +2713,7 @@
     })
 
     $('.wechat-qrcode').on('click', function () {
-      if($('.index--qr').css('display') === 'none'){
-        $('.index--qr').css('display') = 'flex'
-      } else {
-        $('.index--qr').hide();
-      }
+      $(".index--qr").css("display","flex");
     })
     $('.index-qr .mask').on('click', function () {
       $('.index--qr').hide();

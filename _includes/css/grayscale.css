@@ -11494,3 +11494,6 @@ display: none;
     max-width: 150px;
     z-index: 2;
   }
+  .wechat-qrcode{
+      cursor: pointer;
+  }
