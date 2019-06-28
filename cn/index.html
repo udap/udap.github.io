@@ -2714,10 +2714,13 @@
 
     $('.wechat-qrcode').on('click', function () {
       if($('.index--qr').css('display') === 'none'){
-        $('.index--qr').show()
+        $('.index--qr').css('display') = 'flex'
       } else {
-        $('.index--qr').css('display') = 'flex';
+        $('.index--qr').hide();
       }
+    })
+    $('.index-qr .mask').on('click', function () {
+      $('.index--qr').hide();
     })
 
 
