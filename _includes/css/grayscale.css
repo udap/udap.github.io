@@ -11467,6 +11467,7 @@ display: none;
     top: 18px;
   }
   .index--qr{
+    display: none;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -11475,12 +11476,6 @@ display: none;
     align-items: center;
     justify-content: center;
     z-index: 99;
-  }
-  .qr-pc{
-    display: none;
-  }
-  .qr-mobile{
-    display: none;
   }
   .index--qr .mask{
     position: absolute;
