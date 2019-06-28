@@ -11469,11 +11469,29 @@ display: none;
   }
   .index--qr{
     display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+  }
+  .index--qr .mask{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 1;
   }
   .index--qr img{
     width: 150px !important;
     height: 150px;
     display: block;
     max-width: 150px;
-    margin:0 auto;
+    z-index: 2;
   }

@@ -2574,9 +2574,7 @@
                         </a>
                       </li>
                     </ul>
-                    <div class="index--qr">
-                      <img src="../img/index-qr.png" alt="">
-                    </div>
+                    
                   </div>
 
                 </div>
@@ -2588,6 +2586,10 @@
       </div>
       <div class="swiper-pagination mainPagination" id="mainPagination"></div>
       <div class="swiper-scrollbar"></div>
+    </div>
+    <div class="index--qr">
+      <div class="mask"></div>
+      <img src="../img/index-qr.png" alt="">
     </div>
   </div>
   <!-- jQuery Version 1.11.0 -->
@@ -2710,14 +2712,12 @@
       }, 500)
     })
 
-    $('.wechat-qrcode').mouseover(function () {
-      clearTimeout(time)
-      $('.index--qr').show()
-    })
-    $('.wechat-qrcode').mouseout(function () {
-      time = setTimeout(function () {
-        $('.index--qr').hide()
-      }, 500)
+    $('.wechat-qrcode').on('click', function () {
+      if($('.index--qr').css('display') === 'none'){
+        $('.index--qr').show()
+      } else {
+        $('.index--qr').css('display') = 'flex';
+      }
     })
 
 
