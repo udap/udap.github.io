@@ -10216,7 +10216,7 @@ footer .social-buttons {
     margin-bottom: 11px;
 }
 #partner .partners li img{
-    max-width: 103px;
+    max-width: 75px;
     height: 22px;
     margin:0 auto;
     display: inline-block;
@@ -10264,7 +10264,7 @@ footer .social-buttons {
     } 
     #partner .partners li img{
         display: inline-block;
-        max-width: 108px;
+        max-width: 75px;
         max-height: 26px;
         height: auto;
         width: auto;
