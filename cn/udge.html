@@ -1,240 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UDAP UDGE</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/swiper.min.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/udge.css" />
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>UDAP UDGE</title>
-	<link rel="shortcut icon" href="/favicon.ico" />
-	<link href="../css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="../css/swiper.min.css">
-	<link rel="stylesheet" href="../css/index.css">
-	<link rel="stylesheet" href="../css/udge.css">
-</head>
+  <body>
+    <div class="udge">
+      <div class="udge-mask"></div>
+      <div class="udge-top container-fluid">
+        <nav class="navbar navbar-fixed-top">
+          <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button
+                type="button"
+                class="navbar-toggle collapsed"
+                data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1"
+                aria-expanded="false"
+              >
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="https://www.udap.io/"
+                ><img class="logo" src="../img/udapnew.png" alt=""
+              /></a>
+              <ul class="nav navbarmobile">
+                <li class="Nmr">
+                  <a class="stress" href="/cn/demo.html">
+                    <!-- <strong class="sprites social1"></strong> --><img
+                      src="../img/nav/useCases.png"
+                      alt=""
+                    />Product <span class="ico-new">new</span></a
+                  >
+                </li>
+              </ul>
+              <a class="to-en" href="/udge.html">English</a>
+            </div>
 
-<body>
-	<div class="udge">
-		<div class="udge-mask">
-
-		</div>
-		<div class="udge-top container-fluid">
-			<nav class="navbar navbar-fixed-top">
-				<div class="container">
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-							data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<a class="navbar-brand" href="https://www.udap.io/"><img class="logo" src="../img/udapnew.png" alt=""></a>
-						<ul class="nav navbarmobile">
-							<li class="Nmr">
-								<a class="stress" href='/cn/demo.html'>
-									<!-- <strong class="sprites social1"></strong> --><img src="../img/nav/useCases.png" alt="">Product
-									<span class="ico-new">new</span></a>
-							</li>
-						</ul>
-						<a class="to-en" href="/udge.html">English</a>
-
-					</div>
-
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-						<ul class="nav navbar-nav midnav" id="midPcNav">
-							<li>
-								<a class="page-scroll" id="navAbout" href="https://www.udap.io/cn/index.html#home">首 页</a>
-							</li>
-							<li>
-								<a class="page-scroll" id="navTeam" href="https://www.udap.io/cn/index.html#team">团队介绍</a>
-							</li>
-							<li>
-								<a class="page-scroll" id="navRoadmap" href="https://www.udap.io/cn/index.html#roadmap">项目路线图</a>
-							</li>
-							<li>
-								<a class="page-scroll" id="navInverstor" href="https://www.udap.io/cn/index.html#inverstor">投资机构</a>
-							</li>
-							<li class="midMr">
-								<a class="page-scroll" id="navContact" href="https://www.udap.io/cn/index.html#contact">联系我们</a>
-							</li>
-						</ul>
-						<ul class="nav navbar-nav navbar-right">
-							<li class="Nmr">
-								<a id="product" class="page-scroll stress" href="/cn/demo.html"><img src="../img/nav/useCases.png"
-										alt="">Product<span class="ico-new">new</span>
-									<ul class="dropdown-product">
-										<li><a href="javascript:;"><small class="arrow"></small></a></li>
-										<li><a href="/cn/demo.html">Singular</a></li>
-										<li><a href="/cn/middleware.html">UDAP Middleware</a></li>
-										<li><a href="/cn/wallet.html">Harvest Wallet</a></li>
-										<li><a href="/cn/umedia.html">UMedia</a></li>
-										<li><a href="/zsb-cn.html">CERT-Wallet</a></li>
-										<li><a href="/cn/udge.html">UDGE</a></li>
-									</ul>
-								</a>
-							</li>
-							<!--<li>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div
+              class="collapse navbar-collapse"
+              id="bs-example-navbar-collapse-1"
+            >
+              <ul class="nav navbar-nav midnav" id="midPcNav">
+                <li>
+                  <a
+                    class="page-scroll"
+                    id="navAbout"
+                    href="https://www.udap.io/cn/index.html#home"
+                    >首 页</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="page-scroll"
+                    id="navTeam"
+                    href="https://www.udap.io/cn/index.html#team"
+                    >团队介绍</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="page-scroll"
+                    id="navRoadmap"
+                    href="https://www.udap.io/cn/index.html#roadmap"
+                    >项目路线图</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="page-scroll"
+                    id="navInverstor"
+                    href="https://www.udap.io/cn/index.html#inverstor"
+                    >投资机构</a
+                  >
+                </li>
+                <li class="midMr">
+                  <a
+                    class="page-scroll"
+                    id="navContact"
+                    href="https://www.udap.io/cn/index.html#contact"
+                    >联系我们</a
+                  >
+                </li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li class="Nmr">
+                  <a
+                    id="product"
+                    class="page-scroll stress"
+                    href="/cn/demo.html"
+                    ><img src="../img/nav/useCases.png" alt="" />Product<span
+                      class="ico-new"
+                      >new</span
+                    >
+                    <ul class="dropdown-product">
+                      <li>
+                        <a href="javascript:;"><small class="arrow"></small></a>
+                      </li>
+                      <li><a href="/cn/umedia.html">umx.art</a></li>
+                      <li><a href="/cn/wallet.html">umx.art Wallet</a></li>
+                      <li><a href="/zsb-cn.html">CERT-Wallet</a></li>
+                      <li><a href="/cn/demo.html">Singular</a></li>
+                      <li><a href="/cn/middleware.html">UDAP Middleware</a></li>
+                      <li><a href="/cn/udge.html">UDGE</a></li>
+                    </ul>
+                  </a>
+                </li>
+                <!--<li>
 											<a class="page-scroll" href="/tokensale.html"><img src="../img/nav/tokenSale.png" alt="">Tokensale</a>
 									</li>-->
-						</ul>
-						<a class="to-en" href="/udge.html">English</a>
+              </ul>
+              <a class="to-en" href="/udge.html">English</a>
+            </div>
+            <!-- /.navbar-collapse -->
+          </div>
+          <!-- /.container-fluid -->
+        </nav>
+      </div>
+      <div class="container-fluid case">
+        <div class="cont">
+          <div class="container">
+            <div class="row demoImg">
+              <div class="col-xs-6 col-md-3 col-lg-2 demoImg4">
+                <a href="/cn/umedia.html">
+                  <div class="bigicon"></div>
+                  <h2 class="media">umx.art</h2>
+                  <p class="bigpra4">基于区块链技术的NFT交易平台</p>
+                  <i></i>
+                </a>
+              </div>
+              <div class="col-xs-6 col-md-3 col-lg-2 demoImg3">
+                <a href="/cn/wallet.html">
+                  <div class="bigicon"></div>
+                  <h2>umx.art Wallet</h2>
+                  <p>支持ERC721及Singular类型的资产钱包</p>
+                  <i></i>
+                </a>
+              </div>
+              <div class="col-xs-6 col-md-3 col-lg-2 demoImg5">
+                <a href="/zsb-cn.html">
+                  <div class="bigicon"></div>
+                  <h2 class="media">CERT-Wallet</h2>
+                  <p class="bigpra5">通用的区块链证书/票据发行平台</p>
+                  <i></i>
+                </a>
+              </div>
+              <div class="col-xs-6 col-md-3 col-lg-2 demoImg1">
+                <a href="/cn/demo.html">
+                  <div class="bigicon"></div>
+                  <h2>Singular</h2>
+                  <p>新型资产通证化协议架构</p>
+                  <i></i>
+                </a>
+              </div>
+              <div class="col-xs-6 col-md-3 col-lg-2 demoImg2">
+                <a href="/cn/middleware.html">
+                  <div class="bigicon"></div>
+                  <h2>UDAP Middleware</h2>
+                  <p class="bigpra2">提供区块链协议及业务API的服务平台</p>
+                  <i></i>
+                </a>
+              </div>
+              <div class="col-xs-6 col-md-3 col-lg-2 demoImg6 active6">
+                <a href="/cn/udge.html">
+                  <div class="bigicon"></div>
+                  <h2 class="media">UDGE</h2>
+                  <p class="bigpra6">UDAP 去中心化游戏引擎</p>
+                  <i></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!--demoCont-->
+          <div class="container-fluid">
+            <div class="container">
+              <div class="udge-title">
+                <h1>UDGE</h1>
+                <h2>UDAP区块链游戏引擎</h2>
+              </div>
+              <div class="udge-list clear">
+                <div class="col-xs-12 col-md-6 col-lg-6 text">
+                  <h1>痛点</h1>
+                  <p class="big-txt">
+                    Dapp游戏，即“去中心化游戏应用”，是目前区块链上最直接的应用产品。由于不同公链特性不同以及技术要求高，导致游戏与链结合困难，无法满足开发者们尽快实现商业化落地的需求
+                  </p>
+                  <p class="big-txt">
+                    • 在结合区块链的方面，应用方主要会遇到以下痛点：
+                  </p>
+                  <p class="small-txt">• 交易确认速度慢</p>
+                  <p class="small-txt">• 交互gas费用高</p>
+                  <p class="small-txt">• 承载信息容量小</p>
+                  <p class="small-txt">• 安全性验证困难</p>
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-6">
+                  <img src="../img/demo/udge/painpoints-r.png" alt="" />
+                </div>
+              </div>
+              <div class="udge-list clear">
+                <div class="col-xs-12 col-md-6 col-lg-6">
+                  <img src="../img/demo/udge/released-l.png" alt="" />
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-6 text">
+                  <h1>UDAP 发布 UDGE</h1>
+                  <p class="big-txt">
+                    基于以上情况，UDAP研发出了一套区块链游戏引擎，重点解决以太坊等公链上“迟缓、低效、高gas”问题造成的不良游戏体验，为游戏在玩法上的多样化设计提供了技术支撑。
+                  </p>
+                  <p class="small-txt">
+                    • 开局后所有交互均无需gas费，为玩家节省成本
+                  </p>
+                  <p class="small-txt">
+                    • 交互期间无需等待，秒速确认结果给予反馈
+                  </p>
+                  <p class="small-txt">
+                    • 引擎提供安全的随机数设计，开源可验证
+                  </p>
+                  <p class="small-txt">
+                    • 引擎内置常用游戏规则合约，配置即可自动执行
+                  </p>
+                  <p class="small-txt">
+                    • 使用本地数字钱包直接游戏，可无需玩家另行注册
+                  </p>
+                  <p class="small-txt">
+                    • 链上链下仲裁体系设计，多方位保护玩家利益
+                  </p>
+                  <p class="small-txt">
+                    • 玩家退出结算时触发链上交易，即刻打回余额至玩家地址
+                  </p>
+                  <p class="small-txt">
+                    •
+                    PC端、手机端兼容性佳，已适配多数主流数字货币钱包，如：MetaMask/
+                    Coinbase Wallet/ Opera/ Trust/ ImToken等
+                  </p>
+                  <p class="small-txt">
+                    • UDAP游戏引擎支持接入公链代币或其他衍生币种作为游戏代币
+                  </p>
+                </div>
+              </div>
+              <div class="udge-list clear">
+                <div class="col-xs-12 col-md-6 col-lg-6 text">
+                  <h1>状态通道技术</h1>
+                  <p class="big-txt">
+                    UDAP游戏引擎应用的状态通道技术主要为了解决链上交易确认速度慢、每笔交易都需要支付手续费的问题。它将原本需要全网矿工节点共识的交易，转移到链下进行，并通过双方数字签名来验证交易是否有效。与此同时，一旦发现交易双方中一方作弊，另一方随时可以在链上发起仲裁，交由链上合约来保证交易的公平公正。
+                  </p>
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-6">
+                  <img src="../img/demo/udge/channel-r.png" alt="" />
+                </div>
+              </div>
+              <div class="udge-state clear">
+                <h1>状态通道技术一般由链上与链下部件构成：</h1>
+                <div
+                  class="col-md-6"
+                  style="padding: 0 10px; margin-bottom: 20px"
+                >
+                  <div class="state-list">
+                    <h2>链上系统</h2>
+                    <p>a.双方进入通道前，抵押资产。</p>
+                    <p>b.规定好双方交易或者交换状态的规则。</p>
+                    <p>c.提供双方更新通道内状态的接口。</p>
+                    <p>d.提供双方争议处理的仲裁接口。</p>
+                  </div>
+                </div>
+                <div
+                  class="col-md-6"
+                  style="padding: 0 10px; margin-bottom: 20px"
+                >
+                  <div class="state-list">
+                    <h2>链下系统</h2>
+                    <p>a.双方状态交换、业务、签名验证逻辑。</p>
+                    <p>b.双方状态维护和保存。</p>
+                    <p>c.链下状态有效性验证。</p>
+                    <p>d.链下状态定时更新。</p>
+                    <p>e.链下状态争议直接链上仲裁提交。</p>
+                  </div>
+                </div>
+              </div>
+              <div class="udge-contact col-xs-12 col-md-12 col-lg-12">
+                <h1>商务合作</h1>
+                <p>
+                  目前，UDGE比较适合固定人数、规则明确、强交互多交互的、对随机数的安全有强烈要求的游戏，比如链上棋牌、回合策略类游戏等。目前已有使用UDAP游戏引擎的游戏上线主网并运行良好，我们正在寻找更多的游戏开发者使用“UDGE”来开发更去中心化的游戏和应用程序。
+                </p>
+                <a href="javascript:;">Contact us at info@udap.io</a>
+              </div>
+            </div>
+          </div>
+        </div>
 
-					</div><!-- /.navbar-collapse -->
-				</div><!-- /.container-fluid -->
-			</nav>
-		</div>
-		<div class="container-fluid case">
-			<div class="cont">
-				<div class="container">
-					<div class="row demoImg">
-						<div class="col-xs-6 col-md-3 col-lg-2  demoImg1">
-							<a href="/cn/demo.html">
-								<div class="bigicon"></div>
-								<h2>Singular</h2>
-								<p>新型资产通证化协议架构</p>
-								<i></i>
-							</a>
-						</div>
-						<div class="col-xs-6 col-md-3 col-lg-2  demoImg2">
-							<a href="/cn/middleware.html">
-								<div class="bigicon"></div>
-								<h2>UDAP Middleware</h2>
-								<p class="bigpra2">提供区块链协议及业务API的服务平台</p>
-								<i></i>
-							</a>
-						</div>
-						<div class="col-xs-6 col-md-3 col-lg-2 demoImg3">
-							<a href="/cn/wallet.html">
-								<div class="bigicon"></div>
-								<h2>Harvest Wallet</h2>
-								<p>支持ERC721及Singular类型的资产钱包</p>
-								<i></i>
-							</a>
-						</div>
-						<div class="col-xs-6 col-md-3 col-lg-2  demoImg4">
-							<a href="/cn/umedia.html">
-								<div class="bigicon"></div>
-								<h2 class="media">UMedia</h2>
-								<p class="bigpra4">区块链数字媒体作品交易平台</p>
-								<i></i>
-							</a>
-						</div>
-						<div class="col-xs-6 col-md-3 col-lg-2  demoImg5">
-							<a href="/zsb-cn.html">
-								<div class="bigicon"></div>
-								<h2 class="media">CERT-Wallet</h2>
-								<p class="bigpra5">通用的区块链证书/票据发行平台</p>
-								<i></i>
-							</a>
-						</div>
-						<div class="col-xs-6 col-md-3 col-lg-2 demoImg6 active6">
-							<a href="/cn/udge.html">
-								<div class="bigicon"></div>
-								<h2 class="media">UDGE</h2>
-								<p class="bigpra6">UDAP 去中心化游戏引擎</p>
-								<i></i>
-							</a>
-						</div>
-					</div>
-				</div>
-				<!--demoCont-->
-				<div class="container-fluid">
-					<div class="container">
-						<div class="udge-title">
-							<h1>UDGE</h1>
-							<h2>UDAP区块链游戏引擎</h2>
-						</div>
-						<div class="udge-list clear">
-							<div class="col-xs-12 col-md-6 col-lg-6 text">
-								<h1>痛点</h1>
-								<p class="big-txt">Dapp游戏，即“去中心化游戏应用”，是目前区块链上最直接的应用产品。由于不同公链特性不同以及技术要求高，导致游戏与链结合困难，无法满足开发者们尽快实现商业化落地的需求
-								</p>
-								<p class="big-txt">• 在结合区块链的方面，应用方主要会遇到以下痛点：</p>
-								<p class="small-txt">• 交易确认速度慢</p>
-								<p class="small-txt"> • 交互gas费用高</p>
-								<p class="small-txt">• 承载信息容量小</p>
-								<p class="small-txt">• 安全性验证困难</p>
-							</div>
-							<div class="col-xs-12 col-md-6 col-lg-6">
-								<img src="../img/demo/udge/painpoints-r.png" alt="">
-							</div>
-						</div>
-						<div class="udge-list clear">
-							<div class="col-xs-12 col-md-6 col-lg-6">
-								<img src="../img/demo/udge/released-l.png" alt="">
-							</div>
-							<div class="col-xs-12 col-md-6 col-lg-6 text">
-								<h1>UDAP 发布 UDGE</h1>
-								<p class="big-txt">基于以上情况，UDAP研发出了一套区块链游戏引擎，重点解决以太坊等公链上“迟缓、低效、高gas”问题造成的不良游戏体验，为游戏在玩法上的多样化设计提供了技术支撑。</p>
-								<p class="small-txt"> • 开局后所有交互均无需gas费，为玩家节省成本</p>
-								<p class="small-txt"> • 交互期间无需等待，秒速确认结果给予反馈
-								</p>
-								<p class="small-txt"> • 引擎提供安全的随机数设计，开源可验证
-								</p>
-								<p class="small-txt"> • 引擎内置常用游戏规则合约，配置即可自动执行</p>
-								<p class="small-txt"> • 使用本地数字钱包直接游戏，可无需玩家另行注册</p>
-								<p class="small-txt"> • 链上链下仲裁体系设计，多方位保护玩家利益</p>
-								<p class="small-txt"> • 玩家退出结算时触发链上交易，即刻打回余额至玩家地址</p>
-								<p class="small-txt"> • PC端、手机端兼容性佳，已适配多数主流数字货币钱包，如：MetaMask/ Coinbase Wallet/ Opera/ Trust/ ImToken等
-								</p>
-								<p class="small-txt"> • UDAP游戏引擎支持接入公链代币或其他衍生币种作为游戏代币</p>
-							</div>
-						</div>
-						<div class="udge-list clear">
-							<div class="col-xs-12 col-md-6 col-lg-6 text">
-								<h1>状态通道技术</h1>
-								<p class="big-txt">
-									UDAP游戏引擎应用的状态通道技术主要为了解决链上交易确认速度慢、每笔交易都需要支付手续费的问题。它将原本需要全网矿工节点共识的交易，转移到链下进行，并通过双方数字签名来验证交易是否有效。与此同时，一旦发现交易双方中一方作弊，另一方随时可以在链上发起仲裁，交由链上合约来保证交易的公平公正。
-								</p>
-							</div>
-							<div class="col-xs-12 col-md-6 col-lg-6">
-								<img src="../img/demo/udge/channel-r.png" alt="">
-							</div>
-						</div>
-						<div class="udge-state clear">
-							<h1>状态通道技术一般由链上与链下部件构成：</h1>
-							<div class="col-md-6" style="padding: 0 10px;margin-bottom: 20px">
-								<div class="state-list">
-									<h2>链上系统</h2>
-									<p>a.双方进入通道前，抵押资产。</p>
-									<p>b.规定好双方交易或者交换状态的规则。</p>
-									<p>c.提供双方更新通道内状态的接口。</p>
-									<p>d.提供双方争议处理的仲裁接口。</p>
-								</div>
-							</div>
-							<div class="col-md-6" style="padding: 0 10px;margin-bottom: 20px">
-								<div class="state-list">
-									<h2>链下系统</h2>
-									<p>a.双方状态交换、业务、签名验证逻辑。</p>
-									<p>b.双方状态维护和保存。</p>
-									<p>c.链下状态有效性验证。</p>
-									<p>d.链下状态定时更新。</p>
-									<p>e.链下状态争议直接链上仲裁提交。</p>
-								</div>
-							</div>
-						</div>
-						<div class="udge-contact col-xs-12 col-md-12 col-lg-12">
-							<h1>商务合作</h1>
-							<p>
-								目前，UDGE比较适合固定人数、规则明确、强交互多交互的、对随机数的安全有强烈要求的游戏，比如链上棋牌、回合策略类游戏等。目前已有使用UDAP游戏引擎的游戏上线主网并运行良好，我们正在寻找更多的游戏开发者使用“UDGE”来开发更去中心化的游戏和应用程序。
-							</p>
-							<a href="javascript:;">Contact us at info@udap.io</a>
-						</div>
-					</div>
-				</div>
+        <footer>© 2018 UÐAP FOUNDATION All Rights Reserved</footer>
+      </div>
+    </div>
 
-
-			</div>
-
-			<footer>© 2018 UÐAP FOUNDATION All Rights Reserved</footer>
-		</div>
-	</div>
-
-	<script src="../js/jquery.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
-	<script src="../js/style.js"></script>
-</body>
-
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/style.js"></script>
+  </body>
 </html>
