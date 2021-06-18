@@ -1,249 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UDAP UDGE</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/udge.css" />
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>UDAP UDGE</title>
-	<link rel="shortcut icon" href="/favicon.ico" />
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/swiper.min.css">
-	<link rel="stylesheet" href="css/index.css">
-	<link rel="stylesheet" href="css/udge.css">
-</head>
-
-<body>
-	<div class="udge">
-		<div class="udge-mask">
-
-		</div>
-		<div class="udge-top container-fluid">
-			<nav class="navbar navbar-fixed-top">
-				<div class="container">
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-							data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<a class="navbar-brand" href="https://www.udap.io/"><img class="logo" src="img/udapnew.png" alt=""></a>
-						<ul class="nav navbarmobile">
-							<li class="Nmr">
-								<a class="stress" href='/demo.html'>
-									<!-- <strong class="sprites social1"></strong> --><img src="img/nav/useCases.png" alt="">Product <span
-										class="ico-new">new</span></a>
-							</li>
-							<!-- <li>
+  <body>
+    <div class="udge">
+      <div class="udge-mask"></div>
+      <div class="udge-top container-fluid">
+        <nav class="navbar navbar-fixed-top">
+          <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button
+                type="button"
+                class="navbar-toggle collapsed"
+                data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1"
+                aria-expanded="false"
+              >
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="https://www.udap.io/"
+                ><img class="logo" src="img/udapnew.png" alt=""
+              /></a>
+              <ul class="nav navbarmobile">
+                <li class="Nmr">
+                  <a class="stress" href="/demo.html">
+                    <!-- <strong class="sprites social1"></strong> --><img
+                      src="img/nav/useCases.png"
+                      alt=""
+                    />Product <span class="ico-new">new</span></a
+                  >
+                </li>
+                <!-- <li>
 								<a class="" href='/tokensale.html'>
 									<strong class="sprites social2"></strong><img src="img/nav/tokenSale.png"
 										alt="">Tokensale</a>
 							</li> -->
-						</ul>
-					<a class="to-en" href="/cn/udge.html">Chinese</a>
+              </ul>
+              <a class="to-en" href="/cn/udge.html">Chinese</a>
+            </div>
 
-					</div>
-
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-						<ul class="nav navbar-nav midnav" id="midPcNav">
-							<li>
-								<a class="page-scroll" id="navAbout" href="https://www.udap.io/#home">Home</a>
-							</li>
-							<li>
-								<a class="page-scroll" id="navTeam" href="https://www.udap.io/#team">Team</a>
-							</li>
-							<li>
-								<a class="page-scroll" id="navRoadmap" href="https://www.udap.io/#roadmap">Roadmap</a>
-							</li>
-							<li>
-								<a class="page-scroll" id="navInverstor" href="https://www.udap.io/#inverstor">Investors</a>
-							</li>
-							<li class="midMr">
-								<a class="page-scroll" id="navContact" href="https://www.udap.io/#contact">Contact us</a>
-							</li>
-
-						</ul>
-						<ul class="nav navbar-nav navbar-right">
-							<li class="Nmr">
-								<a id="product" class="page-scroll stress" href="/demo.html"><img src="img/nav/useCases.png"
-										alt="">Product<span class="ico-new">new</span>
-									<ul class="dropdown-product">
-										<li><a href="javascript:;"><small class="arrow"></small></a></li>
-										<li><a href="/demo.html">Singular</a></li>
-										<li><a href="/middleware.html">UDAP Middleware</a></li>
-										<li><a href="/wallet.html">Harvest Wallet</a></li>
-										<li><a href="/umedia.html">UMedia</a></li>
-										<li><a href="/zsb.html">CERT-Wallet</a></li>
-										<li><a href="/udge.html">UDGE</a></li>
-									</ul>
-								</a>
-							</li>
-							<!--<li>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div
+              class="collapse navbar-collapse"
+              id="bs-example-navbar-collapse-1"
+            >
+              <ul class="nav navbar-nav midnav" id="midPcNav">
+                <li>
+                  <a
+                    class="page-scroll"
+                    id="navAbout"
+                    href="https://www.udap.io/#home"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="page-scroll"
+                    id="navTeam"
+                    href="https://www.udap.io/#team"
+                    >Team</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="page-scroll"
+                    id="navRoadmap"
+                    href="https://www.udap.io/#roadmap"
+                    >Roadmap</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="page-scroll"
+                    id="navInverstor"
+                    href="https://www.udap.io/#inverstor"
+                    >Investors</a
+                  >
+                </li>
+                <li class="midMr">
+                  <a
+                    class="page-scroll"
+                    id="navContact"
+                    href="https://www.udap.io/#contact"
+                    >Contact us</a
+                  >
+                </li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li class="Nmr">
+                  <a id="product" class="page-scroll stress" href="/demo.html"
+                    ><img src="img/nav/useCases.png" alt="" />Product<span
+                      class="ico-new"
+                      >new</span
+                    >
+                    <ul class="dropdown-product">
+                      <li>
+                        <a href="javascript:;"><small class="arrow"></small></a>
+                      </li>
+                      <li><a href="/umedia.html">umx.art</a></li>
+                      <li><a href="/wallet.html">umx.art Wallet</a></li>
+                      <li><a href="/zsb.html">CERT-Wallet</a></li>
+                      <li><a href="/udge.html">UDGE</a></li>
+                      <li><a href="/demo.html">Singular</a></li>
+                      <li><a href="/middleware.html">UDAP Middleware</a></li>
+                    </ul>
+                  </a>
+                </li>
+                <!--<li>
 											<a class="page-scroll" href="/tokensale.html"><img src="img/nav/tokenSale.png" alt="">Tokensale</a>
 									</li>-->
-						</ul>
-					<a class="to-en" href="/cn/udge.html">Chinese</a>
+              </ul>
+              <a class="to-en" href="/cn/udge.html">Chinese</a>
+            </div>
+            <!-- /.navbar-collapse -->
+          </div>
+          <!-- /.container-fluid -->
+        </nav>
+      </div>
+      <div class="container-fluid case">
+        <div class="cont">
+          <div class="container">
+            <div class="row demoImg">
+              <div class="col-xs-6 col-md-3 col-lg-2 demoImg4">
+                <a href="umedia.html">
+                  <div class="bigicon"></div>
+                  <h2 class="media">umx.art</h2>
+                  <p class="bigpra4">
+                    An NFT Trading Platform Built on Blockchain Technology
+                  </p>
+                  <i></i>
+                </a>
+              </div>
+              <div class="col-xs-6 col-md-3 col-lg-2 demoImg3">
+                <a href="wallet.html">
+                  <div class="bigicon"></div>
+                  <h2>umx.art Wallet</h2>
+                  <p>An ERC721 and UDAP Singular style asset wallet</p>
+                  <i></i>
+                </a>
+              </div>
+              <div class="col-xs-6 col-md-3 col-lg-2 demoImg5">
+                <a href="zsb.html">
+                  <div class="bigicon"></div>
+                  <h2 class="media">CERT-Wallet</h2>
+                  <p class="bigpra5">
+                    A General Securities/Ticket Issuance Platform
+                  </p>
+                  <i></i>
+                </a>
+              </div>
+              <div class="col-xs-6 col-md-3 col-lg-2 demoImg6 active6">
+                <a href="udge.html">
+                  <div class="bigicon"></div>
+                  <h2 class="media">UDGE</h2>
+                  <p class="bigpra6">UDAP Decentralized Game Engine</p>
+                  <i></i>
+                </a>
+              </div>
+              <div class="col-xs-6 col-md-3 col-lg-2 demoImg1">
+                <a href="/demo.html">
+                  <div class="bigicon"></div>
+                  <h2>Singular</h2>
+                  <p>A new asset tokenization framework</p>
+                  <i></i>
+                </a>
+              </div>
+              <div class="col-xs-6 col-md-3 col-lg-2 demoImg2">
+                <a href="middleware.html">
+                  <div class="bigicon"></div>
+                  <h2>UDAP Middleware</h2>
+                  <p class="bigpra2">
+                    A platform that provides APIs for blockchain protocols and
+                    business
+                  </p>
+                  <i></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!--demoCont-->
+          <div class="container-fluid">
+            <div class="container">
+              <div class="udge-title">
+                <h1>UDGE</h1>
+                <h2>UDAP Decentralized Game Engine</h2>
+              </div>
+              <div class="udge-list clear">
+                <div class="col-xs-12 col-md-6 col-lg-6 text">
+                  <h1>Pain Points</h1>
+                  <p class="big-txt">
+                    Currently, Decentralized games can’t meet the needs of
+                    developers to do fancy games for commercial needs, because
+                    of the higher barrier of technical requirements for
+                    different public chains.
+                  </p>
+                  <p class="big-txt">
+                    Some of the pain points encountered by the developers：
+                  </p>
+                  <p class="small-txt">• Difficulty of integrate with chains</p>
+                  <p class="small-txt">• Slow transaction confirmation speed</p>
+                  <p class="small-txt">• High Gas fee</p>
+                  <p class="small-txt">• Small sending and receiving data</p>
+                  <p class="small-txt">• Security verification difficulty</p>
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-6">
+                  <img src="img/demo/udge/painpoints-r.png" alt="" />
+                </div>
+              </div>
+              <div class="udge-list clear">
+                <div class="col-xs-12 col-md-6 col-lg-6">
+                  <img src="img/demo/udge/released-l.png" alt="" />
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-6 text">
+                  <h1>UDGE Features</h1>
+                  <p class="big-txt">
+                    UDAP game engine for decentralized games, that solves the
+                    slow, inefficient and high GAS cost issues on Ethereum and
+                    other public chains.
+                  </p>
+                  <p class="small-txt">
+                    • No GAS fee requires during a game, saving cost for players
+                  </p>
+                  <p class="small-txt">
+                    • Instant confirmation results for multiple parties, that’s
+                    the key for all games
+                  </p>
+                  <p class="small-txt">
+                    • Secured Random Mechanism, the random results can be
+                    verified and open sourced
+                  </p>
+                  <p class="small-txt">
+                    • Built-in common game rules, configuration can be
+                    automatically executed
+                  </p>
+                  <p class="small-txt">
+                    • No registration required, users can play game directly
+                    from digital wallets.
+                  </p>
+                  <p class="small-txt">
+                    • On-chain and off-chain Arbitration system that protect
+                    players
+                  </p>
+                  <p class="small-txt">
+                    • On-chain setting system to withdraw balance to users
+                    automatically
+                  </p>
+                  <p class="small-txt">
+                    • Compatible with popular wallets like MetaMask, ImToken,
+                    CoinBase Wallet, Opera, Trust, etc.
+                  </p>
+                  <p class="small-txt">• Enable mint or use other tokens</p>
+                </div>
+              </div>
+              <div class="udge-list clear">
+                <div class="col-xs-12 col-md-6 col-lg-6 text">
+                  <h1>The State Channel Technology</h1>
+                  <p class="big-txt">
+                    UDGE used the State Channel technology, transfers the
+                    unnecessary on-chain transactions to the state channel,
+                    verify the validity of transactions through the digital
+                    signatures of all parties. If Any party cheats, the other
+                    parties can initiate arbitration on-chain and the
+                    Arbitration system can ensure the fairness.
+                  </p>
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-6">
+                  <img src="img/demo/udge/channel-r.png" alt="" />
+                </div>
+              </div>
+              <div class="udge-state clear">
+                <h1>State Channel includes on-chain and off-chain system</h1>
+                <div class="state-main">
+                  <div
+                    class="col-md-6"
+                    style="padding: 0 10px; margin-bottom: 20px"
+                  >
+                    <div class="state-list">
+                      <h2>On-Chain System</h2>
+                      <p>Deposit assets before entering the channel</p>
+                      <p>Define the game rule</p>
+                      <p>Provides the contracts for updating channel states</p>
+                      <p>Provides the arbitration for any disputes</p>
+                    </div>
+                  </div>
+                  <div
+                    class="col-md-6"
+                    style="padding: 0 10px; margin-bottom: 20px"
+                  >
+                    <div class="state-list">
+                      <h2>Off-Chain system</h2>
+                      <p>
+                        State exchange, game rules and signature verification
+                        logics.
+                      </p>
+                      <p>Maintenance and saving of the status of all parties</p>
+                      <p>Validation of off-chain state validity</p>
+                      <p>Timely updates of the off-chain states</p>
+                      <p>Submit off-chain disputes to on-chain arbitration</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="udge-contact col-xs-12 col-md-12 col-lg-12">
+                <h1>Business Cooperation</h1>
+                <p>
+                  Currently, UDGE can be used in fixed number of parties, game
+                  rule is clear, more interactions, may requires a secured
+                  random mechanism game, like chess, turn-base strategy games,
+                  etc. UDGE has been tested and running perfectly on some of the
+                  games, and we are looking for more game developer using UDGE
+                  to develop more decentralized game and or apps.
+                </p>
+                <a href="javascript:;">Contact us at info@udap.io</a>
+              </div>
+            </div>
+          </div>
+        </div>
 
-					</div><!-- /.navbar-collapse -->
-				</div><!-- /.container-fluid -->
-			</nav>
-		</div>
-		<div class="container-fluid case">
-			<div class="cont">
-				<div class="container">
-					<div class="row demoImg">
-						<div class="col-xs-6 col-md-3 col-lg-2  demoImg1">
-							<a href="/demo.html">
-								<div class="bigicon"></div>
-								<h2>Singular</h2>
-								<p>A new asset tokenization framework</p>
-								<i></i>
-							</a>
-						</div>
-						<div class="col-xs-6 col-md-3 col-lg-2  demoImg2">
-							<a href="middleware.html">
-								<div class="bigicon"></div>
-								<h2>UDAP Middleware</h2>
-								<p class="bigpra2">A platform that provides APIs for blockchain protocols and business</p>
-								<i></i>
-							</a>
-						</div>
-						<div class="col-xs-6 col-md-3 col-lg-2 demoImg3">
-							<a href="wallet.html">
-								<div class="bigicon"></div>
-								<h2>Harvest Wallet</h2>
-								<p>An ERC721 and UDAP Singular style asset wallet</p>
-								<i></i>
-							</a>
-						</div>
-						<div class="col-xs-6 col-md-3 col-lg-2  demoImg4">
-							<a href="umedia.html">
-								<div class="bigicon"></div>
-								<h2 class="media">UMedia</h2>
-								<p class="bigpra4">A music marketplace and a music player on your mobile phone</p>
-								<i></i>
-							</a>
-						</div>
-						<div class="col-xs-6 col-md-3 col-lg-2  demoImg5">
-							<a href="zsb.html">
-								<div class="bigicon"></div>
-								<h2 class="media">CERT-Wallet</h2>
-								<p class="bigpra5">A General Securities/Ticket Issuance Platform</p>
-								<i></i>
-							</a>
-						</div>
-						<div class="col-xs-6 col-md-3 col-lg-2 demoImg6 active6">
-							<a href="udge.html">
-								<div class="bigicon"></div>
-								<h2 class="media">UDGE</h2>
-								<p class="bigpra6">UDAP Decentralized Game Engine</p>
-								<i></i>
-							</a>
-						</div>
-					</div>
-				</div>
-				<!--demoCont-->
-				<div class="container-fluid">
-					<div class="container">
-						<div class="udge-title">
-							<h1>UDGE</h1>
-							<h2>UDAP Decentralized Game Engine</h2>
-						</div>
-						<div class="udge-list clear">
-							<div class="col-xs-12 col-md-6 col-lg-6 text">
-								<h1>Pain Points</h1>
-								<p class="big-txt">Currently, Decentralized games can’t meet the needs of developers to do fancy games
-									for commercial needs, because of the higher barrier of technical requirements for different public
-									chains.</p>
-								<p class="big-txt">Some of the pain points encountered by the developers：</p>
-								<p class="small-txt">• Difficulty of integrate with chains</p>
-								<p class="small-txt">• Slow transaction confirmation speed</p>
-								<p class="small-txt">• High Gas fee</p>
-								<p class="small-txt">• Small sending and receiving data</p>
-								<p class="small-txt">• Security verification difficulty</p>
-							</div>
-							<div class="col-xs-12 col-md-6 col-lg-6">
-								<img src="img/demo/udge/painpoints-r.png" alt="">
-							</div>
-						</div>
-						<div class="udge-list clear">
-							<div class="col-xs-12 col-md-6 col-lg-6">
-								<img src="img/demo/udge/released-l.png" alt="">
-							</div>
-							<div class="col-xs-12 col-md-6 col-lg-6 text">
-								<h1>UDGE Features</h1>
-								<p class="big-txt">UDAP game engine for decentralized games, that solves the slow, inefficient and high GAS cost issues on Ethereum and other public chains.</p>
-								<p class="small-txt">• No GAS fee requires during a game, saving cost for players</p>
-								<p class="small-txt">• Instant confirmation results for multiple parties, that’s the key for all games</p>
-								<p class="small-txt">• Secured Random Mechanism, the random results can be verified and open sourced</p>
-								<p class="small-txt">• Built-in common game rules, configuration can be automatically executed</p>
-								<p class="small-txt">• No registration required, users can play game directly from digital wallets.</p>
-								<p class="small-txt">• On-chain and off-chain Arbitration system that protect players</p>
-								<p class="small-txt">• On-chain setting system to withdraw balance to users automatically</p>
-								<p class="small-txt">• Compatible with popular wallets like MetaMask, ImToken, CoinBase Wallet, Opera, Trust, etc.</p>
-								<p class="small-txt">• Enable mint or use other tokens</p>
-							</div>
-						</div>
-						<div class="udge-list clear">
-							<div class="col-xs-12 col-md-6 col-lg-6 text">
-								<h1>The State Channel Technology</h1>
-								<p class="big-txt">UDGE used the State Channel technology, transfers the unnecessary on-chain
-									transactions to the state channel, verify the validity of transactions through the digital signatures
-									of all parties. If Any party cheats, the other parties can initiate arbitration on-chain and the
-									Arbitration system can ensure the fairness.</p>
-							</div>
-							<div class="col-xs-12 col-md-6 col-lg-6">
-								<img src="img/demo/udge/channel-r.png" alt="">
-							</div>
-						</div>
-						<div class="udge-state clear">
-							<h1>State Channel includes on-chain and off-chain system</h1>
-							<div class="state-main">
-								<div class="col-md-6" style="padding: 0 10px;margin-bottom: 20px">
-									<div class="state-list">
-										<h2>On-Chain System</h2>
-										<p>Deposit assets before entering the channel</p>
-										<p>Define the game rule</p>
-										<p>Provides the contracts for updating channel states</p>
-										<p>Provides the arbitration for any disputes</p>
-									</div>
-								</div>
-								<div class="col-md-6" style="padding: 0 10px;margin-bottom: 20px">
-									<div class="state-list">
-										<h2>Off-Chain system</h2>
-										<p>State exchange, game rules and signature verification logics.</p>
-										<p>Maintenance and saving of the status of all parties</p>
-										<p>Validation of off-chain state validity </p>
-										<p>Timely updates of the off-chain states</p>
-										<p>Submit off-chain disputes to on-chain arbitration</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="udge-contact col-xs-12 col-md-12 col-lg-12">
-							<h1>Business Cooperation</h1>
-							<p>Currently, UDGE can be used in fixed number of parties, game rule is clear, more interactions, may
-								requires a secured random mechanism game, like chess, turn-base strategy games, etc. UDGE has been
-								tested and running perfectly on some of the games, and we are looking for more game developer using UDGE
-								to develop more decentralized game and or apps.</p>
-							<a href="javascript:;">Contact us at info@udap.io</a>
-						</div>
-					</div>
-				</div>
+        <footer>© 2018 UÐAP FOUNDATION All Rights Reserved</footer>
+      </div>
+    </div>
 
-
-			</div>
-
-			<footer>© 2018 UÐAP FOUNDATION All Rights Reserved</footer>
-		</div>
-	</div>
-
-	<script src="js/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/style.js"></script>
-</body>
-
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/style.js"></script>
+  </body>
 </html>
