@@ -9,13 +9,9 @@
     <link rel="stylesheet" href="../css/swiper.min.css" />
     <link rel="stylesheet" href="../css/index.css" />
     <style>
-      html,
-      body {
-        height: 100%;
-      }
-
       .umx_art {
         margin-top: 91px;
+        margin-bottom: 200px;
       }
 
       .umx_art .row {
@@ -74,10 +70,52 @@
         width: 340px;
       }
 
-      footer {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
+      .umxMobile .title {
+        font-size: 60px;
+        font-weight: 600;
+        color: #fff;
+      }
+
+      .umxMobile .tips {
+        font-size: 20px;
+        font-weight: 600;
+        color: #fff;
+      }
+
+      .umxMobile .content {
+        margin-top: 32px;
+        font-size: 14px;
+        font-weight: 400;
+        color: #fff;
+      }
+
+      .umxMobile .content .content1 {
+        margin-bottom: 32px;
+      }
+
+      .umxMobile .urlIcon {
+        margin-top: 32px;
+        display: flex;
+        font-size: 14px;
+        font-weight: 400;
+        color: #fff;
+      }
+
+      .umxMobile .urlIcon .iconView {
+        display: flex;
+      }
+
+      .umxMobile .urlIcon .iconView img {
+        width: 26px;
+        margin: 0 4px 0 15px;
+      }
+
+      .umxMobile .urlIcon .wechat {
+        margin-left: 32px;
+      }
+
+      .umxMobile .umxImg {
+        margin: 32px 0px;
       }
     </style>
   </head>
@@ -250,7 +288,7 @@
         </div>
 
         <!-- 内容部分 -->
-        <div class="container umx_art">
+        <div class="container umx_art umedia1pc">
           <div class="row">
             <div class="uLeft">
               <div class="title">umx.art</div>
@@ -283,25 +321,37 @@
             </div>
           </div>
         </div>
-        <!-- <div class="container umedia umedia1 umedia1mobile">
+        <div class="container umedia umedia1 umedia1mobile">
           <div class="row">
-            <div class="uright">
-              <h1>UMedia</h1>
-              <hr />
-              <h2>区块链数字媒体作品发布及交易平台</h2>
-              <p>
-                随着数字技术和网络的发展，人们可以在网上免费下载到大部分音乐，这对音乐产业的利润影响巨大，并导致人才对于进入该行业越来越缺乏热情和兴趣。
-                <br />
-                只有解决了确权、免费使用、传播等问题，行业才能吸引更多有才华的人，从而更加健康的发展。现在我们有一个运用区块链技术的完美解决方案。
-              </p>
-            </div>
-            <div class="uleft">
-              <div class="mobile">
-                <img src="../img/demo/umediamobile.png" alt="umediamobile" />
+            <div class="umxMobile">
+              <div class="title">umx.art</div>
+              <div class="tips">基于区块链技术的NFT交易平台</div>
+              <div class="content">
+                <div class="content1">
+                  umx
+                  通过区块链技术为艺术品打上无法篡改、难以伪造的编码，使艺术品在umx上完全透明的发行；智能合约通过明确版税参数，实现创作人的终身版税收益。
+                </div>
+                <div>
+                  umx.art
+                  的业务模式核心在两级市场。艺术家通过umx平台区块链智能合约设定NFT作品价格、发行份数、发行时间、版税等参数，在首发市场进行发售。发售方式支持定价直卖和竞价等多种模式。消费者通过首发市场购买作品后，放在二级市场进行再流通和多次售卖，来达到作品增值和投资收益。
+                </div>
               </div>
+              <div class="urlIcon">
+                <div class="iconView">
+                  <div>微博</div>
+                  <img src="../img/umxArt/weibo.png" alt="weibo" />
+                  <div>umx_art</div>
+                </div>
+                <div class="wechat iconView">
+                  <div>微信</div>
+                  <img src="../img/umxArt/wechat.png" alt="wechat" />
+                  <div>umx艺术</div>
+                </div>
+              </div>
+              <img class="umxImg" src="../img/umxArt/umxArt.png" alt="umxArt" />
             </div>
           </div>
-        </div> -->
+        </div>
       </div>
 
       <footer>© 2018 UÐAP FOUNDATION All Rights Reserved</footer>
