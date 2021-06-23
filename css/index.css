@@ -5,8 +5,8 @@
 html,
 body {
   margin: 0;
-  font-family: PingFang SC, Hiragino Sans GB,
-  Microsoft YaHei, SimSun, sans-serif!important;
+  font-family: PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun,
+    sans-serif !important;
   font-size: 14px;
   line-height: 1.5;
   color: #212529;
@@ -21,12 +21,12 @@ button {
 .navbar-collapse {
   position: relative;
 }
-.index--qr{
+.index--qr {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.index--qr img{
+.index--qr img {
   width: 150px;
   height: 150px;
   display: block;
@@ -878,7 +878,7 @@ li.test4 {
   padding-top: 20px;
   margin-left: 2%;
 }
-.navbar-header .to-en{
+.navbar-header .to-en {
   right: 30px;
   top: 18px;
 }
@@ -1012,7 +1012,7 @@ li.test4 {
   display: block;
 }
 @media (min-width: 768px) {
-  .navbar-header .to-en{
+  .navbar-header .to-en {
     display: none;
   }
   .umedia4 .uleft {
