@@ -15,7 +15,7 @@
     <script src="{{ "js/grayscale.js" | prepend: site.baseurl }}"></script>
     <!-- <script src="{{ "js/main.js" | prepend: site.baseurl }}"></script> -->
     <script src="{{ "js/swiper.min.js" | prepend: site.baseurl }}"></script>
-     <script> 
+     <script>
 $(document).ready(function () {
 var swiper1 = new Swiper('.mainSwiper', {//父的
     hashnav:true,
@@ -119,10 +119,31 @@ $('.dropdown-product').mouseout(function () {
 })
 
 $('.wechat-qrcode').on('click', function () {
-  $(".index--qr").css("display","flex");
+  $(".wechat--qr").css("display","flex");
 })
 $('.mask').on('click', function () {
-  $('.index--qr').css("display","none");
+  $('.wechat--qr').css("display","none");
+})
+// ins
+$('.ins-qrcode').on('click', function () {
+  $(".ins--qr").css("display","flex");
+})
+$('.mask').on('click', function () {
+  $('.ins--qr').css("display","none");
+})
+// weibo
+$('.weibo-qrcode').on('click', function () {
+  $(".weibo--qr").css("display","flex");
+})
+$('.mask').on('click', function () {
+  $('.weibo--qr').css("display","none");
+})
+// cusService
+$('.cusService-qrcode').on('click', function () {
+  $(".cusService--qr").css("display","flex");
+})
+$('.mask').on('click', function () {
+  $('.cusService--qr').css("display","none");
 })
 
 

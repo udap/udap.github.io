@@ -1241,6 +1241,21 @@
                     <span>Wechat</span>
                   </a>
                 </li>
+                <li class="col-md-3 col-sm-6 col-xs-6 ins-qrcode"><a target="_blank">
+                  <img src="../img/intro/ins.png" alt="ins">
+                  <span>Instagram</span>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-xs-6 weibo-qrcode"><a target="_blank">
+                  <img src="../img/intro/Weibo.png" alt="Weibo">
+                  <span>Weibo</span>
+                </a>
+              </li>
+              <li class="col-md-3 col-sm-6 col-xs-6 cusService-qrcode"><a target="_blank">
+                  <img src="../img/intro/cusService.png" alt="cusService">
+                  <span>Customer service</span>
+                </a>
+              </li>
               </ul>
 
             </div>
@@ -1250,9 +1265,21 @@
         <p class="copyright">© 2018 UÐAP FOUNDATION All Rights Reserved</p>
       </div>
     </footer>
-    <div class="index--qr">
+    <div class="wechat--qr">
       <div class="mask"></div>
-      <img src="../img/index-qr.png" alt="">
+      <img src="../img/wechat-qr.png" alt="">
+    </div>
+    <div class="ins--qr">
+      <div class="mask"></div>
+      <img src="../img/ins-qr.png" alt="" />
+    </div>
+    <div class="weibo--qr">
+      <div class="mask"></div>
+      <img src="../img/weibo-qr.png" alt="" />
+    </div>
+    <div class="cusService--qr">
+      <div class="mask"></div>
+      <img src="../img/cusService-qr.png" alt="" />
     </div>
     <!-- <div style="width:120px;height:105px;position: fixed;bottom:15px;right:15px;z-index:9999">
       <img src="../img/index-ad.png" alt="" style="width: 100%;display:block;" />
@@ -2711,6 +2738,21 @@
                           <span>Wechat</span>
                         </a>
                       </li>
+                      <li class="col-md-3 col-sm-6 col-xs-6 ins-qrcode"><a target="_blank">
+                          <img src="../img/intro/ins.png" alt="ins">
+                          <span>Instagram</span>
+                        </a>
+                      </li>
+                      <li class="col-md-3 col-sm-6 col-xs-6 weibo-qrcode"><a target="_blank">
+                          <img src="../img/intro/Weibo.png" alt="Weibo">
+                          <span>Weibo</span>
+                        </a>
+                      </li>
+                      <li class="col-md-3 col-sm-6 col-xs-6 cusService-qrcode"><a target="_blank">
+                          <img src="../img/intro/cusService.png" alt="cusService">
+                          <span>Customer service</span>
+                        </a>
+                      </li>
                     </ul>
 
                   </div>
@@ -2725,9 +2767,21 @@
       <div class="swiper-pagination mainPagination" id="mainPagination"></div>
       <div class="swiper-scrollbar"></div>
     </div>
-    <div class="index--qr">
+    <div class="wechat--qr">
       <div class="mask"></div>
-      <img src="../img/index-qr.png" alt="">
+      <img src="../img/wechat-qr.png" alt="">
+    </div>
+    <div class="ins--qr">
+      <div class="mask"></div>
+      <img src="../img/ins-qr.png" alt="" />
+    </div>
+    <div class="weibo--qr">
+      <div class="mask"></div>
+      <img src="../img/weibo-qr.png" alt="" />
+    </div>
+    <div class="cusService--qr">
+      <div class="mask"></div>
+      <img src="../img/cusService-qr.png" alt="" />
     </div>
     <!-- <div style="width:180px;height:165px;position: fixed;bottom:30px;right:30px;z-index:9999;">
       <img src="../img/index-ad.png" alt="" style="width: 100%;display:block;" />
@@ -2854,11 +2908,33 @@
       }, 500)
     })
 
+    // wechat
     $('.wechat-qrcode').on('click', function () {
-      $(".index--qr").css("display","flex");
+      $(".wechat--qr").css("display","flex");
     })
     $('.mask').on('click', function () {
-      $('.index--qr').css("display","none");
+      $('.wechat--qr').css("display","none");
+    })
+    // ins
+    $('.ins-qrcode').on('click', function () {
+      $(".ins--qr").css("display","flex");
+    })
+    $('.mask').on('click', function () {
+      $('.ins--qr').css("display","none");
+    })
+    // weibo
+    $('.weibo-qrcode').on('click', function () {
+      $(".weibo--qr").css("display","flex");
+    })
+    $('.mask').on('click', function () {
+      $('.weibo--qr').css("display","none");
+    })
+    //
+    $('.cusService-qrcode').on('click', function () {
+      $(".cusService--qr").css("display","flex");
+    })
+    $('.mask').on('click', function () {
+      $('.cusService--qr').css("display","none");
     })
 
 

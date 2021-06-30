@@ -21,12 +21,12 @@ button {
 .navbar-collapse {
   position: relative;
 }
-.index--qr {
+.wechat--qr {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.index--qr img {
+.wechat--qr img {
   width: 150px;
   height: 150px;
   display: block;
